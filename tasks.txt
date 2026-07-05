@@ -1,0 +1,19 @@
+# Task subset for the experiment - one skillsbench task id per line.
+# Picked for low cost (agent timeout <= 900s) and category spread.
+# `python3 experiment.py list` shows all 87 tasks; edit freely and re-run build.
+
+bike-rebalance                  # medium  math                 900s  no-network
+travel-planning                 # medium  math                 600s
+dialogue-parser                 # easy    software-engineering 900s
+jax-computing-basics            # medium  software-engineering 600s
+earthquake-plate-calculation    # medium  natural-science      900s
+lake-warming-attribution        # medium  natural-science      300s
+weighted-gdp-calc               # medium  finance              900s
+xlsx-recover-data               # medium  finance              600s
+sales-pivot-analysis            # medium  office               900s
+software-dependency-audit       # medium  cybersecurity        900s
+
+# spares
+# organize-messy-files          # medium  office               900s
+# pddl-tpp-planning             # medium  math                 600s
+# threejs-to-obj                # medium  media                300s
