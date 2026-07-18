@@ -37,14 +37,14 @@ CONDITIONS = {
 }
 
 AGENTS = {  # agent name -> default model (override with --model)
-    "claude-code": "claude-sonnet-4-5",
+    "claude": "claude-sonnet-4-5",
     "codex": "openai/gpt-5.2-codex",
     "opencode": "google/gemini-3-flash-preview",
 }
 
-API_KEYS = {  # agent -> env vars, any one of which authenticates it
-    "claude-code": ("ANTHROPIC_API_KEY", "CLAUDE_CODE_OAUTH_TOKEN"),
-    "codex": ("OPENAI_API_KEY",),
+AUTH = {  # agent -> (env vars, subscription login file); either authenticates
+    "claude": (("ANTHROPIC_API_KEY", "CLAUDE_CODE_OAUTH_TOKEN"), "~/.claude/.credentials.json"),
+    "codex": (("OPENAI_API_KEY",), "~/.codex/auth.json"),
 }
 
 FRONTMATTER_RE = re.compile(r"^(---\n.*?\n---\n)(.*)$", re.DOTALL)
@@ -124,14 +124,7 @@ def bench_command(args, condition):
     model = args.model or AGENTS.get(args.agent)
     if model:
         cmd += ["--model", model]
-    token = os.environ.get("CLAUDE_CODE_OAUTH_TOKEN")
-    if args.agent == "claude-code" and token:
-        cmd += ["--agent-env", f"CLAUDE_CODE_OAUTH_TOKEN={token}"]
     return cmd
-
-
-def shown(cmd):
-    return " ".join(re.sub(r"(CLAUDE_CODE_OAUTH_TOKEN=).+", r"\1...", arg) for arg in cmd)
 
 
 def preflight(args, conditions):
@@ -140,9 +133,13 @@ def preflight(args, conditions):
             sys.exit(f"build/{condition} missing - run: python3 experiment.py build")
     if not shutil.which("bench"):
         sys.exit("bench CLI not found - run: make setup")
-    keys = API_KEYS.get(args.agent, ())
-    if keys and not any(os.environ.get(k) for k in keys):
-        sys.exit(f"none of {' / '.join(keys)} set (needed by {args.agent})")
+    keys, login_file = AUTH.get(args.agent, ((), None))
+    if any(os.environ.get(k) for k in keys):
+        return
+    if login_file and Path(login_file).expanduser().is_file():
+        return  # benchflow detects the login and bills the subscription
+    if keys:
+        sys.exit(f"{args.agent} needs one of {' / '.join(keys)}, or a login at {login_file}")
 
 
 def cmd_run(args):
@@ -155,12 +152,12 @@ def cmd_run(args):
     if not args.execute:
         print("dry run - would execute (pass --execute to run):\n")
         for cmd in commands:
-            print(shown(cmd))
+            print(" ".join(cmd))
         return
 
     preflight(args, conditions)
     for i, cmd in enumerate(commands, 1):
-        print(f"\n[{i}/{len(commands)}] {shown(cmd)}")
+        print(f"\n[{i}/{len(commands)}] {' '.join(cmd)}")
         result = subprocess.run(cmd)
         if result.returncode != 0:
             print(f"warning: exited with code {result.returncode}", file=sys.stderr)
@@ -229,7 +226,7 @@ def main():
     sub.add_parser("build", help="copy selected tasks into build/<condition>/ with phrases injected")
 
     run = sub.add_parser("run", help="run bench eval per condition (dry run unless --execute)")
-    run.add_argument("--agent", default="claude-code", help=f"agent name ({', '.join(AGENTS)}, ...)")
+    run.add_argument("--agent", default="claude", help=f"agent name ({', '.join(AGENTS)}, ...)")
     run.add_argument("--model", help="model id (default: agent's entry in AGENTS)")
     run.add_argument("--conditions", nargs="*", help="subset of conditions (default: all)")
     run.add_argument("--trials", type=int, default=1, help="repeat each condition N times")

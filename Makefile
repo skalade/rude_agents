@@ -1,4 +1,4 @@
-AGENT ?= claude-code
+AGENT ?= claude
 TRIALS ?= 1
 
 setup:  ## install uv + the benchflow CLI (provides `bench`)

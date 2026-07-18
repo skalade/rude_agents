@@ -20,11 +20,12 @@ export ANTHROPIC_API_KEY=...  # claude-code; OPENAI_API_KEY for codex, etc.
 
 Docker is required (tasks run in `--sandbox docker`).
 
-To bill claude-code runs to a Claude subscription instead of API credits:
-`claude setup-token`, then `export CLAUDE_CODE_OAUTH_TOKEN=<token>` (e.g. in
-`.envrc`, gitignored). `run` forwards the token into the sandbox via
-`--agent-env`. Subscription runs share your 5-hour usage window, so use
-`--concurrency 1` and expect the full grid to span several windows on Pro.
+To bill runs to a subscription instead of API credits, just don't set the
+API key: benchflow detects a host login (`~/.claude/.credentials.json` from
+`claude login`; `~/.codex/auth.json` for codex) and uses it natively,
+skipping its LiteLLM proxy. Subscription runs share your 5-hour usage
+window, so use `--concurrency 1` and expect the full grid to span several
+windows on Pro.
 
 ## Workflow
 
@@ -32,7 +33,7 @@ To bill claude-code runs to a Claude subscription instead of API credits:
 make list          # browse all 87 tasks; edit tasks.txt to change the subset
 make build         # build/<condition>/<task>/ with phrases injected
 make run           # dry run: prints the bench commands
-make run EXECUTE=1 AGENT=claude-code TRIALS=3
+make run EXECUTE=1 AGENT=claude TRIALS=3
 make run EXECUTE=1 AGENT=codex
 make run EXECUTE=1 AGENT=opencode   # --model to pick an open-weight model
 make report        # summary table + row-level results.csv
