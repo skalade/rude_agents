@@ -13,6 +13,7 @@ Workflow: list -> (edit tasks.txt) -> build -> run -> report
 import argparse
 import csv
 import json
+import os
 import re
 import shutil
 import subprocess
@@ -41,9 +42,9 @@ AGENTS = {  # agent name -> default model (override with --model)
     "opencode": "google/gemini-3-flash-preview",
 }
 
-API_KEYS = {
-    "claude-code": "ANTHROPIC_API_KEY",
-    "codex": "OPENAI_API_KEY",
+API_KEYS = {  # agent -> env vars, any one of which authenticates it
+    "claude-code": ("ANTHROPIC_API_KEY", "CLAUDE_CODE_OAUTH_TOKEN"),
+    "codex": ("OPENAI_API_KEY",),
 }
 
 FRONTMATTER_RE = re.compile(r"^(---\n.*?\n---\n)(.*)$", re.DOTALL)
@@ -123,20 +124,25 @@ def bench_command(args, condition):
     model = args.model or AGENTS.get(args.agent)
     if model:
         cmd += ["--model", model]
+    token = os.environ.get("CLAUDE_CODE_OAUTH_TOKEN")
+    if args.agent == "claude-code" and token:
+        cmd += ["--agent-env", f"CLAUDE_CODE_OAUTH_TOKEN={token}"]
     return cmd
 
 
-def preflight(args, conditions):
-    import os
+def shown(cmd):
+    return " ".join(re.sub(r"(CLAUDE_CODE_OAUTH_TOKEN=).+", r"\1...", arg) for arg in cmd)
 
+
+def preflight(args, conditions):
     for condition in conditions:
         if not (BUILD_DIR / condition).is_dir():
             sys.exit(f"build/{condition} missing - run: python3 experiment.py build")
     if not shutil.which("bench"):
         sys.exit("bench CLI not found - run: make setup")
-    key = API_KEYS.get(args.agent)
-    if key and not os.environ.get(key):
-        sys.exit(f"{key} not set (needed by {args.agent})")
+    keys = API_KEYS.get(args.agent, ())
+    if keys and not any(os.environ.get(k) for k in keys):
+        sys.exit(f"none of {' / '.join(keys)} set (needed by {args.agent})")
 
 
 def cmd_run(args):
@@ -149,12 +155,12 @@ def cmd_run(args):
     if not args.execute:
         print("dry run - would execute (pass --execute to run):\n")
         for cmd in commands:
-            print(" ".join(cmd))
+            print(shown(cmd))
         return
 
     preflight(args, conditions)
     for i, cmd in enumerate(commands, 1):
-        print(f"\n[{i}/{len(commands)}] {' '.join(cmd)}")
+        print(f"\n[{i}/{len(commands)}] {shown(cmd)}")
         result = subprocess.run(cmd)
         if result.returncode != 0:
             print(f"warning: exited with code {result.returncode}", file=sys.stderr)
