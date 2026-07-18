@@ -20,6 +20,12 @@ export ANTHROPIC_API_KEY=...  # claude-code; OPENAI_API_KEY for codex, etc.
 
 Docker is required (tasks run in `--sandbox docker`).
 
+To bill claude-code runs to a Claude subscription instead of API credits:
+`claude setup-token`, then `export CLAUDE_CODE_OAUTH_TOKEN=<token>` (e.g. in
+`.envrc`, gitignored). `run` forwards the token into the sandbox via
+`--agent-env`. Subscription runs share your 5-hour usage window, so use
+`--concurrency 1` and expect the full grid to span several windows on Pro.
+
 ## Workflow
 
 ```bash
