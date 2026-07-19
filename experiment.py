@@ -111,7 +111,12 @@ def cmd_build(args):
         print(f"built {condition_dir.relative_to(ROOT)} ({len(tasks)} tasks)")
 
 
-def bench_command(args, condition):
+def bench_command(args, condition, trial=1):
+    # Trials 2+ get their own jobs dir: bench resumes (skips) completed work
+    # in an existing dir, so rerunning into trial 1's dir would be a no-op.
+    jobs_dir = JOBS_DIR / args.agent / condition
+    if trial > 1:
+        jobs_dir = jobs_dir / f"t{trial}"
     cmd = [
         "bench", "eval", "run",
         "--tasks-dir", str(BUILD_DIR / condition),
@@ -119,7 +124,7 @@ def bench_command(args, condition):
         "--sandbox", args.sandbox,
         "--skill-mode", args.skill_mode,
         "--concurrency", str(args.concurrency),
-        "--jobs-dir", str(JOBS_DIR / args.agent / condition),
+        "--jobs-dir", str(jobs_dir),
     ]
     model = args.model or AGENTS.get(args.agent)
     if model:
@@ -148,7 +153,11 @@ def cmd_run(args):
         if condition not in CONDITIONS:
             sys.exit(f"unknown condition: {condition} (have: {', '.join(CONDITIONS)})")
 
-    commands = [bench_command(args, c) for c in conditions] * args.trials
+    commands = [
+        bench_command(args, c, t)
+        for t in range(1, args.trials + 1)
+        for c in conditions
+    ]
     if not args.execute:
         print("dry run - would execute (pass --execute to run):\n")
         for cmd in commands:
@@ -156,11 +165,21 @@ def cmd_run(args):
         return
 
     preflight(args, conditions)
+    clean_errored(args.agent, conditions)
     for i, cmd in enumerate(commands, 1):
         print(f"\n[{i}/{len(commands)}] {' '.join(cmd)}")
         result = subprocess.run(cmd)
         if result.returncode != 0:
             print(f"warning: exited with code {result.returncode}", file=sys.stderr)
+
+
+def clean_errored(agent, conditions):
+    """Delete unscored trial dirs so bench reruns them on resume."""
+    for condition in conditions:
+        for result_path in (JOBS_DIR / agent / condition).glob("**/result.json"):
+            if json.loads(result_path.read_text()).get("rewards") is None:
+                shutil.rmtree(result_path.parent)
+                print(f"cleaned errored trial: {result_path.parent.relative_to(JOBS_DIR)}")
 
 
 def parse_reward(result):
@@ -185,11 +204,14 @@ def task_name_for(result, result_path):
 def collect_results():
     rows = []
     for result_path in sorted(JOBS_DIR.glob("*/*/**/result.json")):
-        agent, condition = result_path.relative_to(JOBS_DIR).parts[:2]
+        parts = result_path.relative_to(JOBS_DIR).parts
+        agent, condition = parts[:2]
+        trial = int(parts[2][1:]) if parts[2].startswith("t") and parts[2][1:].isdigit() else 1
         result = json.loads(result_path.read_text())
         rows.append({
             "agent": agent,
             "condition": condition,
+            "trial": trial,
             "task": task_name_for(result, result_path),
             "reward": parse_reward(result),
             "n_tool_calls": result.get("n_tool_calls"),
