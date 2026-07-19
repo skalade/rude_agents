@@ -20,12 +20,15 @@ export ANTHROPIC_API_KEY=...  # claude-code; OPENAI_API_KEY for codex, etc.
 
 Docker is required (tasks run in `--sandbox docker`).
 
-To bill runs to a subscription instead of API credits, just don't set the
-API key: benchflow detects a host login (`~/.claude/.credentials.json` from
-`claude login`; `~/.codex/auth.json` for codex) and uses it natively,
-skipping its LiteLLM proxy. Subscription runs share your 5-hour usage
-window, so use `--concurrency 1` and expect the full grid to span several
-windows on Pro.
+To bill runs to a subscription instead of API credits, don't set the API
+key. Prefer a long-lived token: `claude setup-token`, put the result in
+`.envrc` (gitignored) as `export CLAUDE_CODE_OAUTH_TOKEN=...`, and
+`source .envrc` before running — benchflow forwards it into the sandbox
+automatically. (Without it, benchflow copies `~/.claude/.credentials.json`
+from `claude login` into each sandbox; that works until the access token
+expires mid-run, at which point a sandbox refresh revokes the host login.)
+Subscription runs share your 5-hour usage window, so use `--concurrency 1`
+and expect the full grid to span several windows on Pro.
 
 ## Workflow
 
