@@ -111,12 +111,15 @@ def cmd_build(args):
         print(f"built {condition_dir.relative_to(ROOT)} ({len(tasks)} tasks)")
 
 
-def bench_command(args, condition, trial=1):
+def trial_jobs_dir(args, condition, trial):
     # Trials 2+ get their own jobs dir: bench resumes (skips) completed work
     # in an existing dir, so rerunning into trial 1's dir would be a no-op.
     jobs_dir = JOBS_DIR / args.agent / condition
-    if trial > 1:
-        jobs_dir = jobs_dir / f"t{trial}"
+    return jobs_dir if trial == 1 else jobs_dir / f"t{trial}"
+
+
+def bench_command(args, condition, trial=1):
+    jobs_dir = trial_jobs_dir(args, condition, trial)
     cmd = [
         "bench", "eval", "run",
         "--tasks-dir", str(BUILD_DIR / condition),
@@ -165,7 +168,7 @@ def cmd_run(args):
         return
 
     preflight(args, conditions)
-    clean_errored(args.agent, conditions)
+    reset_incomplete(args, conditions)
     for i, cmd in enumerate(commands, 1):
         print(f"\n[{i}/{len(commands)}] {' '.join(cmd)}")
         result = subprocess.run(cmd)
@@ -173,13 +176,23 @@ def cmd_run(args):
             print(f"warning: exited with code {result.returncode}", file=sys.stderr)
 
 
-def clean_errored(agent, conditions):
-    """Delete unscored trial dirs so bench reruns them on resume."""
-    for condition in conditions:
-        for result_path in (JOBS_DIR / agent / condition).glob("**/result.json"):
-            if json.loads(result_path.read_text()).get("rewards") is None:
-                shutil.rmtree(result_path.parent)
-                print(f"cleaned errored trial: {result_path.parent.relative_to(JOBS_DIR)}")
+def reset_incomplete(args, conditions):
+    """Wipe any trial dir holding an unscored run, so it reruns from scratch.
+
+    Deleting individual failed task dirs instead leaves bench a partial job
+    root that it resumes *into*, nesting later runs under a surviving task
+    dir and double-counting tasks. A trial is only ~10 runs; redo it whole.
+    """
+    for trial in range(1, args.trials + 1):
+        for condition in conditions:
+            jobs_dir = trial_jobs_dir(args, condition, trial)
+            unscored = any(
+                json.loads(p.read_text()).get("rewards") is None
+                for p in jobs_dir.glob("**/result.json")
+            )
+            if unscored:
+                shutil.rmtree(jobs_dir)
+                print(f"reset incomplete trial: {jobs_dir.relative_to(JOBS_DIR)}")
 
 
 def parse_reward(result):
@@ -230,13 +243,20 @@ def cmd_report(args):
         writer.writeheader()
         writer.writerows(rows)
 
-    print(f"{'agent':15} {'condition':12} {'n':>4} {'scored':>7} {'mean reward':>12}")
-    cells = sorted({(r["agent"], r["condition"]) for r in rows})
-    for agent, condition in cells:
-        cell = [r for r in rows if r["agent"] == agent and r["condition"] == condition]
-        scored = [r["reward"] for r in cell if r["reward"] is not None]
-        mean = f"{sum(scored) / len(scored):.3f}" if scored else "-"
-        print(f"{agent:15} {condition:12} {len(cell):>4} {len(scored):>7} {mean:>12}")
+    print(f"{'agent':15} {'condition':12} {'runs':>5} {'tasks':>6} {'score':>7}")
+    for agent, condition in sorted({(r["agent"], r["condition"]) for r in rows}):
+        scored = [
+            r for r in rows
+            if r["agent"] == agent and r["condition"] == condition and r["reward"] is not None
+        ]
+        # Average per task first: repeat/retried runs would otherwise let an
+        # over-sampled task dominate a condition's mean.
+        by_task = {}
+        for r in scored:
+            by_task.setdefault(r["task"], []).append(r["reward"])
+        task_means = [sum(v) / len(v) for v in by_task.values()]
+        score = f"{sum(task_means) / len(task_means):.3f}" if task_means else "-"
+        print(f"{agent:15} {condition:12} {len(scored):>5} {len(by_task):>6} {score:>7}")
     print(f"\nrow-level data written to {RESULTS_CSV.name}")
 
 
