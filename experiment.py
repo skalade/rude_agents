@@ -171,9 +171,30 @@ def cmd_run(args):
     reset_incomplete(args, conditions)
     for i, cmd in enumerate(commands, 1):
         print(f"\n[{i}/{len(commands)}] {' '.join(cmd)}")
-        result = subprocess.run(cmd)
-        if result.returncode != 0:
-            print(f"warning: exited with code {result.returncode}", file=sys.stderr)
+        if run_one(cmd) == "limit":
+            # The usage window is spent; every remaining command would just
+            # spin through the same auth error. Stop and let the caller wait
+            # for the reset instead of erroring for hours.
+            print("usage limit reached - stopping this run", file=sys.stderr)
+            sys.exit(2)
+
+
+USAGE_LIMIT_MARKERS = ("session limit", "hit your", "usage limit")
+
+
+def run_one(cmd):
+    """Run a bench command, streaming output; return 'limit' if the run hit
+    the subscription usage cap, else None."""
+    hit_limit = False
+    process = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True)
+    for line in process.stdout:
+        sys.stdout.write(line)
+        if any(marker in line for marker in USAGE_LIMIT_MARKERS):
+            hit_limit = True
+    process.wait()
+    if process.returncode != 0 and not hit_limit:
+        print(f"warning: exited with code {process.returncode}", file=sys.stderr)
+    return "limit" if hit_limit else None
 
 
 def reset_incomplete(args, conditions):
