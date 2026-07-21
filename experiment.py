@@ -112,10 +112,10 @@ def cmd_build(args):
 
 
 def trial_jobs_dir(args, condition, trial):
-    # Trials 2+ get their own jobs dir: bench resumes (skips) completed work
-    # in an existing dir, so rerunning into trial 1's dir would be a no-op.
-    jobs_dir = JOBS_DIR / args.agent / condition
-    return jobs_dir if trial == 1 else jobs_dir / f"t{trial}"
+    # Every trial (t1 included) gets its own leaf dir. Nesting t2/t3 *under*
+    # t1's dir made reset_incomplete's recursive glob for t1 see the other
+    # trials and wipe them all; sibling leaves keep each trial isolated.
+    return JOBS_DIR / args.agent / condition / f"t{trial}"
 
 
 def bench_command(args, condition, trial=1):
