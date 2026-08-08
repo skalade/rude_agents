@@ -8,6 +8,7 @@ tasks with the same phrase injected at the top of every task description:
 |-------------|-----------------|
 | `baseline`  | (none — unmodified benchmark) |
 | `important` | "This is very important to me, please make no mistakes." |
+| `insult`    | "Just do it right you piece of shit" |
 | `threat`    | "If you don't do this perfectly I will jump into a bathtub and electrocute myself with a toaster." |
 
 ## Setup
@@ -16,6 +17,7 @@ tasks with the same phrase injected at the top of every task description:
 git submodule update --init   # skillsbench, pinned
 make setup                    # installs uv + the benchflow `bench` CLI
 export ANTHROPIC_API_KEY=...  # claude-code; OPENAI_API_KEY for codex, etc.
+export OPENROUTER_API_KEY=... # opencode + DeepSeek V4 Pro
 ```
 
 Docker is required (tasks run in `--sandbox docker`).
@@ -38,10 +40,16 @@ make build         # build/<condition>/<task>/ with phrases injected
 make run           # dry run: prints the bench commands
 make run EXECUTE=1 AGENT=claude TRIALS=3
 make run EXECUTE=1 AGENT=codex
-make run EXECUTE=1 AGENT=opencode   # --model to pick an open-weight model
+make run EXECUTE=1 AGENT=opencode TRIALS=3 # DeepSeek V4 Pro via OpenRouter
 make report        # summary table + row-level results.csv
 ```
 
 Cost knobs: the subset in `tasks.txt` (default: 10 tasks with agent
 timeouts <= 900s), `TRIALS`, and `--conditions baseline threat` to skip a
 condition. Default models per agent live in `AGENTS` in `experiment.py`.
+
+All harnesses run at the same named reasoning level (`high` by default). The
+runner translates that setting to Claude Code's `CLAUDE_CODE_EFFORT_LEVEL`,
+Codex's `model_reasoning_effort`, and OpenCode's provider-level
+`reasoningEffort`. Only `low` and `high` are accepted because those levels are supported by all three model
+families. Override the shared level with `make run REASONING_EFFORT=low`.

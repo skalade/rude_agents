@@ -2,11 +2,12 @@
 # Picked for low cost (agent timeout <= 900s) and category spread.
 # `python3 experiment.py list` shows all 87 tasks; edit freely and re-run build.
 
+# Selected tasks. Uncomment additional tasks to expand the run.
+dialogue-parser                 # easy    software-engineering 900s
+earthquake-plate-calculation    # medium  natural-science      900s
 bike-rebalance                  # medium  math                 900s  no-network
 travel-planning                 # medium  math                 600s
-dialogue-parser                 # easy    software-engineering 900s
 jax-computing-basics            # medium  software-engineering 600s
-earthquake-plate-calculation    # medium  natural-science      900s
 lake-warming-attribution        # medium  natural-science      300s
 weighted-gdp-calc               # medium  finance              900s
 xlsx-recover-data               # medium  finance              600s
