@@ -1,5 +1,6 @@
 build/
 jobs/
+jobs_retries/
 results.csv
 __pycache__/
 .envrc

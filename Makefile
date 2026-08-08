@@ -1,5 +1,6 @@
 AGENT ?= claude
 TRIALS ?= 1
+REASONING_EFFORT ?= high
 
 setup:  ## install uv + the benchflow CLI (provides `bench`)
 	command -v uv >/dev/null || curl -LsSf https://astral.sh/uv/install.sh | sh
@@ -12,7 +13,7 @@ build:  ## materialize build/<condition>/ with phrases injected
 	python3 experiment.py build
 
 run:  ## print bench commands; EXECUTE=1 to actually run (make run AGENT=codex TRIALS=3)
-	python3 experiment.py run --agent $(AGENT) --trials $(TRIALS) $(if $(EXECUTE),--execute)
+	python3 experiment.py run --agent $(AGENT) --trials $(TRIALS) --reasoning-effort $(REASONING_EFFORT) $(if $(EXECUTE),--execute)
 
 report:  ## aggregate jobs/ into results.csv + summary table
 	python3 experiment.py report
