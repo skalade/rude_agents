@@ -43,6 +43,7 @@ AGENTS = {  # agent name -> default model (override with --model)
     "claude": "claude-sonnet-5",
     "codex": "gpt-5.6-terra",
     "opencode": "openrouter/deepseek/deepseek-v4-pro",
+    "openhands": "openrouter/deepseek/deepseek-v4-pro",
 }
 
 # The vendors expose different configuration surfaces, but "low" and "high"
@@ -55,6 +56,7 @@ AUTH = {  # agent -> (env vars, subscription login file); either authenticates
     "claude": (("ANTHROPIC_API_KEY", "CLAUDE_CODE_OAUTH_TOKEN"), "~/.claude/.credentials.json"),
     "codex": (("OPENAI_API_KEY",), "~/.codex/auth.json"),
     "opencode": (("OPENROUTER_API_KEY",), None),
+    "openhands": (("OPENROUTER_API_KEY", "LLM_API_KEY"), None),
 }
 
 FRONTMATTER_RE = re.compile(r"^(---\n.*?\n---\n)(.*)$", re.DOTALL)
@@ -146,6 +148,14 @@ def reasoning_args(agent, model, effort):
             "--agent-env", f"CODEX_MODEL={model}",
             "--agent-env", f"CODEX_CONFIG={config}",
         ]
+
+    if agent == "openhands":
+        # OpenHands exposes no effort flag of its own, but it reaches the model
+        # through benchflow's LiteLLM gateway, which honours this env var
+        # (providers/litellm_config.py::_provider_reasoning_effort). Setting it
+        # gateway-side pins the effort instead of inheriting OpenHands' own
+        # default of "high", so a --reasoning-effort low run is really low.
+        return ["--agent-env", f"BENCHFLOW_REASONING_EFFORT={effort}"]
 
     if agent == "opencode":
         if not model.startswith("openrouter/"):
