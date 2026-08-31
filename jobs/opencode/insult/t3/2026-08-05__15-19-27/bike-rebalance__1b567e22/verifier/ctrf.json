@@ -1,0 +1,220 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 20,
+            "passed": 0,
+            "failed": 20,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1785965785.877614,
+            "stop": 1785965786.1193354
+        },
+        "tests": [
+            {
+                "name": "::TestSchema::test_top_level_fields",
+                "status": "failed",
+                "duration": 0.0004387109656818211,
+                "start": 1785965785.9168084,
+                "stop": 1785965785.935542,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py",
+                "trace": "@pytest.fixture(scope=\"module\")\n    def report() -> dict[str, Any]:\n        \"\"\"Load the submitted report.json.\"\"\"\n>       assert Path(OUTPUT_FILE).exists(), f\"Output file {OUTPUT_FILE} does not exist\"\nE       AssertionError: Output file /root/report.json does not exist\nE       assert False\nE        +  where False = exists()\nE        +    where exists = PosixPath('/root/report.json').exists\nE        +      where PosixPath('/root/report.json') = Path('/root/report.json')\n\n/verifier/test_outputs.py:435: AssertionError"
+            },
+            {
+                "name": "::TestSchema::test_summary_fields",
+                "status": "failed",
+                "duration": 0.00022537700715474784,
+                "start": 1785965785.9357367,
+                "stop": 1785965785.9465055,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py",
+                "trace": "@pytest.fixture(scope=\"module\")\n    def report() -> dict[str, Any]:\n        \"\"\"Load the submitted report.json.\"\"\"\n>       assert Path(OUTPUT_FILE).exists(), f\"Output file {OUTPUT_FILE} does not exist\"\nE       AssertionError: Output file /root/report.json does not exist\nE       assert False\nE        +  where False = exists()\nE        +    where exists = PosixPath('/root/report.json').exists\nE        +      where PosixPath('/root/report.json') = Path('/root/report.json')\n\n/verifier/test_outputs.py:435: AssertionError"
+            },
+            {
+                "name": "::TestSchema::test_vehicle_entries_and_ids",
+                "status": "failed",
+                "duration": 0.00022592800087295473,
+                "start": 1785965785.9466438,
+                "stop": 1785965785.9569132,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py",
+                "trace": "@pytest.fixture(scope=\"module\")\n    def report() -> dict[str, Any]:\n        \"\"\"Load the submitted report.json.\"\"\"\n>       assert Path(OUTPUT_FILE).exists(), f\"Output file {OUTPUT_FILE} does not exist\"\nE       AssertionError: Output file /root/report.json does not exist\nE       assert False\nE        +  where False = exists()\nE        +    where exists = PosixPath('/root/report.json').exists\nE        +      where PosixPath('/root/report.json') = Path('/root/report.json')\n\n/verifier/test_outputs.py:435: AssertionError"
+            },
+            {
+                "name": "::TestSchema::test_vehicle_fields",
+                "status": "failed",
+                "duration": 0.00022011803230270743,
+                "start": 1785965785.9570765,
+                "stop": 1785965785.9659076,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py",
+                "trace": "@pytest.fixture(scope=\"module\")\n    def report() -> dict[str, Any]:\n        \"\"\"Load the submitted report.json.\"\"\"\n>       assert Path(OUTPUT_FILE).exists(), f\"Output file {OUTPUT_FILE} does not exist\"\nE       AssertionError: Output file /root/report.json does not exist\nE       assert False\nE        +  where False = exists()\nE        +    where exists = PosixPath('/root/report.json').exists\nE        +      where PosixPath('/root/report.json') = Path('/root/report.json')\n\n/verifier/test_outputs.py:435: AssertionError"
+            },
+            {
+                "name": "::TestSchema::test_stop_fields",
+                "status": "failed",
+                "duration": 0.00021328398725017905,
+                "start": 1785965785.9660609,
+                "stop": 1785965785.9751463,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py",
+                "trace": "@pytest.fixture(scope=\"module\")\n    def report() -> dict[str, Any]:\n        \"\"\"Load the submitted report.json.\"\"\"\n>       assert Path(OUTPUT_FILE).exists(), f\"Output file {OUTPUT_FILE} does not exist\"\nE       AssertionError: Output file /root/report.json does not exist\nE       assert False\nE        +  where False = exists()\nE        +    where exists = PosixPath('/root/report.json').exists\nE        +      where PosixPath('/root/report.json') = Path('/root/report.json')\n\n/verifier/test_outputs.py:435: AssertionError"
+            },
+            {
+                "name": "::TestSchema::test_station_entries_and_fields",
+                "status": "failed",
+                "duration": 0.00023581500863656402,
+                "start": 1785965785.9752913,
+                "stop": 1785965785.984511,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py",
+                "trace": "@pytest.fixture(scope=\"module\")\n    def report() -> dict[str, Any]:\n        \"\"\"Load the submitted report.json.\"\"\"\n>       assert Path(OUTPUT_FILE).exists(), f\"Output file {OUTPUT_FILE} does not exist\"\nE       AssertionError: Output file /root/report.json does not exist\nE       assert False\nE        +  where False = exists()\nE        +    where exists = PosixPath('/root/report.json').exists\nE        +      where PosixPath('/root/report.json') = Path('/root/report.json')\n\n/verifier/test_outputs.py:435: AssertionError"
+            },
+            {
+                "name": "::TestRoutes::test_routes_start_and_end_at_depots",
+                "status": "failed",
+                "duration": 0.00020815499010495842,
+                "start": 1785965785.984676,
+                "stop": 1785965785.9953969,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py",
+                "trace": "@pytest.fixture(scope=\"module\")\n    def report() -> dict[str, Any]:\n        \"\"\"Load the submitted report.json.\"\"\"\n>       assert Path(OUTPUT_FILE).exists(), f\"Output file {OUTPUT_FILE} does not exist\"\nE       AssertionError: Output file /root/report.json does not exist\nE       assert False\nE        +  where False = exists()\nE        +    where exists = PosixPath('/root/report.json').exists\nE        +      where PosixPath('/root/report.json') = Path('/root/report.json')\n\n/verifier/test_outputs.py:435: AssertionError"
+            },
+            {
+                "name": "::TestRoutes::test_all_route_stations_exist",
+                "status": "failed",
+                "duration": 0.00022323199664242566,
+                "start": 1785965785.9955401,
+                "stop": 1785965786.0071788,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py",
+                "trace": "@pytest.fixture(scope=\"module\")\n    def report() -> dict[str, Any]:\n        \"\"\"Load the submitted report.json.\"\"\"\n>       assert Path(OUTPUT_FILE).exists(), f\"Output file {OUTPUT_FILE} does not exist\"\nE       AssertionError: Output file /root/report.json does not exist\nE       assert False\nE        +  where False = exists()\nE        +    where exists = PosixPath('/root/report.json').exists\nE        +      where PosixPath('/root/report.json') = Path('/root/report.json')\n\n/verifier/test_outputs.py:435: AssertionError"
+            },
+            {
+                "name": "::TestRoutes::test_stops_match_non_depot_route_sequence",
+                "status": "failed",
+                "duration": 0.00020132301142439246,
+                "start": 1785965786.0073445,
+                "stop": 1785965786.0161655,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py",
+                "trace": "@pytest.fixture(scope=\"module\")\n    def report() -> dict[str, Any]:\n        \"\"\"Load the submitted report.json.\"\"\"\n>       assert Path(OUTPUT_FILE).exists(), f\"Output file {OUTPUT_FILE} does not exist\"\nE       AssertionError: Output file /root/report.json does not exist\nE       assert False\nE        +  where False = exists()\nE        +    where exists = PosixPath('/root/report.json').exists\nE        +      where PosixPath('/root/report.json') = Path('/root/report.json')\n\n/verifier/test_outputs.py:435: AssertionError"
+            },
+            {
+                "name": "::TestRoutes::test_no_subtour_or_repeated_station_within_vehicle",
+                "status": "failed",
+                "duration": 0.00018842797726392746,
+                "start": 1785965786.0162945,
+                "stop": 1785965786.0248973,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py",
+                "trace": "@pytest.fixture(scope=\"module\")\n    def report() -> dict[str, Any]:\n        \"\"\"Load the submitted report.json.\"\"\"\n>       assert Path(OUTPUT_FILE).exists(), f\"Output file {OUTPUT_FILE} does not exist\"\nE       AssertionError: Output file /root/report.json does not exist\nE       assert False\nE        +  where False = exists()\nE        +    where exists = PosixPath('/root/report.json').exists\nE        +      where PosixPath('/root/report.json') = Path('/root/report.json')\n\n/verifier/test_outputs.py:435: AssertionError"
+            },
+            {
+                "name": "::TestVehicleBikeFlow::test_load_transitions_match_pickups_and_dropoffs",
+                "status": "failed",
+                "duration": 0.00017163701704703271,
+                "start": 1785965786.0250175,
+                "stop": 1785965786.0335975,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py",
+                "trace": "@pytest.fixture(scope=\"module\")\n    def report() -> dict[str, Any]:\n        \"\"\"Load the submitted report.json.\"\"\"\n>       assert Path(OUTPUT_FILE).exists(), f\"Output file {OUTPUT_FILE} does not exist\"\nE       AssertionError: Output file /root/report.json does not exist\nE       assert False\nE        +  where False = exists()\nE        +    where exists = PosixPath('/root/report.json').exists\nE        +      where PosixPath('/root/report.json') = Path('/root/report.json')\n\n/verifier/test_outputs.py:435: AssertionError"
+            },
+            {
+                "name": "::TestVehicleBikeFlow::test_vehicle_loads_within_capacity",
+                "status": "failed",
+                "duration": 0.00020621102885343134,
+                "start": 1785965786.0337183,
+                "stop": 1785965786.042529,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py",
+                "trace": "@pytest.fixture(scope=\"module\")\n    def report() -> dict[str, Any]:\n        \"\"\"Load the submitted report.json.\"\"\"\n>       assert Path(OUTPUT_FILE).exists(), f\"Output file {OUTPUT_FILE} does not exist\"\nE       AssertionError: Output file /root/report.json does not exist\nE       assert False\nE        +  where False = exists()\nE        +    where exists = PosixPath('/root/report.json').exists\nE        +      where PosixPath('/root/report.json') = Path('/root/report.json')\n\n/verifier/test_outputs.py:435: AssertionError"
+            },
+            {
+                "name": "::TestVehicleBikeFlow::test_no_over_dropoff_or_capacity_overfill_at_stop",
+                "status": "failed",
+                "duration": 0.00020158200641162694,
+                "start": 1785965786.0426722,
+                "stop": 1785965786.0511024,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py",
+                "trace": "@pytest.fixture(scope=\"module\")\n    def report() -> dict[str, Any]:\n        \"\"\"Load the submitted report.json.\"\"\"\n>       assert Path(OUTPUT_FILE).exists(), f\"Output file {OUTPUT_FILE} does not exist\"\nE       AssertionError: Output file /root/report.json does not exist\nE       assert False\nE        +  where False = exists()\nE        +    where exists = PosixPath('/root/report.json').exists\nE        +      where PosixPath('/root/report.json') = Path('/root/report.json')\n\n/verifier/test_outputs.py:435: AssertionError"
+            },
+            {
+                "name": "::TestStationBalances::test_station_aggregates_match_route_stops",
+                "status": "failed",
+                "duration": 0.00023493499611504376,
+                "start": 1785965786.0512419,
+                "stop": 1785965786.0602396,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py",
+                "trace": "@pytest.fixture(scope=\"module\")\n    def report() -> dict[str, Any]:\n        \"\"\"Load the submitted report.json.\"\"\"\n>       assert Path(OUTPUT_FILE).exists(), f\"Output file {OUTPUT_FILE} does not exist\"\nE       AssertionError: Output file /root/report.json does not exist\nE       assert False\nE        +  where False = exists()\nE        +    where exists = PosixPath('/root/report.json').exists\nE        +      where PosixPath('/root/report.json') = Path('/root/report.json')\n\n/verifier/test_outputs.py:435: AssertionError"
+            },
+            {
+                "name": "::TestStationBalances::test_station_inventory_and_capacity",
+                "status": "failed",
+                "duration": 0.00021743300021626055,
+                "start": 1785965786.0604057,
+                "stop": 1785965786.0693023,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py",
+                "trace": "@pytest.fixture(scope=\"module\")\n    def report() -> dict[str, Any]:\n        \"\"\"Load the submitted report.json.\"\"\"\n>       assert Path(OUTPUT_FILE).exists(), f\"Output file {OUTPUT_FILE} does not exist\"\nE       AssertionError: Output file /root/report.json does not exist\nE       assert False\nE        +  where False = exists()\nE        +    where exists = PosixPath('/root/report.json').exists\nE        +      where PosixPath('/root/report.json') = Path('/root/report.json')\n\n/verifier/test_outputs.py:435: AssertionError"
+            },
+            {
+                "name": "::TestStationBalances::test_station_net_change_and_unmet_amount",
+                "status": "failed",
+                "duration": 0.00023731900728307664,
+                "start": 1785965786.0694897,
+                "stop": 1785965786.078754,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py",
+                "trace": "@pytest.fixture(scope=\"module\")\n    def report() -> dict[str, Any]:\n        \"\"\"Load the submitted report.json.\"\"\"\n>       assert Path(OUTPUT_FILE).exists(), f\"Output file {OUTPUT_FILE} does not exist\"\nE       AssertionError: Output file /root/report.json does not exist\nE       assert False\nE        +  where False = exists()\nE        +    where exists = PosixPath('/root/report.json').exists\nE        +      where PosixPath('/root/report.json') = Path('/root/report.json')\n\n/verifier/test_outputs.py:435: AssertionError"
+            },
+            {
+                "name": "::TestObjectiveConsistency::test_travel_distance_matches_route_geometry",
+                "status": "failed",
+                "duration": 0.00019778599380515516,
+                "start": 1785965786.078923,
+                "stop": 1785965786.0876126,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py",
+                "trace": "@pytest.fixture(scope=\"module\")\n    def report() -> dict[str, Any]:\n        \"\"\"Load the submitted report.json.\"\"\"\n>       assert Path(OUTPUT_FILE).exists(), f\"Output file {OUTPUT_FILE} does not exist\"\nE       AssertionError: Output file /root/report.json does not exist\nE       assert False\nE        +  where False = exists()\nE        +    where exists = PosixPath('/root/report.json').exists\nE        +      where PosixPath('/root/report.json') = Path('/root/report.json')\n\n/verifier/test_outputs.py:435: AssertionError"
+            },
+            {
+                "name": "::TestObjectiveConsistency::test_unmet_penalty_matches_station_unmet",
+                "status": "failed",
+                "duration": 0.0002347240224480629,
+                "start": 1785965786.0877428,
+                "stop": 1785965786.0970716,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py",
+                "trace": "@pytest.fixture(scope=\"module\")\n    def report() -> dict[str, Any]:\n        \"\"\"Load the submitted report.json.\"\"\"\n>       assert Path(OUTPUT_FILE).exists(), f\"Output file {OUTPUT_FILE} does not exist\"\nE       AssertionError: Output file /root/report.json does not exist\nE       assert False\nE        +  where False = exists()\nE        +    where exists = PosixPath('/root/report.json').exists\nE        +      where PosixPath('/root/report.json') = Path('/root/report.json')\n\n/verifier/test_outputs.py:435: AssertionError"
+            },
+            {
+                "name": "::TestObjectiveConsistency::test_objective_matches_travel_plus_penalty",
+                "status": "failed",
+                "duration": 0.0002786749682854861,
+                "start": 1785965786.097256,
+                "stop": 1785965786.1094518,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py",
+                "trace": "@pytest.fixture(scope=\"module\")\n    def report() -> dict[str, Any]:\n        \"\"\"Load the submitted report.json.\"\"\"\n>       assert Path(OUTPUT_FILE).exists(), f\"Output file {OUTPUT_FILE} does not exist\"\nE       AssertionError: Output file /root/report.json does not exist\nE       assert False\nE        +  where False = exists()\nE        +    where exists = PosixPath('/root/report.json').exists\nE        +      where PosixPath('/root/report.json') = Path('/root/report.json')\n\n/verifier/test_outputs.py:435: AssertionError"
+            },
+            {
+                "name": "::TestOptimality::test_objective_is_no_worse_than_gap_limited_benchmark",
+                "status": "failed",
+                "duration": 0.00020820501958951354,
+                "start": 1785965786.1096194,
+                "stop": 1785965786.1191983,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py",
+                "trace": "@pytest.fixture(scope=\"module\")\n    def report() -> dict[str, Any]:\n        \"\"\"Load the submitted report.json.\"\"\"\n>       assert Path(OUTPUT_FILE).exists(), f\"Output file {OUTPUT_FILE} does not exist\"\nE       AssertionError: Output file /root/report.json does not exist\nE       assert False\nE        +  where False = exists()\nE        +    where exists = PosixPath('/root/report.json').exists\nE        +      where PosixPath('/root/report.json') = Path('/root/report.json')\n\n/verifier/test_outputs.py:435: AssertionError"
+            }
+        ]
+    }
+}

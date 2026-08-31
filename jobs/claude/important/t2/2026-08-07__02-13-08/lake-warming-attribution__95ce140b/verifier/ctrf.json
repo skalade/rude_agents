@@ -1,0 +1,41 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "9.0.2"
+        },
+        "summary": {
+            "tests": 2,
+            "passed": 1,
+            "failed": 1,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1786090913.3497891,
+            "stop": 1786090913.3699117
+        },
+        "tests": [
+            {
+                "name": "::TestLakeWarmingAttribution::test_trend_result",
+                "status": "passed",
+                "duration": 0.41698210407048464,
+                "start": 1786090913.3574133,
+                "stop": 1786090913.3580127,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::TestLakeWarmingAttribution::test_dominant_factor",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.5329460254870355,
+                "start": 1786090913.35813,
+                "stop": 1786090913.3698127,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py",
+                "trace": "self = <test_outputs.TestLakeWarmingAttribution object at 0x71d4db6e4200>\n\n    def test_dominant_factor(self):\n        \"\"\"Check that Heat is the dominant factor with ~49% contribution.\"\"\"\n        path = \"/root/output/dominant_factor.csv\"\n        assert os.path.exists(path), \"dominant_factor.csv not found\"\n    \n        with open(path, 'r') as f:\n            reader = csv.DictReader(f)\n            row = next(reader)\n>           assert row['variable'].lower() == 'heat'\nE           AssertionError: assert 'airtemplake' == 'heat'\nE             \nE             - heat\nE             + airtemplake\n\n/verifier/test_outputs.py:30: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            }
+        ]
+    }
+}

@@ -1,0 +1,123 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.3.4"
+        },
+        "summary": {
+            "tests": 10,
+            "passed": 9,
+            "failed": 0,
+            "skipped": 1,
+            "pending": 0,
+            "other": 0,
+            "start": 1785991312.3546948,
+            "stop": 1785991313.1323566
+        },
+        "tests": [
+            {
+                "name": "::TestPivotTableConfiguration::test_pivot_row_is_state",
+                "status": "passed",
+                "duration": 130.35570899955928,
+                "start": 1785991312.9032438,
+                "stop": 1785991313.0338295,
+                "retries": 3,
+                "file_path": "../verifier/test_outputs.py",
+                "tags": [
+                    "parametrize::sheet_name,expected_agg,col_field::[('Population by State', 'sum', None), ('Earners by State', 'sum', None), ('Regions by State', 'count', None), ('State Income Quartile', 'sum', 'quarter')]"
+                ]
+            },
+            {
+                "name": "::TestPivotTableConfiguration::test_pivot_uses_correct_aggregation",
+                "status": "passed",
+                "duration": 0.22597803035750985,
+                "start": 1785991313.035235,
+                "stop": 1785991313.0355325,
+                "retries": 3,
+                "file_path": "../verifier/test_outputs.py",
+                "tags": [
+                    "parametrize::sheet_name,expected_agg,col_field::[('Population by State', 'sum', None), ('Earners by State', 'sum', None), ('Regions by State', 'count', None), ('State Income Quartile', 'sum', 'quarter')]"
+                ]
+            },
+            {
+                "name": "::TestPivotTableConfiguration::test_pivot_col_field",
+                "status": "skipped",
+                "duration": 0.24324993137270212,
+                "start": 1785991313.0366855,
+                "stop": 1785991313.0371237,
+                "retries": 3,
+                "file_path": "../verifier/test_outputs.py",
+                "tags": [
+                    "parametrize::sheet_name,expected_agg,col_field::[('Population by State', 'sum', None), ('Earners by State', 'sum', None), ('Regions by State', 'count', None), ('State Income Quartile', 'sum', 'quarter')]"
+                ],
+                "trace": "('/verifier/test_outputs.py', 81, \"Skipped: 'Regions by State' is not a matrix pivot\")"
+            },
+            {
+                "name": "::TestSourceDataSheet::test_source_data_has_required_column",
+                "status": "passed",
+                "duration": 1.7930040485225618,
+                "start": 1785991313.0385094,
+                "stop": 1785991313.0403898,
+                "retries": 7,
+                "file_path": "../verifier/test_outputs.py",
+                "tags": [
+                    "parametrize::desc,match_fn::[('SA2_CODE', <function <lambda> at 0x7396f26bdda0>), ('SA2_NAME', <function <lambda> at 0x7396f26be020>), ('STATE', <function <lambda> at 0x7396f26be160>), ('POPULATION_2023', <function <lambda> at 0x7396c7dfc400>), ('EARNERS', <function <lambda> at 0x7396c7a69ee0>), ('MEDIAN_INCOME', <function <lambda> at 0x7396c7a69f80>), ('Quarter', <function <lambda> at 0x7396c7a6a020>), ('Total', <function <lambda> at 0x7396c7a6a0c0>)]"
+                ]
+            },
+            {
+                "name": "::TestSourceDataContent::test_source_data_has_reasonable_row_count",
+                "status": "passed",
+                "duration": 12.306930031627417,
+                "start": 1785991313.0431466,
+                "stop": 1785991313.0555868,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::TestSourceDataContent::test_quarter_values_are_valid",
+                "status": "passed",
+                "duration": 0.4840940819121897,
+                "start": 1785991313.0557082,
+                "stop": 1785991313.0562646,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::TestSourceDataContent::test_state_values_are_valid",
+                "status": "passed",
+                "duration": 0.4604709683917463,
+                "start": 1785991313.0563533,
+                "stop": 1785991313.056881,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::TestDataTransformationCorrectness::test_pivot_cache_has_fields",
+                "status": "passed",
+                "duration": 0.1849920372478664,
+                "start": 1785991313.0569606,
+                "stop": 1785991313.0572093,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::TestDataTransformationCorrectness::test_total_equals_earners_times_median_income",
+                "status": "passed",
+                "duration": 0.2899160608649254,
+                "start": 1785991313.0573022,
+                "stop": 1785991313.057684,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::TestDataTransformationCorrectness::test_sa2_codes_from_income_file_present",
+                "status": "passed",
+                "duration": 73.46496795071289,
+                "start": 1785991313.0577884,
+                "stop": 1785991313.13151,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            }
+        ]
+    }
+}

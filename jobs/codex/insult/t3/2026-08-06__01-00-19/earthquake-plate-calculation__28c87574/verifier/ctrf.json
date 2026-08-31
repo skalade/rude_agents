@@ -1,0 +1,92 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 8,
+            "passed": 8,
+            "failed": 0,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1785999878.6745045,
+            "stop": 1785999878.6875854
+        },
+        "tests": [
+            {
+                "name": "::TestEarthquakeTask::test_distance_within_tolerance",
+                "status": "passed",
+                "duration": 0.0004636240191757679,
+                "start": 1785999878.683869,
+                "stop": 1785999878.6844792,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::TestEarthquakeTask::test_earthquake_id_correct",
+                "status": "passed",
+                "duration": 0.00032257597194984555,
+                "start": 1785999878.6846,
+                "stop": 1785999878.6850178,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::TestEarthquakeTask::test_latitude_within_tolerance",
+                "status": "passed",
+                "duration": 0.0002977789845317602,
+                "start": 1785999878.6851404,
+                "stop": 1785999878.685542,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::TestEarthquakeTask::test_longitude_within_tolerance",
+                "status": "passed",
+                "duration": 0.000213132007047534,
+                "start": 1785999878.6856573,
+                "stop": 1785999878.6859334,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::TestEarthquakeTask::test_magnitude_within_tolerance",
+                "status": "passed",
+                "duration": 0.00021799106616526842,
+                "start": 1785999878.6860442,
+                "stop": 1785999878.6863227,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::TestEarthquakeTask::test_output_file_and_structure",
+                "status": "passed",
+                "duration": 0.00022521504433825612,
+                "start": 1785999878.6864102,
+                "stop": 1785999878.686703,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::TestEarthquakeTask::test_place_correct",
+                "status": "passed",
+                "duration": 0.0002013209741562605,
+                "start": 1785999878.6867917,
+                "stop": 1785999878.687051,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::TestEarthquakeTask::test_time_correct",
+                "status": "passed",
+                "duration": 0.0002478579990565777,
+                "start": 1785999878.6871345,
+                "stop": 1785999878.6874642,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            }
+        ]
+    }
+}

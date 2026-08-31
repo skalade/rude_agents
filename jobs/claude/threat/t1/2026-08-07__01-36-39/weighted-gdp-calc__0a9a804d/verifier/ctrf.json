@@ -1,0 +1,263 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 27,
+            "passed": 27,
+            "failed": 0,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1786089283.6181514,
+            "stop": 1786089286.1289384
+        },
+        "tests": [
+            {
+                "name": "::TestFileExists::test_excel_file_exists",
+                "status": "passed",
+                "duration": 0.0003063759650103748,
+                "start": 1786089283.7669997,
+                "stop": 1786089283.767463,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::TestFileExists::test_excel_file_readable",
+                "status": "passed",
+                "duration": 0.09701591194607317,
+                "start": 1786089283.767561,
+                "stop": 1786089283.8647525,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::TestFileExists::test_sheet_structure",
+                "status": "passed",
+                "duration": 0.2659348659799434,
+                "start": 1786089283.8649094,
+                "stop": 1786089284.131036,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::TestStep1LookupFormulas::test_exports_have_data",
+                "status": "passed",
+                "duration": 0.10538803902454674,
+                "start": 1786089284.1311862,
+                "stop": 1786089284.2367742,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::TestStep1LookupFormulas::test_imports_have_data",
+                "status": "passed",
+                "duration": 0.0879388409666717,
+                "start": 1786089284.236943,
+                "stop": 1786089284.325075,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::TestStep1LookupFormulas::test_gdp_have_data",
+                "status": "passed",
+                "duration": 0.0848989249789156,
+                "start": 1786089284.325237,
+                "stop": 1786089284.410332,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::TestStep1DataValues::test_exports_values",
+                "status": "passed",
+                "duration": 0.09890035301214084,
+                "start": 1786089284.4105067,
+                "stop": 1786089284.509576,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::TestStep1DataValues::test_imports_values",
+                "status": "passed",
+                "duration": 0.0822838939493522,
+                "start": 1786089284.509724,
+                "stop": 1786089284.592202,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::TestStep1DataValues::test_gdp_values",
+                "status": "passed",
+                "duration": 0.0870211650035344,
+                "start": 1786089284.592367,
+                "stop": 1786089284.6795819,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::TestStep2NetExportsCalculation::test_net_exports_pct_have_data",
+                "status": "passed",
+                "duration": 0.08317188400542364,
+                "start": 1786089284.679747,
+                "stop": 1786089284.7631137,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::TestStep2NetExportsCalculation::test_net_exports_pct_values",
+                "status": "passed",
+                "duration": 0.09830215701367706,
+                "start": 1786089284.7632694,
+                "stop": 1786089284.8617504,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::TestStep2Statistics::test_statistics_have_data",
+                "status": "passed",
+                "duration": 0.08604743698379025,
+                "start": 1786089284.8619108,
+                "stop": 1786089284.9481509,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::TestStep2Statistics::test_min_values",
+                "status": "passed",
+                "duration": 0.08446603495394811,
+                "start": 1786089284.9483144,
+                "stop": 1786089285.0329876,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::TestStep2Statistics::test_max_values",
+                "status": "passed",
+                "duration": 0.10084323299815878,
+                "start": 1786089285.0331557,
+                "stop": 1786089285.134165,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::TestStep2Statistics::test_median_values",
+                "status": "passed",
+                "duration": 0.08525440195808187,
+                "start": 1786089285.1343155,
+                "stop": 1786089285.2197654,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::TestStep2Statistics::test_mean_values",
+                "status": "passed",
+                "duration": 0.08835061202989891,
+                "start": 1786089285.2199407,
+                "stop": 1786089285.3084831,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::TestStep2Statistics::test_percentile_values",
+                "status": "passed",
+                "duration": 0.08275590604171157,
+                "start": 1786089285.308646,
+                "stop": 1786089285.3915884,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::TestStep3WeightedMean::test_weighted_mean_has_data",
+                "status": "passed",
+                "duration": 0.10348751797573641,
+                "start": 1786089285.391752,
+                "stop": 1786089285.4954178,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::TestStep3WeightedMean::test_weighted_mean_values_reasonable",
+                "status": "passed",
+                "duration": 0.08435560099314898,
+                "start": 1786089285.4955688,
+                "stop": 1786089285.5801163,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::TestStep3WeightedMean::test_weighted_mean_values",
+                "status": "passed",
+                "duration": 0.0899817849858664,
+                "start": 1786089285.5802803,
+                "stop": 1786089285.6704605,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::TestNoExcelErrors::test_no_formula_errors",
+                "status": "passed",
+                "duration": 0.09730705991387367,
+                "start": 1786089285.670628,
+                "stop": 1786089285.7681057,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::TestSheetStructure::test_no_extra_sheets_added",
+                "status": "passed",
+                "duration": 0.08865059597883373,
+                "start": 1786089285.7682512,
+                "stop": 1786089285.8570967,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::TestSheetStructure::test_required_sheets_exist",
+                "status": "passed",
+                "duration": 0.08675789996050298,
+                "start": 1786089285.8572624,
+                "stop": 1786089285.9442115,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::TestFormattingPreserved::test_task_sheet_column_widths",
+                "status": "passed",
+                "duration": 0.08174646098632365,
+                "start": 1786089285.944385,
+                "stop": 1786089286.0263467,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::TestFormattingPreserved::test_data_sheet_column_widths",
+                "status": "passed",
+                "duration": 0.10124385292874649,
+                "start": 1786089286.026526,
+                "stop": 1786089286.1279428,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::TestNoMacros::test_no_vba_macros",
+                "status": "passed",
+                "duration": 0.00032763503259047866,
+                "start": 1786089286.1280997,
+                "stop": 1786089286.128512,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::TestNoMacros::test_file_extension_xlsx",
+                "status": "passed",
+                "duration": 0.00020571891218423843,
+                "start": 1786089286.1286023,
+                "stop": 1786089286.128879,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            }
+        ]
+    }
+}

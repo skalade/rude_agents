@@ -1,0 +1,140 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 10,
+            "passed": 0,
+            "failed": 10,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1786178128.2884011,
+            "stop": 1786178128.3343678
+        },
+        "tests": [
+            {
+                "name": "::test_plan_file_exists",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.00038983102422207594,
+                "start": 1786178128.2994294,
+                "stop": 1786178128.3131516,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py",
+                "trace": "def test_plan_file_exists():\n        \"\"\"Plan file should be produced at the expected path.\"\"\"\n>       assert os.path.exists(PLAN_PATH), f\"Plan JSON not found at {PLAN_PATH}\"\nE       AssertionError: Plan JSON not found at /app/output/itinerary.json\nE       assert False\nE        +  where False = <function exists at 0x75a23033fe20>('/app/output/itinerary.json')\nE        +    where <function exists at 0x75a23033fe20> = <module 'posixpath' (frozen)>.exists\nE        +      where <module 'posixpath' (frozen)> = os.path\n\n/verifier/test_outputs.py:24: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "::test_plan_structure_and_length",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.0002645889762789011,
+                "start": 1786178128.3132663,
+                "stop": 1786178128.3156316,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py",
+                "trace": "def test_plan_structure_and_length():\n        \"\"\"Plan should be a JSON object with a 7-day plan array.\"\"\"\n>       with open(PLAN_PATH) as f:\n             ^^^^^^^^^^^^^^^\nE       FileNotFoundError: [Errno 2] No such file or directory: '/app/output/itinerary.json'\n\n/verifier/test_outputs.py:29: FileNotFoundError",
+                "message": "The test failed in the call phase"
+            },
+            {
+                "name": "::test_plan_required_fields_and_days",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.00022895302390679717,
+                "start": 1786178128.3157356,
+                "stop": 1786178128.3179297,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py",
+                "trace": "def test_plan_required_fields_and_days():\n        \"\"\"Each day should have required fields and sequential day numbers.\"\"\"\n>       with open(PLAN_PATH) as f:\n             ^^^^^^^^^^^^^^^\nE       FileNotFoundError: [Errno 2] No such file or directory: '/app/output/itinerary.json'\n\n/verifier/test_outputs.py:41: FileNotFoundError",
+                "message": "The test failed in the call phase"
+            },
+            {
+                "name": "::test_no_flights_in_transportation",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.00021723302779719234,
+                "start": 1786178128.3180268,
+                "stop": 1786178128.3201773,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py",
+                "trace": "def test_no_flights_in_transportation():\n        \"\"\"Transportation should respect no-flight preference.\"\"\"\n>       with open(PLAN_PATH) as f:\n             ^^^^^^^^^^^^^^^\nE       FileNotFoundError: [Errno 2] No such file or directory: '/app/output/itinerary.json'\n\n/verifier/test_outputs.py:54: FileNotFoundError",
+                "message": "The test failed in the call phase"
+            },
+            {
+                "name": "::test_starts_in_minneapolis",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.00025142409140244126,
+                "start": 1786178128.3202755,
+                "stop": 1786178128.3228202,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py",
+                "trace": "def test_starts_in_minneapolis():\n        \"\"\"Day 1 should start from Minneapolis.\"\"\"\n>       with open(PLAN_PATH) as f:\n             ^^^^^^^^^^^^^^^\nE       FileNotFoundError: [Errno 2] No such file or directory: '/app/output/itinerary.json'\n\n/verifier/test_outputs.py:64: FileNotFoundError",
+                "message": "The test failed in the call phase"
+            },
+            {
+                "name": "::test_visits_at_least_three_cities",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.000222100003156811,
+                "start": 1786178128.3229206,
+                "stop": 1786178128.325092,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py",
+                "trace": "def test_visits_at_least_three_cities():\n        \"\"\"Plan should cover at least three distinct cities.\"\"\"\n>       with open(PLAN_PATH) as f:\n             ^^^^^^^^^^^^^^^\nE       FileNotFoundError: [Errno 2] No such file or directory: '/app/output/itinerary.json'\n\n/verifier/test_outputs.py:73: FileNotFoundError",
+                "message": "The test failed in the call phase"
+            },
+            {
+                "name": "::test_visits_ohio_cities",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.0002227820223197341,
+                "start": 1786178128.325185,
+                "stop": 1786178128.3273616,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py",
+                "trace": "def test_visits_ohio_cities():\n        \"\"\"Plan should visit cities in Ohio (the required destination state).\"\"\"\n>       with open(PLAN_PATH) as f:\n             ^^^^^^^^^^^^^^^\nE       FileNotFoundError: [Errno 2] No such file or directory: '/app/output/itinerary.json'\n\n/verifier/test_outputs.py:85: FileNotFoundError",
+                "message": "The test failed in the call phase"
+            },
+            {
+                "name": "::test_pet_friendly_accommodation_hint",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.0002317880280315876,
+                "start": 1786178128.3274589,
+                "stop": 1786178128.3296883,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py",
+                "trace": "def test_pet_friendly_accommodation_hint():\n        \"\"\"Accommodation strings should signal pet-friendly preference.\"\"\"\n>       with open(PLAN_PATH) as f:\n             ^^^^^^^^^^^^^^^\nE       FileNotFoundError: [Errno 2] No such file or directory: '/app/output/itinerary.json'\n\n/verifier/test_outputs.py:137: FileNotFoundError",
+                "message": "The test failed in the call phase"
+            },
+            {
+                "name": "::test_meals_include_requested_cuisines",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.00021510699298232794,
+                "start": 1786178128.3297865,
+                "stop": 1786178128.3319387,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py",
+                "trace": "def test_meals_include_requested_cuisines():\n        \"\"\"Meals should reflect at least 3 of the 4 preferred cuisines by cross-referencing restaurant data.\"\"\"\n        import csv\n        from pathlib import Path\n    \n>       with open(PLAN_PATH) as f:\n             ^^^^^^^^^^^^^^^\nE       FileNotFoundError: [Errno 2] No such file or directory: '/app/output/itinerary.json'\n\n/verifier/test_outputs.py:155: FileNotFoundError",
+                "message": "The test failed in the call phase"
+            },
+            {
+                "name": "::test_attractions_non_empty",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.00021385500440374017,
+                "start": 1786178128.3320343,
+                "stop": 1786178128.334271,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py",
+                "trace": "def test_attractions_non_empty():\n        \"\"\"Attractions should not be empty placeholders.\"\"\"\n>       with open(PLAN_PATH) as f:\n             ^^^^^^^^^^^^^^^\nE       FileNotFoundError: [Errno 2] No such file or directory: '/app/output/itinerary.json'\n\n/verifier/test_outputs.py:215: FileNotFoundError",
+                "message": "The test failed in the call phase"
+            }
+        ]
+    }
+}

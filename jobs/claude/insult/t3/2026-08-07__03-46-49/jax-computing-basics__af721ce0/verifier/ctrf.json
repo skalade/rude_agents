@@ -1,0 +1,68 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 5,
+            "passed": 5,
+            "failed": 0,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1786096180.9050624,
+            "stop": 1786096181.1961205
+        },
+        "tests": [
+            {
+                "name": "::TestOutputFilesExist::test_all_output_files_exist",
+                "status": "passed",
+                "duration": 0.00047130201710388064,
+                "start": 1786096181.1922104,
+                "stop": 1786096181.1928372,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::TestOutputFilesExist::test_all_answer_files_exist",
+                "status": "passed",
+                "duration": 0.00030358205549418926,
+                "start": 1786096181.192945,
+                "stop": 1786096181.1933205,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::TestOutputShapes::test_shapes_match",
+                "status": "passed",
+                "duration": 0.0008856180938892066,
+                "start": 1786096181.1934266,
+                "stop": 1786096181.1943905,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::TestNumericalCorrectness::test_allclose",
+                "status": "passed",
+                "duration": 0.0010617050575092435,
+                "start": 1786096181.1944926,
+                "stop": 1786096181.1956246,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py",
+                "tags": [
+                    "parametrize::rtol, atol::[(1e-05, 1e-06)]"
+                ]
+            },
+            {
+                "name": "::TestTaskIDs::test_no_duplicate_ids",
+                "status": "passed",
+                "duration": 0.00024369097081944346,
+                "start": 1786096181.195719,
+                "stop": 1786096181.196021,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            }
+        ]
+    }
+}

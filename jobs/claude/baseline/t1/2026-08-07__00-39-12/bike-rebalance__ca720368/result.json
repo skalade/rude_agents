@@ -1,0 +1,128 @@
+{
+  "task_name": "bike-rebalance",
+  "rollout_name": "bike-rebalance__ca720368",
+  "rewards": {
+    "reward": 0.0
+  },
+  "agent": "claude-agent-acp",
+  "agent_name": "@agentclientprotocol/claude-agent-acp",
+  "model": "claude-sonnet-5",
+  "skill_mode": "with-skill",
+  "skill_source": "task_bundled",
+  "requested_skills_dir": null,
+  "effective_skills_dir": "/tmp/benchflow-task-537fjjlq/bike-rebalance/environment/skills",
+  "skills_sandbox_dir": "/skills",
+  "include_task_skills": true,
+  "n_tool_calls": 15,
+  "n_skill_invocations": 0,
+  "n_prompts": 1,
+  "agent_result": {
+    "n_tool_calls": 15,
+    "n_skill_invocations": 0,
+    "n_prompts": 1,
+    "n_input_tokens": 1650724,
+    "n_output_tokens": 32028,
+    "n_cache_read_tokens": 759757,
+    "n_cache_creation_tokens": 64559,
+    "total_tokens": 858436,
+    "cost_usd": 0.6378129,
+    "usage_source": "provider_response",
+    "price_source": "litellm"
+  },
+  "final_metrics": {
+    "total_prompt_tokens": 1650724,
+    "total_completion_tokens": 32028,
+    "total_cached_tokens": 759757,
+    "total_cost_usd": 0.6378129
+  },
+  "trajectory_summary": {
+    "steps": 33,
+    "tool_call_steps": 15,
+    "user_message_steps": 1,
+    "agent_message_steps": 2,
+    "agent_thought_steps": 14,
+    "other_steps": 1,
+    "event_type_counts": {
+      "user_message": 1,
+      "agent_thought": 14,
+      "tool_call": 15,
+      "agent_message": 2,
+      "agent_timeout": 1
+    },
+    "tool_call_status_counts": {
+      "completed": 14,
+      "in_progress": 1
+    },
+    "partial_trajectory": true,
+    "trajectory_source": "partial_acp"
+  },
+  "usage_tracking": {
+    "requested": "auto",
+    "status": "enabled",
+    "environment": "docker",
+    "endpoint_kind": "host",
+    "usage_source": "provider_response"
+  },
+  "error": "Agent prompt exceeded wall-clock budget 900s",
+  "error_category": "timeout",
+  "verifier_error": null,
+  "verifier_error_category": null,
+  "export_error": null,
+  "idle_timeout_info": null,
+  "agent_timeout_info": {
+    "reason": "wall_clock_timeout",
+    "timeout_sec": 900.0,
+    "n_tool_calls": 15,
+    "pending_tool_call_ids": [
+      "toolu_016Mnv4qHxNmWoLVc93eXvzK"
+    ],
+    "terminal_event_recorded": true,
+    "terminal_trajectory_complete": false
+  },
+  "sandbox_startup_info": null,
+  "transport_error_info": null,
+  "verifier_timeout_info": null,
+  "api_error_info": null,
+  "suspected_api_error_info": null,
+  "partial_trajectory": true,
+  "trajectory_source": "partial_acp",
+  "started_at": "2026-08-07 00:39:12.462828",
+  "finished_at": "2026-08-07 00:57:23.681629",
+  "timing": {
+    "environment_setup": 3.5,
+    "agent_setup": 3.7,
+    "agent_execution": 900.3,
+    "verifier": 133.0,
+    "total": 1091.2
+  },
+  "scenes": [
+    {
+      "name": "default",
+      "skills_dir": null,
+      "roles": [
+        {
+          "name": "agent",
+          "agent": "claude-agent-acp",
+          "model": "claude-sonnet-5",
+          "reasoning_effort": null,
+          "timeout_sec": null,
+          "idle_timeout_sec": null,
+          "skills_dir": null,
+          "capabilities": null,
+          "env_keys": []
+        }
+      ],
+      "turns": [
+        {
+          "role": "agent",
+          "has_prompt": false
+        }
+      ]
+    }
+  ],
+  "loop": {
+    "strategy": "single-shot"
+  },
+  "task_digest": "sha256:9366569f77d18bf7630a4ccdbad710c321374350c87e9d69746939432d2e0a7a",
+  "sandbox_id": null
+}

@@ -1,0 +1,215 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 20,
+            "passed": 15,
+            "failed": 5,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1785905759.2707746,
+            "stop": 1785905898.562935
+        },
+        "tests": [
+            {
+                "name": "::TestSchema::test_top_level_fields",
+                "status": "passed",
+                "duration": 0.007021433993941173,
+                "start": 1785905759.3167615,
+                "stop": 1785905759.324152,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::TestSchema::test_summary_fields",
+                "status": "passed",
+                "duration": 0.00024384204880334437,
+                "start": 1785905759.3243434,
+                "stop": 1785905759.3246624,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::TestSchema::test_vehicle_entries_and_ids",
+                "status": "passed",
+                "duration": 0.0005777680198661983,
+                "start": 1785905759.324761,
+                "stop": 1785905759.3254128,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::TestSchema::test_vehicle_fields",
+                "status": "passed",
+                "duration": 0.00019592203898355365,
+                "start": 1785905759.325511,
+                "stop": 1785905759.3257668,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::TestSchema::test_stop_fields",
+                "status": "passed",
+                "duration": 0.00019302699365653098,
+                "start": 1785905759.3258536,
+                "stop": 1785905759.326107,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::TestSchema::test_station_entries_and_fields",
+                "status": "passed",
+                "duration": 0.0002405339910183102,
+                "start": 1785905759.3261898,
+                "stop": 1785905759.3264909,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::TestRoutes::test_routes_start_and_end_at_depots",
+                "status": "passed",
+                "duration": 0.0001898400078061968,
+                "start": 1785905759.3265774,
+                "stop": 1785905759.3268247,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::TestRoutes::test_all_route_stations_exist",
+                "status": "passed",
+                "duration": 0.00021665898384526372,
+                "start": 1785905759.326905,
+                "stop": 1785905759.3271768,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::TestRoutes::test_stops_match_non_depot_route_sequence",
+                "status": "passed",
+                "duration": 0.00032689401996321976,
+                "start": 1785905759.3272572,
+                "stop": 1785905759.3276453,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::TestRoutes::test_no_subtour_or_repeated_station_within_vehicle",
+                "status": "passed",
+                "duration": 0.00020339700859040022,
+                "start": 1785905759.32773,
+                "stop": 1785905759.3279908,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::TestVehicleBikeFlow::test_load_transitions_match_pickups_and_dropoffs",
+                "status": "passed",
+                "duration": 0.000218064000364393,
+                "start": 1785905759.3280754,
+                "stop": 1785905759.3283513,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::TestVehicleBikeFlow::test_vehicle_loads_within_capacity",
+                "status": "passed",
+                "duration": 0.0002043690183199942,
+                "start": 1785905759.3284388,
+                "stop": 1785905759.3287024,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::TestVehicleBikeFlow::test_no_over_dropoff_or_capacity_overfill_at_stop",
+                "status": "passed",
+                "duration": 0.00020350696286186576,
+                "start": 1785905759.3287857,
+                "stop": 1785905759.3290455,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::TestStationBalances::test_station_aggregates_match_route_stops",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.0004490799910854548,
+                "start": 1785905759.3291256,
+                "stop": 1785905759.359839,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py",
+                "trace": "self = <test_outputs.TestStationBalances object at 0x72f57012d7f0>\nreconstructed = {'objective': 58.70702637375812, 'station_reports': {150: {'net_bike_change': 13.0, 'net_rebalancing_target': 13.0, 's...up': 0.0}, 251: {'dropoff': 0.0, 'pickup': 0.0}, 265: {'dropoff': 0.0, 'pickup': 0.0}, ...}, 'total_unmet': 112.0, ...}\n\n    def test_station_aggregates_match_route_stops(self, reconstructed: dict[str, Any]) -> None:\n        \"\"\"Station total pickups/dropoffs must equal sums over all vehicle stops.\"\"\"\n        for sid, totals in reconstructed[\"station_sums\"].items():\n            station_report = reconstructed[\"station_reports\"][sid]\n            reported_pickup = float(station_report[\"total_bikes_picked_up\"])\n            reported_dropoff = float(station_report[\"total_bikes_dropped_off\"])\n>           _assert_close(reported_pickup, totals[\"pickup\"], f\"station {sid} total_bikes_picked_up\")\n\n/verifier/test_outputs.py:672: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nactual = 1.0, expected = 0.0, label = 'station 312 total_bikes_picked_up'\ntol = 1e-05\n\n    def _assert_close(actual: float, expected: float, label: str, tol: float = TOL) -> None:\n        diff = abs(float(actual) - float(expected))\n        limit = max(tol, tol * max(1.0, abs(float(expected))))\n>       assert diff <= limit, f\"{label}: actual={actual:.8f}, expected={expected:.8f}, diff={diff:.8g}\"\nE       AssertionError: station 312 total_bikes_picked_up: actual=1.00000000, expected=0.00000000, diff=1\nE       assert 1.0 <= 1e-05\n\n/verifier/test_outputs.py:69: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "::TestStationBalances::test_station_inventory_and_capacity",
+                "status": "passed",
+                "duration": 0.00030327000422403216,
+                "start": 1785905759.3600159,
+                "stop": 1785905759.3604,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::TestStationBalances::test_station_net_change_and_unmet_amount",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.00040505698416382074,
+                "start": 1785905759.3605015,
+                "stop": 1785905759.3791184,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py",
+                "trace": "self = <test_outputs.TestStationBalances object at 0x72f5701f0050>\nreconstructed = {'objective': 58.70702637375812, 'station_reports': {150: {'net_bike_change': 13.0, 'net_rebalancing_target': 13.0, 's...up': 0.0}, 251: {'dropoff': 0.0, 'pickup': 0.0}, 265: {'dropoff': 0.0, 'pickup': 0.0}, ...}, 'total_unmet': 112.0, ...}\nparsed_case = {'penalty_weight': 0.5, 'station_by_id': {150: {'id': 150, 'initial_bikes': 17, 'latitude': 40.7208736, 'longitude': -...ongitude': -73.99147535, ...}, ...}, 'station_ids': {150, 229, 251, 265, 280, 285, ...}, 'vehicle_capacity': 25.0, ...}\n\n    def test_station_net_change_and_unmet_amount(self, reconstructed: dict[str, Any], parsed_case: dict[str, Any]) -> None:\n        \"\"\"Station net change and unmet amount must match the data target.\"\"\"\n        station_by_id = parsed_case[\"station_by_id\"]\n        for sid, totals in reconstructed[\"station_sums\"].items():\n            station_report = reconstructed[\"station_reports\"][sid]\n            target = float(station_by_id[sid][\"net_rebalancing_target\"])\n            expected_net_change = totals[\"pickup\"] - totals[\"dropoff\"]\n            expected_unmet = abs(target - expected_net_change)\n    \n            _assert_close(float(station_report[\"net_rebalancing_target\"]), target, f\"station {sid} target\")\n>           _assert_close(float(station_report[\"net_bike_change\"]), expected_net_change, f\"station {sid} net_bike_change\")\n\n/verifier/test_outputs.py:705: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nactual = 1.0, expected = 0.0, label = 'station 312 net_bike_change', tol = 1e-05\n\n    def _assert_close(actual: float, expected: float, label: str, tol: float = TOL) -> None:\n        diff = abs(float(actual) - float(expected))\n        limit = max(tol, tol * max(1.0, abs(float(expected))))\n>       assert diff <= limit, f\"{label}: actual={actual:.8f}, expected={expected:.8f}, diff={diff:.8g}\"\nE       AssertionError: station 312 net_bike_change: actual=1.00000000, expected=0.00000000, diff=1\nE       assert 1.0 <= 1e-05\n\n/verifier/test_outputs.py:69: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "::TestObjectiveConsistency::test_travel_distance_matches_route_geometry",
+                "status": "passed",
+                "duration": 0.00028583797393366694,
+                "start": 1785905759.3792913,
+                "stop": 1785905759.3796532,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::TestObjectiveConsistency::test_unmet_penalty_matches_station_unmet",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.0003975439758505672,
+                "start": 1785905759.3797483,
+                "stop": 1785905759.3960986,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py",
+                "trace": "self = <test_outputs.TestObjectiveConsistency object at 0x72f56ff1f350>\nreport = {'stations': [{'net_bike_change': 13.0, 'net_rebalancing_target': 13.0, 'station_id': 150, 'total_bikes_dropped_off': ...: 0.0, 'stops': [{'bikes_dropped_off': 0.0, 'bikes_picked_up': 6.0, 'load_after_stop': 6.0, 'station_id': 335}], ...}]}\ndata = {'depot': {'latitude': 40.716629, 'longitude': -73.982616}, 'distance_metric': 'great_circle_miles', 'net_rebalancing_...sitive means pick up bikes from the station; negative means drop off bikes to the station', 'penalty_weight': 0.5, ...}\nreconstructed = {'objective': 58.70702637375812, 'station_reports': {150: {'net_bike_change': 13.0, 'net_rebalancing_target': 13.0, 's...up': 0.0}, 251: {'dropoff': 0.0, 'pickup': 0.0}, 265: {'dropoff': 0.0, 'pickup': 0.0}, ...}, 'total_unmet': 112.0, ...}\n\n    def test_unmet_penalty_matches_station_unmet(self, report: dict[str, Any], data: dict[str, Any], reconstructed: dict[str, Any]) -> None:\n        \"\"\"Unmet summary fields must equal station-level unmet totals.\"\"\"\n        penalty_weight = float(data[\"penalty_weight\"])\n        total_unmet = reconstructed[\"total_unmet\"]\n        expected_penalty = penalty_weight * total_unmet\n    \n>       _assert_close(\n            float(report[\"summary\"][\"total_unmet_rebalancing_amount\"]),\n            total_unmet,\n            \"summary.total_unmet_rebalancing_amount\",\n        )\n\n/verifier/test_outputs.py:733: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nactual = 5.0, expected = 112.0, label = 'summary.total_unmet_rebalancing_amount'\ntol = 1e-05\n\n    def _assert_close(actual: float, expected: float, label: str, tol: float = TOL) -> None:\n        diff = abs(float(actual) - float(expected))\n        limit = max(tol, tol * max(1.0, abs(float(expected))))\n>       assert diff <= limit, f\"{label}: actual={actual:.8f}, expected={expected:.8f}, diff={diff:.8g}\"\nE       AssertionError: summary.total_unmet_rebalancing_amount: actual=5.00000000, expected=112.00000000, diff=107\nE       assert 107.0 <= 0.0011200000000000001\n\n/verifier/test_outputs.py:69: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "::TestObjectiveConsistency::test_objective_matches_travel_plus_penalty",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.00045425997814163566,
+                "start": 1785905759.3963351,
+                "stop": 1785905759.4130938,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py",
+                "trace": "self = <test_outputs.TestObjectiveConsistency object at 0x72f56ff1e240>\nreport = {'stations': [{'net_bike_change': 13.0, 'net_rebalancing_target': 13.0, 'station_id': 150, 'total_bikes_dropped_off': ...: 0.0, 'stops': [{'bikes_dropped_off': 0.0, 'bikes_picked_up': 6.0, 'load_after_stop': 6.0, 'station_id': 335}], ...}]}\nreconstructed = {'objective': 58.70702637375812, 'station_reports': {150: {'net_bike_change': 13.0, 'net_rebalancing_target': 13.0, 's...up': 0.0}, 251: {'dropoff': 0.0, 'pickup': 0.0}, 265: {'dropoff': 0.0, 'pickup': 0.0}, ...}, 'total_unmet': 112.0, ...}\n\n    def test_objective_matches_travel_plus_penalty(self, report: dict[str, Any], reconstructed: dict[str, Any]) -> None:\n        \"\"\"objective must equal travel_distance_miles + unmet_rebalancing_penalty.\"\"\"\n        reported = float(report[\"summary\"][\"objective\"])\n        computed = reconstructed[\"objective\"]\n>       _assert_close(reported, computed, \"summary.objective\", TOL_OBJECTIVE)\n\n/verifier/test_outputs.py:748: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nactual = 5.207026, expected = 58.70702637375812, label = 'summary.objective'\ntol = 0.001\n\n    def _assert_close(actual: float, expected: float, label: str, tol: float = TOL) -> None:\n        diff = abs(float(actual) - float(expected))\n        limit = max(tol, tol * max(1.0, abs(float(expected))))\n>       assert diff <= limit, f\"{label}: actual={actual:.8f}, expected={expected:.8f}, diff={diff:.8g}\"\nE       AssertionError: summary.objective: actual=5.20702600, expected=58.70702637, diff=53.5\nE       assert 53.50000037375812 <= 0.05870702637375812\n\n/verifier/test_outputs.py:69: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "::TestOptimality::test_objective_is_no_worse_than_gap_limited_benchmark",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 139.12256869702833,
+                "start": 1785905759.4132667,
+                "stop": 1785905898.5627625,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py",
+                "trace": "self = <test_outputs.TestOptimality object at 0x72f56ff1e0f0>\nreport = {'stations': [{'net_bike_change': 13.0, 'net_rebalancing_target': 13.0, 'station_id': 150, 'total_bikes_dropped_off': ...: 0.0, 'stops': [{'bikes_dropped_off': 0.0, 'bikes_picked_up': 6.0, 'load_after_stop': 6.0, 'station_id': 335}], ...}]}\nreconstructed = {'objective': 58.70702637375812, 'station_reports': {150: {'net_bike_change': 13.0, 'net_rebalancing_target': 13.0, 's...up': 0.0}, 251: {'dropoff': 0.0, 'pickup': 0.0}, 265: {'dropoff': 0.0, 'pickup': 0.0}, ...}, 'total_unmet': 112.0, ...}\nbenchmark_objective = 8.75739030549318\n\n    def test_objective_is_no_worse_than_gap_limited_benchmark(\n        self,\n        report: dict[str, Any],\n        reconstructed: dict[str, Any],\n        benchmark_objective: float,\n    ) -> None:\n        \"\"\"\n        Accept any feasible report whose reconstructed objective is no greater\n        than the verifier's SCIP incumbent obtained with a 10% MIP gap limit.\n        \"\"\"\n        reported = float(report[\"summary\"][\"objective\"])\n>       _assert_close(reported, reconstructed[\"objective\"], \"summary.objective\", TOL_OBJECTIVE)\n\n/verifier/test_outputs.py:770: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nactual = 5.207026, expected = 58.70702637375812, label = 'summary.objective'\ntol = 0.001\n\n    def _assert_close(actual: float, expected: float, label: str, tol: float = TOL) -> None:\n        diff = abs(float(actual) - float(expected))\n        limit = max(tol, tol * max(1.0, abs(float(expected))))\n>       assert diff <= limit, f\"{label}: actual={actual:.8f}, expected={expected:.8f}, diff={diff:.8g}\"\nE       AssertionError: summary.objective: actual=5.20702600, expected=58.70702637, diff=53.5\nE       assert 53.50000037375812 <= 0.05870702637375812\n\n/verifier/test_outputs.py:69: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            }
+        ]
+    }
+}

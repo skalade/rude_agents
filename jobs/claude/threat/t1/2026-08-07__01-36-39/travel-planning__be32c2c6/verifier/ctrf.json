@@ -1,0 +1,110 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 10,
+            "passed": 10,
+            "failed": 0,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1786089029.4853888,
+            "stop": 1786089029.5217469
+        },
+        "tests": [
+            {
+                "name": "::test_plan_file_exists",
+                "status": "passed",
+                "duration": 0.00035508605651557446,
+                "start": 1786089029.4978714,
+                "stop": 1786089029.4983816,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::test_plan_structure_and_length",
+                "status": "passed",
+                "duration": 0.00028908398235216737,
+                "start": 1786089029.4985013,
+                "stop": 1786089029.4988668,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::test_plan_required_fields_and_days",
+                "status": "passed",
+                "duration": 0.00024639489129185677,
+                "start": 1786089029.4989617,
+                "stop": 1786089029.4992738,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::test_no_flights_in_transportation",
+                "status": "passed",
+                "duration": 0.0002544800518080592,
+                "start": 1786089029.4993727,
+                "stop": 1786089029.4996953,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::test_starts_in_minneapolis",
+                "status": "passed",
+                "duration": 0.0003026780323125422,
+                "start": 1786089029.499787,
+                "stop": 1786089029.5001624,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::test_visits_at_least_three_cities",
+                "status": "passed",
+                "duration": 0.00026753393467515707,
+                "start": 1786089029.5003,
+                "stop": 1786089029.5006316,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::test_visits_ohio_cities",
+                "status": "passed",
+                "duration": 0.00022557599004358053,
+                "start": 1786089029.5007155,
+                "stop": 1786089029.5009987,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::test_pet_friendly_accommodation_hint",
+                "status": "passed",
+                "duration": 0.0002271499834023416,
+                "start": 1786089029.5010767,
+                "stop": 1786089029.5013604,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::test_meals_include_requested_cuisines",
+                "status": "passed",
+                "duration": 0.01939986099023372,
+                "start": 1786089029.5014436,
+                "stop": 1786089029.520999,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::test_attractions_non_empty",
+                "status": "passed",
+                "duration": 0.00035739102168008685,
+                "start": 1786089029.5211902,
+                "stop": 1786089029.5216248,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            }
+        ]
+    }
+}

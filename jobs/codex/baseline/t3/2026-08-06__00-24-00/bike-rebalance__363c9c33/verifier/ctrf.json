@@ -1,0 +1,200 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 20,
+            "passed": 20,
+            "failed": 0,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1785998204.8964097,
+            "stop": 1785998317.3719947
+        },
+        "tests": [
+            {
+                "name": "::TestSchema::test_top_level_fields",
+                "status": "passed",
+                "duration": 0.008074758050497621,
+                "start": 1785998204.933939,
+                "stop": 1785998204.9423983,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::TestSchema::test_summary_fields",
+                "status": "passed",
+                "duration": 0.00023386202519759536,
+                "start": 1785998204.942576,
+                "stop": 1785998204.9428852,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::TestSchema::test_vehicle_entries_and_ids",
+                "status": "passed",
+                "duration": 0.00037074496503919363,
+                "start": 1785998204.9429832,
+                "stop": 1785998204.9434261,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::TestSchema::test_vehicle_fields",
+                "status": "passed",
+                "duration": 0.00022148998687043786,
+                "start": 1785998204.9435213,
+                "stop": 1785998204.9438038,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::TestSchema::test_stop_fields",
+                "status": "passed",
+                "duration": 0.00020958809182047844,
+                "start": 1785998204.9438946,
+                "stop": 1785998204.944167,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::TestSchema::test_station_entries_and_fields",
+                "status": "passed",
+                "duration": 0.0002318170154467225,
+                "start": 1785998204.9442523,
+                "stop": 1785998204.944545,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::TestRoutes::test_routes_start_and_end_at_depots",
+                "status": "passed",
+                "duration": 0.00021606101654469967,
+                "start": 1785998204.9446287,
+                "stop": 1785998204.9449036,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::TestRoutes::test_all_route_stations_exist",
+                "status": "passed",
+                "duration": 0.0002075340016745031,
+                "start": 1785998204.9449854,
+                "stop": 1785998204.9452498,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::TestRoutes::test_stops_match_non_depot_route_sequence",
+                "status": "passed",
+                "duration": 0.0004488700651563704,
+                "start": 1785998204.9453483,
+                "stop": 1785998204.9458613,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::TestRoutes::test_no_subtour_or_repeated_station_within_vehicle",
+                "status": "passed",
+                "duration": 0.0002383810351602733,
+                "start": 1785998204.9459507,
+                "stop": 1785998204.9462469,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::TestVehicleBikeFlow::test_load_transitions_match_pickups_and_dropoffs",
+                "status": "passed",
+                "duration": 0.00021309603471308947,
+                "start": 1785998204.9463372,
+                "stop": 1785998204.9466078,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::TestVehicleBikeFlow::test_vehicle_loads_within_capacity",
+                "status": "passed",
+                "duration": 0.0001979160006158054,
+                "start": 1785998204.946691,
+                "stop": 1785998204.94695,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::TestVehicleBikeFlow::test_no_over_dropoff_or_capacity_overfill_at_stop",
+                "status": "passed",
+                "duration": 0.00020584999583661556,
+                "start": 1785998204.947032,
+                "stop": 1785998204.9472945,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::TestStationBalances::test_station_aggregates_match_route_stops",
+                "status": "passed",
+                "duration": 0.0002138750278390944,
+                "start": 1785998204.9473863,
+                "stop": 1785998204.947656,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::TestStationBalances::test_station_inventory_and_capacity",
+                "status": "passed",
+                "duration": 0.0002029050374403596,
+                "start": 1785998204.9477344,
+                "stop": 1785998204.9479926,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::TestStationBalances::test_station_net_change_and_unmet_amount",
+                "status": "passed",
+                "duration": 0.00022570602595806122,
+                "start": 1785998204.9480708,
+                "stop": 1785998204.9483514,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::TestObjectiveConsistency::test_travel_distance_matches_route_geometry",
+                "status": "passed",
+                "duration": 0.00019358907593414187,
+                "start": 1785998204.9484313,
+                "stop": 1785998204.9486804,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::TestObjectiveConsistency::test_unmet_penalty_matches_station_unmet",
+                "status": "passed",
+                "duration": 0.00019236502703279257,
+                "start": 1785998204.9487576,
+                "stop": 1785998204.9490197,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::TestObjectiveConsistency::test_objective_matches_travel_plus_penalty",
+                "status": "passed",
+                "duration": 0.00021344504784792662,
+                "start": 1785998204.9491045,
+                "stop": 1785998204.9493778,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::TestOptimality::test_objective_is_no_worse_than_gap_limited_benchmark",
+                "status": "passed",
+                "duration": 112.4221755170147,
+                "start": 1785998204.949457,
+                "stop": 1785998317.371813,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            }
+        ]
+    }
+}

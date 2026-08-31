@@ -1,0 +1,113 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 10,
+            "passed": 9,
+            "failed": 1,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1785907351.9930015,
+            "stop": 1785907352.0456371
+        },
+        "tests": [
+            {
+                "name": "::test_plan_file_exists",
+                "status": "passed",
+                "duration": 0.00031241498072631657,
+                "start": 1785907352.005557,
+                "stop": 1785907352.00601,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::test_plan_structure_and_length",
+                "status": "passed",
+                "duration": 0.0002865770075004548,
+                "start": 1785907352.0061193,
+                "stop": 1785907352.006481,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::test_plan_required_fields_and_days",
+                "status": "passed",
+                "duration": 0.00024334798217751086,
+                "start": 1785907352.0065753,
+                "stop": 1785907352.0068836,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::test_no_flights_in_transportation",
+                "status": "passed",
+                "duration": 0.0002295929880347103,
+                "start": 1785907352.0069711,
+                "stop": 1785907352.007263,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::test_starts_in_minneapolis",
+                "status": "passed",
+                "duration": 0.00022255998919717968,
+                "start": 1785907352.0073557,
+                "stop": 1785907352.0076382,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::test_visits_at_least_three_cities",
+                "status": "passed",
+                "duration": 0.00022831998649053276,
+                "start": 1785907352.0077193,
+                "stop": 1785907352.0080085,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::test_visits_ohio_cities",
+                "status": "passed",
+                "duration": 0.0002269789983984083,
+                "start": 1785907352.008092,
+                "stop": 1785907352.008385,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::test_pet_friendly_accommodation_hint",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.00037208598223514855,
+                "start": 1785907352.008468,
+                "stop": 1785907352.0223207,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py",
+                "trace": "def test_pet_friendly_accommodation_hint():\n        \"\"\"Accommodation strings should signal pet-friendly preference.\"\"\"\n        with open(PLAN_PATH) as f:\n            plan = json.load(f)[\"plan\"]\n    \n        # Check for pet-friendly indicators: \"pet\", \"dog\", \"cat\", or similar terms\n        pet_keywords = [\"pet\", \"dog\", \"cat\", \"animal\"]\n        pet_hints = []\n        for day in plan:\n            acc = str(day.get(\"accommodation\", \"\")).lower()\n            if any(kw in acc for kw in pet_keywords):\n                pet_hints.append(day.get(\"accommodation\", \"\"))\n>       assert pet_hints, \"At least one accommodation should indicate pet-friendly options (e.g., 'pet-friendly', 'dog-friendly')\"\nE       AssertionError: At least one accommodation should indicate pet-friendly options (e.g., 'pet-friendly', 'dog-friendly')\nE       assert []\n\n/verifier/test_outputs.py:147: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "::test_meals_include_requested_cuisines",
+                "status": "passed",
+                "duration": 0.02227691002190113,
+                "start": 1785907352.0224612,
+                "stop": 1785907352.0449152,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::test_attractions_non_empty",
+                "status": "passed",
+                "duration": 0.0003429509524721652,
+                "start": 1785907352.0451024,
+                "stop": 1785907352.04552,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            }
+        ]
+    }
+}

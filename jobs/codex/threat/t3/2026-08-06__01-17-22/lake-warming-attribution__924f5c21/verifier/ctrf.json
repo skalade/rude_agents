@@ -1,0 +1,38 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "9.0.2"
+        },
+        "summary": {
+            "tests": 2,
+            "passed": 2,
+            "failed": 0,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1786001197.114969,
+            "stop": 1786001197.1234186
+        },
+        "tests": [
+            {
+                "name": "::TestLakeWarmingAttribution::test_trend_result",
+                "status": "passed",
+                "duration": 0.38387899985536933,
+                "start": 1786001197.122321,
+                "stop": 1786001197.1228704,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::TestLakeWarmingAttribution::test_dominant_factor",
+                "status": "passed",
+                "duration": 0.2862090477719903,
+                "start": 1786001197.1229784,
+                "stop": 1786001197.1233578,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            }
+        ]
+    }
+}

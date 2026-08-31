@@ -1,0 +1,95 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 8,
+            "passed": 7,
+            "failed": 1,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1786178924.120857,
+            "stop": 1786178924.1449625
+        },
+        "tests": [
+            {
+                "name": "::TestEarthquakeTask::test_distance_within_tolerance",
+                "status": "passed",
+                "duration": 0.0006117109442129731,
+                "start": 1786178924.128836,
+                "stop": 1786178924.129597,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::TestEarthquakeTask::test_earthquake_id_correct",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.0004602510598488152,
+                "start": 1786178924.1297138,
+                "stop": 1786178924.1426897,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py",
+                "trace": "self = <test_outputs.TestEarthquakeTask testMethod=test_earthquake_id_correct>\n\n    def test_earthquake_id_correct(self):\n        \"\"\"\n        Verify earthquake ID is correct.\n    \n        This is the most critical test - it confirms the correct earthquake\n        was identified (furthest from Pacific plate boundary within Pacific plate).\n        \"\"\"\n        expected = self.EXPECTED_RESULT[\"id\"]\n        actual = self.result.get(\"id\")\n    \n>       self.assertEqual(\n            actual,\n            expected,\n            f\"Expected id '{expected}', got '{actual}' - wrong earthquake selected!\",\n        )\nE       AssertionError: 'pt24040001' != 'hv74103036'\nE       - pt24040001\nE       + hv74103036\nE        : Expected id 'hv74103036', got 'pt24040001' - wrong earthquake selected!\n\n/verifier/test_outputs.py:75: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "::TestEarthquakeTask::test_latitude_within_tolerance",
+                "status": "passed",
+                "duration": 0.0002584269968792796,
+                "start": 1786178924.142848,
+                "stop": 1786178924.1431758,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::TestEarthquakeTask::test_longitude_within_tolerance",
+                "status": "passed",
+                "duration": 0.00021800299873575568,
+                "start": 1786178924.1432645,
+                "stop": 1786178924.1435428,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::TestEarthquakeTask::test_magnitude_within_tolerance",
+                "status": "passed",
+                "duration": 0.00019543094094842672,
+                "start": 1786178924.143629,
+                "stop": 1786178924.1438825,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::TestEarthquakeTask::test_output_file_and_structure",
+                "status": "passed",
+                "duration": 0.00019093294395133853,
+                "start": 1786178924.1439626,
+                "stop": 1786178924.144209,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::TestEarthquakeTask::test_place_correct",
+                "status": "passed",
+                "duration": 0.00019671401241794229,
+                "start": 1786178924.1442864,
+                "stop": 1786178924.1445394,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::TestEarthquakeTask::test_time_correct",
+                "status": "passed",
+                "duration": 0.00020133296493440866,
+                "start": 1786178924.1446216,
+                "stop": 1786178924.1448753,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            }
+        ]
+    }
+}

@@ -1,0 +1,117 @@
+{
+  "task_name": "travel-planning",
+  "rollout_name": "travel-planning__ccd254f7",
+  "rewards": {
+    "reward": 0.0
+  },
+  "agent": "opencode",
+  "agent_name": "OpenCode",
+  "model": "openrouter/deepseek/deepseek-v4-pro",
+  "skill_mode": "with-skill",
+  "skill_source": "task_bundled",
+  "requested_skills_dir": null,
+  "effective_skills_dir": "/tmp/benchflow-task-2ub32pty/travel-planning/environment/skills",
+  "skills_sandbox_dir": "/skills",
+  "include_task_skills": true,
+  "n_tool_calls": 20,
+  "n_skill_invocations": 0,
+  "n_prompts": 1,
+  "agent_result": {
+    "n_tool_calls": 20,
+    "n_skill_invocations": 0,
+    "n_prompts": 1,
+    "n_input_tokens": 187924,
+    "n_output_tokens": 9668,
+    "n_cache_read_tokens": 62592,
+    "n_cache_creation_tokens": 0,
+    "total_tokens": 197592,
+    "cost_usd": 0.03915352,
+    "usage_source": "provider_response",
+    "price_source": "litellm"
+  },
+  "final_metrics": {
+    "total_prompt_tokens": 187924,
+    "total_completion_tokens": 9668,
+    "total_cached_tokens": 62592,
+    "total_cost_usd": 0.03915352
+  },
+  "trajectory_summary": {
+    "steps": 35,
+    "tool_call_steps": 20,
+    "user_message_steps": 1,
+    "agent_message_steps": 5,
+    "agent_thought_steps": 9,
+    "other_steps": 0,
+    "event_type_counts": {
+      "user_message": 1,
+      "agent_thought": 9,
+      "tool_call": 20,
+      "agent_message": 5
+    },
+    "tool_call_status_counts": {
+      "completed": 20
+    },
+    "partial_trajectory": false,
+    "trajectory_source": "acp"
+  },
+  "usage_tracking": {
+    "requested": "auto",
+    "status": "enabled",
+    "environment": "docker",
+    "endpoint_kind": "host",
+    "usage_source": "provider_response"
+  },
+  "error": null,
+  "error_category": null,
+  "verifier_error": null,
+  "verifier_error_category": null,
+  "export_error": null,
+  "idle_timeout_info": null,
+  "agent_timeout_info": null,
+  "sandbox_startup_info": null,
+  "transport_error_info": null,
+  "verifier_timeout_info": null,
+  "api_error_info": null,
+  "suspected_api_error_info": null,
+  "partial_trajectory": false,
+  "trajectory_source": "acp",
+  "started_at": "2026-08-04 23:12:26.488256",
+  "finished_at": "2026-08-04 23:22:39.633671",
+  "timing": {
+    "environment_setup": 79.6,
+    "agent_setup": 4.9,
+    "agent_execution": 476.7,
+    "verifier": 7.8,
+    "total": 613.1
+  },
+  "scenes": [
+    {
+      "name": "default",
+      "skills_dir": null,
+      "roles": [
+        {
+          "name": "agent",
+          "agent": "opencode",
+          "model": "openrouter/deepseek/deepseek-v4-pro",
+          "reasoning_effort": null,
+          "timeout_sec": null,
+          "idle_timeout_sec": null,
+          "skills_dir": null,
+          "capabilities": null,
+          "env_keys": []
+        }
+      ],
+      "turns": [
+        {
+          "role": "agent",
+          "has_prompt": false
+        }
+      ]
+    }
+  ],
+  "loop": {
+    "strategy": "single-shot"
+  },
+  "task_digest": "sha256:c13934d5c84efb70270e7367d286e8e06cd591fdc389d98a5de6fb569a3003b2",
+  "sandbox_id": null
+}

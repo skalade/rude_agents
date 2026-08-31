@@ -1,0 +1,94 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.3.4"
+        },
+        "summary": {
+            "tests": 6,
+            "passed": 5,
+            "failed": 1,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1785912102.584511,
+            "stop": 1785912102.6554596
+        },
+        "tests": [
+            {
+                "name": "::test_system_basics",
+                "status": "passed",
+                "duration": 1.2549790262710303,
+                "start": 1785912102.6252182,
+                "stop": 1785912102.6266851,
+                "retries": 3,
+                "file_path": "../verifier/test_outputs.py",
+                "tags": [
+                    "parametrize::check::['json_structure', 'schema_validation', 'dot_exists', 'graph_size']"
+                ]
+            },
+            {
+                "name": "::test_narrative_content",
+                "status": "passed",
+                "duration": 0.2583380264695734,
+                "start": 1785912102.628323,
+                "stop": 1785912102.628661,
+                "retries": 8,
+                "file_path": "../verifier/test_outputs.py",
+                "tags": [
+                    "parametrize::category,expected_id::[('speaker', 'Narrator'), ('speaker', 'Barkeep'), ('speaker', 'Merchant'), ('speaker', 'Kira'), ('node', 'Start'), ('node', 'TavernChoice'), ('node', 'StrangerApproach'), ('node', 'CrimsonQuestStart'), ('node', 'KiraMeet')]"
+                ]
+            },
+            {
+                "name": "::test_graph_logic",
+                "status": "failed",
+                "duration": 0.34753300133161247,
+                "start": 1785912102.6318636,
+                "stop": 1785912102.6322885,
+                "retries": 3,
+                "file_path": "../verifier/test_outputs.py",
+                "tags": [
+                    "parametrize::logic_check::['edges_valid', 'reachability', 'tavern_branching', 'multiple_endings']"
+                ],
+                "trace": "nodes = {'AllPotionsBought': {'id': 'AllPotionsBought', 'speaker': 'Narrator', 'text': 'Your pack clinks with vials. You feel ...Rage', 'speaker': 'Narrator', 'text': 'Your shout echoes. A rat scurries away. No answers come.', 'type': 'line'}, ...}\nedges = [{'from': 'Start', 'text': '', 'to': 'TavernEntry'}, {'from': 'TavernEntry', 'text': '', 'to': 'TavernChoice'}, {'from...epApproach'}, {'from': 'TavernChoice', 'text': '[Observe] Study the room from the shadows.', 'to': 'ObserveRoom'}, ...]\nedge_map = {'AllPotionsBought': ['QuestChoice'], 'AlleyCalm': ['TavernReturn'], 'AlleyCheck': ['TavernReturn'], 'AlleyRage': ['AlleyCheck'], ...}\nlogic_check = 'reachability'\n\n    @pytest.mark.parametrize(\"logic_check\", [\n        \"edges_valid\",\n        \"reachability\",\n        \"tavern_branching\",\n        \"multiple_endings\"\n    ])\n    def test_graph_logic(nodes, edges, edge_map, logic_check):\n        \"\"\"Verify graph connectivity, validity, and branching logic.\"\"\"\n    \n        if logic_check == \"edges_valid\":\n            for edge in edges:\n                assert edge[\"from\"] in nodes, f\"Edge source '{edge['from']}' missing\"\n                if edge[\"to\"] != \"End\":\n                    assert edge[\"to\"] in nodes, f\"Edge target '{edge['to']}' missing\"\n    \n        elif logic_check == \"reachability\":\n            reachable = set()\n            queue = deque([\"Start\"])\n            while queue:\n                curr = queue.popleft()\n                if curr in reachable: continue\n                reachable.add(curr)\n                for tgt in edge_map.get(curr, []):\n                    if tgt != \"End\": queue.append(tgt)\n    \n            unreachable = set(nodes.keys()) - reachable\n>           assert not unreachable, f\"Unreachable nodes found: {list(unreachable)[:3]}...\"\nE           AssertionError: Unreachable nodes found: ['End']...\nE           assert not {'End'}\n\n/verifier/test_outputs.py:158: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "::test_visualization_validity",
+                "status": "passed",
+                "duration": 0.21837299573235214,
+                "start": 1785912102.6473553,
+                "stop": 1785912102.6476514,
+                "retries": 3,
+                "file_path": "../verifier/test_outputs.py",
+                "tags": [
+                    "parametrize::viz_check::['header', 'syntax', 'shapes', 'content']"
+                ]
+            },
+            {
+                "name": "::test_content_integrity",
+                "status": "passed",
+                "duration": 0.2611519885249436,
+                "start": 1785912102.6489124,
+                "stop": 1785912102.6492527,
+                "retries": 7,
+                "file_path": "../verifier/test_outputs.py",
+                "tags": [
+                    "parametrize::check_type, identifier, content_fragment::[('node_text', 'StrangerMoreInfo', 'Back so soon? Afraid?'), ('node_text', 'MerchantShame', 'I light a candle for each of them'), ('edge_text', 'RecruitOptions', 'The stranger seems capable'), ('node_text', 'KiraWarning', \"She's never failed a contract\"), ('node_id', 'HitNegotiate', None), ('node_id', 'CrimsonCompromise', None), ('dynamic_script_sample', 'script.txt', None), ('first_node_check', 'script.txt', None)]"
+                ]
+            },
+            {
+                "name": "::test_structural_integrity",
+                "status": "passed",
+                "duration": 0.25187499704770744,
+                "start": 1785912102.6530375,
+                "stop": 1785912102.6533694,
+                "retries": 5,
+                "file_path": "../verifier/test_outputs.py",
+                "tags": [
+                    "parametrize::u,v::[('Start', 'TavernEntry'), ('TavernEntry', 'TavernChoice'), ('TavernChoice', 'StrangerApproach'), ('TavernChoice', 'MerchantApproach'), ('StrangerGreet', 'CrimsonQuestStart'), ('CrimsonQuestStart', 'CrimsonWarning')]"
+                ]
+            }
+        ]
+    }
+}

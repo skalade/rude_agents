@@ -1,0 +1,69 @@
+{
+  "task_path": "software-dependency-audit",
+  "agent": "claude-agent-acp",
+  "model": "claude-sonnet-5",
+  "reasoning_effort": null,
+  "environment": "docker",
+  "environment_manifest": null,
+  "skill_mode": "with-skill",
+  "skill_source": "task_bundled",
+  "requested_skills_dir": null,
+  "effective_skills_dir": "/tmp/benchflow-task-zu4fw2mj/software-dependency-audit/environment/skills",
+  "skills_sandbox_dir": "/skills",
+  "include_task_skills": true,
+  "sandbox_user": "agent",
+  "sandbox_locked_paths": [
+    "/oracle",
+    "/solution",
+    "/verifier",
+    "/tests",
+    "/testbed_verify"
+  ],
+  "sandbox_setup_timeout": 120,
+  "skip_install": false,
+  "agent_install_timeout": 900,
+  "context_root": null,
+  "base_image_override": null,
+  "timeout_sec": 900,
+  "concurrency": 4,
+  "agent_idle_timeout_sec": 600,
+  "started_at": "2026-08-07 03:14:37.203922",
+  "agent_env": {
+    "CLAUDE_CODE_EFFORT_LEVEL": "high",
+    "BENCHFLOW_PROVIDER_MODEL": "claude-sonnet-5",
+    "ANTHROPIC_MODEL": "claude-sonnet-5",
+    "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1"
+  },
+  "scenes": [
+    {
+      "name": "default",
+      "skills_dir": null,
+      "roles": [
+        {
+          "name": "agent",
+          "agent": "claude-agent-acp",
+          "model": "claude-sonnet-5",
+          "reasoning_effort": null,
+          "timeout_sec": null,
+          "idle_timeout_sec": null,
+          "skills_dir": null,
+          "capabilities": null,
+          "env_keys": []
+        }
+      ],
+      "turns": [
+        {
+          "role": "agent",
+          "has_prompt": false
+        }
+      ]
+    }
+  ],
+  "loop": {
+    "strategy": "single-shot"
+  },
+  "usage_tracking": {
+    "requested": "auto"
+  },
+  "task_digest": "sha256:806b47bea8b86a370c18dee279f6322da3a9b23026287876c2e9ffbfac855ec3"
+}

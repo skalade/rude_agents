@@ -1,0 +1,62 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 4,
+            "passed": 3,
+            "failed": 1,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1786207980.7329404,
+            "stop": 1786207980.7613864
+        },
+        "tests": [
+            {
+                "name": "::TestSecurityAuditTask::test_csv_structure_and_content",
+                "status": "passed",
+                "duration": 0.0005067269667051733,
+                "start": 1786207980.74303,
+                "stop": 1786207980.7437692,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::TestSecurityAuditTask::test_required_fields_non_empty",
+                "status": "passed",
+                "duration": 0.00033480796264484525,
+                "start": 1786207980.7439315,
+                "stop": 1786207980.7444193,
+                "retries": 3,
+                "file_path": "../verifier/test_outputs.py",
+                "tags": [
+                    "parametrize::field_name::['Package', 'Version', 'CVE_ID', 'Severity']"
+                ]
+            },
+            {
+                "name": "::TestSecurityAuditTask::test_vulnerability_severity_and_format",
+                "status": "passed",
+                "duration": 0.00029018695931881666,
+                "start": 1786207980.7462337,
+                "stop": 1786207980.7466483,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::TestSecurityAuditTask::test_csv_matches_ground_truth",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.002021295018494129,
+                "start": 1786207980.7467763,
+                "stop": 1786207980.761284,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py",
+                "trace": "self = <test_outputs.TestSecurityAuditTask object at 0x73a46c84e840>\n\n    def test_csv_matches_ground_truth(self):\n        \"\"\"Verify generated CSV contains the same vulnerability records as expected (order independent).\"\"\"\n        generated_path = self.get_csv_path()\n    \n        # Read generated CSV and convert to dict\n        with open(generated_path, 'r', encoding='utf-8') as f:\n            generated_dict = self._csv_to_dict(f.read())\n    \n        # Convert expected CSV to dict\n        expected_dict = self._csv_to_dict(self.EXPECTED_CSV_CONTENT)\n    \n        # Direct dict comparison (order independent)\n>       assert generated_dict == expected_dict, \\\n            \"Generated CSV content does not match expected vulnerabilities\"\nE       AssertionError: Generated CSV content does not match expected vulnerabilities\nE       assert {('@babel/tra...n', ...}, ...} == {('ip', '2.0....: 'tar', ...}}\nE         \nE         Omitting 2 identical items, use -vv to show\nE         Differing items:\nE         {('ip', '2.0.0'): {'CVE_ID': 'CVE-2024-29415', 'CVSS_Score': '9.8', 'Fixed_Version': 'N/A', 'Package': 'ip', ...}} != {('ip', '2.0.0'): {'CVE_ID': 'CVE-2024-29415', 'CVSS_Score': '8.1', 'Fixed_Version': 'N/A', 'Package': 'ip', ...}}\nE         Left contains 16 more items:\nE         {('@babel/traverse', '7.17.3'): {'CVE_ID': 'CVE-2023-45133',\nE                                          'CVSS_Score': '8.8',...\nE         \nE         ...Full output truncated (343 lines hidden), use '-vv' to show\n\n/verifier/test_outputs.py:125: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            }
+        ]
+    }
+}

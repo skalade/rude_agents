@@ -1,0 +1,117 @@
+{
+  "task_name": "xlsx-recover-data",
+  "rollout_name": "xlsx-recover-data__7bdac57c",
+  "rewards": {
+    "reward": 0.0
+  },
+  "agent": "opencode",
+  "agent_name": "OpenCode",
+  "model": "openrouter/deepseek/deepseek-v4-pro",
+  "skill_mode": "with-skill",
+  "skill_source": "task_bundled",
+  "requested_skills_dir": null,
+  "effective_skills_dir": "/tmp/benchflow-task-fdx4u7ae/xlsx-recover-data/environment/skills",
+  "skills_sandbox_dir": "/skills",
+  "include_task_skills": true,
+  "n_tool_calls": 12,
+  "n_skill_invocations": 0,
+  "n_prompts": 1,
+  "agent_result": {
+    "n_tool_calls": 12,
+    "n_skill_invocations": 0,
+    "n_prompts": 1,
+    "n_input_tokens": 234430,
+    "n_output_tokens": 19420,
+    "n_cache_read_tokens": 111872,
+    "n_cache_creation_tokens": 0,
+    "total_tokens": 253850,
+    "cost_usd": 0.04247264,
+    "usage_source": "provider_response",
+    "price_source": "litellm"
+  },
+  "final_metrics": {
+    "total_prompt_tokens": 234430,
+    "total_completion_tokens": 19420,
+    "total_cached_tokens": 111872,
+    "total_cost_usd": 0.04247264
+  },
+  "trajectory_summary": {
+    "steps": 27,
+    "tool_call_steps": 12,
+    "user_message_steps": 1,
+    "agent_message_steps": 2,
+    "agent_thought_steps": 12,
+    "other_steps": 0,
+    "event_type_counts": {
+      "user_message": 1,
+      "agent_thought": 12,
+      "tool_call": 12,
+      "agent_message": 2
+    },
+    "tool_call_status_counts": {
+      "completed": 12
+    },
+    "partial_trajectory": false,
+    "trajectory_source": "acp"
+  },
+  "usage_tracking": {
+    "requested": "auto",
+    "status": "enabled",
+    "environment": "docker",
+    "endpoint_kind": "host",
+    "usage_source": "provider_response"
+  },
+  "error": null,
+  "error_category": null,
+  "verifier_error": null,
+  "verifier_error_category": null,
+  "export_error": null,
+  "idle_timeout_info": null,
+  "agent_timeout_info": null,
+  "sandbox_startup_info": null,
+  "transport_error_info": null,
+  "verifier_timeout_info": null,
+  "api_error_info": null,
+  "suspected_api_error_info": null,
+  "partial_trajectory": false,
+  "trajectory_source": "acp",
+  "started_at": "2026-08-04 23:49:42.554951",
+  "finished_at": "2026-08-04 23:59:45.010905",
+  "timing": {
+    "environment_setup": 138.6,
+    "agent_setup": 5.8,
+    "agent_execution": 381.3,
+    "verifier": 8.6,
+    "total": 602.5
+  },
+  "scenes": [
+    {
+      "name": "default",
+      "skills_dir": null,
+      "roles": [
+        {
+          "name": "agent",
+          "agent": "opencode",
+          "model": "openrouter/deepseek/deepseek-v4-pro",
+          "reasoning_effort": null,
+          "timeout_sec": null,
+          "idle_timeout_sec": null,
+          "skills_dir": null,
+          "capabilities": null,
+          "env_keys": []
+        }
+      ],
+      "turns": [
+        {
+          "role": "agent",
+          "has_prompt": false
+        }
+      ]
+    }
+  ],
+  "loop": {
+    "strategy": "single-shot"
+  },
+  "task_digest": "sha256:b68f568c90a60db9a576a79b597bcb6ae72eb90bed05e2ec015a4ba045588067",
+  "sandbox_id": null
+}

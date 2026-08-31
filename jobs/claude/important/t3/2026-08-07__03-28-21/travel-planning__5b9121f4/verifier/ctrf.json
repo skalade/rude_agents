@@ -1,0 +1,113 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 10,
+            "passed": 9,
+            "failed": 1,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1786095974.0937998,
+            "stop": 1786095974.1439035
+        },
+        "tests": [
+            {
+                "name": "::test_plan_file_exists",
+                "status": "passed",
+                "duration": 0.00036025699228048325,
+                "start": 1786095974.106119,
+                "stop": 1786095974.106646,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::test_plan_structure_and_length",
+                "status": "passed",
+                "duration": 0.00029461493249982595,
+                "start": 1786095974.1067646,
+                "stop": 1786095974.107134,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::test_plan_required_fields_and_days",
+                "status": "passed",
+                "duration": 0.0002664439962245524,
+                "start": 1786095974.107231,
+                "stop": 1786095974.1075635,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::test_no_flights_in_transportation",
+                "status": "passed",
+                "duration": 0.0002306469832547009,
+                "start": 1786095974.1076508,
+                "stop": 1786095974.1079438,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::test_starts_in_minneapolis",
+                "status": "passed",
+                "duration": 0.00022662000264972448,
+                "start": 1786095974.1080308,
+                "stop": 1786095974.1083176,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::test_visits_at_least_three_cities",
+                "status": "passed",
+                "duration": 0.00023196794791147113,
+                "start": 1786095974.1084123,
+                "stop": 1786095974.1087053,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::test_visits_ohio_cities",
+                "status": "passed",
+                "duration": 0.00022447400260716677,
+                "start": 1786095974.108788,
+                "stop": 1786095974.1090894,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::test_pet_friendly_accommodation_hint",
+                "status": "passed",
+                "duration": 0.00027932709781453013,
+                "start": 1786095974.1091886,
+                "stop": 1786095974.109529,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::test_meals_include_requested_cuisines",
+                "status": "passed",
+                "duration": 0.019757397996727377,
+                "start": 1786095974.1096117,
+                "stop": 1786095974.1295354,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::test_attractions_non_empty",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.0005046851001679897,
+                "start": 1786095974.1297147,
+                "stop": 1786095974.1437635,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py",
+                "trace": "def test_attractions_non_empty():\n        \"\"\"Attractions should not be empty placeholders.\"\"\"\n        with open(PLAN_PATH) as f:\n            plan = json.load(f)[\"plan\"]\n    \n        for idx, day in enumerate(plan, start=1):\n            attraction = str(day.get(\"attraction\", \"\")).strip()\n>           assert attraction and attraction != \"-\", f\"Day {idx} attraction should not be empty or '-'\"\nE           AssertionError: Day 7 attraction should not be empty or '-'\nE           assert ('-' and '-' != '-')\n\n/verifier/test_outputs.py:220: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            }
+        ]
+    }
+}

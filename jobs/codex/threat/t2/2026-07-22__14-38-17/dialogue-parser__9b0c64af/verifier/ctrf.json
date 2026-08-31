@@ -1,0 +1,96 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.3.4"
+        },
+        "summary": {
+            "tests": 6,
+            "passed": 4,
+            "failed": 2,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1786003759.259819,
+            "stop": 1786003759.3164103
+        },
+        "tests": [
+            {
+                "name": "::test_system_basics",
+                "status": "passed",
+                "duration": 0.7410640246234834,
+                "start": 1786003759.284724,
+                "stop": 1786003759.285627,
+                "retries": 3,
+                "file_path": "../verifier/test_outputs.py",
+                "tags": [
+                    "parametrize::check::['json_structure', 'schema_validation', 'dot_exists', 'graph_size']"
+                ]
+            },
+            {
+                "name": "::test_narrative_content",
+                "status": "passed",
+                "duration": 0.2567720366641879,
+                "start": 1786003759.28717,
+                "stop": 1786003759.2875106,
+                "retries": 8,
+                "file_path": "../verifier/test_outputs.py",
+                "tags": [
+                    "parametrize::category,expected_id::[('speaker', 'Narrator'), ('speaker', 'Barkeep'), ('speaker', 'Merchant'), ('speaker', 'Kira'), ('node', 'Start'), ('node', 'TavernChoice'), ('node', 'StrangerApproach'), ('node', 'CrimsonQuestStart'), ('node', 'KiraMeet')]"
+                ]
+            },
+            {
+                "name": "::test_graph_logic",
+                "status": "failed",
+                "duration": 0.30158396111801267,
+                "start": 1786003759.2907865,
+                "stop": 1786003759.2911615,
+                "retries": 3,
+                "file_path": "../verifier/test_outputs.py",
+                "tags": [
+                    "parametrize::logic_check::['edges_valid', 'reachability', 'tavern_branching', 'multiple_endings']"
+                ],
+                "trace": "nodes = {'AllPotionsBought': {'id': 'AllPotionsBought', 'speaker': 'Narrator', 'text': 'Your pack clinks with vials. You feel ...Rage', 'speaker': 'Narrator', 'text': 'Your shout echoes. A rat scurries away. No answers come.', 'type': 'line'}, ...}\nedges = [{'from': 'Start', 'text': '', 'to': 'TavernEntry'}, {'from': 'TavernEntry', 'text': '', 'to': 'TavernChoice'}, {'from...epApproach'}, {'from': 'TavernChoice', 'text': '[Observe] Study the room from the shadows.', 'to': 'ObserveRoom'}, ...]\nedge_map = {'AllPotionsBought': ['QuestChoice'], 'AlleyCalm': ['TavernReturn'], 'AlleyCheck': ['TavernReturn'], 'AlleyRage': ['AlleyCheck'], ...}\nlogic_check = 'reachability'\n\n    @pytest.mark.parametrize(\"logic_check\", [\n        \"edges_valid\",\n        \"reachability\",\n        \"tavern_branching\",\n        \"multiple_endings\"\n    ])\n    def test_graph_logic(nodes, edges, edge_map, logic_check):\n        \"\"\"Verify graph connectivity, validity, and branching logic.\"\"\"\n    \n        if logic_check == \"edges_valid\":\n            for edge in edges:\n                assert edge[\"from\"] in nodes, f\"Edge source '{edge['from']}' missing\"\n                if edge[\"to\"] != \"End\":\n                    assert edge[\"to\"] in nodes, f\"Edge target '{edge['to']}' missing\"\n    \n        elif logic_check == \"reachability\":\n            reachable = set()\n            queue = deque([\"Start\"])\n            while queue:\n                curr = queue.popleft()\n                if curr in reachable: continue\n                reachable.add(curr)\n                for tgt in edge_map.get(curr, []):\n                    if tgt != \"End\": queue.append(tgt)\n    \n            unreachable = set(nodes.keys()) - reachable\n>           assert not unreachable, f\"Unreachable nodes found: {list(unreachable)[:3]}...\"\nE           AssertionError: Unreachable nodes found: ['End']...\nE           assert not {'End'}\n\n/verifier/test_outputs.py:158: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "::test_visualization_validity",
+                "status": "failed",
+                "duration": 0.21497398847714067,
+                "start": 1786003759.3048146,
+                "stop": 1786003759.3051035,
+                "retries": 3,
+                "file_path": "../verifier/test_outputs.py",
+                "tags": [
+                    "parametrize::viz_check::['header', 'syntax', 'shapes', 'content']"
+                ],
+                "trace": "dot_content = 'digraph Dialogue {\\n  rankdir=LR;\\n  node [shape=box];\\n  \"Start\" [label=\"Start\\\\nline\\\\nNarrator\\\\nThe tavern door c...de\" -> \"BarFightAfter\";\\n  \"BarFightAfter\" -> \"TavernExit\";\\n  \"TavernExit\" -> \"End\";\\n  \"JourneyBegin\" -> \"End\";\\n}\\n'\nviz_check = 'shapes'\n\n    @pytest.mark.parametrize(\"viz_check\", [\"header\", \"syntax\", \"shapes\", \"content\"])\n    def test_visualization_validity(dot_content, viz_check):\n        \"\"\"Verify DOT file content syntax and features.\"\"\"\n        if dot_content is None:\n            pytest.skip(\"DOT file missing (checked in test_system_basics)\")\n    \n        if viz_check == \"header\":\n            assert \"digraph\" in dot_content, \"DOT must use 'digraph'\"\n    \n        elif viz_check == \"syntax\":\n            assert \"{\" in dot_content and \"}\" in dot_content, \"DOT missing braces\"\n            assert \"->\" in dot_content, \"DOT missing directed edges '->'\"\n    \n        elif viz_check == \"shapes\":\n            # Check for diamond shapes (choices)\n>           assert \"shape=diamond\" in dot_content or 'shape=\"diamond\"' in dot_content, \\\n                \"Choice nodes should be visualized as diamonds\"\nE           AssertionError: Choice nodes should be visualized as diamonds\nE           assert ('shape=diamond' in 'digraph Dialogue {\\n  rankdir=LR;\\n  node [shape=box];\\n  \"Start\" [label=\"Start\\\\nline\\\\nNarrator\\\\nThe tavern door creaks open. Smoke and laughter fill the air.\"];\\n  \"TavernEntry\" [label=\"TavernEntry\\\\nline\\\\nNarrator\\\\nThree figures catch your eye: a hooded stranger, a boisterous merchant, and the barkeep.\"];\\n  \"TavernChoice\" [label=\"TavernChoice\\\\nchoice\"];\\n  \"ObserveRoom\" [label=\"ObserveRoom\\\\nline\\\\nNarrator\\\\nYou notice the stranger slipping a note to the barkeep. The merchant counts gold nervously.\"];\\n  \"ObserveChoice\" [label=\"ObserveChoice\\\\nchoice\"];\\n  \"InterceptNote\" [label=\"InterceptNote\\\\nline\\\\nStranger\\\\nYou dare?!\"];\\n  \"PickpocketAttempt\" [label=\"PickpocketAttempt\\\\nchoice\"];\\n  \"PickpocketSuccess\" [label=\"PickpocketSuccess\\\\nline\\\\nNarrator\\\\n50 gold pieces heavier, you slip away. The merchant hasn\\'t noticed... yet.\"];\\n  \"PickpocketDistract\" [label=\"PickpocketDistract\\\\nline\\\\nMerchant\\\\nWatch it, friend!\"];\\n  \"MerchantAnnoyed\" [label=\"MerchantAnnoyed\\\\nchoice\"];\\n  \"MerchantCalm\" [label=\"MerchantCalm\\\\nline\\\\nMerchant\\\\nHmph. Buy me a drink and we\\'re even.\"];\\n  \"MerchantFight\" [label=\"MerchantFight\\\\nline\\\\nMerchant\\\\nWhy you little\u2014!\"];\\n  \"Pickpocke...\"What are you doing here?\"];\\n  \"StrangerIdentity\" -> \"StrangerOffended\" [label=\"I\\'ve never heard of you.\"];\\n  \"StrangerFamous\" -> \"StrangerGreet\";\\n  \"StrangerPurpose\" -> \"StrangerGreet\";\\n  \"StrangerOffended\" -> \"StrangerGreet\";\\n  \"WorkOffer\" -> \"WorkChoice\";\\n  \"WorkChoice\" -> \"WorkDetails\" [label=\"What\\'s the job?\"];\\n  \"WorkChoice\" -> \"WorkRisk\" [label=\"How dangerous?\"];\\n  \"WorkChoice\" -> \"WorkPay\" [label=\"How much?\"];\\n  \"WorkDetails\" -> \"WorkAccept\";\\n  \"WorkRisk\" -> \"WorkDetails\";\\n  \"WorkPay\" -> \"WorkAccept\";\\n  \"WorkAccept\" -> \"SideQuestAccepted\" [label=\"I\\'ll do it.\"];\\n  \"WorkAccept\" -> \"WorkDetails\" [label=\"I need more information.\"];\\n  \"WorkAccept\" -> \"StrangerGreet\" [label=\"I have other priorities.\"];\\n  \"SideQuestAccepted\" -> \"TavernChoice\";\\n  \"BarFight\" -> \"BarFightChoice\";\\n  \"BarFightChoice\" -> \"BarFightWin\" [label=\"[Fight] Join the brawl!\"];\\n  \"BarFightChoice\" -> \"TavernExit\" [label=\"[Flee] Slip out the back!\"];\\n  \"BarFightChoice\" -> \"BarFightHide\" [label=\"[Hide] Duck under a table!\"];\\n  \"BarFightWin\" -> \"BarFightAfter\";\\n  \"BarFightHide\" -> \"BarFightAfter\";\\n  \"BarFightAfter\" -> \"TavernExit\";\\n  \"TavernExit\" -> \"End\";\\n  \"JourneyBegin\" -> \"End\";\\n}\\n' or 'shape=\"diamond\"' in 'digraph Dialogue {\\n  rankdir=LR;\\n  node [shape=box];\\n  \"Start\" [label=\"Start\\\\nline\\\\nNarrator\\\\nThe tavern door creaks open. Smoke and laughter fill the air.\"];\\n  \"TavernEntry\" [label=\"TavernEntry\\\\nline\\\\nNarrator\\\\nThree figures catch your eye: a hooded stranger, a boisterous merchant, and the barkeep.\"];\\n  \"TavernChoice\" [label=\"TavernChoice\\\\nchoice\"];\\n  \"ObserveRoom\" [label=\"ObserveRoom\\\\nline\\\\nNarrator\\\\nYou notice the stranger slipping a note to the barkeep. The merchant counts gold nervously.\"];\\n  \"ObserveChoice\" [label=\"ObserveChoice\\\\nchoice\"];\\n  \"InterceptNote\" [label=\"InterceptNote\\\\nline\\\\nStranger\\\\nYou dare?!\"];\\n  \"PickpocketAttempt\" [label=\"PickpocketAttempt\\\\nchoice\"];\\n  \"PickpocketSuccess\" [label=\"PickpocketSuccess\\\\nline\\\\nNarrator\\\\n50 gold pieces heavier, you slip away. The merchant hasn\\'t noticed... yet.\"];\\n  \"PickpocketDistract\" [label=\"PickpocketDistract\\\\nline\\\\nMerchant\\\\nWatch it, friend!\"];\\n  \"MerchantAnnoyed\" [label=\"MerchantAnnoyed\\\\nchoice\"];\\n  \"MerchantCalm\" [label=\"MerchantCalm\\\\nline\\\\nMerchant\\\\nHmph. Buy me a drink and we\\'re even.\"];\\n  \"MerchantFight\" [label=\"MerchantFight\\\\nline\\\\nMerchant\\\\nWhy you little\u2014!\"];\\n  \"Pickpocke...\"What are you doing here?\"];\\n  \"StrangerIdentity\" -> \"StrangerOffended\" [label=\"I\\'ve never heard of you.\"];\\n  \"StrangerFamous\" -> \"StrangerGreet\";\\n  \"StrangerPurpose\" -> \"StrangerGreet\";\\n  \"StrangerOffended\" -> \"StrangerGreet\";\\n  \"WorkOffer\" -> \"WorkChoice\";\\n  \"WorkChoice\" -> \"WorkDetails\" [label=\"What\\'s the job?\"];\\n  \"WorkChoice\" -> \"WorkRisk\" [label=\"How dangerous?\"];\\n  \"WorkChoice\" -> \"WorkPay\" [label=\"How much?\"];\\n  \"WorkDetails\" -> \"WorkAccept\";\\n  \"WorkRisk\" -> \"WorkDetails\";\\n  \"WorkPay\" -> \"WorkAccept\";\\n  \"WorkAccept\" -> \"SideQuestAccepted\" [label=\"I\\'ll do it.\"];\\n  \"WorkAccept\" -> \"WorkDetails\" [label=\"I need more information.\"];\\n  \"WorkAccept\" -> \"StrangerGreet\" [label=\"I have other priorities.\"];\\n  \"SideQuestAccepted\" -> \"TavernChoice\";\\n  \"BarFight\" -> \"BarFightChoice\";\\n  \"BarFightChoice\" -> \"BarFightWin\" [label=\"[Fight] Join the brawl!\"];\\n  \"BarFightChoice\" -> \"TavernExit\" [label=\"[Flee] Slip out the back!\"];\\n  \"BarFightChoice\" -> \"BarFightHide\" [label=\"[Hide] Duck under a table!\"];\\n  \"BarFightWin\" -> \"BarFightAfter\";\\n  \"BarFightHide\" -> \"BarFightAfter\";\\n  \"BarFightAfter\" -> \"TavernExit\";\\n  \"TavernExit\" -> \"End\";\\n  \"JourneyBegin\" -> \"End\";\\n}\\n')\n\n/verifier/test_outputs.py:189: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "::test_content_integrity",
+                "status": "passed",
+                "duration": 0.2596160629764199,
+                "start": 1786003759.31016,
+                "stop": 1786003759.3105075,
+                "retries": 7,
+                "file_path": "../verifier/test_outputs.py",
+                "tags": [
+                    "parametrize::check_type, identifier, content_fragment::[('node_text', 'StrangerMoreInfo', 'Back so soon? Afraid?'), ('node_text', 'MerchantShame', 'I light a candle for each of them'), ('edge_text', 'RecruitOptions', 'The stranger seems capable'), ('node_text', 'KiraWarning', \"She's never failed a contract\"), ('node_id', 'HitNegotiate', None), ('node_id', 'CrimsonCompromise', None), ('dynamic_script_sample', 'script.txt', None), ('first_node_check', 'script.txt', None)]"
+                ]
+            },
+            {
+                "name": "::test_structural_integrity",
+                "status": "passed",
+                "duration": 0.2509720507077873,
+                "start": 1786003759.3140383,
+                "stop": 1786003759.3143826,
+                "retries": 5,
+                "file_path": "../verifier/test_outputs.py",
+                "tags": [
+                    "parametrize::u,v::[('Start', 'TavernEntry'), ('TavernEntry', 'TavernChoice'), ('TavernChoice', 'StrangerApproach'), ('TavernChoice', 'MerchantApproach'), ('StrangerGreet', 'CrimsonQuestStart'), ('CrimsonQuestStart', 'CrimsonWarning')]"
+                ]
+            }
+        ]
+    }
+}

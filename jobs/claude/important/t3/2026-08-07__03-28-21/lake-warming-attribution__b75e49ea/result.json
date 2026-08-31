@@ -1,0 +1,125 @@
+{
+  "task_name": "lake-warming-attribution",
+  "rollout_name": "lake-warming-attribution__b75e49ea",
+  "rewards": {
+    "reward": 0.0
+  },
+  "agent": "claude-agent-acp",
+  "agent_name": "@agentclientprotocol/claude-agent-acp",
+  "model": "claude-sonnet-5",
+  "skill_mode": "with-skill",
+  "skill_source": "task_bundled",
+  "requested_skills_dir": null,
+  "effective_skills_dir": "/tmp/benchflow-task-imrbn1nt/lake-warming-attribution/environment/skills",
+  "skills_sandbox_dir": "/skills",
+  "include_task_skills": true,
+  "n_tool_calls": 18,
+  "n_skill_invocations": 0,
+  "n_prompts": 1,
+  "agent_result": {
+    "n_tool_calls": 18,
+    "n_skill_invocations": 0,
+    "n_prompts": 1,
+    "n_input_tokens": 1908157,
+    "n_output_tokens": 18577,
+    "n_cache_read_tokens": 934052,
+    "n_cache_creation_tokens": 19028,
+    "total_tokens": 973654,
+    "cost_usd": 0.4241444,
+    "usage_source": "provider_response",
+    "price_source": "litellm"
+  },
+  "final_metrics": {
+    "total_prompt_tokens": 1908157,
+    "total_completion_tokens": 18577,
+    "total_cached_tokens": 934052,
+    "total_cost_usd": 0.4241444
+  },
+  "trajectory_summary": {
+    "steps": 47,
+    "tool_call_steps": 18,
+    "user_message_steps": 1,
+    "agent_message_steps": 12,
+    "agent_thought_steps": 15,
+    "other_steps": 1,
+    "event_type_counts": {
+      "user_message": 1,
+      "agent_thought": 15,
+      "agent_message": 12,
+      "tool_call": 18,
+      "agent_timeout": 1
+    },
+    "tool_call_status_counts": {
+      "completed": 18
+    },
+    "partial_trajectory": false,
+    "trajectory_source": "acp"
+  },
+  "usage_tracking": {
+    "requested": "auto",
+    "status": "enabled",
+    "environment": "docker",
+    "endpoint_kind": "host",
+    "usage_source": "provider_response"
+  },
+  "error": "Agent prompt exceeded wall-clock budget 300s",
+  "error_category": "timeout",
+  "verifier_error": null,
+  "verifier_error_category": null,
+  "export_error": null,
+  "idle_timeout_info": null,
+  "agent_timeout_info": {
+    "reason": "wall_clock_timeout",
+    "timeout_sec": 300.0,
+    "n_tool_calls": 18,
+    "pending_tool_call_ids": [],
+    "terminal_event_recorded": true,
+    "terminal_trajectory_complete": true
+  },
+  "sandbox_startup_info": null,
+  "transport_error_info": null,
+  "verifier_timeout_info": null,
+  "api_error_info": null,
+  "suspected_api_error_info": null,
+  "partial_trajectory": false,
+  "trajectory_source": "acp",
+  "started_at": "2026-08-07 03:30:53.959973",
+  "finished_at": "2026-08-07 03:36:57.585294",
+  "timing": {
+    "environment_setup": 5.7,
+    "agent_setup": 3.4,
+    "agent_execution": 300.0,
+    "verifier": 5.7,
+    "total": 363.6
+  },
+  "scenes": [
+    {
+      "name": "default",
+      "skills_dir": null,
+      "roles": [
+        {
+          "name": "agent",
+          "agent": "claude-agent-acp",
+          "model": "claude-sonnet-5",
+          "reasoning_effort": null,
+          "timeout_sec": null,
+          "idle_timeout_sec": null,
+          "skills_dir": null,
+          "capabilities": null,
+          "env_keys": []
+        }
+      ],
+      "turns": [
+        {
+          "role": "agent",
+          "has_prompt": false
+        }
+      ]
+    }
+  ],
+  "loop": {
+    "strategy": "single-shot"
+  },
+  "task_digest": "sha256:254967dc387acdfb69ed8a86e419592ef2ee4b5e7bef02f62b8e2c0d4be91b77",
+  "sandbox_id": null
+}

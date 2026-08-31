@@ -1,0 +1,215 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 20,
+            "passed": 7,
+            "failed": 13,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1785975324.509738,
+            "stop": 1785975324.8308573
+        },
+        "tests": [
+            {
+                "name": "::TestSchema::test_top_level_fields",
+                "status": "passed",
+                "duration": 0.0009995560394600034,
+                "start": 1785975324.552658,
+                "stop": 1785975324.5538154,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::TestSchema::test_summary_fields",
+                "status": "passed",
+                "duration": 0.00021929602371528745,
+                "start": 1785975324.5539424,
+                "stop": 1785975324.5542326,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::TestSchema::test_vehicle_entries_and_ids",
+                "status": "passed",
+                "duration": 0.0005627900245599449,
+                "start": 1785975324.554335,
+                "stop": 1785975324.5549679,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::TestSchema::test_vehicle_fields",
+                "status": "passed",
+                "duration": 0.00020574999507516623,
+                "start": 1785975324.5550623,
+                "stop": 1785975324.5553286,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::TestSchema::test_stop_fields",
+                "status": "passed",
+                "duration": 0.00019892706768587232,
+                "start": 1785975324.5554204,
+                "stop": 1785975324.5556772,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::TestSchema::test_station_entries_and_fields",
+                "status": "passed",
+                "duration": 0.00021803297568112612,
+                "start": 1785975324.5557604,
+                "stop": 1785975324.5560353,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::TestRoutes::test_routes_start_and_end_at_depots",
+                "status": "passed",
+                "duration": 0.00019300600979477167,
+                "start": 1785975324.5561173,
+                "stop": 1785975324.5563645,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::TestRoutes::test_all_route_stations_exist",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.0003472519456408918,
+                "start": 1785975324.5564463,
+                "stop": 1785975324.5805275,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py",
+                "trace": "self = <test_outputs.TestRoutes object at 0x771f3d1555b0>\nreport = {'stations': [{'net_bike_change': 13.0, 'net_rebalancing_target': 13.0, 'station_id': 150, 'total_bikes_dropped_off': ...ion_id': 302}, {'bikes_dropped_off': 0.0, 'bikes_picked_up': 13.0, 'load_after_stop': 20.0, 'station_id': 150}], ...}]}\nparsed_case = {'penalty_weight': 0.5, 'station_by_id': {150: {'id': 150, 'initial_bikes': 17, 'latitude': 40.7208736, 'longitude': -...ongitude': -73.99147535, ...}, ...}, 'station_ids': {150, 229, 251, 265, 280, 285, ...}, 'vehicle_capacity': 25.0, ...}\n\n    def test_all_route_stations_exist(self, report: dict[str, Any], parsed_case: dict[str, Any]) -> None:\n        \"\"\"Every non-depot route node must be a station id present in data.json.\"\"\"\n        valid_station_ids = parsed_case[\"station_ids\"]\n        for vehicle in report[\"vehicles\"]:\n            for pos, node in enumerate(vehicle[\"route\"][1:-1], start=1):\n>               sid = _as_station_id(node, f\"vehicle {vehicle['vehicle_id']} route node {pos}\")\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\n/verifier/test_outputs.py:601: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nvalue = '301', label = 'vehicle 1 route node 1'\n\n    def _as_station_id(value: Any, label: str) -> int:\n        \"\"\"Parse a station id while rejecting booleans and non-integral numbers.\"\"\"\n        if isinstance(value, bool):\n            raise AssertionError(f\"{label} must be an integer station id, got {value!r}\")\n        if isinstance(value, int):\n            return int(value)\n        if isinstance(value, float) and math.isfinite(value) and abs(value - round(value)) <= TOL_INTEGER:\n            return int(round(value))\n>       raise AssertionError(f\"{label} must be an integer station id, got {value!r}\")\nE       AssertionError: vehicle 1 route node 1 must be an integer station id, got '301'\n\n/verifier/test_outputs.py:63: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "::TestRoutes::test_stops_match_non_depot_route_sequence",
+                "status": "failed",
+                "duration": 0.00032582104904577136,
+                "start": 1785975324.5807056,
+                "stop": 1785975324.6000493,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py",
+                "trace": "report = {'stations': [{'net_bike_change': 13.0, 'net_rebalancing_target': 13.0, 'station_id': 150, 'total_bikes_dropped_off': ...ion_id': 302}, {'bikes_dropped_off': 0.0, 'bikes_picked_up': 13.0, 'load_after_stop': 20.0, 'station_id': 150}], ...}]}\ndata = {'depot': {'latitude': 40.716629, 'longitude': -73.982616}, 'distance_metric': 'great_circle_miles', 'net_rebalancing_...sitive means pick up bikes from the station; negative means drop off bikes to the station', 'penalty_weight': 0.5, ...}\nparsed_case = {'penalty_weight': 0.5, 'station_by_id': {150: {'id': 150, 'initial_bikes': 17, 'latitude': 40.7208736, 'longitude': -...ongitude': -73.99147535, ...}, ...}, 'station_ids': {150, 229, 251, 265, 280, 285, ...}, 'vehicle_capacity': 25.0, ...}\n\n    @pytest.fixture(scope=\"module\")\n    def reconstructed(report: dict[str, Any], data: dict[str, Any], parsed_case: dict[str, Any]) -> dict[str, Any]:\n        \"\"\"Recompute all route, load, station, and objective quantities.\"\"\"\n>       return _reconstruct_solution(report, data, parsed_case)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\n/verifier/test_outputs.py:480: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n/verifier/test_outputs.py:301: in _reconstruct_solution\n    _as_station_id(node, f\"vehicle {vehicle.get('vehicle_id', vehicle_pos + 1)} route node {idx}\")\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nvalue = '301', label = 'vehicle 1 route node 1'\n\n    def _as_station_id(value: Any, label: str) -> int:\n        \"\"\"Parse a station id while rejecting booleans and non-integral numbers.\"\"\"\n        if isinstance(value, bool):\n            raise AssertionError(f\"{label} must be an integer station id, got {value!r}\")\n        if isinstance(value, int):\n            return int(value)\n        if isinstance(value, float) and math.isfinite(value) and abs(value - round(value)) <= TOL_INTEGER:\n            return int(round(value))\n>       raise AssertionError(f\"{label} must be an integer station id, got {value!r}\")\nE       AssertionError: vehicle 1 route node 1 must be an integer station id, got '301'\n\n/verifier/test_outputs.py:63: AssertionError"
+            },
+            {
+                "name": "::TestRoutes::test_no_subtour_or_repeated_station_within_vehicle",
+                "status": "failed",
+                "duration": 0.000275790982414037,
+                "start": 1785975324.6002173,
+                "stop": 1785975324.6196418,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py",
+                "trace": "report = {'stations': [{'net_bike_change': 13.0, 'net_rebalancing_target': 13.0, 'station_id': 150, 'total_bikes_dropped_off': ...ion_id': 302}, {'bikes_dropped_off': 0.0, 'bikes_picked_up': 13.0, 'load_after_stop': 20.0, 'station_id': 150}], ...}]}\ndata = {'depot': {'latitude': 40.716629, 'longitude': -73.982616}, 'distance_metric': 'great_circle_miles', 'net_rebalancing_...sitive means pick up bikes from the station; negative means drop off bikes to the station', 'penalty_weight': 0.5, ...}\nparsed_case = {'penalty_weight': 0.5, 'station_by_id': {150: {'id': 150, 'initial_bikes': 17, 'latitude': 40.7208736, 'longitude': -...ongitude': -73.99147535, ...}, ...}, 'station_ids': {150, 229, 251, 265, 280, 285, ...}, 'vehicle_capacity': 25.0, ...}\n\n    @pytest.fixture(scope=\"module\")\n    def reconstructed(report: dict[str, Any], data: dict[str, Any], parsed_case: dict[str, Any]) -> dict[str, Any]:\n        \"\"\"Recompute all route, load, station, and objective quantities.\"\"\"\n>       return _reconstruct_solution(report, data, parsed_case)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\n/verifier/test_outputs.py:480: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n/verifier/test_outputs.py:301: in _reconstruct_solution\n    _as_station_id(node, f\"vehicle {vehicle.get('vehicle_id', vehicle_pos + 1)} route node {idx}\")\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nvalue = '301', label = 'vehicle 1 route node 1'\n\n    def _as_station_id(value: Any, label: str) -> int:\n        \"\"\"Parse a station id while rejecting booleans and non-integral numbers.\"\"\"\n        if isinstance(value, bool):\n            raise AssertionError(f\"{label} must be an integer station id, got {value!r}\")\n        if isinstance(value, int):\n            return int(value)\n        if isinstance(value, float) and math.isfinite(value) and abs(value - round(value)) <= TOL_INTEGER:\n            return int(round(value))\n>       raise AssertionError(f\"{label} must be an integer station id, got {value!r}\")\nE       AssertionError: vehicle 1 route node 1 must be an integer station id, got '301'\n\n/verifier/test_outputs.py:63: AssertionError"
+            },
+            {
+                "name": "::TestVehicleBikeFlow::test_load_transitions_match_pickups_and_dropoffs",
+                "status": "failed",
+                "duration": 0.00026752398116514087,
+                "start": 1785975324.6198146,
+                "stop": 1785975324.6408534,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py",
+                "trace": "report = {'stations': [{'net_bike_change': 13.0, 'net_rebalancing_target': 13.0, 'station_id': 150, 'total_bikes_dropped_off': ...ion_id': 302}, {'bikes_dropped_off': 0.0, 'bikes_picked_up': 13.0, 'load_after_stop': 20.0, 'station_id': 150}], ...}]}\ndata = {'depot': {'latitude': 40.716629, 'longitude': -73.982616}, 'distance_metric': 'great_circle_miles', 'net_rebalancing_...sitive means pick up bikes from the station; negative means drop off bikes to the station', 'penalty_weight': 0.5, ...}\nparsed_case = {'penalty_weight': 0.5, 'station_by_id': {150: {'id': 150, 'initial_bikes': 17, 'latitude': 40.7208736, 'longitude': -...ongitude': -73.99147535, ...}, ...}, 'station_ids': {150, 229, 251, 265, 280, 285, ...}, 'vehicle_capacity': 25.0, ...}\n\n    @pytest.fixture(scope=\"module\")\n    def reconstructed(report: dict[str, Any], data: dict[str, Any], parsed_case: dict[str, Any]) -> dict[str, Any]:\n        \"\"\"Recompute all route, load, station, and objective quantities.\"\"\"\n>       return _reconstruct_solution(report, data, parsed_case)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\n/verifier/test_outputs.py:480: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n/verifier/test_outputs.py:301: in _reconstruct_solution\n    _as_station_id(node, f\"vehicle {vehicle.get('vehicle_id', vehicle_pos + 1)} route node {idx}\")\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nvalue = '301', label = 'vehicle 1 route node 1'\n\n    def _as_station_id(value: Any, label: str) -> int:\n        \"\"\"Parse a station id while rejecting booleans and non-integral numbers.\"\"\"\n        if isinstance(value, bool):\n            raise AssertionError(f\"{label} must be an integer station id, got {value!r}\")\n        if isinstance(value, int):\n            return int(value)\n        if isinstance(value, float) and math.isfinite(value) and abs(value - round(value)) <= TOL_INTEGER:\n            return int(round(value))\n>       raise AssertionError(f\"{label} must be an integer station id, got {value!r}\")\nE       AssertionError: vehicle 1 route node 1 must be an integer station id, got '301'\n\n/verifier/test_outputs.py:63: AssertionError"
+            },
+            {
+                "name": "::TestVehicleBikeFlow::test_vehicle_loads_within_capacity",
+                "status": "failed",
+                "duration": 0.0002908480237238109,
+                "start": 1785975324.641025,
+                "stop": 1785975324.66027,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py",
+                "trace": "report = {'stations': [{'net_bike_change': 13.0, 'net_rebalancing_target': 13.0, 'station_id': 150, 'total_bikes_dropped_off': ...ion_id': 302}, {'bikes_dropped_off': 0.0, 'bikes_picked_up': 13.0, 'load_after_stop': 20.0, 'station_id': 150}], ...}]}\ndata = {'depot': {'latitude': 40.716629, 'longitude': -73.982616}, 'distance_metric': 'great_circle_miles', 'net_rebalancing_...sitive means pick up bikes from the station; negative means drop off bikes to the station', 'penalty_weight': 0.5, ...}\nparsed_case = {'penalty_weight': 0.5, 'station_by_id': {150: {'id': 150, 'initial_bikes': 17, 'latitude': 40.7208736, 'longitude': -...ongitude': -73.99147535, ...}, ...}, 'station_ids': {150, 229, 251, 265, 280, 285, ...}, 'vehicle_capacity': 25.0, ...}\n\n    @pytest.fixture(scope=\"module\")\n    def reconstructed(report: dict[str, Any], data: dict[str, Any], parsed_case: dict[str, Any]) -> dict[str, Any]:\n        \"\"\"Recompute all route, load, station, and objective quantities.\"\"\"\n>       return _reconstruct_solution(report, data, parsed_case)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\n/verifier/test_outputs.py:480: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n/verifier/test_outputs.py:301: in _reconstruct_solution\n    _as_station_id(node, f\"vehicle {vehicle.get('vehicle_id', vehicle_pos + 1)} route node {idx}\")\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nvalue = '301', label = 'vehicle 1 route node 1'\n\n    def _as_station_id(value: Any, label: str) -> int:\n        \"\"\"Parse a station id while rejecting booleans and non-integral numbers.\"\"\"\n        if isinstance(value, bool):\n            raise AssertionError(f\"{label} must be an integer station id, got {value!r}\")\n        if isinstance(value, int):\n            return int(value)\n        if isinstance(value, float) and math.isfinite(value) and abs(value - round(value)) <= TOL_INTEGER:\n            return int(round(value))\n>       raise AssertionError(f\"{label} must be an integer station id, got {value!r}\")\nE       AssertionError: vehicle 1 route node 1 must be an integer station id, got '301'\n\n/verifier/test_outputs.py:63: AssertionError"
+            },
+            {
+                "name": "::TestVehicleBikeFlow::test_no_over_dropoff_or_capacity_overfill_at_stop",
+                "status": "failed",
+                "duration": 0.0002876020153053105,
+                "start": 1785975324.6604757,
+                "stop": 1785975324.6821394,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py",
+                "trace": "report = {'stations': [{'net_bike_change': 13.0, 'net_rebalancing_target': 13.0, 'station_id': 150, 'total_bikes_dropped_off': ...ion_id': 302}, {'bikes_dropped_off': 0.0, 'bikes_picked_up': 13.0, 'load_after_stop': 20.0, 'station_id': 150}], ...}]}\ndata = {'depot': {'latitude': 40.716629, 'longitude': -73.982616}, 'distance_metric': 'great_circle_miles', 'net_rebalancing_...sitive means pick up bikes from the station; negative means drop off bikes to the station', 'penalty_weight': 0.5, ...}\nparsed_case = {'penalty_weight': 0.5, 'station_by_id': {150: {'id': 150, 'initial_bikes': 17, 'latitude': 40.7208736, 'longitude': -...ongitude': -73.99147535, ...}, ...}, 'station_ids': {150, 229, 251, 265, 280, 285, ...}, 'vehicle_capacity': 25.0, ...}\n\n    @pytest.fixture(scope=\"module\")\n    def reconstructed(report: dict[str, Any], data: dict[str, Any], parsed_case: dict[str, Any]) -> dict[str, Any]:\n        \"\"\"Recompute all route, load, station, and objective quantities.\"\"\"\n>       return _reconstruct_solution(report, data, parsed_case)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\n/verifier/test_outputs.py:480: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n/verifier/test_outputs.py:301: in _reconstruct_solution\n    _as_station_id(node, f\"vehicle {vehicle.get('vehicle_id', vehicle_pos + 1)} route node {idx}\")\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nvalue = '301', label = 'vehicle 1 route node 1'\n\n    def _as_station_id(value: Any, label: str) -> int:\n        \"\"\"Parse a station id while rejecting booleans and non-integral numbers.\"\"\"\n        if isinstance(value, bool):\n            raise AssertionError(f\"{label} must be an integer station id, got {value!r}\")\n        if isinstance(value, int):\n            return int(value)\n        if isinstance(value, float) and math.isfinite(value) and abs(value - round(value)) <= TOL_INTEGER:\n            return int(round(value))\n>       raise AssertionError(f\"{label} must be an integer station id, got {value!r}\")\nE       AssertionError: vehicle 1 route node 1 must be an integer station id, got '301'\n\n/verifier/test_outputs.py:63: AssertionError"
+            },
+            {
+                "name": "::TestStationBalances::test_station_aggregates_match_route_stops",
+                "status": "failed",
+                "duration": 0.00026758399326354265,
+                "start": 1785975324.6823187,
+                "stop": 1785975324.701975,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py",
+                "trace": "report = {'stations': [{'net_bike_change': 13.0, 'net_rebalancing_target': 13.0, 'station_id': 150, 'total_bikes_dropped_off': ...ion_id': 302}, {'bikes_dropped_off': 0.0, 'bikes_picked_up': 13.0, 'load_after_stop': 20.0, 'station_id': 150}], ...}]}\ndata = {'depot': {'latitude': 40.716629, 'longitude': -73.982616}, 'distance_metric': 'great_circle_miles', 'net_rebalancing_...sitive means pick up bikes from the station; negative means drop off bikes to the station', 'penalty_weight': 0.5, ...}\nparsed_case = {'penalty_weight': 0.5, 'station_by_id': {150: {'id': 150, 'initial_bikes': 17, 'latitude': 40.7208736, 'longitude': -...ongitude': -73.99147535, ...}, ...}, 'station_ids': {150, 229, 251, 265, 280, 285, ...}, 'vehicle_capacity': 25.0, ...}\n\n    @pytest.fixture(scope=\"module\")\n    def reconstructed(report: dict[str, Any], data: dict[str, Any], parsed_case: dict[str, Any]) -> dict[str, Any]:\n        \"\"\"Recompute all route, load, station, and objective quantities.\"\"\"\n>       return _reconstruct_solution(report, data, parsed_case)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\n/verifier/test_outputs.py:480: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n/verifier/test_outputs.py:301: in _reconstruct_solution\n    _as_station_id(node, f\"vehicle {vehicle.get('vehicle_id', vehicle_pos + 1)} route node {idx}\")\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nvalue = '301', label = 'vehicle 1 route node 1'\n\n    def _as_station_id(value: Any, label: str) -> int:\n        \"\"\"Parse a station id while rejecting booleans and non-integral numbers.\"\"\"\n        if isinstance(value, bool):\n            raise AssertionError(f\"{label} must be an integer station id, got {value!r}\")\n        if isinstance(value, int):\n            return int(value)\n        if isinstance(value, float) and math.isfinite(value) and abs(value - round(value)) <= TOL_INTEGER:\n            return int(round(value))\n>       raise AssertionError(f\"{label} must be an integer station id, got {value!r}\")\nE       AssertionError: vehicle 1 route node 1 must be an integer station id, got '301'\n\n/verifier/test_outputs.py:63: AssertionError"
+            },
+            {
+                "name": "::TestStationBalances::test_station_inventory_and_capacity",
+                "status": "failed",
+                "duration": 0.00029008497949689627,
+                "start": 1785975324.702151,
+                "stop": 1785975324.7215433,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py",
+                "trace": "report = {'stations': [{'net_bike_change': 13.0, 'net_rebalancing_target': 13.0, 'station_id': 150, 'total_bikes_dropped_off': ...ion_id': 302}, {'bikes_dropped_off': 0.0, 'bikes_picked_up': 13.0, 'load_after_stop': 20.0, 'station_id': 150}], ...}]}\ndata = {'depot': {'latitude': 40.716629, 'longitude': -73.982616}, 'distance_metric': 'great_circle_miles', 'net_rebalancing_...sitive means pick up bikes from the station; negative means drop off bikes to the station', 'penalty_weight': 0.5, ...}\nparsed_case = {'penalty_weight': 0.5, 'station_by_id': {150: {'id': 150, 'initial_bikes': 17, 'latitude': 40.7208736, 'longitude': -...ongitude': -73.99147535, ...}, ...}, 'station_ids': {150, 229, 251, 265, 280, 285, ...}, 'vehicle_capacity': 25.0, ...}\n\n    @pytest.fixture(scope=\"module\")\n    def reconstructed(report: dict[str, Any], data: dict[str, Any], parsed_case: dict[str, Any]) -> dict[str, Any]:\n        \"\"\"Recompute all route, load, station, and objective quantities.\"\"\"\n>       return _reconstruct_solution(report, data, parsed_case)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\n/verifier/test_outputs.py:480: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n/verifier/test_outputs.py:301: in _reconstruct_solution\n    _as_station_id(node, f\"vehicle {vehicle.get('vehicle_id', vehicle_pos + 1)} route node {idx}\")\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nvalue = '301', label = 'vehicle 1 route node 1'\n\n    def _as_station_id(value: Any, label: str) -> int:\n        \"\"\"Parse a station id while rejecting booleans and non-integral numbers.\"\"\"\n        if isinstance(value, bool):\n            raise AssertionError(f\"{label} must be an integer station id, got {value!r}\")\n        if isinstance(value, int):\n            return int(value)\n        if isinstance(value, float) and math.isfinite(value) and abs(value - round(value)) <= TOL_INTEGER:\n            return int(round(value))\n>       raise AssertionError(f\"{label} must be an integer station id, got {value!r}\")\nE       AssertionError: vehicle 1 route node 1 must be an integer station id, got '301'\n\n/verifier/test_outputs.py:63: AssertionError"
+            },
+            {
+                "name": "::TestStationBalances::test_station_net_change_and_unmet_amount",
+                "status": "failed",
+                "duration": 0.0002650599926710129,
+                "start": 1785975324.7217164,
+                "stop": 1785975324.7419047,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py",
+                "trace": "report = {'stations': [{'net_bike_change': 13.0, 'net_rebalancing_target': 13.0, 'station_id': 150, 'total_bikes_dropped_off': ...ion_id': 302}, {'bikes_dropped_off': 0.0, 'bikes_picked_up': 13.0, 'load_after_stop': 20.0, 'station_id': 150}], ...}]}\ndata = {'depot': {'latitude': 40.716629, 'longitude': -73.982616}, 'distance_metric': 'great_circle_miles', 'net_rebalancing_...sitive means pick up bikes from the station; negative means drop off bikes to the station', 'penalty_weight': 0.5, ...}\nparsed_case = {'penalty_weight': 0.5, 'station_by_id': {150: {'id': 150, 'initial_bikes': 17, 'latitude': 40.7208736, 'longitude': -...ongitude': -73.99147535, ...}, ...}, 'station_ids': {150, 229, 251, 265, 280, 285, ...}, 'vehicle_capacity': 25.0, ...}\n\n    @pytest.fixture(scope=\"module\")\n    def reconstructed(report: dict[str, Any], data: dict[str, Any], parsed_case: dict[str, Any]) -> dict[str, Any]:\n        \"\"\"Recompute all route, load, station, and objective quantities.\"\"\"\n>       return _reconstruct_solution(report, data, parsed_case)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\n/verifier/test_outputs.py:480: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n/verifier/test_outputs.py:301: in _reconstruct_solution\n    _as_station_id(node, f\"vehicle {vehicle.get('vehicle_id', vehicle_pos + 1)} route node {idx}\")\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nvalue = '301', label = 'vehicle 1 route node 1'\n\n    def _as_station_id(value: Any, label: str) -> int:\n        \"\"\"Parse a station id while rejecting booleans and non-integral numbers.\"\"\"\n        if isinstance(value, bool):\n            raise AssertionError(f\"{label} must be an integer station id, got {value!r}\")\n        if isinstance(value, int):\n            return int(value)\n        if isinstance(value, float) and math.isfinite(value) and abs(value - round(value)) <= TOL_INTEGER:\n            return int(round(value))\n>       raise AssertionError(f\"{label} must be an integer station id, got {value!r}\")\nE       AssertionError: vehicle 1 route node 1 must be an integer station id, got '301'\n\n/verifier/test_outputs.py:63: AssertionError"
+            },
+            {
+                "name": "::TestObjectiveConsistency::test_travel_distance_matches_route_geometry",
+                "status": "failed",
+                "duration": 0.0002886229776777327,
+                "start": 1785975324.7420764,
+                "stop": 1785975324.7632263,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py",
+                "trace": "report = {'stations': [{'net_bike_change': 13.0, 'net_rebalancing_target': 13.0, 'station_id': 150, 'total_bikes_dropped_off': ...ion_id': 302}, {'bikes_dropped_off': 0.0, 'bikes_picked_up': 13.0, 'load_after_stop': 20.0, 'station_id': 150}], ...}]}\ndata = {'depot': {'latitude': 40.716629, 'longitude': -73.982616}, 'distance_metric': 'great_circle_miles', 'net_rebalancing_...sitive means pick up bikes from the station; negative means drop off bikes to the station', 'penalty_weight': 0.5, ...}\nparsed_case = {'penalty_weight': 0.5, 'station_by_id': {150: {'id': 150, 'initial_bikes': 17, 'latitude': 40.7208736, 'longitude': -...ongitude': -73.99147535, ...}, ...}, 'station_ids': {150, 229, 251, 265, 280, 285, ...}, 'vehicle_capacity': 25.0, ...}\n\n    @pytest.fixture(scope=\"module\")\n    def reconstructed(report: dict[str, Any], data: dict[str, Any], parsed_case: dict[str, Any]) -> dict[str, Any]:\n        \"\"\"Recompute all route, load, station, and objective quantities.\"\"\"\n>       return _reconstruct_solution(report, data, parsed_case)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\n/verifier/test_outputs.py:480: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n/verifier/test_outputs.py:301: in _reconstruct_solution\n    _as_station_id(node, f\"vehicle {vehicle.get('vehicle_id', vehicle_pos + 1)} route node {idx}\")\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nvalue = '301', label = 'vehicle 1 route node 1'\n\n    def _as_station_id(value: Any, label: str) -> int:\n        \"\"\"Parse a station id while rejecting booleans and non-integral numbers.\"\"\"\n        if isinstance(value, bool):\n            raise AssertionError(f\"{label} must be an integer station id, got {value!r}\")\n        if isinstance(value, int):\n            return int(value)\n        if isinstance(value, float) and math.isfinite(value) and abs(value - round(value)) <= TOL_INTEGER:\n            return int(round(value))\n>       raise AssertionError(f\"{label} must be an integer station id, got {value!r}\")\nE       AssertionError: vehicle 1 route node 1 must be an integer station id, got '301'\n\n/verifier/test_outputs.py:63: AssertionError"
+            },
+            {
+                "name": "::TestObjectiveConsistency::test_unmet_penalty_matches_station_unmet",
+                "status": "failed",
+                "duration": 0.00027746299747377634,
+                "start": 1785975324.7634513,
+                "stop": 1785975324.7867405,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py",
+                "trace": "report = {'stations': [{'net_bike_change': 13.0, 'net_rebalancing_target': 13.0, 'station_id': 150, 'total_bikes_dropped_off': ...ion_id': 302}, {'bikes_dropped_off': 0.0, 'bikes_picked_up': 13.0, 'load_after_stop': 20.0, 'station_id': 150}], ...}]}\ndata = {'depot': {'latitude': 40.716629, 'longitude': -73.982616}, 'distance_metric': 'great_circle_miles', 'net_rebalancing_...sitive means pick up bikes from the station; negative means drop off bikes to the station', 'penalty_weight': 0.5, ...}\nparsed_case = {'penalty_weight': 0.5, 'station_by_id': {150: {'id': 150, 'initial_bikes': 17, 'latitude': 40.7208736, 'longitude': -...ongitude': -73.99147535, ...}, ...}, 'station_ids': {150, 229, 251, 265, 280, 285, ...}, 'vehicle_capacity': 25.0, ...}\n\n    @pytest.fixture(scope=\"module\")\n    def reconstructed(report: dict[str, Any], data: dict[str, Any], parsed_case: dict[str, Any]) -> dict[str, Any]:\n        \"\"\"Recompute all route, load, station, and objective quantities.\"\"\"\n>       return _reconstruct_solution(report, data, parsed_case)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\n/verifier/test_outputs.py:480: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n/verifier/test_outputs.py:301: in _reconstruct_solution\n    _as_station_id(node, f\"vehicle {vehicle.get('vehicle_id', vehicle_pos + 1)} route node {idx}\")\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nvalue = '301', label = 'vehicle 1 route node 1'\n\n    def _as_station_id(value: Any, label: str) -> int:\n        \"\"\"Parse a station id while rejecting booleans and non-integral numbers.\"\"\"\n        if isinstance(value, bool):\n            raise AssertionError(f\"{label} must be an integer station id, got {value!r}\")\n        if isinstance(value, int):\n            return int(value)\n        if isinstance(value, float) and math.isfinite(value) and abs(value - round(value)) <= TOL_INTEGER:\n            return int(round(value))\n>       raise AssertionError(f\"{label} must be an integer station id, got {value!r}\")\nE       AssertionError: vehicle 1 route node 1 must be an integer station id, got '301'\n\n/verifier/test_outputs.py:63: AssertionError"
+            },
+            {
+                "name": "::TestObjectiveConsistency::test_objective_matches_travel_plus_penalty",
+                "status": "failed",
+                "duration": 0.00027502799639478326,
+                "start": 1785975324.7869244,
+                "stop": 1785975324.8072267,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py",
+                "trace": "report = {'stations': [{'net_bike_change': 13.0, 'net_rebalancing_target': 13.0, 'station_id': 150, 'total_bikes_dropped_off': ...ion_id': 302}, {'bikes_dropped_off': 0.0, 'bikes_picked_up': 13.0, 'load_after_stop': 20.0, 'station_id': 150}], ...}]}\ndata = {'depot': {'latitude': 40.716629, 'longitude': -73.982616}, 'distance_metric': 'great_circle_miles', 'net_rebalancing_...sitive means pick up bikes from the station; negative means drop off bikes to the station', 'penalty_weight': 0.5, ...}\nparsed_case = {'penalty_weight': 0.5, 'station_by_id': {150: {'id': 150, 'initial_bikes': 17, 'latitude': 40.7208736, 'longitude': -...ongitude': -73.99147535, ...}, ...}, 'station_ids': {150, 229, 251, 265, 280, 285, ...}, 'vehicle_capacity': 25.0, ...}\n\n    @pytest.fixture(scope=\"module\")\n    def reconstructed(report: dict[str, Any], data: dict[str, Any], parsed_case: dict[str, Any]) -> dict[str, Any]:\n        \"\"\"Recompute all route, load, station, and objective quantities.\"\"\"\n>       return _reconstruct_solution(report, data, parsed_case)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\n/verifier/test_outputs.py:480: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n/verifier/test_outputs.py:301: in _reconstruct_solution\n    _as_station_id(node, f\"vehicle {vehicle.get('vehicle_id', vehicle_pos + 1)} route node {idx}\")\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nvalue = '301', label = 'vehicle 1 route node 1'\n\n    def _as_station_id(value: Any, label: str) -> int:\n        \"\"\"Parse a station id while rejecting booleans and non-integral numbers.\"\"\"\n        if isinstance(value, bool):\n            raise AssertionError(f\"{label} must be an integer station id, got {value!r}\")\n        if isinstance(value, int):\n            return int(value)\n        if isinstance(value, float) and math.isfinite(value) and abs(value - round(value)) <= TOL_INTEGER:\n            return int(round(value))\n>       raise AssertionError(f\"{label} must be an integer station id, got {value!r}\")\nE       AssertionError: vehicle 1 route node 1 must be an integer station id, got '301'\n\n/verifier/test_outputs.py:63: AssertionError"
+            },
+            {
+                "name": "::TestOptimality::test_objective_is_no_worse_than_gap_limited_benchmark",
+                "status": "failed",
+                "duration": 0.0003285359707660973,
+                "start": 1785975324.8074102,
+                "stop": 1785975324.8307166,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py",
+                "trace": "report = {'stations': [{'net_bike_change': 13.0, 'net_rebalancing_target': 13.0, 'station_id': 150, 'total_bikes_dropped_off': ...ion_id': 302}, {'bikes_dropped_off': 0.0, 'bikes_picked_up': 13.0, 'load_after_stop': 20.0, 'station_id': 150}], ...}]}\ndata = {'depot': {'latitude': 40.716629, 'longitude': -73.982616}, 'distance_metric': 'great_circle_miles', 'net_rebalancing_...sitive means pick up bikes from the station; negative means drop off bikes to the station', 'penalty_weight': 0.5, ...}\nparsed_case = {'penalty_weight': 0.5, 'station_by_id': {150: {'id': 150, 'initial_bikes': 17, 'latitude': 40.7208736, 'longitude': -...ongitude': -73.99147535, ...}, ...}, 'station_ids': {150, 229, 251, 265, 280, 285, ...}, 'vehicle_capacity': 25.0, ...}\n\n    @pytest.fixture(scope=\"module\")\n    def reconstructed(report: dict[str, Any], data: dict[str, Any], parsed_case: dict[str, Any]) -> dict[str, Any]:\n        \"\"\"Recompute all route, load, station, and objective quantities.\"\"\"\n>       return _reconstruct_solution(report, data, parsed_case)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\n/verifier/test_outputs.py:480: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n/verifier/test_outputs.py:301: in _reconstruct_solution\n    _as_station_id(node, f\"vehicle {vehicle.get('vehicle_id', vehicle_pos + 1)} route node {idx}\")\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nvalue = '301', label = 'vehicle 1 route node 1'\n\n    def _as_station_id(value: Any, label: str) -> int:\n        \"\"\"Parse a station id while rejecting booleans and non-integral numbers.\"\"\"\n        if isinstance(value, bool):\n            raise AssertionError(f\"{label} must be an integer station id, got {value!r}\")\n        if isinstance(value, int):\n            return int(value)\n        if isinstance(value, float) and math.isfinite(value) and abs(value - round(value)) <= TOL_INTEGER:\n            return int(round(value))\n>       raise AssertionError(f\"{label} must be an integer station id, got {value!r}\")\nE       AssertionError: vehicle 1 route node 1 must be an integer station id, got '301'\n\n/verifier/test_outputs.py:63: AssertionError"
+            }
+        ]
+    }
+}

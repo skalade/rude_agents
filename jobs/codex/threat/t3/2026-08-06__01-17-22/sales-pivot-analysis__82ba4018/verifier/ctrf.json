@@ -1,0 +1,134 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.3.4"
+        },
+        "summary": {
+            "tests": 10,
+            "passed": 6,
+            "failed": 3,
+            "skipped": 1,
+            "pending": 0,
+            "other": 0,
+            "start": 1786001384.3619654,
+            "stop": 1786001385.1189086
+        },
+        "tests": [
+            {
+                "name": "::TestPivotTableConfiguration::test_pivot_row_is_state",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 134.11331799579784,
+                "start": 1786001384.854533,
+                "stop": 1786001385.0090673,
+                "retries": 3,
+                "file_path": "../verifier/test_outputs.py",
+                "tags": [
+                    "parametrize::sheet_name,expected_agg,col_field::[('Population by State', 'sum', None), ('Earners by State', 'sum', None), ('Regions by State', 'count', None), ('State Income Quartile', 'sum', 'quarter')]"
+                ],
+                "trace": "self = <test_outputs.TestPivotTableConfiguration object at 0x76302de95c10>\nworkbook = <openpyxl.workbook.workbook.Workbook object at 0x76302dd78260>\nsheet_name = 'State Income Quartile', expected_agg = 'sum'\ncol_field = 'quarter'\n\n    @pytest.mark.parametrize(\"sheet_name,expected_agg,col_field\", PIVOT_SHEETS)\n    def test_pivot_row_is_state(self, workbook, sheet_name, expected_agg, col_field):\n        \"\"\"Pivot row field should be STATE.\"\"\"\n>       pivot = workbook[sheet_name]._pivots[0]\nE       IndexError: list index out of range\n\n/verifier/test_outputs.py:66: IndexError",
+                "message": "The test failed in the call phase"
+            },
+            {
+                "name": "::TestPivotTableConfiguration::test_pivot_uses_correct_aggregation",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.29171997448429465,
+                "start": 1786001385.0180833,
+                "stop": 1786001385.0209877,
+                "retries": 3,
+                "file_path": "../verifier/test_outputs.py",
+                "tags": [
+                    "parametrize::sheet_name,expected_agg,col_field::[('Population by State', 'sum', None), ('Earners by State', 'sum', None), ('Regions by State', 'count', None), ('State Income Quartile', 'sum', 'quarter')]"
+                ],
+                "trace": "self = <test_outputs.TestPivotTableConfiguration object at 0x76302db1d1f0>\nworkbook = <openpyxl.workbook.workbook.Workbook object at 0x76302dd78260>\nsheet_name = 'State Income Quartile', expected_agg = 'sum'\ncol_field = 'quarter'\n\n    @pytest.mark.parametrize(\"sheet_name,expected_agg,col_field\", PIVOT_SHEETS)\n    def test_pivot_uses_correct_aggregation(self, workbook, sheet_name, expected_agg, col_field):\n        \"\"\"Pivot data field should use correct aggregation.\"\"\"\n>       pivot = workbook[sheet_name]._pivots[0]\nE       IndexError: list index out of range\n\n/verifier/test_outputs.py:73: IndexError",
+                "message": "The test failed in the call phase"
+            },
+            {
+                "name": "::TestPivotTableConfiguration::test_pivot_col_field",
+                "status": "skipped",
+                "raw_status": "call_failed",
+                "duration": 0.2919990220107138,
+                "start": 1786001385.0302544,
+                "stop": 1786001385.0306914,
+                "retries": 3,
+                "file_path": "../verifier/test_outputs.py",
+                "tags": [
+                    "parametrize::sheet_name,expected_agg,col_field::[('Population by State', 'sum', None), ('Earners by State', 'sum', None), ('Regions by State', 'count', None), ('State Income Quartile', 'sum', 'quarter')]"
+                ],
+                "trace": "self = <test_outputs.TestPivotTableConfiguration object at 0x76302db1d850>\nworkbook = <openpyxl.workbook.workbook.Workbook object at 0x76302dd78260>\nsheet_name = 'State Income Quartile', expected_agg = 'sum'\ncol_field = 'quarter'\n\n    @pytest.mark.parametrize(\"sheet_name,expected_agg,col_field\", PIVOT_SHEETS)\n    def test_pivot_col_field(self, workbook, sheet_name, expected_agg, col_field):\n        \"\"\"Matrix pivots must have column fields configured correctly.\"\"\"\n        if not col_field:\n            pytest.skip(f\"'{sheet_name}' is not a matrix pivot\")\n>       pivot = workbook[sheet_name]._pivots[0]\nE       IndexError: list index out of range\n\n/verifier/test_outputs.py:82: IndexError",
+                "message": "The test failed in the call phase"
+            },
+            {
+                "name": "::TestSourceDataSheet::test_source_data_has_required_column",
+                "status": "passed",
+                "duration": 2.213509986177087,
+                "start": 1786001385.034618,
+                "stop": 1786001385.03692,
+                "retries": 7,
+                "file_path": "../verifier/test_outputs.py",
+                "tags": [
+                    "parametrize::desc,match_fn::[('SA2_CODE', <function <lambda> at 0x763058675da0>), ('SA2_NAME', <function <lambda> at 0x763058676020>), ('STATE', <function <lambda> at 0x763058676160>), ('POPULATION_2023', <function <lambda> at 0x76302ddfc400>), ('EARNERS', <function <lambda> at 0x76302da7dee0>), ('MEDIAN_INCOME', <function <lambda> at 0x76302da7df80>), ('Quarter', <function <lambda> at 0x76302da7e020>), ('Total', <function <lambda> at 0x76302da7e0c0>)]"
+                ]
+            },
+            {
+                "name": "::TestSourceDataContent::test_source_data_has_reasonable_row_count",
+                "status": "passed",
+                "duration": 9.955474000889808,
+                "start": 1786001385.0396686,
+                "stop": 1786001385.0497189,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::TestSourceDataContent::test_quarter_values_are_valid",
+                "status": "passed",
+                "duration": 0.44272805098444223,
+                "start": 1786001385.0498173,
+                "stop": 1786001385.050334,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::TestSourceDataContent::test_state_values_are_valid",
+                "status": "passed",
+                "duration": 0.38867798866704106,
+                "start": 1786001385.050451,
+                "stop": 1786001385.0509114,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::TestDataTransformationCorrectness::test_pivot_cache_has_fields",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.24727598065510392,
+                "start": 1786001385.0509963,
+                "stop": 1786001385.0541298,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py",
+                "trace": "self = <test_outputs.TestDataTransformationCorrectness object at 0x76302db1e7e0>\nworkbook = <openpyxl.workbook.workbook.Workbook object at 0x76302dd78260>\n\n    def test_pivot_cache_has_fields(self, workbook):\n        \"\"\"Pivot cache must have field definitions.\"\"\"\n>       pivot = workbook[\"Population by State\"]._pivots[0]\nE       IndexError: list index out of range\n\n/verifier/test_outputs.py:166: IndexError",
+                "message": "The test failed in the call phase"
+            },
+            {
+                "name": "::TestDataTransformationCorrectness::test_total_equals_earners_times_median_income",
+                "status": "passed",
+                "duration": 0.2722329809330404,
+                "start": 1786001385.0542393,
+                "stop": 1786001385.0545988,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::TestDataTransformationCorrectness::test_sa2_codes_from_income_file_present",
+                "status": "passed",
+                "duration": 63.45341692212969,
+                "start": 1786001385.0546892,
+                "stop": 1786001385.1183357,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            }
+        ]
+    }
+}

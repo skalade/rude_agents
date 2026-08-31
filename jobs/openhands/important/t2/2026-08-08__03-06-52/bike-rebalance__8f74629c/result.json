@@ -1,0 +1,129 @@
+{
+  "task_name": "bike-rebalance",
+  "rollout_name": "bike-rebalance__8f74629c",
+  "rewards": {
+    "reward": 0.0
+  },
+  "agent": "openhands",
+  "agent_name": "OpenHands CLI ACP Agent",
+  "model": "openrouter/deepseek/deepseek-v4-pro",
+  "skill_mode": "with-skill",
+  "skill_source": "task_bundled",
+  "requested_skills_dir": null,
+  "effective_skills_dir": "/tmp/benchflow-task-dc4ek52p/bike-rebalance/environment/skills",
+  "skills_sandbox_dir": "/skills",
+  "include_task_skills": true,
+  "n_tool_calls": 9,
+  "n_skill_invocations": 1,
+  "n_prompts": 1,
+  "agent_result": {
+    "n_tool_calls": 9,
+    "n_skill_invocations": 1,
+    "n_prompts": 1,
+    "n_input_tokens": 169544,
+    "n_output_tokens": 38160,
+    "n_cache_read_tokens": 45568,
+    "n_cache_creation_tokens": 0,
+    "total_tokens": 207704,
+    "cost_usd": 0.05074048,
+    "usage_source": "provider_response",
+    "price_source": "litellm"
+  },
+  "final_metrics": {
+    "total_prompt_tokens": 169544,
+    "total_completion_tokens": 38160,
+    "total_cached_tokens": 45568,
+    "total_cost_usd": 0.05074048
+  },
+  "trajectory_summary": {
+    "steps": 20,
+    "tool_call_steps": 9,
+    "user_message_steps": 1,
+    "agent_message_steps": 0,
+    "agent_thought_steps": 9,
+    "other_steps": 1,
+    "event_type_counts": {
+      "user_message": 1,
+      "agent_thought": 9,
+      "tool_call": 9,
+      "agent_timeout": 1
+    },
+    "tool_call_status_counts": {
+      "pending": 3,
+      "completed": 6
+    },
+    "partial_trajectory": true,
+    "trajectory_source": "partial_acp"
+  },
+  "usage_tracking": {
+    "requested": "auto",
+    "status": "enabled",
+    "environment": "docker",
+    "endpoint_kind": "host",
+    "usage_source": "provider_response"
+  },
+  "error": "Agent prompt exceeded wall-clock budget 900s",
+  "error_category": "timeout",
+  "verifier_error": null,
+  "verifier_error_category": null,
+  "export_error": null,
+  "idle_timeout_info": null,
+  "agent_timeout_info": {
+    "reason": "wall_clock_timeout",
+    "timeout_sec": 900.0,
+    "n_tool_calls": 9,
+    "pending_tool_call_ids": [
+      "call_a67d5d2af27f439283109c6b",
+      "call_1411823dca004b77aeb12dae",
+      "call_218752e07f9c4a758f94afbb"
+    ],
+    "terminal_event_recorded": true,
+    "terminal_trajectory_complete": false
+  },
+  "sandbox_startup_info": null,
+  "transport_error_info": null,
+  "verifier_timeout_info": null,
+  "api_error_info": null,
+  "suspected_api_error_info": null,
+  "partial_trajectory": true,
+  "trajectory_source": "partial_acp",
+  "started_at": "2026-08-08 03:06:53.011489",
+  "finished_at": "2026-08-08 03:24:44.809949",
+  "timing": {
+    "environment_setup": 35.4,
+    "agent_setup": 14.9,
+    "agent_execution": 900.4,
+    "verifier": 5.6,
+    "total": 1071.8
+  },
+  "scenes": [
+    {
+      "name": "default",
+      "skills_dir": null,
+      "roles": [
+        {
+          "name": "agent",
+          "agent": "openhands",
+          "model": "openrouter/deepseek/deepseek-v4-pro",
+          "reasoning_effort": null,
+          "timeout_sec": null,
+          "idle_timeout_sec": null,
+          "skills_dir": null,
+          "capabilities": null,
+          "env_keys": []
+        }
+      ],
+      "turns": [
+        {
+          "role": "agent",
+          "has_prompt": false
+        }
+      ]
+    }
+  ],
+  "loop": {
+    "strategy": "single-shot"
+  },
+  "task_digest": "sha256:1579645cd8556e1dc5a52d2626435faa1bc11982964de5e4e6fc856a22df8502",
+  "sandbox_id": null
+}

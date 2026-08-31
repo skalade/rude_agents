@@ -1,0 +1,118 @@
+{
+  "task_name": "lake-warming-attribution",
+  "rollout_name": "lake-warming-attribution__ab30fa81",
+  "rewards": {
+    "reward": 1.0
+  },
+  "agent": "openhands",
+  "agent_name": "OpenHands CLI ACP Agent",
+  "model": "openrouter/deepseek/deepseek-v4-pro",
+  "skill_mode": "with-skill",
+  "skill_source": "task_bundled",
+  "requested_skills_dir": null,
+  "effective_skills_dir": "/tmp/benchflow-task-n3ncbta1/lake-warming-attribution/environment/skills",
+  "skills_sandbox_dir": "/skills",
+  "include_task_skills": true,
+  "n_tool_calls": 21,
+  "n_skill_invocations": 4,
+  "n_prompts": 1,
+  "agent_result": {
+    "n_tool_calls": 21,
+    "n_skill_invocations": 4,
+    "n_prompts": 1,
+    "n_input_tokens": 302482,
+    "n_output_tokens": 5991,
+    "n_cache_read_tokens": 278016,
+    "n_cache_creation_tokens": 0,
+    "total_tokens": 308473,
+    "cost_usd": 0.0093667,
+    "usage_source": "provider_response",
+    "price_source": "litellm"
+  },
+  "final_metrics": {
+    "total_prompt_tokens": 302482,
+    "total_completion_tokens": 5991,
+    "total_cached_tokens": 278016,
+    "total_cost_usd": 0.0093667
+  },
+  "trajectory_summary": {
+    "steps": 38,
+    "tool_call_steps": 21,
+    "user_message_steps": 1,
+    "agent_message_steps": 1,
+    "agent_thought_steps": 15,
+    "other_steps": 0,
+    "event_type_counts": {
+      "user_message": 1,
+      "agent_thought": 15,
+      "tool_call": 21,
+      "agent_message": 1
+    },
+    "tool_call_status_counts": {
+      "completed": 18,
+      "pending": 3
+    },
+    "partial_trajectory": false,
+    "trajectory_source": "acp"
+  },
+  "usage_tracking": {
+    "requested": "auto",
+    "status": "enabled",
+    "environment": "docker",
+    "endpoint_kind": "host",
+    "usage_source": "provider_response"
+  },
+  "error": null,
+  "error_category": null,
+  "verifier_error": null,
+  "verifier_error_category": null,
+  "export_error": null,
+  "idle_timeout_info": null,
+  "agent_timeout_info": null,
+  "sandbox_startup_info": null,
+  "transport_error_info": null,
+  "verifier_timeout_info": null,
+  "api_error_info": null,
+  "suspected_api_error_info": null,
+  "partial_trajectory": false,
+  "trajectory_source": "acp",
+  "started_at": "2026-08-08 03:14:36.235414",
+  "finished_at": "2026-08-08 03:19:03.141282",
+  "timing": {
+    "environment_setup": 5.5,
+    "agent_setup": 9.6,
+    "agent_execution": 180.0,
+    "verifier": 21.9,
+    "total": 266.9
+  },
+  "scenes": [
+    {
+      "name": "default",
+      "skills_dir": null,
+      "roles": [
+        {
+          "name": "agent",
+          "agent": "openhands",
+          "model": "openrouter/deepseek/deepseek-v4-pro",
+          "reasoning_effort": null,
+          "timeout_sec": null,
+          "idle_timeout_sec": null,
+          "skills_dir": null,
+          "capabilities": null,
+          "env_keys": []
+        }
+      ],
+      "turns": [
+        {
+          "role": "agent",
+          "has_prompt": false
+        }
+      ]
+    }
+  ],
+  "loop": {
+    "strategy": "single-shot"
+  },
+  "task_digest": "sha256:254967dc387acdfb69ed8a86e419592ef2ee4b5e7bef02f62b8e2c0d4be91b77",
+  "sandbox_id": null
+}

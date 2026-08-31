@@ -1,0 +1,59 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 4,
+            "passed": 4,
+            "failed": 0,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1785906839.0479856,
+            "stop": 1785906839.0647726
+        },
+        "tests": [
+            {
+                "name": "::TestSecurityAuditTask::test_csv_structure_and_content",
+                "status": "passed",
+                "duration": 0.0009714540210552514,
+                "start": 1785906839.059576,
+                "stop": 1785906839.0611007,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::TestSecurityAuditTask::test_required_fields_non_empty",
+                "status": "passed",
+                "duration": 0.0003308009763713926,
+                "start": 1785906839.0612836,
+                "stop": 1785906839.061771,
+                "retries": 3,
+                "file_path": "../verifier/test_outputs.py",
+                "tags": [
+                    "parametrize::field_name::['Package', 'Version', 'CVE_ID', 'Severity']"
+                ]
+            },
+            {
+                "name": "::TestSecurityAuditTask::test_vulnerability_severity_and_format",
+                "status": "passed",
+                "duration": 0.0002697580202948302,
+                "start": 1785906839.0637426,
+                "stop": 1785906839.0641553,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::TestSecurityAuditTask::test_csv_matches_ground_truth",
+                "status": "passed",
+                "duration": 0.0002861079992726445,
+                "start": 1785906839.0642893,
+                "stop": 1785906839.0647075,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            }
+        ]
+    }
+}

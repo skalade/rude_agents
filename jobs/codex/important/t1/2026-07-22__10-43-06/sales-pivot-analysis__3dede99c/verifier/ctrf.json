@@ -1,0 +1,126 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.3.4"
+        },
+        "summary": {
+            "tests": 10,
+            "passed": 8,
+            "failed": 1,
+            "skipped": 1,
+            "pending": 0,
+            "other": 0,
+            "start": 1785992076.7647908,
+            "stop": 1785992077.4838266
+        },
+        "tests": [
+            {
+                "name": "::TestPivotTableConfiguration::test_pivot_row_is_state",
+                "status": "passed",
+                "duration": 123.14052903093398,
+                "start": 1785992077.2621968,
+                "stop": 1785992077.3855715,
+                "retries": 3,
+                "file_path": "../verifier/test_outputs.py",
+                "tags": [
+                    "parametrize::sheet_name,expected_agg,col_field::[('Population by State', 'sum', None), ('Earners by State', 'sum', None), ('Regions by State', 'count', None), ('State Income Quartile', 'sum', 'quarter')]"
+                ]
+            },
+            {
+                "name": "::TestPivotTableConfiguration::test_pivot_uses_correct_aggregation",
+                "status": "passed",
+                "duration": 0.2736649475991726,
+                "start": 1785992077.3870995,
+                "stop": 1785992077.3874705,
+                "retries": 3,
+                "file_path": "../verifier/test_outputs.py",
+                "tags": [
+                    "parametrize::sheet_name,expected_agg,col_field::[('Population by State', 'sum', None), ('Earners by State', 'sum', None), ('Regions by State', 'count', None), ('State Income Quartile', 'sum', 'quarter')]"
+                ]
+            },
+            {
+                "name": "::TestPivotTableConfiguration::test_pivot_col_field",
+                "status": "skipped",
+                "duration": 0.25414000265300274,
+                "start": 1785992077.3886852,
+                "stop": 1785992077.3891368,
+                "retries": 3,
+                "file_path": "../verifier/test_outputs.py",
+                "tags": [
+                    "parametrize::sheet_name,expected_agg,col_field::[('Population by State', 'sum', None), ('Earners by State', 'sum', None), ('Regions by State', 'count', None), ('State Income Quartile', 'sum', 'quarter')]"
+                ],
+                "trace": "('/verifier/test_outputs.py', 81, \"Skipped: 'Regions by State' is not a matrix pivot\")"
+            },
+            {
+                "name": "::TestSourceDataSheet::test_source_data_has_required_column",
+                "status": "passed",
+                "duration": 1.1530000483617187,
+                "start": 1785992077.3905282,
+                "stop": 1785992077.3917663,
+                "retries": 7,
+                "file_path": "../verifier/test_outputs.py",
+                "tags": [
+                    "parametrize::desc,match_fn::[('SA2_CODE', <function <lambda> at 0x7f47773ddda0>), ('SA2_NAME', <function <lambda> at 0x7f47773de020>), ('STATE', <function <lambda> at 0x7f47773de160>), ('POPULATION_2023', <function <lambda> at 0x7f474cbfc400>), ('EARNERS', <function <lambda> at 0x7f474c875ee0>), ('MEDIAN_INCOME', <function <lambda> at 0x7f474c875f80>), ('Quarter', <function <lambda> at 0x7f474c876020>), ('Total', <function <lambda> at 0x7f474c8760c0>)]"
+                ]
+            },
+            {
+                "name": "::TestSourceDataContent::test_source_data_has_reasonable_row_count",
+                "status": "passed",
+                "duration": 9.602935053408146,
+                "start": 1785992077.3946974,
+                "stop": 1785992077.4044056,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::TestSourceDataContent::test_quarter_values_are_valid",
+                "status": "passed",
+                "duration": 0.48994499957188964,
+                "start": 1785992077.4045038,
+                "stop": 1785992077.4050634,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::TestSourceDataContent::test_state_values_are_valid",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.5737600149586797,
+                "start": 1785992077.4051495,
+                "stop": 1785992077.4248235,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py",
+                "trace": "self = <test_outputs.TestSourceDataContent object at 0x7f474c91eba0>\nsource_data = ([{'EARNERS': 1956, 'MEAN_INCOME': 98921, 'MEDIAN_INCOME': 79542, 'POPULATION_2023': 2577, ...}, {'EARNERS': 7359, 'ME...'POPULATION_2023': 7375, ...}, ...], ['SA2_CODE', 'SA2_NAME', 'EARNERS', 'MEDIAN_INCOME', 'MEAN_INCOME', 'STATE', ...])\n\n    def test_state_values_are_valid(self, source_data):\n        \"\"\"STATE column must contain valid Australian states.\"\"\"\n        data, headers = source_data\n        state_col = next((h for h in headers if \"state\" in h.lower()), None)\n        states_found = {row.get(state_col) for row in data if row.get(state_col)}\n        invalid = states_found - VALID_STATES\n>       assert not invalid, f\"Invalid states: {invalid}\"\nE       AssertionError: Invalid states: {'Other Territories'}\nE       assert not {'Other Territories'}\n\n/verifier/test_outputs.py:158: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "::TestDataTransformationCorrectness::test_pivot_cache_has_fields",
+                "status": "passed",
+                "duration": 0.23246899945661426,
+                "start": 1785992077.4249527,
+                "stop": 1785992077.4252608,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::TestDataTransformationCorrectness::test_total_equals_earners_times_median_income",
+                "status": "passed",
+                "duration": 0.26099104434251785,
+                "start": 1785992077.425358,
+                "stop": 1785992077.42569,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::TestDataTransformationCorrectness::test_sa2_codes_from_income_file_present",
+                "status": "passed",
+                "duration": 57.65127594349906,
+                "start": 1785992077.4257689,
+                "stop": 1785992077.4836156,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            }
+        ]
+    }
+}

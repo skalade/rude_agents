@@ -1,0 +1,73 @@
+{
+  "task_path": "sales-pivot-analysis",
+  "agent": "openhands",
+  "model": "openrouter/deepseek/deepseek-v4-pro",
+  "reasoning_effort": null,
+  "environment": "docker",
+  "environment_manifest": null,
+  "skill_mode": "with-skill",
+  "skill_source": "task_bundled",
+  "requested_skills_dir": null,
+  "effective_skills_dir": "/tmp/benchflow-task-xu3tu_nf/sales-pivot-analysis/environment/skills",
+  "skills_sandbox_dir": "/skills",
+  "include_task_skills": true,
+  "sandbox_user": "agent",
+  "sandbox_locked_paths": [
+    "/oracle",
+    "/solution",
+    "/verifier",
+    "/tests",
+    "/testbed_verify"
+  ],
+  "sandbox_setup_timeout": 120,
+  "skip_install": false,
+  "agent_install_timeout": 900,
+  "context_root": null,
+  "base_image_override": null,
+  "timeout_sec": 900,
+  "concurrency": 4,
+  "agent_idle_timeout_sec": 600,
+  "started_at": "2026-08-08 02:18:38.550430",
+  "agent_env": {
+    "BENCHFLOW_REASONING_EFFORT": "high",
+    "BENCHFLOW_PROVIDER_MODEL": "deepseek/deepseek-v4-pro",
+    "BENCHFLOW_PROVIDER_NAME": "openrouter",
+    "BENCHFLOW_PROVIDER_BASE_URL": "https://openrouter.ai/api/v1",
+    "BENCHFLOW_PROVIDER_PROTOCOL": "openai-completions",
+    "LLM_BASE_URL": "https://openrouter.ai/api/v1",
+    "LLM_MODEL": "openai/deepseek/deepseek-v4-pro",
+    "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1"
+  },
+  "scenes": [
+    {
+      "name": "default",
+      "skills_dir": null,
+      "roles": [
+        {
+          "name": "agent",
+          "agent": "openhands",
+          "model": "openrouter/deepseek/deepseek-v4-pro",
+          "reasoning_effort": null,
+          "timeout_sec": null,
+          "idle_timeout_sec": null,
+          "skills_dir": null,
+          "capabilities": null,
+          "env_keys": []
+        }
+      ],
+      "turns": [
+        {
+          "role": "agent",
+          "has_prompt": false
+        }
+      ]
+    }
+  ],
+  "loop": {
+    "strategy": "single-shot"
+  },
+  "usage_tracking": {
+    "requested": "auto"
+  },
+  "task_digest": "sha256:bb6c12d609c60f489a091cd4cca177848f0511d1e65fc2ef045c64e496c69b96"
+}

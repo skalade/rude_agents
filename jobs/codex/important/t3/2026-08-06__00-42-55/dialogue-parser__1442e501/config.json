@@ -1,0 +1,69 @@
+{
+  "task_path": "dialogue-parser",
+  "agent": "codex-acp",
+  "model": "gpt-5.6-terra",
+  "reasoning_effort": null,
+  "environment": "docker",
+  "environment_manifest": null,
+  "skill_mode": "with-skill",
+  "skill_source": "task_bundled",
+  "requested_skills_dir": null,
+  "effective_skills_dir": "/tmp/benchflow-task-96z7nb1p/dialogue-parser/environment/skills",
+  "skills_sandbox_dir": "/skills",
+  "include_task_skills": true,
+  "sandbox_user": "agent",
+  "sandbox_locked_paths": [
+    "/oracle",
+    "/solution",
+    "/verifier",
+    "/tests",
+    "/testbed_verify"
+  ],
+  "sandbox_setup_timeout": 120,
+  "skip_install": false,
+  "agent_install_timeout": 900,
+  "context_root": null,
+  "base_image_override": null,
+  "timeout_sec": 900,
+  "concurrency": 2,
+  "agent_idle_timeout_sec": 600,
+  "started_at": "2026-08-06 00:42:56.093943",
+  "agent_env": {
+    "CODEX_MODEL": "gpt-5.6-terra",
+    "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}",
+    "BENCHFLOW_PROVIDER_MODEL": "gpt-5.6-terra",
+    "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1"
+  },
+  "scenes": [
+    {
+      "name": "default",
+      "skills_dir": null,
+      "roles": [
+        {
+          "name": "agent",
+          "agent": "codex-acp",
+          "model": "gpt-5.6-terra",
+          "reasoning_effort": null,
+          "timeout_sec": null,
+          "idle_timeout_sec": null,
+          "skills_dir": null,
+          "capabilities": null,
+          "env_keys": []
+        }
+      ],
+      "turns": [
+        {
+          "role": "agent",
+          "has_prompt": false
+        }
+      ]
+    }
+  ],
+  "loop": {
+    "strategy": "single-shot"
+  },
+  "usage_tracking": {
+    "requested": "auto"
+  },
+  "task_digest": "sha256:578b2deb1fe59e69bf28e488d12281ad197d436c83bb1891b757b2810ed24ddb"
+}

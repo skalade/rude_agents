@@ -1,0 +1,117 @@
+{
+  "task_name": "dialogue-parser",
+  "rollout_name": "dialogue-parser__ff04db3a",
+  "rewards": {
+    "reward": 0.833
+  },
+  "agent": "codex-acp",
+  "agent_name": "@agentclientprotocol/codex-acp",
+  "model": "gpt-5.6-terra",
+  "skill_mode": "with-skill",
+  "skill_source": "task_bundled",
+  "requested_skills_dir": null,
+  "effective_skills_dir": "/tmp/benchflow-task-77kcyx7g/dialogue-parser/environment/skills",
+  "skills_sandbox_dir": "/skills",
+  "include_task_skills": true,
+  "n_tool_calls": 8,
+  "n_skill_invocations": 0,
+  "n_prompts": 1,
+  "agent_result": {
+    "n_tool_calls": 8,
+    "n_skill_invocations": 0,
+    "n_prompts": 1,
+    "n_input_tokens": 208215,
+    "n_output_tokens": 7343,
+    "n_cache_read_tokens": 186343,
+    "n_cache_creation_tokens": 0,
+    "total_tokens": 215558,
+    "cost_usd": 0.1691286,
+    "usage_source": "provider_response",
+    "price_source": "litellm"
+  },
+  "final_metrics": {
+    "total_prompt_tokens": 208215,
+    "total_completion_tokens": 7343,
+    "total_cached_tokens": 186343,
+    "total_cost_usd": 0.1691286
+  },
+  "trajectory_summary": {
+    "steps": 17,
+    "tool_call_steps": 8,
+    "user_message_steps": 1,
+    "agent_message_steps": 8,
+    "agent_thought_steps": 0,
+    "other_steps": 0,
+    "event_type_counts": {
+      "user_message": 1,
+      "agent_message": 8,
+      "tool_call": 8
+    },
+    "tool_call_status_counts": {
+      "failed": 2,
+      "completed": 6
+    },
+    "partial_trajectory": false,
+    "trajectory_source": "acp"
+  },
+  "usage_tracking": {
+    "requested": "auto",
+    "status": "enabled",
+    "environment": "docker",
+    "endpoint_kind": "host",
+    "usage_source": "provider_response"
+  },
+  "error": null,
+  "error_category": null,
+  "verifier_error": null,
+  "verifier_error_category": null,
+  "export_error": null,
+  "idle_timeout_info": null,
+  "agent_timeout_info": null,
+  "sandbox_startup_info": null,
+  "transport_error_info": null,
+  "verifier_timeout_info": null,
+  "api_error_info": null,
+  "suspected_api_error_info": null,
+  "partial_trajectory": false,
+  "trajectory_source": "acp",
+  "started_at": "2026-08-06 01:00:19.224903",
+  "finished_at": "2026-08-06 01:03:13.730523",
+  "timing": {
+    "environment_setup": 2.9,
+    "agent_setup": 3.3,
+    "agent_execution": 90.0,
+    "verifier": 5.3,
+    "total": 174.5
+  },
+  "scenes": [
+    {
+      "name": "default",
+      "skills_dir": null,
+      "roles": [
+        {
+          "name": "agent",
+          "agent": "codex-acp",
+          "model": "gpt-5.6-terra",
+          "reasoning_effort": null,
+          "timeout_sec": null,
+          "idle_timeout_sec": null,
+          "skills_dir": null,
+          "capabilities": null,
+          "env_keys": []
+        }
+      ],
+      "turns": [
+        {
+          "role": "agent",
+          "has_prompt": false
+        }
+      ]
+    }
+  ],
+  "loop": {
+    "strategy": "single-shot"
+  },
+  "task_digest": "sha256:2c534e846acef6b2d6de3ee34dd27d579eb0b12062f31951e630cbddeabd0cf4",
+  "sandbox_id": null
+}

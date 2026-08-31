@@ -1,0 +1,117 @@
+{
+  "task_name": "earthquake-plate-calculation",
+  "rollout_name": "earthquake-plate-calculation__a102fb33",
+  "rewards": {
+    "reward": 1.0
+  },
+  "agent": "claude-agent-acp",
+  "agent_name": "@agentclientprotocol/claude-agent-acp",
+  "model": "claude-sonnet-5",
+  "skill_mode": "with-skill",
+  "skill_source": "task_bundled",
+  "requested_skills_dir": null,
+  "effective_skills_dir": "/tmp/benchflow-task-6a9bv7je/earthquake-plate-calculation/environment/skills",
+  "skills_sandbox_dir": "/skills",
+  "include_task_skills": true,
+  "n_tool_calls": 9,
+  "n_skill_invocations": 0,
+  "n_prompts": 1,
+  "agent_result": {
+    "n_tool_calls": 9,
+    "n_skill_invocations": 0,
+    "n_prompts": 1,
+    "n_input_tokens": 875483,
+    "n_output_tokens": 3856,
+    "n_cache_read_tokens": 385409,
+    "n_cache_creation_tokens": 51496,
+    "total_tokens": 442434,
+    "cost_usd": 0.2477278,
+    "usage_source": "provider_response",
+    "price_source": "litellm"
+  },
+  "final_metrics": {
+    "total_prompt_tokens": 875483,
+    "total_completion_tokens": 3856,
+    "total_cached_tokens": 385409,
+    "total_cost_usd": 0.2477278
+  },
+  "trajectory_summary": {
+    "steps": 20,
+    "tool_call_steps": 9,
+    "user_message_steps": 1,
+    "agent_message_steps": 3,
+    "agent_thought_steps": 7,
+    "other_steps": 0,
+    "event_type_counts": {
+      "user_message": 1,
+      "agent_thought": 7,
+      "tool_call": 9,
+      "agent_message": 3
+    },
+    "tool_call_status_counts": {
+      "completed": 9
+    },
+    "partial_trajectory": false,
+    "trajectory_source": "acp"
+  },
+  "usage_tracking": {
+    "requested": "auto",
+    "status": "enabled",
+    "environment": "docker",
+    "endpoint_kind": "host",
+    "usage_source": "provider_response"
+  },
+  "error": null,
+  "error_category": null,
+  "verifier_error": null,
+  "verifier_error_category": null,
+  "export_error": null,
+  "idle_timeout_info": null,
+  "agent_timeout_info": null,
+  "sandbox_startup_info": null,
+  "transport_error_info": null,
+  "verifier_timeout_info": null,
+  "api_error_info": null,
+  "suspected_api_error_info": null,
+  "partial_trajectory": false,
+  "trajectory_source": "acp",
+  "started_at": "2026-08-07 02:13:08.764895",
+  "finished_at": "2026-08-07 02:16:27.820395",
+  "timing": {
+    "environment_setup": 45.9,
+    "agent_setup": 3.6,
+    "agent_execution": 90.0,
+    "verifier": 7.5,
+    "total": 199.1
+  },
+  "scenes": [
+    {
+      "name": "default",
+      "skills_dir": null,
+      "roles": [
+        {
+          "name": "agent",
+          "agent": "claude-agent-acp",
+          "model": "claude-sonnet-5",
+          "reasoning_effort": null,
+          "timeout_sec": null,
+          "idle_timeout_sec": null,
+          "skills_dir": null,
+          "capabilities": null,
+          "env_keys": []
+        }
+      ],
+      "turns": [
+        {
+          "role": "agent",
+          "has_prompt": false
+        }
+      ]
+    }
+  ],
+  "loop": {
+    "strategy": "single-shot"
+  },
+  "task_digest": "sha256:68f840af6456ad1856879cd4b577af810eb7cfbf33ac7b4a54d9073dc647f683",
+  "sandbox_id": null
+}

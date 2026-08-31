@@ -1,0 +1,72 @@
+{
+  "task_path": "dialogue-parser",
+  "agent": "opencode",
+  "model": "openrouter/deepseek/deepseek-v4-pro",
+  "reasoning_effort": null,
+  "environment": "docker",
+  "environment_manifest": null,
+  "skill_mode": "with-skill",
+  "skill_source": "task_bundled",
+  "requested_skills_dir": null,
+  "effective_skills_dir": "/tmp/benchflow-task-2nhup2ol/dialogue-parser/environment/skills",
+  "skills_sandbox_dir": "/skills",
+  "include_task_skills": true,
+  "sandbox_user": "agent",
+  "sandbox_locked_paths": [
+    "/oracle",
+    "/solution",
+    "/verifier",
+    "/tests",
+    "/testbed_verify"
+  ],
+  "sandbox_setup_timeout": 120,
+  "skip_install": false,
+  "agent_install_timeout": 900,
+  "context_root": null,
+  "base_image_override": null,
+  "timeout_sec": 900,
+  "concurrency": 2,
+  "agent_idle_timeout_sec": 600,
+  "started_at": "2026-08-05 19:09:55.394049",
+  "agent_env": {
+    "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}",
+    "BENCHFLOW_PROVIDER_MODEL": "deepseek/deepseek-v4-pro",
+    "BENCHFLOW_PROVIDER_NAME": "openrouter",
+    "BENCHFLOW_PROVIDER_BASE_URL": "https://openrouter.ai/api/v1",
+    "BENCHFLOW_PROVIDER_PROTOCOL": "openai-completions",
+    "OPENAI_BASE_URL": "https://openrouter.ai/api/v1",
+    "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1"
+  },
+  "scenes": [
+    {
+      "name": "default",
+      "skills_dir": null,
+      "roles": [
+        {
+          "name": "agent",
+          "agent": "opencode",
+          "model": "openrouter/deepseek/deepseek-v4-pro",
+          "reasoning_effort": null,
+          "timeout_sec": null,
+          "idle_timeout_sec": null,
+          "skills_dir": null,
+          "capabilities": null,
+          "env_keys": []
+        }
+      ],
+      "turns": [
+        {
+          "role": "agent",
+          "has_prompt": false
+        }
+      ]
+    }
+  ],
+  "loop": {
+    "strategy": "single-shot"
+  },
+  "usage_tracking": {
+    "requested": "auto"
+  },
+  "task_digest": "sha256:578b2deb1fe59e69bf28e488d12281ad197d436c83bb1891b757b2810ed24ddb"
+}

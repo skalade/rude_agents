@@ -1,0 +1,105 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 8,
+            "passed": 7,
+            "failed": 1,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1786205387.6034803,
+            "stop": 1786205387.889818
+        },
+        "tests": [
+            {
+                "name": "::test_file_exists",
+                "status": "passed",
+                "duration": 0.0003311120090074837,
+                "start": 1786205387.7618284,
+                "stop": 1786205387.7622972,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::test_budget_values",
+                "status": "passed",
+                "duration": 0.006817494053393602,
+                "start": 1786205387.7624116,
+                "stop": 1786205387.7693307,
+                "retries": 5,
+                "file_path": "../verifier/test_outputs.py",
+                "tags": [
+                    "parametrize::cell,expected,desc::[('F8', 4639, 'FY2019 SpaceOps'), ('K5', 19285, 'FY2016 Total'), ('B9', 7139, 'FY2020 Science'), ('C12', 936, 'FY2023 Aeronautics'), ('K10', 23285, 'FY2021 Total'), ('E10', 6555, 'FY2021 Exploration')]"
+                ]
+            },
+            {
+                "name": "::test_yoy_values",
+                "status": "passed",
+                "duration": 0.005492796946782619,
+                "start": 1786205387.7945228,
+                "stop": 1786205387.800113,
+                "retries": 2,
+                "file_path": "../verifier/test_outputs.py",
+                "tags": [
+                    "parametrize::cell,expected,desc::[('D7', 21.97, 'FY2019 SpaceTech YoY'), ('F9', -0.08, 'FY2021 SpaceOps YoY'), ('B9', 2.27, 'FY2021 Science YoY')]"
+                ]
+            },
+            {
+                "name": "::test_shares_values",
+                "status": "passed",
+                "duration": 0.0046615920145995915,
+                "start": 1786205387.8098829,
+                "stop": 1786205387.8146286,
+                "file_path": "../verifier/test_outputs.py",
+                "tags": [
+                    "parametrize::cell,expected,desc::[('F5', 26.08, 'FY2016 SpaceOps Share'), ('B10', 31.35, 'FY2021 Science Share')]"
+                ]
+            },
+            {
+                "name": "::test_growth_values",
+                "status": "failed",
+                "duration": 0.004763719975017011,
+                "start": 1786205387.8202875,
+                "stop": 1786205387.8251398,
+                "retries": 3,
+                "file_path": "../verifier/test_outputs.py",
+                "tags": [
+                    "parametrize::cell,expected,desc::[('B7', 1534, 'Science 5yr Change'), ('B8', 7444.4, 'Science Avg Budget'), ('E4', 8.58, 'Exploration CAGR'), ('E5', 5047, 'FY2019 Exploration')]"
+                ],
+                "trace": "growth_sheet = <Worksheet \"Growth Analysis\">, cell = 'B8', expected = 7444.4\ndesc = 'Science Avg Budget'\n\n    @pytest.mark.parametrize(\"cell,expected,desc\", GROWTH_VALUES)\n    def test_growth_values(growth_sheet, cell, expected, desc):\n        \"\"\"Test all recovered Growth sheet values.\"\"\"\n        actual = growth_sheet[cell].value\n        if isinstance(expected, int):\n            assert actual == expected, f\"{desc} ({cell}): expected {expected}, got {actual}\"\n        else:\n>           assert abs(actual - expected) < 0.5, f\"{desc} ({cell}): expected {expected}, got {actual}\"\nE           AssertionError: Science Avg Budget (B8): expected 7444.4, got 7610.3\nE           assert 165.90000000000055 < 0.5\nE            +  where 165.90000000000055 = abs((7610.3 - 7444.4))\n\n/verifier/test_outputs.py:118: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "::test_no_remaining_placeholders",
+                "status": "passed",
+                "duration": 0.004954582022037357,
+                "start": 1786205387.874184,
+                "stop": 1786205387.879235,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::test_row_sums_consistent",
+                "status": "passed",
+                "duration": 0.004920370003674179,
+                "start": 1786205387.8793843,
+                "stop": 1786205387.8844166,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::test_cross_sheet_consistency",
+                "status": "passed",
+                "duration": 0.005017639021389186,
+                "start": 1786205387.8845658,
+                "stop": 1786205387.88968,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            }
+        ]
+    }
+}

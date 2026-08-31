@@ -1,0 +1,117 @@
+{
+  "task_name": "travel-planning",
+  "rollout_name": "travel-planning__be32c2c6",
+  "rewards": {
+    "reward": 1.0
+  },
+  "agent": "claude-agent-acp",
+  "agent_name": "@agentclientprotocol/claude-agent-acp",
+  "model": "claude-sonnet-5",
+  "skill_mode": "with-skill",
+  "skill_source": "task_bundled",
+  "requested_skills_dir": null,
+  "effective_skills_dir": "/tmp/benchflow-task-sj0nxbak/travel-planning/environment/skills",
+  "skills_sandbox_dir": "/skills",
+  "include_task_skills": true,
+  "n_tool_calls": 21,
+  "n_skill_invocations": 0,
+  "n_prompts": 1,
+  "agent_result": {
+    "n_tool_calls": 21,
+    "n_skill_invocations": 0,
+    "n_prompts": 1,
+    "n_input_tokens": 2462812,
+    "n_output_tokens": 29683,
+    "n_cache_read_tokens": 1196533,
+    "n_cache_creation_tokens": 33811,
+    "total_tokens": 1262151,
+    "cost_usd": 0.6249121,
+    "usage_source": "provider_response",
+    "price_source": "litellm"
+  },
+  "final_metrics": {
+    "total_prompt_tokens": 2462812,
+    "total_completion_tokens": 29683,
+    "total_cached_tokens": 1196533,
+    "total_cost_usd": 0.6249121
+  },
+  "trajectory_summary": {
+    "steps": 41,
+    "tool_call_steps": 21,
+    "user_message_steps": 1,
+    "agent_message_steps": 8,
+    "agent_thought_steps": 11,
+    "other_steps": 0,
+    "event_type_counts": {
+      "user_message": 1,
+      "agent_thought": 11,
+      "agent_message": 8,
+      "tool_call": 21
+    },
+    "tool_call_status_counts": {
+      "completed": 21
+    },
+    "partial_trajectory": false,
+    "trajectory_source": "acp"
+  },
+  "usage_tracking": {
+    "requested": "auto",
+    "status": "enabled",
+    "environment": "docker",
+    "endpoint_kind": "host",
+    "usage_source": "provider_response"
+  },
+  "error": null,
+  "error_category": null,
+  "verifier_error": null,
+  "verifier_error_category": null,
+  "export_error": null,
+  "idle_timeout_info": null,
+  "agent_timeout_info": null,
+  "sandbox_startup_info": null,
+  "transport_error_info": null,
+  "verifier_timeout_info": null,
+  "api_error_info": null,
+  "suspected_api_error_info": null,
+  "partial_trajectory": false,
+  "trajectory_source": "acp",
+  "started_at": "2026-08-07 01:43:20.404035",
+  "finished_at": "2026-08-07 01:50:38.723015",
+  "timing": {
+    "environment_setup": 3.2,
+    "agent_setup": 3.2,
+    "agent_execution": 390.1,
+    "verifier": 7.5,
+    "total": 438.3
+  },
+  "scenes": [
+    {
+      "name": "default",
+      "skills_dir": null,
+      "roles": [
+        {
+          "name": "agent",
+          "agent": "claude-agent-acp",
+          "model": "claude-sonnet-5",
+          "reasoning_effort": null,
+          "timeout_sec": null,
+          "idle_timeout_sec": null,
+          "skills_dir": null,
+          "capabilities": null,
+          "env_keys": []
+        }
+      ],
+      "turns": [
+        {
+          "role": "agent",
+          "has_prompt": false
+        }
+      ]
+    }
+  ],
+  "loop": {
+    "strategy": "single-shot"
+  },
+  "task_digest": "sha256:bdbbbfb74132d28c7a7c082a5c8012e7e4e8dd615a58162fe3e6b7f457bc09db",
+  "sandbox_id": null
+}

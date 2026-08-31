@@ -1,0 +1,92 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.3.4"
+        },
+        "summary": {
+            "tests": 6,
+            "passed": 6,
+            "failed": 0,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1786086132.4922132,
+            "stop": 1786086132.634142
+        },
+        "tests": [
+            {
+                "name": "::test_system_basics",
+                "status": "passed",
+                "duration": 0.9635899914428592,
+                "start": 1786086132.614884,
+                "stop": 1786086132.6160548,
+                "retries": 3,
+                "file_path": "../verifier/test_outputs.py",
+                "tags": [
+                    "parametrize::check::['json_structure', 'schema_validation', 'dot_exists', 'graph_size']"
+                ]
+            },
+            {
+                "name": "::test_narrative_content",
+                "status": "passed",
+                "duration": 0.2865180722437799,
+                "start": 1786086132.6177373,
+                "stop": 1786086132.6181173,
+                "retries": 8,
+                "file_path": "../verifier/test_outputs.py",
+                "tags": [
+                    "parametrize::category,expected_id::[('speaker', 'Narrator'), ('speaker', 'Barkeep'), ('speaker', 'Merchant'), ('speaker', 'Kira'), ('node', 'Start'), ('node', 'TavernChoice'), ('node', 'StrangerApproach'), ('node', 'CrimsonQuestStart'), ('node', 'KiraMeet')]"
+                ]
+            },
+            {
+                "name": "::test_graph_logic",
+                "status": "passed",
+                "duration": 0.37621601950377226,
+                "start": 1786086132.6217153,
+                "stop": 1786086132.6221747,
+                "retries": 3,
+                "file_path": "../verifier/test_outputs.py",
+                "tags": [
+                    "parametrize::logic_check::['edges_valid', 'reachability', 'tavern_branching', 'multiple_endings']"
+                ]
+            },
+            {
+                "name": "::test_visualization_validity",
+                "status": "passed",
+                "duration": 0.2163299941457808,
+                "start": 1786086132.623626,
+                "stop": 1786086132.6239197,
+                "retries": 3,
+                "file_path": "../verifier/test_outputs.py",
+                "tags": [
+                    "parametrize::viz_check::['header', 'syntax', 'shapes', 'content']"
+                ]
+            },
+            {
+                "name": "::test_content_integrity",
+                "status": "passed",
+                "duration": 0.28338393894955516,
+                "start": 1786086132.625216,
+                "stop": 1786086132.6255822,
+                "retries": 7,
+                "file_path": "../verifier/test_outputs.py",
+                "tags": [
+                    "parametrize::check_type, identifier, content_fragment::[('node_text', 'StrangerMoreInfo', 'Back so soon? Afraid?'), ('node_text', 'MerchantShame', 'I light a candle for each of them'), ('edge_text', 'RecruitOptions', 'The stranger seems capable'), ('node_text', 'KiraWarning', \"She's never failed a contract\"), ('node_id', 'HitNegotiate', None), ('node_id', 'CrimsonCompromise', None), ('dynamic_script_sample', 'script.txt', None), ('first_node_check', 'script.txt', None)]"
+                ]
+            },
+            {
+                "name": "::test_structural_integrity",
+                "status": "passed",
+                "duration": 0.2586469636298716,
+                "start": 1786086132.631472,
+                "stop": 1786086132.6318164,
+                "retries": 5,
+                "file_path": "../verifier/test_outputs.py",
+                "tags": [
+                    "parametrize::u,v::[('Start', 'TavernEntry'), ('TavernEntry', 'TavernChoice'), ('TavernChoice', 'StrangerApproach'), ('TavernChoice', 'MerchantApproach'), ('StrangerGreet', 'CrimsonQuestStart'), ('CrimsonQuestStart', 'CrimsonWarning')]"
+                ]
+            }
+        ]
+    }
+}
