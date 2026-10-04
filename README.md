@@ -41,6 +41,7 @@ make run           # dry run: prints the bench commands
 make run EXECUTE=1 AGENT=claude TRIALS=3
 make run EXECUTE=1 AGENT=codex
 make run EXECUTE=1 AGENT=opencode TRIALS=3 # DeepSeek V4 Pro via OpenRouter
+make run AGENT=pi TRIALS=3               # preview the equivalent Pi experiment
 make report        # summary table + row-level results.csv
 ```
 
@@ -53,3 +54,30 @@ runner translates that setting to Claude Code's `CLAUDE_CODE_EFFORT_LEVEL`,
 Codex's `model_reasoning_effort`, and OpenCode's provider-level
 `reasoningEffort`. Only `low` and `high` are accepted because those levels are supported by all three model
 families. Override the shared level with `make run REASONING_EFFORT=low`.
+
+## Pi + DeepSeek
+
+Pi uses the same `openrouter/deepseek/deepseek-v4-pro` model and
+`OPENROUTER_API_KEY`, task builds, four conditions, skills, and timeouts.
+Three trials produce 120 task runs, with results isolated under `jobs/pi/`.
+
+```bash
+python3 experiment.py run --agent pi --trials 3 --concurrency 2
+# Add --execute to run the grid after validating a one-task smoke test.
+```
+
+`bench_pi.py` applies process-local fixes to the installed Benchflow 0.6.5
+adapter: it pins `@earendil-works/pi-coding-agent@1.0.0` and `pi-acp@0.0.34`
+and registers the ACP `thought_level` option. This sets Pi's reasoning level
+explicitly (default `high`). Benchflow's stock installer still uses the deprecated
+`@mariozechner` package, which is older than the current ACP adapter requires.
+The wrapper uses the Python environment installed by `uv tool install benchflow`;
+it does not modify the installed package or other harnesses.
+
+Pi also receives explicit DeepSeek reasoning and token-limit metadata, captured
+from the [OpenRouter model catalog](https://openrouter.ai/api/v1/models) on
+2026-10-02 (1,024,000 context tokens; 384,000 maximum completion tokens).
+Benchflow otherwise defaults this custom model to non-reasoning and a 4,096-token
+completion cap. Other Pi model overrides are rejected until their metadata is
+configured. The wrapper fails if Benchflow's installer changes, so an upgrade
+requires reviewing the compatibility fixes.

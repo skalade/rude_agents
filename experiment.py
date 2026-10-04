@@ -16,6 +16,7 @@ import csv
 import json
 import os
 import re
+import shlex
 import shutil
 import subprocess
 import sys
@@ -44,6 +45,7 @@ AGENTS = {  # agent name -> default model (override with --model)
     "codex": "gpt-5.6-terra",
     "opencode": "openrouter/deepseek/deepseek-v4-pro",
     "openhands": "openrouter/deepseek/deepseek-v4-pro",
+    "pi": "openrouter/deepseek/deepseek-v4-pro",
 }
 
 # The vendors expose different configuration surfaces, but "low" and "high"
@@ -57,6 +59,7 @@ AUTH = {  # agent -> (env vars, subscription login file); either authenticates
     "codex": (("OPENAI_API_KEY",), "~/.codex/auth.json"),
     "opencode": (("OPENROUTER_API_KEY",), None),
     "openhands": (("OPENROUTER_API_KEY", "LLM_API_KEY"), None),
+    "pi": (("OPENROUTER_API_KEY",), None),
 }
 
 FRONTMATTER_RE = re.compile(r"^(---\n.*?\n---\n)(.*)$", re.DOTALL)
@@ -137,6 +140,25 @@ def reasoning_args(agent, model, effort):
     so configure each harness through its native runtime instead of allowing
     different harness defaults.
     """
+    if agent == "pi":
+        if model != AGENTS["pi"]:
+            sys.exit("Pi model metadata is pinned for openrouter/deepseek/deepseek-v4-pro")
+        # OpenRouter's Benchflow registry entry has no model metadata. Without
+        # this, Pi treats the gateway alias as non-reasoning with a 4K output cap.
+        metadata = [{
+            "id": "deepseek/deepseek-v4-pro",
+            "name": "DeepSeek V4 Pro",
+            "reasoning": True,
+            "input": ["text"],
+            "contextWindow": 1024000,
+            "maxTokens": 384000,
+        }]
+        return [
+            "--reasoning-effort", effort,
+            "--agent-env",
+            "BENCHFLOW_PROVIDER_MODELS=" + json.dumps(metadata, separators=(",", ":")),
+        ]
+
     if agent == "claude":
         return ["--agent-env", f"CLAUDE_CODE_EFFORT_LEVEL={effort}"]
 
@@ -181,8 +203,18 @@ def bench_command(args, condition, trial=1):
     model = args.model or AGENTS.get(args.agent)
     if not model:
         sys.exit(f"{args.agent} needs --model to configure reasoning effort")
-    cmd = [
-        "bench", "eval", "run",
+    launcher = ["bench"]
+    if args.agent == "pi":
+        bench = shutil.which("bench")
+        if not bench:
+            sys.exit("bench CLI not found - run: make setup")
+        # uv's bench entry point lives next to its own Python interpreter.
+        python = Path(bench).resolve().parent / "python"
+        if not python.is_file():
+            sys.exit("Pi requires bench installed with uv tool install benchflow")
+        launcher = [str(python), str(ROOT / "bench_pi.py")]
+    cmd = launcher + [
+        "eval", "run",
         "--tasks-dir", str(BUILD_DIR / condition),
         "--agent", args.agent,
         "--sandbox", args.sandbox,
@@ -224,12 +256,12 @@ def cmd_run(args):
     if not args.execute:
         print("dry run - would execute (pass --execute to run):\n")
         for cmd in commands:
-            print(" ".join(cmd))
+            print(shlex.join(cmd))
         return
 
     preflight(args, conditions)
     for i, cmd in enumerate(commands, 1):
-        print(f"\n[{i}/{len(commands)}] {' '.join(cmd)}")
+        print(f"\n[{i}/{len(commands)}] {shlex.join(cmd)}")
         if run_one(cmd) == "limit":
             # The usage window is spent; every remaining command would just
             # spin through the same auth error. Stop and let the caller wait
