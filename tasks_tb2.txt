@@ -1,0 +1,105 @@
+# Terminal-Bench 2 subset - one task dir name per line (python3 experiment.py --bench tb2 list).
+# All 89 tasks except 2 that cannot run under benchflow today (commented out below).
+# Baseline calibration of 24 candidates (2026-10-04) is archived in
+# jobs_archive/tb2-pi-calibration-2026-10-04.
+#
+# Known task issues (2026-10-04):
+# - EXCLUDED qemu-startup, qemu-alpine-ssh: Debian bullseye images. deb.debian.org
+#   still serves bullseye's package index but its files moved to archive.debian.org
+#   (404), so apt can't install curl: Pi's installer fails and so would the verifier.
+# - Reference solutions fail on upstream drift (task kept; an agent can still pass):
+#   build-pmars (pinned dpkg-dev removed), build-cython-ext (dependency updates),
+#   build-pov-ray (povray.org returns 403), make-doom-for-mips (stale apt index),
+#   mcmc-sampling-stan (rstan install fails). Swept 50/89 tasks; the rest unchecked.
+# - llm-inference-batching-scheduler: test.sh has no shebang; build adds #!/bin/bash
+#   (benchflow would run it with sh). Its first baseline run (bogus 0) was rerun.
+
+adaptive-rejection-sampler        # medium  scientific-computing   900s  1cpu 2GB
+bn-fit-modify                     # hard    scientific-computing   3600s  1cpu 2GB
+break-filter-js-from-html         # medium  security               1200s  1cpu 2GB
+build-cython-ext                  # medium  debugging              900s  1cpu 2GB
+build-pmars                       # medium  software-engineering   900s  1cpu 2GB
+build-pov-ray                     # medium  software-engineering   12000s  1cpu 2GB
+caffe-cifar-10                    # medium  machine-learning       1200s  1cpu 2GB
+cancel-async-tasks                # hard    software-engineering   900s  1cpu 2GB
+chess-best-move                   # medium  games                  900s  1cpu 2GB
+circuit-fibsqrt                   # hard    software-engineering   3600s  1cpu 2GB
+cobol-modernization               # easy    software-engineering   900s  1cpu 2GB
+code-from-image                   # medium  software-engineering   1200s  1cpu 2GB
+compile-compcert                  # medium  system-administration  2400s  2cpu 4GB
+configure-git-webserver           # hard    system-administration  900s  1cpu 2GB
+constraints-scheduling            # medium  personal-assistant     1200s  1cpu 2GB
+count-dataset-tokens              # medium  model-training         900s  1cpu 2GB
+crack-7z-hash                     # medium  security               1800s  1cpu 4GB
+custom-memory-heap-crash          # medium  debugging              1800s  1cpu 2GB
+db-wal-recovery                   # medium  file-operations        900s  1cpu 2GB
+distribution-search               # medium  machine-learning       3600s  1cpu 2GB
+dna-assembly                      # hard    scientific-computing   1800s  1cpu 2GB
+dna-insert                        # medium  scientific-computing   1800s  1cpu 4GB
+extract-elf                       # medium  file-operations        900s  1cpu 2GB
+extract-moves-from-video          # hard    file-operations        1800s  1cpu 2GB
+feal-differential-cryptanalysis   # hard    mathematics            1800s  1cpu 2GB
+feal-linear-cryptanalysis         # hard    mathematics            1800s  1cpu 2GB
+filter-js-from-html               # medium  security               1800s  1cpu 4GB
+financial-document-processor      # medium  data-processing        1200s  1cpu 4GB
+fix-code-vulnerability            # hard    security               900s  1cpu 2GB
+fix-git                           # easy    software-engineering   900s  1cpu 2GB
+fix-ocaml-gc                      # hard    software-engineering   3600s  1cpu 2GB
+gcode-to-text                     # medium  file-operations        900s  1cpu 2GB
+git-leak-recovery                 # medium  software-engineering   900s  1cpu 2GB
+git-multibranch                   # medium  system-administration  900s  1cpu 2GB
+gpt2-codegolf                     # hard    software-engineering   900s  1cpu 8GB
+headless-terminal                 # medium  software-engineering   900s  1cpu 2GB
+hf-model-inference                # medium  data-science           900s  1cpu 2GB
+install-windows-3.11              # hard    system-administration  3600s  2cpu 4GB
+kv-store-grpc                     # medium  software-engineering   900s  1cpu 2GB
+large-scale-text-editing          # medium  file-operations        1200s  1cpu 2GB
+largest-eigenval                  # medium  mathematics            900s  1cpu 2GB
+llm-inference-batching-scheduler  # hard    machine-learning       1800s  1cpu 2GB
+log-summary-date-ranges           # medium  data-processing        900s  1cpu 2GB
+mailman                           # medium  system-administration  1800s  1cpu 2GB
+make-doom-for-mips                # hard    software-engineering   900s  1cpu 2GB
+make-mips-interpreter             # hard    software-engineering   1800s  1cpu 2GB
+mcmc-sampling-stan                # hard    data-science           1800s  4cpu 8GB
+merge-diff-arc-agi-task           # medium  debugging              900s  1cpu 4GB
+model-extraction-relu-logits      # hard    mathematics            900s  1cpu 2GB
+modernize-scientific-stack        # medium  scientific-computing   600s  1cpu 2GB
+mteb-leaderboard                  # medium  data-science           3600s  1cpu 4GB
+mteb-retrieve                     # medium  data-science           1800s  1cpu 2GB
+multi-source-data-merger          # medium  data-processing        900s  1cpu 2GB
+nginx-request-logging             # medium  system-administration  900s  1cpu 2GB
+openssl-selfsigned-cert           # medium  security               900s  1cpu 2GB
+overfull-hbox                     # easy    debugging              750s  2cpu 4GB
+password-recovery                 # hard    security               900s  1cpu 2GB
+path-tracing-reverse              # hard    software-engineering   1800s  1cpu 2GB
+path-tracing                      # hard    software-engineering   1800s  1cpu 2GB
+polyglot-c-py                     # medium  software-engineering   900s  1cpu 2GB
+polyglot-rust-c                   # hard    software-engineering   900s  1cpu 2GB
+portfolio-optimization            # medium  optimization           3600s  1cpu 4GB
+protein-assembly                  # hard    scientific-computing   1800s  1cpu 4GB
+prove-plus-comm                   # easy    software-engineering   900s  1cpu 2GB
+pypi-server                       # medium  software-engineering   900s  1cpu 2GB
+pytorch-model-cli                 # medium  model-training         900s  1cpu 2GB
+pytorch-model-recovery            # medium  model-training         900s  1cpu 2GB
+# qemu-alpine-ssh                   # medium  system-administration  900s  1cpu 4GB  EXCLUDED: bullseye apt 404s
+# qemu-startup                      # medium  system-administration  900s  1cpu 4GB  EXCLUDED: bullseye apt 404s
+query-optimize                    # medium  data-science           900s  1cpu 2GB
+raman-fitting                     # medium  scientific-computing   900s  1cpu 2GB
+regex-chess                       # hard    software-engineering   3600s  1cpu 2GB
+regex-log                         # medium  data-processing        900s  1cpu 2GB
+reshard-c4-data                   # medium  data-science           3600s  1cpu 2GB
+rstan-to-pystan                   # medium  data-science           1800s  4cpu 8GB
+sam-cell-seg                      # hard    data-science           7200s  1cpu 4GB
+sanitize-git-repo                 # medium  security               900s  1cpu 2GB
+schemelike-metacircular-eval      # medium  software-engineering   2400s  1cpu 2GB
+sparql-university                 # hard    data-querying          900s  1cpu 2GB
+sqlite-db-truncate                # medium  debugging              900s  1cpu 2GB
+sqlite-with-gcov                  # medium  system-administration  900s  1cpu 2GB
+torch-pipeline-parallelism        # hard    software-engineering   900s  1cpu 4GB
+torch-tensor-parallelism          # hard    software-engineering   900s  1cpu 4GB
+train-fasttext                    # hard    model-training         3600s  1cpu 4GB
+tune-mjcf                         # medium  scientific-computing   900s  1cpu 2GB
+video-processing                  # hard    video-processing       3600s  1cpu 2GB
+vulnerable-secret                 # medium  security               900s  1cpu 2GB
+winning-avg-corewars              # medium  software-engineering   3600s  1cpu 2GB
+write-compressor                  # hard    software-engineering   900s  1cpu 2GB

@@ -1,6 +1,11 @@
 build/
 jobs/
+jobs_archive/
 jobs_retries/
 results.csv
 __pycache__/
 .envrc
+build_tb2/
+jobs_tb2/
+jobs_tb2_retries/
+results_tb2.csv

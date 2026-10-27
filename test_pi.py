@@ -64,6 +64,141 @@ class PiIntegrationTests(unittest.TestCase):
         with self.assertRaises(SystemExit):
             experiment.reasoning_args("pi", "openrouter/unknown/model", "high")
 
+    def test_openrouter_provider_pinned_in_proxy_config(self):
+        from benchflow.providers import litellm_runtime
+
+        original = litellm_runtime.litellm_proxy_config
+        try:
+            bench_pi.pin_openrouter_provider()
+            route = resolve_litellm_route(
+                model=experiment.AGENTS["pi"], env={"OPENROUTER_API_KEY": "test"}
+            )
+            config = litellm_runtime.litellm_proxy_config(route, master_key="k")
+            for entry in config["model_list"]:
+                self.assertEqual(
+                    entry["litellm_params"]["extra_body"],
+                    {"provider": bench_pi.OPENROUTER_PROVIDER},
+                )
+        finally:
+            litellm_runtime.litellm_proxy_config = original
+
+
+class SlowDockerTests(unittest.TestCase):
+    def test_short_exec_timeouts_raised_long_ones_kept(self):
+        import asyncio
+
+        from benchflow.sandbox.docker import DockerSandbox
+
+        original = DockerSandbox.exec
+        seen = []
+
+        async def fake_exec(self, command, cwd=None, env=None, timeout_sec=None,
+                            user=None, service="main"):
+            seen.append(timeout_sec)
+
+        try:
+            DockerSandbox.exec = fake_exec
+            bench_pi.tolerate_slow_docker()
+            for timeout in (10, 900, None):
+                asyncio.run(DockerSandbox.exec(object(), "mkdir -p /logs/agent",
+                                               user="root", timeout_sec=timeout))
+        finally:
+            DockerSandbox.exec = original
+        self.assertEqual(seen, [bench_pi.MIN_EXEC_TIMEOUT_SEC, 900, None])
+
+
+class Tb2Tests(unittest.TestCase):
+    def setUp(self):
+        experiment.use_bench("tb2")
+
+    def tearDown(self):
+        experiment.use_bench("skillsbench")
+
+    def test_command_runs_as_root_without_skills(self):
+        args = Namespace(agent="pi", model=None, sandbox="docker",
+                         skill_mode=None, concurrency=2, reasoning_effort="high")
+        cmd = experiment.bench_command(args, "baseline", 1)
+        self.assertEqual(cmd[cmd.index("--sandbox-user") + 1], "none")
+        self.assertEqual(cmd[cmd.index("--skill-mode") + 1], "no-skill")
+        self.assertIn("/build_tb2/baseline", cmd[cmd.index("--tasks-dir") + 1])
+        self.assertIn("/jobs_tb2/pi/baseline/t1", cmd[cmd.index("--jobs-dir") + 1])
+
+    def test_selected_tasks_exist(self):
+        for name in experiment.selected_tasks():
+            self.assertGreater(experiment.task_metadata(name)["timeout"], 0)
+
+    def test_prompt_matches_condition(self):
+        import tempfile
+        from pathlib import Path
+
+        task = "Fix the repo."
+        with tempfile.TemporaryDirectory() as tmp:
+            run_dir = Path(tmp)
+            for sent_as in experiment.CONDITIONS:
+                phrase = experiment.CONDITIONS[sent_as]
+                prompt = f"{phrase}\n\n{task}" if phrase else task
+                (run_dir / "prompts.json").write_text(json.dumps([prompt]))
+                for labelled in experiment.CONDITIONS:
+                    self.assertEqual(
+                        experiment.prompt_matches(labelled, run_dir),
+                        labelled == sent_as,
+                        (sent_as, labelled),
+                    )
+
+    def test_phrase_prepended_to_instruction(self):
+        import tempfile
+        from pathlib import Path
+
+        with tempfile.TemporaryDirectory() as tmp:
+            prompt = Path(tmp) / "instruction.md"
+            prompt.write_text("Fix the repo.\n")
+            experiment.inject_phrase(prompt, "Be nice.")
+            self.assertEqual(prompt.read_text(), "Be nice.\n\nFix the repo.\n")
+
+    def test_root_runs_ignore_sandbox_pytest_plugins(self):
+        import asyncio
+        from pathlib import Path
+        from types import SimpleNamespace
+
+        from benchflow.sandbox import lockdown
+
+        class NoExec:
+            async def exec(self, *args, **kwargs):
+                raise AssertionError("sandbox plugin discovery should be skipped")
+
+        task = SimpleNamespace(
+            config=SimpleNamespace(verifier=SimpleNamespace(pytest_plugins=[])),
+            task_dir=Path(experiment.TASKS_ROOT / "build-pmars"),
+        )
+        original = lockdown._discover_pytest_plugin_flags
+        try:
+            bench_pi.skip_sandbox_pytest_plugins()
+            flags = asyncio.run(lockdown._discover_pytest_plugin_flags(NoExec(), task))
+            self.assertEqual(flags, "-p ctrf")
+        finally:
+            lockdown._discover_pytest_plugin_flags = original
+        self.assertTrue(bench_pi.runs_as_root(["x", "--sandbox-user", "none"]))
+        self.assertFalse(bench_pi.runs_as_root(["x", "--sandbox-user", "agent"]))
+        self.assertFalse(bench_pi.runs_as_root(["x"]))
+
+    def test_shebangless_test_script_gets_bash(self):
+        import tempfile
+        from pathlib import Path
+
+        with tempfile.TemporaryDirectory() as tmp:
+            bare, bash = Path(tmp) / "bare.sh", Path(tmp) / "bash.sh"
+            bare.write_text("# canary\nsource $HOME/.local/bin/env\n")
+            bash.write_text("#!/bin/bash\necho hi\n")
+            for script in (bare, bash):
+                experiment.ensure_bash_shebang(script)
+            self.assertEqual(bare.read_text(), "#!/bin/bash\n# canary\nsource $HOME/.local/bin/env\n")
+            self.assertEqual(bash.read_text(), "#!/bin/bash\necho hi\n")
+            experiment.ensure_bash_shebang(Path(tmp) / "missing.sh")  # no-op
+
+    def test_namespaced_task_name(self):
+        result = {"task_name": "terminal-bench/fix-git"}
+        self.assertEqual(experiment.task_name_for(result, None), "fix-git")
+
 
 if __name__ == "__main__":
     unittest.main()

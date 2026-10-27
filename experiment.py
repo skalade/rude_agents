@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """Does the tone of a task description change how coding agents perform?
 
-Runs a subset of SkillsBench tasks under four conditions:
+Runs a subset of SkillsBench (or Terminal-Bench 2, with --bench tb2) tasks
+under four conditions:
 
   baseline   - task description unchanged
   important  - polite high-stakes preamble
@@ -23,12 +24,47 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).parent
-SKILLSBENCH_TASKS = ROOT / "skillsbench" / "tasks"
-BUILD_DIR = ROOT / "build"
-JOBS_DIR = ROOT / "jobs"
-RETRY_JOBS_DIR = ROOT / "jobs_retries"
-TASKS_FILE = ROOT / "tasks.txt"
-RESULTS_CSV = ROOT / "results.csv"
+
+BENCHES = {  # name -> task source, prompt file, and bench flags
+    "skillsbench": {
+        "tasks": ROOT / "skillsbench" / "tasks",
+        "prompt": "task.md",
+        "suffix": "",
+        "skill_mode": "with-skill",
+        "bench_args": [],
+    },
+    "tb2": {
+        "tasks": ROOT / "terminal-bench-2",
+        "prompt": "instruction.md",
+        "suffix": "_tb2",
+        "skill_mode": "no-skill",  # TB2 ships no skills
+        # Harbor runs agents as root and TB2 tasks assume it (apt-get etc.);
+        # benchflow's default non-root user has no sudo.
+        "bench_args": ["--sandbox-user", "none"],
+    },
+}
+
+
+def use_bench(name):
+    """Point the task source and every output path at one benchmark.
+
+    Outputs get a per-benchmark suffix (jobs_tb2/, build_tb2/, ...) because
+    collect_results reads the first directory under jobs/ as the agent name.
+    """
+    global BENCH, TASKS_ROOT, PROMPT_FILE, TASKS_FILE, BUILD_DIR, JOBS_DIR
+    global RETRY_JOBS_DIR, RESULTS_CSV
+    BENCH = BENCHES[name]
+    suffix = BENCH["suffix"]
+    TASKS_ROOT = BENCH["tasks"]
+    PROMPT_FILE = BENCH["prompt"]
+    TASKS_FILE = ROOT / f"tasks{suffix}.txt"
+    BUILD_DIR = ROOT / f"build{suffix}"
+    JOBS_DIR = ROOT / f"jobs{suffix}"
+    RETRY_JOBS_DIR = ROOT / f"jobs{suffix}_retries"
+    RESULTS_CSV = ROOT / f"results{suffix}.csv"
+
+
+use_bench("skillsbench")
 
 CONDITIONS = {
     "baseline": None,
@@ -73,7 +109,7 @@ def selected_tasks():
         name = line.split("#")[0].strip()
         if not name:
             continue
-        if not (SKILLSBENCH_TASKS / name / "task.md").exists():
+        if not (TASKS_ROOT / name / PROMPT_FILE).exists():
             sys.exit(f"unknown task in {TASKS_FILE.name}: {name}")
         names.append(name)
     if not names:
@@ -81,12 +117,22 @@ def selected_tasks():
     return names
 
 
-def task_metadata(name):
+def task_config(name):
+    """Task config: Harbor's task.toml, or SkillsBench's task.md frontmatter."""
+    toml_path = TASKS_ROOT / name / "task.toml"
+    if toml_path.exists():
+        import tomllib
+
+        return tomllib.loads(toml_path.read_text())
+
     import yaml
 
-    text = (SKILLSBENCH_TASKS / name / "task.md").read_text()
-    match = FRONTMATTER_RE.match(text)
-    data = yaml.safe_load(match.group(1).strip("-\n")) if match else {}
+    match = FRONTMATTER_RE.match((TASKS_ROOT / name / "task.md").read_text())
+    return yaml.safe_load(match.group(1).strip("-\n")) if match else {}
+
+
+def task_metadata(name):
+    data = task_config(name)
     meta = data.get("metadata", {})
     return {
         "difficulty": meta.get("difficulty", "?"),
@@ -98,20 +144,32 @@ def task_metadata(name):
 def cmd_list(args):
     selected = set(selected_tasks()) if TASKS_FILE.exists() else set()
     print(f"{'':2}{'task':45} {'difficulty':10} {'category':35} timeout")
-    for task_md in sorted(SKILLSBENCH_TASKS.glob("*/task.md")):
-        name = task_md.parent.name
+    for prompt in sorted(TASKS_ROOT.glob(f"*/{PROMPT_FILE}")):
+        name = prompt.parent.name
         meta = task_metadata(name)
         mark = "*" if name in selected else " "
         print(f"{mark:2}{name:45} {meta['difficulty']:10} {meta['category']:35} {meta['timeout']}")
     print(f"\n* = selected in {TASKS_FILE.name} ({len(selected)} tasks)")
 
 
-def inject_phrase(task_md, phrase):
-    match = FRONTMATTER_RE.match(task_md.read_text())
+def inject_phrase(prompt, phrase):
+    text = prompt.read_text()
+    if prompt.name == "instruction.md":  # Harbor prompts have no frontmatter
+        prompt.write_text(f"{phrase}\n\n{text.lstrip()}")
+        return
+    match = FRONTMATTER_RE.match(text)
     if not match:
-        sys.exit(f"no frontmatter in {task_md}")
+        sys.exit(f"no frontmatter in {prompt}")
     frontmatter, body = match.groups()
-    task_md.write_text(f"{frontmatter}\n{phrase}\n\n{body.lstrip()}")
+    prompt.write_text(f"{frontmatter}\n{phrase}\n\n{body.lstrip()}")
+
+
+def ensure_bash_shebang(test_sh):
+    """Harbor runs tests/test.sh with bash; benchflow execs it directly, so a
+    script without a shebang falls to sh, which lacks `source` (TB2's
+    llm-inference-batching-scheduler then never runs its tests)."""
+    if test_sh.exists() and not test_sh.read_text().startswith("#!"):
+        test_sh.write_text("#!/bin/bash\n" + test_sh.read_text())
 
 
 def cmd_build(args):
@@ -120,9 +178,10 @@ def cmd_build(args):
         condition_dir = BUILD_DIR / condition
         shutil.rmtree(condition_dir, ignore_errors=True)
         for name in tasks:
-            shutil.copytree(SKILLSBENCH_TASKS / name, condition_dir / name)
+            shutil.copytree(TASKS_ROOT / name, condition_dir / name)
+            ensure_bash_shebang(condition_dir / name / "tests" / "test.sh")
             if phrase:
-                inject_phrase(condition_dir / name / "task.md", phrase)
+                inject_phrase(condition_dir / name / PROMPT_FILE, phrase)
         print(f"built {condition_dir.relative_to(ROOT)} ({len(tasks)} tasks)")
 
 
@@ -218,10 +277,11 @@ def bench_command(args, condition, trial=1):
         "--tasks-dir", str(BUILD_DIR / condition),
         "--agent", args.agent,
         "--sandbox", args.sandbox,
-        "--skill-mode", args.skill_mode,
+        "--skill-mode", args.skill_mode or BENCH["skill_mode"],
         "--concurrency", str(args.concurrency),
         "--jobs-dir", str(jobs_dir),
     ]
+    cmd += BENCH["bench_args"]
     cmd += ["--model", model]
     cmd += reasoning_args(args.agent, model, args.reasoning_effort)
     return cmd
@@ -419,13 +479,28 @@ def parse_reward(result):
 def task_name_for(result, result_path):
     for key in ("task_name", "task_id", "task"):
         if isinstance(result.get(key), str):
-            return result[key]
-    known = {p.name for p in SKILLSBENCH_TASKS.iterdir() if p.is_dir()}
+            # Harbor names are namespaced ("terminal-bench/fix-git"); the
+            # task dir and tasks.txt entry are the bare name.
+            return result[key].rsplit("/", 1)[-1]
+    known = {p.name for p in TASKS_ROOT.iterdir() if p.is_dir()}
     for part in result_path.parts:
         for name in known:
             if name in part:
                 return name
     return "?"
+
+
+def prompt_matches(condition, run_dir):
+    """True if the prompt the agent received carries exactly this condition's
+    phrase (baseline: none); None if the run recorded no prompt."""
+    prompts_path = run_dir / "prompts.json"
+    if condition not in CONDITIONS or not prompts_path.exists():
+        return None
+    prompt = json.loads(prompts_path.read_text())[0]
+    phrase = CONDITIONS[condition]
+    if phrase:
+        return prompt.startswith(phrase)
+    return not any(p and prompt.startswith(p) for p in CONDITIONS.values())
 
 
 def collect_results():
@@ -445,6 +520,7 @@ def collect_results():
             "task": task_name_for(result, result_path),
             "reward": reward,
             "n_tool_calls": result.get("n_tool_calls"),
+            "prompt_ok": prompt_matches(condition, result_path.parent),
             "result_path": str(result_path.relative_to(ROOT)),
         })
     return rows
@@ -475,13 +551,21 @@ def cmd_report(args):
         score = f"{sum(task_means) / len(task_means):.3f}" if task_means else "-"
         print(f"{agent:15} {condition:12} {len(scored):>5} {len(by_task):>6} {score:>7}")
     print(f"\nrow-level data written to {RESULTS_CSV.name}")
+    wrong = [r["result_path"] for r in rows if r["prompt_ok"] is False]
+    if wrong:
+        print(f"\nWARNING: {len(wrong)} runs got a prompt that doesn't match their condition:")
+        print("\n".join(f"  {p}" for p in wrong))
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "--bench", choices=BENCHES, default="skillsbench",
+        help="task source; tb2 reads tasks_tb2.txt and writes build_tb2/, jobs_tb2/",
+    )
     sub = parser.add_subparsers(dest="command", required=True)
 
-    sub.add_parser("list", help="show all skillsbench tasks, marking the selected subset")
+    sub.add_parser("list", help="show all tasks, marking the selected subset")
     sub.add_parser("build", help="copy selected tasks into build/<condition>/ with phrases injected")
 
     run = sub.add_parser("run", help="run bench eval per condition (dry run unless --execute)")
@@ -496,13 +580,17 @@ def main():
     run.add_argument("--conditions", nargs="*", help="subset of conditions (default: all)")
     run.add_argument("--trials", type=int, default=1, help="repeat each condition N times")
     run.add_argument("--sandbox", default="docker")
-    run.add_argument("--skill-mode", default="with-skill", choices=["with-skill", "no-skill"])
+    run.add_argument(
+        "--skill-mode", choices=["with-skill", "no-skill"],
+        help="default: with-skill for skillsbench, no-skill for tb2",
+    )
     run.add_argument("--concurrency", type=int, default=4)
     run.add_argument("--execute", action="store_true", help="actually run (default: print commands)")
 
     sub.add_parser("report", help="aggregate rewards from jobs/ into results.csv and a summary table")
 
     args = parser.parse_args()
+    use_bench(args.bench)
     {"list": cmd_list, "build": cmd_build, "run": cmd_run, "report": cmd_report}[args.command](args)
 
 

@@ -81,3 +81,29 @@ Benchflow otherwise defaults this custom model to non-reasoning and a 4,096-toke
 completion cap. Other Pi model overrides are rejected until their metadata is
 configured. The wrapper fails if Benchflow's installer changes, so an upgrade
 requires reviewing the compatibility fixes.
+
+`bench_pi.py` also asks OpenRouter to prefer the StreamLake provider and skip
+Relace. Default routing sent 78% of the 2026-10-02 run to Relace, which bills
+cached input at the full input price.
+
+## Terminal-Bench 2
+
+`--bench tb2` (or `make ... BENCH=tb2`) runs the same four conditions on
+[Terminal-Bench 2.0](https://github.com/harbor-framework/terminal-bench-2),
+pinned as the `terminal-bench-2` submodule. The subset is `tasks_tb2.txt`;
+outputs go to `build_tb2/`, `jobs_tb2/` and `results_tb2.csv`. The phrase is
+prepended to each task's `instruction.md`.
+
+TB2 runs with `--sandbox-user none` because its tasks expect root (Harbor's
+default), and with `--skill-mode no-skill` because it ships no skills.
+`bench_pi.py` also works around two benchflow behaviours that break TB2
+verification: it doesn't force-load pytest plugins found in the container
+(an agent running as root can install them), and it raises benchflow's 10s
+housekeeping exec timeouts to 120s. Known task issues and the two excluded
+`qemu-*` tasks are listed at the top of `tasks_tb2.txt`.
+
+```bash
+make build BENCH=tb2
+make run BENCH=tb2 AGENT=pi TRIALS=3   # add EXECUTE=1 to run
+make report BENCH=tb2
+```
