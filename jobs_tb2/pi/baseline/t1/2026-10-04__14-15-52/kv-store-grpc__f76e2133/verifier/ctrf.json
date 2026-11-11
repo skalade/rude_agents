@@ -1,0 +1,86 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.2"
+        },
+        "summary": {
+            "tests": 7,
+            "passed": 6,
+            "failed": 1,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1791157748.5615134,
+            "stop": 1791157748.767247
+        },
+        "tests": [
+            {
+                "name": "::test_proto_file_creation",
+                "status": "passed",
+                "duration": 0.00033663189969956875,
+                "start": 1791157748.6091418,
+                "stop": 1791157748.609613,
+                "retries": 0,
+                "file_path": "../tests/test_outputs.py"
+            },
+            {
+                "name": "::test_grpc_tools_installation",
+                "status": "passed",
+                "duration": 0.0779628868913278,
+                "start": 1791157748.609718,
+                "stop": 1791157748.687837,
+                "retries": 0,
+                "file_path": "../tests/test_outputs.py"
+            },
+            {
+                "name": "::test_protobuf_generation",
+                "status": "passed",
+                "duration": 0.0002659211168065667,
+                "start": 1791157748.687992,
+                "stop": 1791157748.6883328,
+                "retries": 0,
+                "file_path": "../tests/test_outputs.py"
+            },
+            {
+                "name": "::test_server_file_creation",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.0003591430140659213,
+                "start": 1791157748.688419,
+                "stop": 1791157748.6999047,
+                "retries": 0,
+                "file_path": "../tests/test_outputs.py",
+                "trace": "def test_server_file_creation():\n        \"\"\"\n        Test that the server.py file was created by the agent.\n        This verifies the agent implemented the gRPC server as required.\n        \"\"\"\n        server_py_path = Path(\"/app/server.py\")\n        assert server_py_path.exists(), f\"Server file {server_py_path} was not created\"\n    \n        # Verify the server file contains the expected implementation\n        with open(server_py_path, \"r\") as f:\n            content = f.read()\n    \n        # Check for required server components\n>       assert \"class Server\" in content, \"Server file must define Server class\"\nE       AssertionError: Server file must define Server class\nE       assert 'class Server' in 'from concurrent import futures\\n\\nimport grpc\\nimport kv_store_pb2\\nimport kv_store_pb2_grpc\\n\\n\\nclass KVStoreServic...VStore server listening on port 5328\")\\n    server.wait_for_termination()\\n\\n\\nif __name__ == \"__main__\":\\n    serve()'\n\n/tests/test_outputs.py:80: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "::test_real_grpc_server_running",
+                "status": "passed",
+                "duration": 0.00034703186247497797,
+                "start": 1791157748.700012,
+                "stop": 1791157748.700434,
+                "retries": 0,
+                "file_path": "../tests/test_outputs.py"
+            },
+            {
+                "name": "::test_grpc_protocol_handshake",
+                "status": "passed",
+                "duration": 0.06376987614203244,
+                "start": 1791157748.700545,
+                "stop": 1791157748.7645156,
+                "retries": 0,
+                "file_path": "../tests/test_outputs.py"
+            },
+            {
+                "name": "::test_grpc_server_functionality",
+                "status": "passed",
+                "duration": 0.002320289029739797,
+                "start": 1791157748.7646978,
+                "stop": 1791157748.7671037,
+                "retries": 0,
+                "file_path": "../tests/test_outputs.py"
+            }
+        ]
+    }
+}

@@ -1,0 +1,137 @@
+{
+  "task_name": "sqlite-db-truncate",
+  "rollout_name": "sqlite-db-truncate__1804ee03",
+  "rewards": {
+    "reward": 1.0
+  },
+  "agent": "pi-acp",
+  "agent_name": "pi-acp",
+  "model": "openrouter/deepseek/deepseek-v4-pro",
+  "skill_mode": "no-skill",
+  "skill_source": "none",
+  "requested_skills_dir": null,
+  "effective_skills_dir": null,
+  "skills_sandbox_dir": null,
+  "include_task_skills": false,
+  "n_tool_calls": 8,
+  "n_skill_invocations": 0,
+  "n_prompts": 1,
+  "agent_result": {
+    "n_tool_calls": 8,
+    "n_skill_invocations": 0,
+    "n_prompts": 1,
+    "n_input_tokens": 82556,
+    "n_output_tokens": 9960,
+    "n_cache_read_tokens": 72360,
+    "n_cache_creation_tokens": 0,
+    "total_tokens": 92516,
+    "cost_usd": 0.00703808,
+    "usage_source": "provider_response",
+    "price_source": "litellm"
+  },
+  "final_metrics": {
+    "total_prompt_tokens": 82556,
+    "total_completion_tokens": 9960,
+    "total_cached_tokens": 72360,
+    "total_cost_usd": 0.00703808
+  },
+  "trajectory_summary": {
+    "steps": 21,
+    "tool_call_steps": 8,
+    "user_message_steps": 1,
+    "agent_message_steps": 5,
+    "agent_thought_steps": 7,
+    "other_steps": 0,
+    "event_type_counts": {
+      "agent_message": 5,
+      "user_message": 1,
+      "agent_thought": 7,
+      "tool_call": 8
+    },
+    "tool_call_status_counts": {
+      "failed": 3,
+      "completed": 5
+    },
+    "partial_trajectory": false,
+    "trajectory_source": "acp"
+  },
+  "usage_tracking": {
+    "requested": "auto",
+    "status": "enabled",
+    "environment": "docker",
+    "endpoint_kind": "host",
+    "usage_source": "provider_response"
+  },
+  "error": null,
+  "error_category": null,
+  "verifier_error": null,
+  "verifier_error_category": null,
+  "export_error": null,
+  "idle_timeout_info": null,
+  "agent_timeout_info": null,
+  "sandbox_startup_info": null,
+  "transport_error_info": null,
+  "verifier_timeout_info": null,
+  "api_error_info": null,
+  "suspected_api_error_info": null,
+  "partial_trajectory": false,
+  "trajectory_source": "acp",
+  "started_at": "2026-10-05 05:28:16.424103",
+  "finished_at": "2026-10-05 05:32:54.769790",
+  "timing": {
+    "environment_setup": 1.8,
+    "agent_setup": 3.4,
+    "agent_execution": 240.5,
+    "verifier": 4.6,
+    "total": 278.3
+  },
+  "scenes": [
+    {
+      "name": "default",
+      "skills_dir": null,
+      "roles": [
+        {
+          "name": "agent",
+          "agent": "pi-acp",
+          "model": "openrouter/deepseek/deepseek-v4-pro",
+          "reasoning_effort": "high",
+          "timeout_sec": null,
+          "idle_timeout_sec": null,
+          "skills_dir": null,
+          "capabilities": null,
+          "env_keys": []
+        }
+      ],
+      "turns": [
+        {
+          "role": "agent",
+          "has_prompt": false
+        }
+      ]
+    }
+  ],
+  "loop": {
+    "strategy": "single-shot"
+  },
+  "source": {
+    "type": "github",
+    "repo": "skalade/rude_agents",
+    "requested_ref": "master",
+    "resolved_sha": "d68b067959758ae0c77a0bb8d2360e0aa3ff5aed",
+    "path": "build_tb2/important/sqlite-db-truncate",
+    "dirty": false,
+    "file_hashes": {
+      ".gitignore": "sha256:9a8dd8d9b6c3adb8e9e56328df27deef859a3e98fffc9b8133c8b22207c25953",
+      "README.md": "sha256:73864a0c6f3b1b56cdc6ba55dc93132936fbf79d0ea11b853efdde4620f746cd",
+      "environment/Dockerfile": "sha256:49ac9305c360f117c10c940b5d036a76fb4a29a0f4302e7d75e573c352db0aea",
+      "environment/trunc.db": "sha256:a7f00ee232fe621629dc014eb2619ac793131843ede1fd892f3b8b7e17332a5b",
+      "instruction.md": "sha256:09225ba9f13a18670db86e6a6855217d91819e886eab75ced44cd9dd51be8e95",
+      "solution/solve.sh": "sha256:6aa341ba5e614aa5ef991cdd2d398da1c5833b80123795d7da87ea41da431a04",
+      "task.toml": "sha256:56061acd75d9933aa554aeb249b85d7d081227fca1b71a3da7e3dc97a675723e",
+      "tests/test.sh": "sha256:4770437ea96c3cc84684b4f99d55fb148fcac09f9ea1e8ef49de487716e6c334",
+      "tests/test_outputs.py": "sha256:8f5bc11018687d8c5894ebf1b4ec6fad004828e5ce442d3cc04d925ef53ef881"
+    }
+  },
+  "task_digest": "sha256:220232d503407fc648b9e2097ea50e58344945d0b5e08892980c2eeb7d79b12d",
+  "sandbox_id": null
+}

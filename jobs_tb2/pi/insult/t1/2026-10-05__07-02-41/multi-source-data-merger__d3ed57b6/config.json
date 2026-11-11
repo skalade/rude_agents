@@ -1,0 +1,86 @@
+{
+  "task_path": "build_tb2/insult/multi-source-data-merger",
+  "agent": "pi-acp",
+  "model": "openrouter/deepseek/deepseek-v4-pro",
+  "reasoning_effort": "high",
+  "environment": "docker",
+  "environment_manifest": null,
+  "skill_mode": "no-skill",
+  "skill_source": "none",
+  "requested_skills_dir": null,
+  "effective_skills_dir": null,
+  "skills_sandbox_dir": null,
+  "include_task_skills": false,
+  "sandbox_user": null,
+  "sandbox_locked_paths": [],
+  "sandbox_setup_timeout": 120,
+  "skip_install": false,
+  "agent_install_timeout": 900,
+  "context_root": null,
+  "base_image_override": null,
+  "timeout_sec": 900,
+  "concurrency": 3,
+  "agent_idle_timeout_sec": 600,
+  "started_at": "2026-10-05 11:21:46.257976",
+  "agent_env": {
+    "BENCHFLOW_PROVIDER_MODELS": "[{\"id\":\"deepseek/deepseek-v4-pro\",\"name\":\"DeepSeek V4 Pro\",\"reasoning\":true,\"input\":[\"text\"],\"contextWindow\":1024000,\"maxTokens\":384000}]",
+    "BENCHFLOW_PROVIDER_MODEL": "deepseek/deepseek-v4-pro",
+    "BENCHFLOW_PROVIDER_NAME": "openrouter",
+    "BENCHFLOW_PROVIDER_BASE_URL": "https://openrouter.ai/api/v1",
+    "BENCHFLOW_PROVIDER_PROTOCOL": "openai-completions",
+    "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1"
+  },
+  "scenes": [
+    {
+      "name": "default",
+      "skills_dir": null,
+      "roles": [
+        {
+          "name": "agent",
+          "agent": "pi-acp",
+          "model": "openrouter/deepseek/deepseek-v4-pro",
+          "reasoning_effort": "high",
+          "timeout_sec": null,
+          "idle_timeout_sec": null,
+          "skills_dir": null,
+          "capabilities": null,
+          "env_keys": []
+        }
+      ],
+      "turns": [
+        {
+          "role": "agent",
+          "has_prompt": false
+        }
+      ]
+    }
+  ],
+  "loop": {
+    "strategy": "single-shot"
+  },
+  "usage_tracking": {
+    "requested": "auto"
+  },
+  "source": {
+    "type": "github",
+    "repo": "skalade/rude_agents",
+    "requested_ref": "master",
+    "resolved_sha": "d68b067959758ae0c77a0bb8d2360e0aa3ff5aed",
+    "path": "build_tb2/insult/multi-source-data-merger",
+    "dirty": false,
+    "file_hashes": {
+      ".gitignore": "sha256:9a8dd8d9b6c3adb8e9e56328df27deef859a3e98fffc9b8133c8b22207c25953",
+      "README.md": "sha256:9bf37162a4c1b88ed93627830bb8512ebae154325d7cb069c883144a0e4c69d6",
+      "environment/Dockerfile": "sha256:c95a40d3d35b473dc15ae1e8784ba7fb1725805c0583fc574dd2764325d75e4f",
+      "environment/data/source_a/users.json": "sha256:75e51e2d3ab0bdba2269d7cf3757576f84f3ee2c13407d2db94289a5958a1778",
+      "environment/data/source_b/users.csv": "sha256:8e87d16dc47d166edd8e56165955bad265b630d53d02762367c816affb5fa760",
+      "environment/data/source_c/users.parquet": "sha256:23d1ea51c4170bdba53febb885a0f495e28de525a52667347b2932136b9a72fe",
+      "instruction.md": "sha256:efadc98d0f4892215db97f403f07cab97299e2d585ce20725ea2bfd85cf1c69b",
+      "solution/solve.sh": "sha256:1b3d0d50e31930d042495d48f4c8e95f1a9c1a979c803b7f7cec651322537e1e",
+      "task.toml": "sha256:ee3964c0ee040f0a0cb121cefefbc15443d127684acb003fa5b61dd42f31c694",
+      "tests/test.sh": "sha256:d5a00e64413c0e1ae452f38a1aa1a47c3ed7b4416bbfccae1a4c053025a336d1",
+      "tests/test_outputs.py": "sha256:a070888930cf829aeca039771260b1386bda990ea805f313468d381ba3608ca5"
+    }
+  },
+  "task_digest": "sha256:edd08d1e34ba7f6b91b02cdf566abdb001e7208e3e41755cfc1f679e953063ff"
+}

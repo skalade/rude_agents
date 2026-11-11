@@ -1,0 +1,9 @@
+[
+  {
+    "agent": "openhands",
+    "path": "jobs/openhands/important/t1/2026-08-08__01-28-03/dialogue-parser__05339e28/trajectory/llm_trajectory.jsonl",
+    "request_index": 7,
+    "usage": null,
+    "status_code": 500
+  }
+]

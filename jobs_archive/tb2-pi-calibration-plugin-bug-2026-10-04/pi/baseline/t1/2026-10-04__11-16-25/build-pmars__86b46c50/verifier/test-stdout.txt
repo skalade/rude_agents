@@ -1,0 +1,82 @@
+Hit:1 http://deb.debian.org/debian trixie InRelease
+Hit:2 http://deb.debian.org/debian trixie-updates InRelease
+Hit:3 http://deb.debian.org/debian-security trixie-security InRelease
+Reading package lists...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+curl is already the newest version (8.14.1-2+deb13u5).
+0 upgraded, 0 newly installed, 0 to remove and 33 not upgraded.
+downloading uv 0.9.5 x86_64-unknown-linux-gnu
+no checksums to verify
+installing to /root/.local/bin
+  uv
+  uvx
+everything's installed!
+
+To add $HOME/.local/bin to your PATH, either restart your shell or run:
+
+    source $HOME/.local/bin/env (sh, bash, zsh)
+    source $HOME/.local/bin/env.fish (fish)
+Downloading pygments (1.2MiB)
+ Downloading pygments
+Installed 6 packages in 13ms
+Traceback (most recent call last):
+  File "/root/.cache/uv/archive-v0/c8-RGoAh8yOFdV_sqV6RC/lib/python3.13/site-packages/_pytest/config/__init__.py", line 860, in import_plugin
+    __import__(importspec)
+    ~~~~~~~~~~^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'typeguard'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/.cache/uv/archive-v0/c8-RGoAh8yOFdV_sqV6RC/bin/pytest", line 12, in <module>
+    sys.exit(console_main())
+             ~~~~~~~~~~~~^^
+  File "/root/.cache/uv/archive-v0/c8-RGoAh8yOFdV_sqV6RC/lib/python3.13/site-packages/_pytest/config/__init__.py", line 201, in console_main
+    code = main()
+  File "/root/.cache/uv/archive-v0/c8-RGoAh8yOFdV_sqV6RC/lib/python3.13/site-packages/_pytest/config/__init__.py", line 156, in main
+    config = _prepareconfig(args, plugins)
+  File "/root/.cache/uv/archive-v0/c8-RGoAh8yOFdV_sqV6RC/lib/python3.13/site-packages/_pytest/config/__init__.py", line 342, in _prepareconfig
+    config = pluginmanager.hook.pytest_cmdline_parse(
+        pluginmanager=pluginmanager, args=args
+    )
+  File "/root/.cache/uv/archive-v0/c8-RGoAh8yOFdV_sqV6RC/lib/python3.13/site-packages/pluggy/_hooks.py", line 512, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/uv/archive-v0/c8-RGoAh8yOFdV_sqV6RC/lib/python3.13/site-packages/pluggy/_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/uv/archive-v0/c8-RGoAh8yOFdV_sqV6RC/lib/python3.13/site-packages/pluggy/_callers.py", line 167, in _multicall
+    raise exception
+  File "/root/.cache/uv/archive-v0/c8-RGoAh8yOFdV_sqV6RC/lib/python3.13/site-packages/pluggy/_callers.py", line 139, in _multicall
+    teardown.throw(exception)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/root/.cache/uv/archive-v0/c8-RGoAh8yOFdV_sqV6RC/lib/python3.13/site-packages/_pytest/helpconfig.py", line 112, in pytest_cmdline_parse
+    config = yield
+             ^^^^^
+  File "/root/.cache/uv/archive-v0/c8-RGoAh8yOFdV_sqV6RC/lib/python3.13/site-packages/pluggy/_callers.py", line 121, in _multicall
+    res = hook_impl.function(*args)
+  File "/root/.cache/uv/archive-v0/c8-RGoAh8yOFdV_sqV6RC/lib/python3.13/site-packages/_pytest/config/__init__.py", line 1146, in pytest_cmdline_parse
+    self.parse(args)
+    ~~~~~~~~~~^^^^^^
+  File "/root/.cache/uv/archive-v0/c8-RGoAh8yOFdV_sqV6RC/lib/python3.13/site-packages/_pytest/config/__init__.py", line 1527, in parse
+    self._preparse(args, addopts=addopts)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/uv/archive-v0/c8-RGoAh8yOFdV_sqV6RC/lib/python3.13/site-packages/_pytest/config/__init__.py", line 1405, in _preparse
+    self.pluginmanager.consider_preparse(args, exclude_only=False)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/uv/archive-v0/c8-RGoAh8yOFdV_sqV6RC/lib/python3.13/site-packages/_pytest/config/__init__.py", line 789, in consider_preparse
+    self.consider_pluginarg(parg)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/root/.cache/uv/archive-v0/c8-RGoAh8yOFdV_sqV6RC/lib/python3.13/site-packages/_pytest/config/__init__.py", line 812, in consider_pluginarg
+    self.import_plugin(arg, consider_entry_points=True)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/uv/archive-v0/c8-RGoAh8yOFdV_sqV6RC/lib/python3.13/site-packages/_pytest/config/__init__.py", line 862, in import_plugin
+    raise ImportError(
+        f'Error importing plugin "{modname}": {e.args[0]}'
+    ).with_traceback(e.__traceback__) from e
+  File "/root/.cache/uv/archive-v0/c8-RGoAh8yOFdV_sqV6RC/lib/python3.13/site-packages/_pytest/config/__init__.py", line 860, in import_plugin
+    __import__(importspec)
+    ~~~~~~~~~~^^^^^^^^^^^^
+ImportError: Error importing plugin "typeguard": No module named 'typeguard'

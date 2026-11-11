@@ -1,0 +1,139 @@
+{
+  "task_name": "reshard-c4-data",
+  "rollout_name": "reshard-c4-data__685de087",
+  "rewards": {
+    "reward": 1.0
+  },
+  "agent": "pi-acp",
+  "agent_name": "pi-acp",
+  "model": "openrouter/deepseek/deepseek-v4-pro",
+  "skill_mode": "no-skill",
+  "skill_source": "none",
+  "requested_skills_dir": null,
+  "effective_skills_dir": null,
+  "skills_sandbox_dir": null,
+  "include_task_skills": false,
+  "n_tool_calls": 26,
+  "n_skill_invocations": 0,
+  "n_prompts": 1,
+  "agent_result": {
+    "n_tool_calls": 26,
+    "n_skill_invocations": 0,
+    "n_prompts": 1,
+    "n_input_tokens": 520840,
+    "n_output_tokens": 21213,
+    "n_cache_read_tokens": 474195,
+    "n_cache_creation_tokens": 0,
+    "total_tokens": 542053,
+    "cost_usd": 0.02197006,
+    "usage_source": "provider_response",
+    "price_source": "litellm"
+  },
+  "final_metrics": {
+    "total_prompt_tokens": 520840,
+    "total_completion_tokens": 21213,
+    "total_cached_tokens": 474195,
+    "total_cost_usd": 0.02197006
+  },
+  "trajectory_summary": {
+    "steps": 55,
+    "tool_call_steps": 26,
+    "user_message_steps": 1,
+    "agent_message_steps": 8,
+    "agent_thought_steps": 20,
+    "other_steps": 0,
+    "event_type_counts": {
+      "agent_message": 8,
+      "user_message": 1,
+      "agent_thought": 20,
+      "tool_call": 26
+    },
+    "tool_call_status_counts": {
+      "completed": 25,
+      "failed": 1
+    },
+    "partial_trajectory": false,
+    "trajectory_source": "acp"
+  },
+  "usage_tracking": {
+    "requested": "auto",
+    "status": "enabled",
+    "environment": "docker",
+    "endpoint_kind": "host",
+    "usage_source": "provider_response"
+  },
+  "error": null,
+  "error_category": null,
+  "verifier_error": null,
+  "verifier_error_category": null,
+  "export_error": null,
+  "idle_timeout_info": null,
+  "agent_timeout_info": null,
+  "sandbox_startup_info": null,
+  "transport_error_info": null,
+  "verifier_timeout_info": null,
+  "api_error_info": null,
+  "suspected_api_error_info": null,
+  "partial_trajectory": false,
+  "trajectory_source": "acp",
+  "started_at": "2026-10-05 12:49:19.095506",
+  "finished_at": "2026-10-05 13:03:20.535874",
+  "timing": {
+    "environment_setup": 29.4,
+    "agent_setup": 4.0,
+    "agent_execution": 536.8,
+    "verifier": 172.4,
+    "total": 841.4
+  },
+  "scenes": [
+    {
+      "name": "default",
+      "skills_dir": null,
+      "roles": [
+        {
+          "name": "agent",
+          "agent": "pi-acp",
+          "model": "openrouter/deepseek/deepseek-v4-pro",
+          "reasoning_effort": "high",
+          "timeout_sec": null,
+          "idle_timeout_sec": null,
+          "skills_dir": null,
+          "capabilities": null,
+          "env_keys": []
+        }
+      ],
+      "turns": [
+        {
+          "role": "agent",
+          "has_prompt": false
+        }
+      ]
+    }
+  ],
+  "loop": {
+    "strategy": "single-shot"
+  },
+  "source": {
+    "type": "github",
+    "repo": "skalade/rude_agents",
+    "requested_ref": "master",
+    "resolved_sha": "d68b067959758ae0c77a0bb8d2360e0aa3ff5aed",
+    "path": "build_tb2/insult/reshard-c4-data",
+    "dirty": false,
+    "file_hashes": {
+      ".gitignore": "sha256:9a8dd8d9b6c3adb8e9e56328df27deef859a3e98fffc9b8133c8b22207c25953",
+      "README.md": "sha256:0b1dbe1aa63420a103c32a1bd76253d558688b6c02f561e84b19db0ee976d611",
+      "environment/Dockerfile": "sha256:2ca4a0e68628b8160f5e4296f779a204f51e3a70a8d4239be30e845e1565b39d",
+      "environment/revert.py": "sha256:d72accde61d258c9e10ad1715ba8cc6000b5673e670bc6ccf115f9883e00ab9a",
+      "environment/setup.py": "sha256:4f997ee98f4b968dbd67eb865db2907a0f3554e9861a3a7b93efe80479d8eb4d",
+      "instruction.md": "sha256:ec11faebd4e25dd8ce7ce76493e20adef7431c64f4166b7455c49c0c4a8a4e0a",
+      "solution/solve.sh": "sha256:84ab67b5d3ceb68cac0413e5ba4a130bdb52ad7c764bbd231a30d9d8f82fa976",
+      "task.toml": "sha256:c2f146a1e00f798f7486ff60686ad52749bb73c7b71e984d52716d859e0f7dd8",
+      "tests/files_hashes.json": "sha256:8a6b0c533db960d5534d3ab28ff4c683d6b5bca0a486e9a1921509a14db0e2fb",
+      "tests/test.sh": "sha256:833c89a17fb238b0da378566d648a6f978963f5ed9f4dd120ab6366d9cf7c35f",
+      "tests/test_outputs.py": "sha256:7c3e934692e274d798d90e213a0f733a1d1ef08464245e17b9531335ea78ae0a"
+    }
+  },
+  "task_digest": "sha256:2836e57fcd6b302697ac55ce9e0006ef638a6354ddf82dc34aee249e23558ca2",
+  "sandbox_id": null
+}

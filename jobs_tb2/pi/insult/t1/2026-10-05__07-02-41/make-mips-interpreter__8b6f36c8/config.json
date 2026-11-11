@@ -1,0 +1,85 @@
+{
+  "task_path": "build_tb2/insult/make-mips-interpreter",
+  "agent": "pi-acp",
+  "model": "openrouter/deepseek/deepseek-v4-pro",
+  "reasoning_effort": "high",
+  "environment": "docker",
+  "environment_manifest": null,
+  "skill_mode": "no-skill",
+  "skill_source": "none",
+  "requested_skills_dir": null,
+  "effective_skills_dir": null,
+  "skills_sandbox_dir": null,
+  "include_task_skills": false,
+  "sandbox_user": null,
+  "sandbox_locked_paths": [],
+  "sandbox_setup_timeout": 120,
+  "skip_install": false,
+  "agent_install_timeout": 900,
+  "context_root": null,
+  "base_image_override": null,
+  "timeout_sec": 1800,
+  "concurrency": 3,
+  "agent_idle_timeout_sec": 600,
+  "started_at": "2026-10-05 10:38:23.315245",
+  "agent_env": {
+    "BENCHFLOW_PROVIDER_MODELS": "[{\"id\":\"deepseek/deepseek-v4-pro\",\"name\":\"DeepSeek V4 Pro\",\"reasoning\":true,\"input\":[\"text\"],\"contextWindow\":1024000,\"maxTokens\":384000}]",
+    "BENCHFLOW_PROVIDER_MODEL": "deepseek/deepseek-v4-pro",
+    "BENCHFLOW_PROVIDER_NAME": "openrouter",
+    "BENCHFLOW_PROVIDER_BASE_URL": "https://openrouter.ai/api/v1",
+    "BENCHFLOW_PROVIDER_PROTOCOL": "openai-completions",
+    "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1"
+  },
+  "scenes": [
+    {
+      "name": "default",
+      "skills_dir": null,
+      "roles": [
+        {
+          "name": "agent",
+          "agent": "pi-acp",
+          "model": "openrouter/deepseek/deepseek-v4-pro",
+          "reasoning_effort": "high",
+          "timeout_sec": null,
+          "idle_timeout_sec": null,
+          "skills_dir": null,
+          "capabilities": null,
+          "env_keys": []
+        }
+      ],
+      "turns": [
+        {
+          "role": "agent",
+          "has_prompt": false
+        }
+      ]
+    }
+  ],
+  "loop": {
+    "strategy": "single-shot"
+  },
+  "usage_tracking": {
+    "requested": "auto"
+  },
+  "source": {
+    "type": "github",
+    "repo": "skalade/rude_agents",
+    "requested_ref": "master",
+    "resolved_sha": "d68b067959758ae0c77a0bb8d2360e0aa3ff5aed",
+    "path": "build_tb2/insult/make-mips-interpreter",
+    "dirty": false,
+    "file_hashes": {
+      ".gitignore": "sha256:9a8dd8d9b6c3adb8e9e56328df27deef859a3e98fffc9b8133c8b22207c25953",
+      "README.md": "sha256:c7d7bcdd6a6af42d92a36a4d8b04833cbb3038f99548583c7bacc1a9aeb41b3d",
+      "environment/Dockerfile": "sha256:7fe6814c68c28d907e72ac05176ba8f9f493d7eb6693bef96c97126462b8fedf",
+      "environment/task-deps/mips.patch": "sha256:63d84570d9c94fb2b82bf745c827656211a7cfb2d8b31c9191cad7c61e19b559",
+      "instruction.md": "sha256:c787efcc2f3ef6e65aa5f096e2689cad51f3358b70db8ebcf69aa9ca4c2ba3fa",
+      "solution/solve.sh": "sha256:94063278c36e848006bcc3381d347af4dea066d3eff4da3ba29538922f6c22a1",
+      "task.toml": "sha256:3fda43066642fd38516d07b2679f9813bdb3f1a42bc80b0c06151f60b9210e82",
+      "tests/reference.jpg": "sha256:d1909be8f3266a72686c3945029a553b82e5b46acd624eda65f3fdd5eb339574",
+      "tests/test.sh": "sha256:25809a2ebcb714b1c4e55563b0db16add23e2fd9b68d03e51b1734f8dbb392e1",
+      "tests/test_outputs.py": "sha256:f1748ff20bfd670af1e1cb935647503eb176a4a14dd15f20935264ad7e4a98f6"
+    }
+  },
+  "task_digest": "sha256:b2e4c06efd75af986de966d5a4a681da8bb1029e2b3b5505b6bb6706763ac5ff"
+}

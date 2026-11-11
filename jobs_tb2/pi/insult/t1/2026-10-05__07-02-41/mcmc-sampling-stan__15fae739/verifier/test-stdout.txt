@@ -1,0 +1,99 @@
+Hit:1 http://archive.ubuntu.com/ubuntu noble InRelease
+Hit:2 http://archive.ubuntu.com/ubuntu noble-updates InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu noble-backports InRelease
+Hit:4 http://security.ubuntu.com/ubuntu noble-security InRelease
+Reading package lists...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+curl is already the newest version (8.5.0-2ubuntu10.15).
+0 upgraded, 0 newly installed, 0 to remove and 98 not upgraded.
+downloading uv 0.9.5 x86_64-unknown-linux-gnu
+no checksums to verify
+installing to /root/.local/bin
+  uv
+  uvx
+everything's installed!
+
+To add $HOME/.local/bin to your PATH, either restart your shell or run:
+
+    source $HOME/.local/bin/env (sh, bash, zsh)
+    source $HOME/.local/bin/env.fish (fish)
+Downloading cpython-3.13.9-linux-x86_64-gnu (download) (32.0MiB)
+ Downloading cpython-3.13.9-linux-x86_64-gnu (download)
+Installed 5 packages in 5ms
+============================= test session starts ==============================
+platform linux -- Python 3.13.9, pytest-8.3.4, pluggy-1.6.0
+rootdir: /app
+configfile: ../dev/null
+plugins: json-ctrf-0.3.5
+collected 6 items
+
+../app ..F...                                                            [100%]
+
+=================================== FAILURES ===================================
+_____________________ test_r_script_created_and_used_rstan _____________________
+
+    def test_r_script_created_and_used_rstan():
+        """Test that R script 'analysis.R' was created and uses RStan"""
+        r_script_path = "/app/analysis.R"
+        assert os.path.exists(r_script_path), (
+            f"R analysis script not found at {r_script_path}"
+        )
+    
+        # Verify the script can be executed and uses RStan
+        try:
+            # Test that the script doesn't have syntax errors
+            result = subprocess.run(
+                ["R", "--slave", "--no-restore", "--no-save", "-f", r_script_path],
+                capture_output=True,
+                text=True,
+                timeout=2000,
+            )
+    
+            # Check if script ran without errors
+            # (warnings are acceptable)
+            fatal_errors = any(
+                phrase in result.stderr.lower()
+                for phrase in ["fatal", "cannot", "failed to", "error in"]
+            )
+    
+>           assert not fatal_errors or result.returncode == 0, (
+                f"R script failed to execute properly: {result.stderr}"
+            )
+E           AssertionError: R script failed to execute properly: Loading required package: StanHeaders
+E             
+E             rstan version 2.32.7 (Stan version 2.39.0)
+E             
+E             For execution on a local, multicore CPU with excess RAM we recommend calling
+E             options(mc.cores = parallel::detectCores()).
+E             To avoid recompilation of unchanged Stan programs, we recommend calling
+E             rstan_options(auto_write = TRUE)
+E             For within-chain threading using `reduce_sum()` or `map_rect()` Stan functions,
+E             change `threads_per_chain` option:
+E             rstan_options(threads_per_chain = 1)
+E             
+E             Error in file(fname, "rt") : cannot open the connection
+E             In addition: Warning messages:
+E             1: In normalizePath(file) :
+E               path[1]="hierarchical_model.stan": No such file or directory
+E             2: In file(fname, "rt") :
+E               cannot open file 'hierarchical_model.stan': No such file or directory
+E             Error in get_model_strcode(file, model_code) : 
+E               cannot open model file "hierarchical_model.stan"
+E             Calls: stan_model -> stanc -> stanc_process -> get_model_strcode
+E             Execution halted
+E             
+E           assert (not True or 1 == 0)
+E            +  where 1 = CompletedProcess(args=['R', '--slave', '--no-restore', '--no-save', '-f', '/app/analysis.R'], returncode=1, stdout='',... file "hierarchical_model.stan"\nCalls: stan_model -> stanc -> stanc_process -> get_model_strcode\nExecution halted\n').returncode
+
+test_outputs.py:81: AssertionError
+==================================== PASSES ====================================
+=========================== short test summary info ============================
+PASSED ../app::test_rstan_package_installed
+PASSED ../app::test_hierarchical_model_implemented
+PASSED ../app::test_posterior_alpha_estimation
+PASSED ../app::test_posterior_beta_estimation
+PASSED ../app::test_stan_model_sampling
+FAILED ../app::test_r_script_created_and_used_rstan - AssertionError: R scrip...
+=================== 1 failed, 5 passed in 161.99s (0:02:41) ====================

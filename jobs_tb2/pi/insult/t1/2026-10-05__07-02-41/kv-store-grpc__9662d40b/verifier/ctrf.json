@@ -1,0 +1,83 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.2"
+        },
+        "summary": {
+            "tests": 7,
+            "passed": 7,
+            "failed": 0,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1791215951.6588714,
+            "stop": 1791215951.8466406
+        },
+        "tests": [
+            {
+                "name": "::test_proto_file_creation",
+                "status": "passed",
+                "duration": 0.0003493749536573887,
+                "start": 1791215951.7038782,
+                "stop": 1791215951.7043667,
+                "retries": 0,
+                "file_path": "../tests/test_outputs.py"
+            },
+            {
+                "name": "::test_grpc_tools_installation",
+                "status": "passed",
+                "duration": 0.07523684191983193,
+                "start": 1791215951.704472,
+                "stop": 1791215951.7798617,
+                "retries": 0,
+                "file_path": "../tests/test_outputs.py"
+            },
+            {
+                "name": "::test_protobuf_generation",
+                "status": "passed",
+                "duration": 0.0002562140580266714,
+                "start": 1791215951.7800093,
+                "stop": 1791215951.7803354,
+                "retries": 0,
+                "file_path": "../tests/test_outputs.py"
+            },
+            {
+                "name": "::test_server_file_creation",
+                "status": "passed",
+                "duration": 0.00022979394998401403,
+                "start": 1791215951.780422,
+                "stop": 1791215951.7807152,
+                "retries": 0,
+                "file_path": "../tests/test_outputs.py"
+            },
+            {
+                "name": "::test_real_grpc_server_running",
+                "status": "passed",
+                "duration": 0.0003935470012947917,
+                "start": 1791215951.780804,
+                "stop": 1791215951.7812912,
+                "retries": 0,
+                "file_path": "../tests/test_outputs.py"
+            },
+            {
+                "name": "::test_grpc_protocol_handshake",
+                "status": "passed",
+                "duration": 0.06288460199721158,
+                "start": 1791215951.7814012,
+                "stop": 1791215951.8444746,
+                "retries": 0,
+                "file_path": "../tests/test_outputs.py"
+            },
+            {
+                "name": "::test_grpc_server_functionality",
+                "status": "passed",
+                "duration": 0.0017862929962575436,
+                "start": 1791215951.844648,
+                "stop": 1791215951.8465216,
+                "retries": 0,
+                "file_path": "../tests/test_outputs.py"
+            }
+        ]
+    }
+}

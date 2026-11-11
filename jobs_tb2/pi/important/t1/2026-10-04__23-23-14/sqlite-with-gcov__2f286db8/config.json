@@ -1,0 +1,85 @@
+{
+  "task_path": "build_tb2/important/sqlite-with-gcov",
+  "agent": "pi-acp",
+  "model": "openrouter/deepseek/deepseek-v4-pro",
+  "reasoning_effort": "high",
+  "environment": "docker",
+  "environment_manifest": null,
+  "skill_mode": "no-skill",
+  "skill_source": "none",
+  "requested_skills_dir": null,
+  "effective_skills_dir": null,
+  "skills_sandbox_dir": null,
+  "include_task_skills": false,
+  "sandbox_user": null,
+  "sandbox_locked_paths": [],
+  "sandbox_setup_timeout": 120,
+  "skip_install": false,
+  "agent_install_timeout": 900,
+  "context_root": null,
+  "base_image_override": null,
+  "timeout_sec": 900,
+  "concurrency": 3,
+  "agent_idle_timeout_sec": 600,
+  "started_at": "2026-10-05 05:32:32.588820",
+  "agent_env": {
+    "BENCHFLOW_PROVIDER_MODELS": "[{\"id\":\"deepseek/deepseek-v4-pro\",\"name\":\"DeepSeek V4 Pro\",\"reasoning\":true,\"input\":[\"text\"],\"contextWindow\":1024000,\"maxTokens\":384000}]",
+    "BENCHFLOW_PROVIDER_MODEL": "deepseek/deepseek-v4-pro",
+    "BENCHFLOW_PROVIDER_NAME": "openrouter",
+    "BENCHFLOW_PROVIDER_BASE_URL": "https://openrouter.ai/api/v1",
+    "BENCHFLOW_PROVIDER_PROTOCOL": "openai-completions",
+    "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1"
+  },
+  "scenes": [
+    {
+      "name": "default",
+      "skills_dir": null,
+      "roles": [
+        {
+          "name": "agent",
+          "agent": "pi-acp",
+          "model": "openrouter/deepseek/deepseek-v4-pro",
+          "reasoning_effort": "high",
+          "timeout_sec": null,
+          "idle_timeout_sec": null,
+          "skills_dir": null,
+          "capabilities": null,
+          "env_keys": []
+        }
+      ],
+      "turns": [
+        {
+          "role": "agent",
+          "has_prompt": false
+        }
+      ]
+    }
+  ],
+  "loop": {
+    "strategy": "single-shot"
+  },
+  "usage_tracking": {
+    "requested": "auto"
+  },
+  "source": {
+    "type": "github",
+    "repo": "skalade/rude_agents",
+    "requested_ref": "master",
+    "resolved_sha": "d68b067959758ae0c77a0bb8d2360e0aa3ff5aed",
+    "path": "build_tb2/important/sqlite-with-gcov",
+    "dirty": false,
+    "file_hashes": {
+      ".gitignore": "sha256:9a8dd8d9b6c3adb8e9e56328df27deef859a3e98fffc9b8133c8b22207c25953",
+      "README.md": "sha256:ba1a1f05c7152b9a4d355382212fa4d8e6829f604fee4b8a4f3aa4a7a603bac6",
+      "environment/Dockerfile": "sha256:f4be72b64b710962e5d9d5236716b4823ec72401a5379423039101cc00a73cd6",
+      "environment/vendor/sqlite-fossil-release.tar.gz": "sha256:7c02b6cc04dddc2f90e63d43ab8900cb694ba4665f4e4ac877ec724733125229",
+      "environment/vendor/sqlite-fossil-release.tar.gz.sha256": "sha256:3574015c694bd2465942ff17731db62293fea6ec7d90f34be09de1445fcdb18a",
+      "instruction.md": "sha256:e151e4cb253bfcf91b01b4b864eace24c8a247c2adc25d54c91bc9913873815a",
+      "solution/solve.sh": "sha256:e054f4092eb4b2895866a89c4d4e3591dda0fa28bd9d825ca60403f359a8f027",
+      "task.toml": "sha256:9a0da96990ee2ecbf4d92682a4c5301a53db45fc6e2d46ac7d45d3b8ee7fe523",
+      "tests/test.sh": "sha256:4770437ea96c3cc84684b4f99d55fb148fcac09f9ea1e8ef49de487716e6c334",
+      "tests/test_outputs.py": "sha256:b165f8504bb93a901451b80c4ea73344b71b6af377ebdabef745fbcdd1d2993b"
+    }
+  },
+  "task_digest": "sha256:5d1c5a1ec9374c22a3a765df4086ffacfd6d6bc502d6ea87397f02521f35c9d9"
+}

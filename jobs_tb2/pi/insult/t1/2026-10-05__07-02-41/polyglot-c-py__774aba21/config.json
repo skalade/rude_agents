@@ -1,0 +1,83 @@
+{
+  "task_path": "build_tb2/insult/polyglot-c-py",
+  "agent": "pi-acp",
+  "model": "openrouter/deepseek/deepseek-v4-pro",
+  "reasoning_effort": "high",
+  "environment": "docker",
+  "environment_manifest": null,
+  "skill_mode": "no-skill",
+  "skill_source": "none",
+  "requested_skills_dir": null,
+  "effective_skills_dir": null,
+  "skills_sandbox_dir": null,
+  "include_task_skills": false,
+  "sandbox_user": null,
+  "sandbox_locked_paths": [],
+  "sandbox_setup_timeout": 120,
+  "skip_install": false,
+  "agent_install_timeout": 900,
+  "context_root": null,
+  "base_image_override": null,
+  "timeout_sec": 900,
+  "concurrency": 3,
+  "agent_idle_timeout_sec": 600,
+  "started_at": "2026-10-05 11:39:44.973208",
+  "agent_env": {
+    "BENCHFLOW_PROVIDER_MODELS": "[{\"id\":\"deepseek/deepseek-v4-pro\",\"name\":\"DeepSeek V4 Pro\",\"reasoning\":true,\"input\":[\"text\"],\"contextWindow\":1024000,\"maxTokens\":384000}]",
+    "BENCHFLOW_PROVIDER_MODEL": "deepseek/deepseek-v4-pro",
+    "BENCHFLOW_PROVIDER_NAME": "openrouter",
+    "BENCHFLOW_PROVIDER_BASE_URL": "https://openrouter.ai/api/v1",
+    "BENCHFLOW_PROVIDER_PROTOCOL": "openai-completions",
+    "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1"
+  },
+  "scenes": [
+    {
+      "name": "default",
+      "skills_dir": null,
+      "roles": [
+        {
+          "name": "agent",
+          "agent": "pi-acp",
+          "model": "openrouter/deepseek/deepseek-v4-pro",
+          "reasoning_effort": "high",
+          "timeout_sec": null,
+          "idle_timeout_sec": null,
+          "skills_dir": null,
+          "capabilities": null,
+          "env_keys": []
+        }
+      ],
+      "turns": [
+        {
+          "role": "agent",
+          "has_prompt": false
+        }
+      ]
+    }
+  ],
+  "loop": {
+    "strategy": "single-shot"
+  },
+  "usage_tracking": {
+    "requested": "auto"
+  },
+  "source": {
+    "type": "github",
+    "repo": "skalade/rude_agents",
+    "requested_ref": "master",
+    "resolved_sha": "d68b067959758ae0c77a0bb8d2360e0aa3ff5aed",
+    "path": "build_tb2/insult/polyglot-c-py",
+    "dirty": false,
+    "file_hashes": {
+      ".gitignore": "sha256:9a8dd8d9b6c3adb8e9e56328df27deef859a3e98fffc9b8133c8b22207c25953",
+      "README.md": "sha256:591e27f9c71f12f6d0f0dc506970850737f951bfdb3f582196e89bc752e92881",
+      "environment/Dockerfile": "sha256:2eb537f29d2bc4ab30e1b35ff352578437a08b90f91ef6360ee28d8195d5098a",
+      "instruction.md": "sha256:8de48e9be493e61f478f712ecd97f079477e9e0b85a78dde042f9ddb434a21c4",
+      "solution/solve.sh": "sha256:e768453a194037b0517803fa0d99dbd3b6f820dead842e0b6161019b33456bf0",
+      "task.toml": "sha256:d31b9f60c47eed0d79e10d3be8fd56a23e50b3986606e3f2546863d44ac9a9ea",
+      "tests/test.sh": "sha256:4770437ea96c3cc84684b4f99d55fb148fcac09f9ea1e8ef49de487716e6c334",
+      "tests/test_outputs.py": "sha256:b94a7a9882decd8114835bdf52b5bc42fc78e9fe67ecad9bd19050b11781ddec"
+    }
+  },
+  "task_digest": "sha256:e20fd6a89d1f672c306efcb3f86177b047b59ce61f13afbfa6b91525d0739c5c"
+}

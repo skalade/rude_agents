@@ -1,0 +1,107 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 9,
+            "passed": 7,
+            "failed": 2,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1791153397.585097,
+            "stop": 1791153400.6039329
+        },
+        "tests": [
+            {
+                "name": "::test_ars_function_exists",
+                "status": "passed",
+                "duration": 0.00044032500591129065,
+                "start": 1791153397.9334958,
+                "stop": 1791153397.9340744,
+                "retries": 0,
+                "file_path": "../tests/test_outputs.py"
+            },
+            {
+                "name": "::test_can_generate_standard_distribution_samples",
+                "status": "passed",
+                "duration": 0.27948836993891746,
+                "start": 1791153397.934179,
+                "stop": 1791153398.2138343,
+                "retries": 0,
+                "file_path": "../tests/test_outputs.py"
+            },
+            {
+                "name": "::test_has_test_function",
+                "status": "passed",
+                "duration": 0.0006401118589565158,
+                "start": 1791153398.2139974,
+                "stop": 1791153398.2147346,
+                "retries": 0,
+                "file_path": "../tests/test_outputs.py"
+            },
+            {
+                "name": "::test_formal_testing_with_known_truth",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 1.9424673289759085,
+                "start": 1791153398.2148383,
+                "stop": 1791153400.1735997,
+                "retries": 0,
+                "file_path": "../tests/test_outputs.py",
+                "trace": "def test_formal_testing_with_known_truth():\n        \"\"\"Test that formal testing outputs correct format as specified.\"\"\"\n        app_dir = Path(\"/app\")\n    \n        # Run the test function and check output format\n        test_code = \"\"\"\n    source(\"ars.R\")\n    # Run the test function if it exists\n    if (exists(\"test\")) {\n        test()\n    } else {\n        cat(\"ERROR: test function not found\\n\")\n    }\n    \"\"\"\n    \n        test_file = app_dir / \"run_test.R\"\n        test_file.write_text(test_code)\n        try:\n            result = subprocess.run(\n                [\"Rscript\", str(test_file)],\n                capture_output=True,\n                text=True,\n                cwd=str(app_dir),\n                timeout=60,\n            )\n            output = result.stdout + result.stderr\n    \n            # Check for required output format: \"TEST_NAME: PASS\" or \"TEST_NAME: FAIL\"\n>           assert \": PASS\" in output or \": FAIL\" in output, (\n                \"Test function must output results in format \"\n                \"'TEST_NAME: PASS' or 'TEST_NAME: FAIL'\"\n            )\nE           AssertionError: Test function must output results in format 'TEST_NAME: PASS' or 'TEST_NAME: FAIL'\nE           assert (': PASS' in '\\n ====================================================================== \\n  Adaptive Rejection Sampling - Test Suit...=================== \\n  SOME TESTS FAILED\\n====================================================================== \\n\\n' or ': FAIL' in '\\n ====================================================================== \\n  Adaptive Rejection Sampling - Test Suit...=================== \\n  SOME TESTS FAILED\\n====================================================================== \\n\\n')\n\n/tests/test_outputs.py:141: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "::test_sample_files_generated",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.0003159140469506383,
+                "start": 1791153400.173724,
+                "stop": 1791153400.1755216,
+                "retries": 0,
+                "file_path": "../tests/test_outputs.py",
+                "trace": "def test_sample_files_generated():\n        \"\"\"Test that required sample files are generated.\"\"\"\n        app_dir = Path(\"/app\")\n    \n        # Check for required sample files as specified in task\n        normal_file = app_dir / \"normal_samples.txt\"\n        exp_file = app_dir / \"exponential_samples.txt\"\n    \n>       assert normal_file.exists() or exp_file.exists(), (\n            \"At least one sample file must be generated. Task requires generating 'normal_samples.txt' \"\n            \"or 'exponential_samples.txt' containing test samples\"\n        )\nE       AssertionError: At least one sample file must be generated. Task requires generating 'normal_samples.txt' or 'exponential_samples.txt' containing test samples\nE       assert (False or False)\nE        +  where False = exists()\nE        +    where exists = PosixPath('/app/normal_samples.txt').exists\nE        +  and   False = exists()\nE        +    where exists = PosixPath('/app/exponential_samples.txt').exists\n\n/tests/test_outputs.py:161: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "::test_implementation_is_modular",
+                "status": "passed",
+                "duration": 0.0004483899101614952,
+                "start": 1791153400.1756067,
+                "stop": 1791153400.1761274,
+                "retries": 0,
+                "file_path": "../tests/test_outputs.py"
+            },
+            {
+                "name": "::test_implementation_handles_errors",
+                "status": "passed",
+                "duration": 0.00043612602166831493,
+                "start": 1791153400.1762102,
+                "stop": 1791153400.176705,
+                "retries": 0,
+                "file_path": "../tests/test_outputs.py"
+            },
+            {
+                "name": "::test_input_validation_functionality",
+                "status": "passed",
+                "duration": 0.17904541606549174,
+                "start": 1791153400.176778,
+                "stop": 1791153400.3560193,
+                "retries": 0,
+                "file_path": "../tests/test_outputs.py"
+            },
+            {
+                "name": "::test_log_concavity_functionality",
+                "status": "passed",
+                "duration": 0.24716601404361427,
+                "start": 1791153400.3563082,
+                "stop": 1791153400.603707,
+                "retries": 0,
+                "file_path": "../tests/test_outputs.py"
+            }
+        ]
+    }
+}

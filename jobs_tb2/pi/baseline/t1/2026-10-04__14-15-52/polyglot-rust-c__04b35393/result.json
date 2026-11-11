@@ -1,0 +1,140 @@
+{
+  "task_name": "polyglot-rust-c",
+  "rollout_name": "polyglot-rust-c__04b35393",
+  "rewards": {
+    "reward": 0.0
+  },
+  "agent": "pi-acp",
+  "agent_name": "pi-acp",
+  "model": "openrouter/deepseek/deepseek-v4-pro",
+  "skill_mode": "no-skill",
+  "skill_source": "none",
+  "requested_skills_dir": null,
+  "effective_skills_dir": null,
+  "skills_sandbox_dir": null,
+  "include_task_skills": false,
+  "n_tool_calls": 0,
+  "n_skill_invocations": 0,
+  "n_prompts": 1,
+  "agent_result": {
+    "n_tool_calls": 0,
+    "n_skill_invocations": 0,
+    "n_prompts": 1,
+    "n_input_tokens": 0,
+    "n_output_tokens": 0,
+    "n_cache_read_tokens": 0,
+    "n_cache_creation_tokens": 0,
+    "total_tokens": 0,
+    "cost_usd": null,
+    "usage_source": "unavailable",
+    "price_source": null
+  },
+  "final_metrics": {
+    "total_prompt_tokens": 0,
+    "total_completion_tokens": 0,
+    "total_cached_tokens": 0,
+    "total_cost_usd": null
+  },
+  "trajectory_summary": {
+    "steps": 4,
+    "tool_call_steps": 0,
+    "user_message_steps": 1,
+    "agent_message_steps": 1,
+    "agent_thought_steps": 1,
+    "other_steps": 1,
+    "event_type_counts": {
+      "agent_message": 1,
+      "user_message": 1,
+      "agent_thought": 1,
+      "agent_timeout": 1
+    },
+    "tool_call_status_counts": {},
+    "partial_trajectory": false,
+    "trajectory_source": "acp"
+  },
+  "usage_tracking": {
+    "requested": "auto",
+    "status": "unavailable",
+    "environment": "docker",
+    "endpoint_kind": "none",
+    "usage_source": "unavailable"
+  },
+  "error": "Agent prompt exceeded wall-clock budget 900s",
+  "error_category": "timeout",
+  "verifier_error": null,
+  "verifier_error_category": null,
+  "export_error": null,
+  "idle_timeout_info": null,
+  "agent_timeout_info": {
+    "reason": "wall_clock_timeout",
+    "timeout_sec": 900.0,
+    "n_tool_calls": 0,
+    "pending_tool_call_ids": [],
+    "terminal_event_recorded": true,
+    "terminal_trajectory_complete": true
+  },
+  "sandbox_startup_info": null,
+  "transport_error_info": null,
+  "verifier_timeout_info": null,
+  "api_error_info": null,
+  "suspected_api_error_info": null,
+  "partial_trajectory": false,
+  "trajectory_source": "acp",
+  "started_at": "2026-10-04 19:08:18.744157",
+  "finished_at": "2026-10-04 19:32:03.130948",
+  "timing": {
+    "environment_setup": 6.8,
+    "agent_setup": 4.3,
+    "agent_execution": 1007.4,
+    "verifier": 8.9,
+    "total": 1424.4
+  },
+  "scenes": [
+    {
+      "name": "default",
+      "skills_dir": null,
+      "roles": [
+        {
+          "name": "agent",
+          "agent": "pi-acp",
+          "model": "openrouter/deepseek/deepseek-v4-pro",
+          "reasoning_effort": "high",
+          "timeout_sec": null,
+          "idle_timeout_sec": null,
+          "skills_dir": null,
+          "capabilities": null,
+          "env_keys": []
+        }
+      ],
+      "turns": [
+        {
+          "role": "agent",
+          "has_prompt": false
+        }
+      ]
+    }
+  ],
+  "loop": {
+    "strategy": "single-shot"
+  },
+  "source": {
+    "type": "github",
+    "repo": "skalade/rude_agents",
+    "requested_ref": "master",
+    "resolved_sha": "d68b067959758ae0c77a0bb8d2360e0aa3ff5aed",
+    "path": "build_tb2/baseline/polyglot-rust-c",
+    "dirty": false,
+    "file_hashes": {
+      ".gitignore": "sha256:9a8dd8d9b6c3adb8e9e56328df27deef859a3e98fffc9b8133c8b22207c25953",
+      "README.md": "sha256:6e091c5e7d2c1634b4527361385563f6afee3d9b184ec5c587f686fdd2b1504d",
+      "environment/Dockerfile": "sha256:d8a3dc4dc57fa9dac783a029aef3b3094d99a6fdbff57e5201a5fb16e84dee0d",
+      "instruction.md": "sha256:b0fbcd99a97fc886e4e198b6189b977409dada47cae0a87ac7dc185b440b2355",
+      "solution/solve.sh": "sha256:f3b101d9528efb3997937fa134b10e3773521bf83d576dab3183e977d12c9638",
+      "task.toml": "sha256:3c41e83437068c62a3fdff74641899146e34907aefd9e47346213f47caeb82de",
+      "tests/test.sh": "sha256:4770437ea96c3cc84684b4f99d55fb148fcac09f9ea1e8ef49de487716e6c334",
+      "tests/test_outputs.py": "sha256:baed5e4d0cc0e5809ff41a7df1815d18c65c708a3a3f264428e1cda11ce692f9"
+    }
+  },
+  "task_digest": "sha256:e3b6da99038df663b41c82cba1b969295b35fe2b118851813b5b5f08b6296788",
+  "sandbox_id": null
+}

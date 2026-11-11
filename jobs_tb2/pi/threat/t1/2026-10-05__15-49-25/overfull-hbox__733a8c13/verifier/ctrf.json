@@ -1,0 +1,56 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 4,
+            "passed": 4,
+            "failed": 0,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1791252473.5214622,
+            "stop": 1791252492.6649902
+        },
+        "tests": [
+            {
+                "name": "::test_main_synonyms_not_modified",
+                "status": "passed",
+                "duration": 19.10940301103983,
+                "start": 1791252473.5528448,
+                "stop": 1791252492.6625185,
+                "retries": 0,
+                "file_path": "../tests/test_outputs.py"
+            },
+            {
+                "name": "::test_compilation_successful",
+                "status": "passed",
+                "duration": 0.00022868206724524498,
+                "start": 1791252492.662661,
+                "stop": 1791252492.6629562,
+                "retries": 0,
+                "file_path": "../tests/test_outputs.py"
+            },
+            {
+                "name": "::test_no_overfull_hboxes",
+                "status": "passed",
+                "duration": 0.00020169198978692293,
+                "start": 1791252492.6630328,
+                "stop": 1791252492.6632934,
+                "retries": 0,
+                "file_path": "../tests/test_outputs.py"
+            },
+            {
+                "name": "::test_input_file_matches",
+                "status": "passed",
+                "duration": 0.0014772590948268771,
+                "start": 1791252492.6633623,
+                "stop": 1791252492.6648984,
+                "retries": 0,
+                "file_path": "../tests/test_outputs.py"
+            }
+        ]
+    }
+}

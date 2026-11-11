@@ -1,0 +1,7 @@
+{
+  "environment_setup": 3.7,
+  "agent_setup": 8.9,
+  "agent_execution": 480.3,
+  "verifier": 9.4,
+  "total": 553.2
+}

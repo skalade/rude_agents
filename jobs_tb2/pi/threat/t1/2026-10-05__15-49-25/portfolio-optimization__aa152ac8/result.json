@@ -1,0 +1,142 @@
+{
+  "task_name": "portfolio-optimization",
+  "rollout_name": "portfolio-optimization__aa152ac8",
+  "rewards": {
+    "reward": 1.0
+  },
+  "agent": "pi-acp",
+  "agent_name": "pi-acp",
+  "model": "openrouter/deepseek/deepseek-v4-pro",
+  "skill_mode": "no-skill",
+  "skill_source": "none",
+  "requested_skills_dir": null,
+  "effective_skills_dir": null,
+  "skills_sandbox_dir": null,
+  "include_task_skills": false,
+  "n_tool_calls": 9,
+  "n_skill_invocations": 0,
+  "n_prompts": 1,
+  "agent_result": {
+    "n_tool_calls": 9,
+    "n_skill_invocations": 0,
+    "n_prompts": 1,
+    "n_input_tokens": 30124,
+    "n_output_tokens": 3788,
+    "n_cache_read_tokens": 26615,
+    "n_cache_creation_tokens": 0,
+    "total_tokens": 33912,
+    "cost_usd": 0.00257348,
+    "usage_source": "provider_response",
+    "price_source": "litellm"
+  },
+  "final_metrics": {
+    "total_prompt_tokens": 30124,
+    "total_completion_tokens": 3788,
+    "total_cached_tokens": 26615,
+    "total_cost_usd": 0.00257348
+  },
+  "trajectory_summary": {
+    "steps": 20,
+    "tool_call_steps": 9,
+    "user_message_steps": 1,
+    "agent_message_steps": 5,
+    "agent_thought_steps": 5,
+    "other_steps": 0,
+    "event_type_counts": {
+      "agent_message": 5,
+      "user_message": 1,
+      "agent_thought": 5,
+      "tool_call": 9
+    },
+    "tool_call_status_counts": {
+      "completed": 9
+    },
+    "partial_trajectory": false,
+    "trajectory_source": "acp"
+  },
+  "usage_tracking": {
+    "requested": "auto",
+    "status": "enabled",
+    "environment": "docker",
+    "endpoint_kind": "host",
+    "usage_source": "provider_response"
+  },
+  "error": null,
+  "error_category": null,
+  "verifier_error": null,
+  "verifier_error_category": null,
+  "export_error": null,
+  "idle_timeout_info": null,
+  "agent_timeout_info": null,
+  "sandbox_startup_info": null,
+  "transport_error_info": null,
+  "verifier_timeout_info": null,
+  "api_error_info": null,
+  "suspected_api_error_info": null,
+  "partial_trajectory": false,
+  "trajectory_source": "acp",
+  "started_at": "2026-10-05 20:38:25.620244",
+  "finished_at": "2026-10-05 20:42:04.647856",
+  "timing": {
+    "environment_setup": 6.6,
+    "agent_setup": 3.7,
+    "agent_execution": 120.0,
+    "verifier": 62.5,
+    "total": 219.0
+  },
+  "scenes": [
+    {
+      "name": "default",
+      "skills_dir": null,
+      "roles": [
+        {
+          "name": "agent",
+          "agent": "pi-acp",
+          "model": "openrouter/deepseek/deepseek-v4-pro",
+          "reasoning_effort": "high",
+          "timeout_sec": null,
+          "idle_timeout_sec": null,
+          "skills_dir": null,
+          "capabilities": null,
+          "env_keys": []
+        }
+      ],
+      "turns": [
+        {
+          "role": "agent",
+          "has_prompt": false
+        }
+      ]
+    }
+  ],
+  "loop": {
+    "strategy": "single-shot"
+  },
+  "source": {
+    "type": "github",
+    "repo": "skalade/rude_agents",
+    "requested_ref": "master",
+    "resolved_sha": "d68b067959758ae0c77a0bb8d2360e0aa3ff5aed",
+    "path": "build_tb2/threat/portfolio-optimization",
+    "dirty": false,
+    "file_hashes": {
+      ".gitignore": "sha256:9a8dd8d9b6c3adb8e9e56328df27deef859a3e98fffc9b8133c8b22207c25953",
+      "README.md": "sha256:c68dbd80837bc72dc6e66eb945cecc4c187f6a7154ae4f331f17c0c7255e4d4b",
+      "environment/Dockerfile": "sha256:3d0210dedc3a9c0a7956369ba7025fbf6cd4e1bf9eb556bd3a8cbd06092904e6",
+      "environment/benchmark.py": "sha256:64b6e7a40f79ed90a550bc15249ebc09babda14efe04a85a3cf54acd7fb4819f",
+      "environment/cvxopt_benchmark.py": "sha256:c49315473bef2ebaa7829ccec849b31d964f0a5a00492a515952d1db5ffebdbd",
+      "environment/portfolio_baseline.py": "sha256:ff86bf940cb78cfc212c6788a04e81ab0a33ce995591608d114004b96b17d174",
+      "environment/portfolio_optimized.c": "sha256:42bd3baf5bdf3c8a8052a0d59ed0e2af72b64adbdb4d6fdf85bbaded36c3da41",
+      "environment/portfolio_optimized.py": "sha256:e289125b4113921152117280a49a0294430bd1dca76f1515c7d79942cb41f5e5",
+      "environment/setup.py": "sha256:4712ead66edc6684c45880954e83d8b9a915bdaf0b60ebb0ee895a5b740a4c09",
+      "instruction.md": "sha256:5c2bf610497356ca8d6cd4e0665b9cf475f1f7655d2fbb34e16a232a1901b83a",
+      "solution/solve.sh": "sha256:c9291da2bf6d504896b1259bf3d896c7ca29d71630975c49493805f758d138cc",
+      "task.toml": "sha256:4918687e4e261a9852e39e5a554156733c071c17dc89c5f544f15f2ef744ce0a",
+      "tests/portfolio_baseline_protected.py": "sha256:ff86bf940cb78cfc212c6788a04e81ab0a33ce995591608d114004b96b17d174",
+      "tests/test.sh": "sha256:25d5d5008edeab93d730b44f723687d2b08978f9f53750f62af8aeb1ecae90c6",
+      "tests/test_outputs.py": "sha256:800fc762b0a107b197d17cc2c094858490f02f09f47af4e3ee84253594f97fa7"
+    }
+  },
+  "task_digest": "sha256:f1cdf37892508ab5458461e7ccde70b82ac2d5e7c3cdd9e841c407ab055247ab",
+  "sandbox_id": null
+}

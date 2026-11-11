@@ -1,0 +1,116 @@
+{
+  "codex": {
+    "requests": 1770,
+    "provider_cost_count": 0,
+    "provider_cost_sum": 0.0,
+    "request_models": {
+      "gpt-5.6-terra": 1770
+    },
+    "providers": {
+      "not recorded": 1770
+    },
+    "effort_by_main": "main  effort\nTrue  NaN       1770",
+    "first_main_tools": {
+      "[\"exec_command\", \"write_stdin\", \"update_plan\", \"request_user_input\", \"view_image\", \"get_goal\", \"create_goal\", \"update_goal\"]": 120
+    },
+    "first_main_input_median": 7865.5,
+    "first_main_system_chars_median": 7817.5,
+    "first_main_tools_chars_median": 8784.0,
+    "reasoning_tokens": 163105,
+    "non_tool_requests": 0,
+    "non_tool_cost_proxy": 0.0,
+    "trace_hours": 1.8802938290437063
+  },
+  "pi": {
+    "requests": 1238,
+    "provider_cost_count": 0,
+    "provider_cost_sum": 0.0,
+    "request_models": {
+      "deepseek/deepseek-v4-pro": 1238
+    },
+    "providers": {
+      "not recorded": 1238
+    },
+    "effort_by_main": "main  effort\nTrue  high      1238",
+    "first_main_tools": {
+      "[\"read\", \"bash\", \"edit\", \"write\"]": 120
+    },
+    "first_main_input_median": 2133.0,
+    "first_main_system_chars_median": 4145.5,
+    "first_main_tools_chars_median": 2956.0,
+    "reasoning_tokens": 380524,
+    "non_tool_requests": 0,
+    "non_tool_cost_proxy": 0.0,
+    "trace_hours": 3.978266029689047
+  },
+  "opencode": {
+    "requests": 1405,
+    "provider_cost_count": 0,
+    "provider_cost_sum": 0.0,
+    "request_models": {
+      "deepseek/deepseek-v4-pro": 1405
+    },
+    "providers": {
+      "not recorded": 1405
+    },
+    "effort_by_main": "main   effort\nFalse  NaN        119\nTrue   high      1274\n       NaN         12",
+    "first_main_tools": {
+      "[\"bash\", \"edit\", \"glob\", \"grep\", \"read\", \"skill\", \"task\", \"todowrite\", \"webfetch\", \"write\"]": 108,
+      "[\"bash\", \"edit\", \"glob\", \"grep\", \"read\", \"skill\", \"task\", \"todowrite\", \"write\"]": 12
+    },
+    "first_main_input_median": 7820.0,
+    "first_main_system_chars_median": 10706.5,
+    "first_main_tools_chars_median": 21144.0,
+    "reasoning_tokens": 596389,
+    "non_tool_requests": 119,
+    "non_tool_cost_proxy": 0.043222199999999995,
+    "trace_hours": 6.680582800176409
+  },
+  "openhands": {
+    "requests": 2090,
+    "provider_cost_count": 2089,
+    "provider_cost_sum": 3.8719247969,
+    "request_models": {
+      "deepseek/deepseek-v4-pro": 2090
+    },
+    "providers": {
+      "StreamLake": 1223,
+      "Baidu": 866,
+      "not recorded": 1
+    },
+    "effort_by_main": "main  effort\nTrue  NaN       2090",
+    "first_main_tools": {
+      "[\"terminal\", \"file_editor\", \"task_tracker\", \"task\", \"finish\", \"think\", \"invoke_skill\"]": 120
+    },
+    "first_main_input_median": 13157.5,
+    "first_main_system_chars_median": 35650.5,
+    "first_main_tools_chars_median": 21408.0,
+    "reasoning_tokens": 1347676,
+    "non_tool_requests": 0,
+    "non_tool_cost_proxy": 0.0,
+    "trace_hours": 11.079770733118057
+  },
+  "claude": {
+    "requests": 2294,
+    "provider_cost_count": 0,
+    "provider_cost_sum": 0.0,
+    "request_models": {
+      "claude-sonnet-5": 2294
+    },
+    "providers": {
+      "not recorded": 2294
+    },
+    "effort_by_main": "main   effort\nFalse  NaN          9\nTrue   NaN       2285",
+    "first_main_tools": {
+      "[\"Agent\", \"Bash\", \"CronCreate\", \"CronDelete\", \"CronList\", \"Edit\", \"EnterPlanMode\", \"EnterWorktree\", \"ExitPlanMode\", \"ExitWorktree\", \"Glob\", \"Grep\", \"NotebookEdit\", \"Read\", \"ScheduleWakeup\", \"Skill\", \"TaskCreate\", \"TaskGet\", \"TaskList\", \"TaskOutput\", \"TaskStop\", \"TaskUpdate\", \"WebFetch\", \"WebSearch\", \"Workflow\", \"Write\"]": 108,
+      "[\"Agent\", \"Bash\", \"CronCreate\", \"CronDelete\", \"CronList\", \"Edit\", \"EnterPlanMode\", \"EnterWorktree\", \"ExitPlanMode\", \"ExitWorktree\", \"Glob\", \"Grep\", \"NotebookEdit\", \"Read\", \"ScheduleWakeup\", \"Skill\", \"TaskCreate\", \"TaskGet\", \"TaskList\", \"TaskOutput\", \"TaskStop\", \"TaskUpdate\", \"Workflow\", \"Write\"]": 12
+    },
+    "first_main_input_median": 43402.5,
+    "first_main_system_chars_median": 4898.5,
+    "first_main_tools_chars_median": 90365.0,
+    "reasoning_tokens": 0,
+    "non_tool_requests": 9,
+    "non_tool_cost_proxy": 0.01129842,
+    "trace_hours": 5.6543634243806205
+  }
+}

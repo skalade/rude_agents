@@ -1,0 +1,88 @@
+{
+  "task_path": "build_tb2/threat/feal-differential-cryptanalysis",
+  "agent": "pi-acp",
+  "model": "openrouter/deepseek/deepseek-v4-pro",
+  "reasoning_effort": "high",
+  "environment": "docker",
+  "environment_manifest": null,
+  "skill_mode": "no-skill",
+  "skill_source": "none",
+  "requested_skills_dir": null,
+  "effective_skills_dir": null,
+  "skills_sandbox_dir": null,
+  "include_task_skills": false,
+  "sandbox_user": null,
+  "sandbox_locked_paths": [],
+  "sandbox_setup_timeout": 120,
+  "skip_install": false,
+  "agent_install_timeout": 900,
+  "context_root": null,
+  "base_image_override": null,
+  "timeout_sec": 1800,
+  "concurrency": 3,
+  "agent_idle_timeout_sec": 600,
+  "started_at": "2026-10-05 17:38:00.729219",
+  "agent_env": {
+    "BENCHFLOW_PROVIDER_MODELS": "[{\"id\":\"deepseek/deepseek-v4-pro\",\"name\":\"DeepSeek V4 Pro\",\"reasoning\":true,\"input\":[\"text\"],\"contextWindow\":1024000,\"maxTokens\":384000}]",
+    "BENCHFLOW_PROVIDER_MODEL": "deepseek/deepseek-v4-pro",
+    "BENCHFLOW_PROVIDER_NAME": "openrouter",
+    "BENCHFLOW_PROVIDER_BASE_URL": "https://openrouter.ai/api/v1",
+    "BENCHFLOW_PROVIDER_PROTOCOL": "openai-completions",
+    "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1"
+  },
+  "scenes": [
+    {
+      "name": "default",
+      "skills_dir": null,
+      "roles": [
+        {
+          "name": "agent",
+          "agent": "pi-acp",
+          "model": "openrouter/deepseek/deepseek-v4-pro",
+          "reasoning_effort": "high",
+          "timeout_sec": null,
+          "idle_timeout_sec": null,
+          "skills_dir": null,
+          "capabilities": null,
+          "env_keys": []
+        }
+      ],
+      "turns": [
+        {
+          "role": "agent",
+          "has_prompt": false
+        }
+      ]
+    }
+  ],
+  "loop": {
+    "strategy": "single-shot"
+  },
+  "usage_tracking": {
+    "requested": "auto"
+  },
+  "source": {
+    "type": "github",
+    "repo": "skalade/rude_agents",
+    "requested_ref": "master",
+    "resolved_sha": "d68b067959758ae0c77a0bb8d2360e0aa3ff5aed",
+    "path": "build_tb2/threat/feal-differential-cryptanalysis",
+    "dirty": false,
+    "file_hashes": {
+      ".gitignore": "sha256:9a8dd8d9b6c3adb8e9e56328df27deef859a3e98fffc9b8133c8b22207c25953",
+      "README.md": "sha256:887407c78513837d93f02231998419a0ce9b0cc0a0c600ed86cd30df5cb24e7f",
+      "environment/Dockerfile": "sha256:c40553e4cf830b7cd075a79dca1a29f5267c45c63b1cedb275383f58af356a30",
+      "environment/feal.py": "sha256:23cc077b9dce176a3aa3078681d1c8dff8c1b7959556c9457db57036d2885dfe",
+      "instruction.md": "sha256:d5606e3b12eae335489f24a0f3aa611a20cca8037c73ca4c490d5a6883d79dd0",
+      "solution/solve.sh": "sha256:6846dd2877aac95bc0b35a65c3b522403d21491407e02f07b7060ab4071a9620",
+      "task.toml": "sha256:dcb9f2f15047eee0be15ca18c39c357f89187a94aae6baeff276221e2383eecb",
+      "tests/feal.c": "sha256:bd4e9fb31e38073414d8a1930b2e67bc59eaee17e52f58133f781d297073e885",
+      "tests/feal.h": "sha256:d3ebd83bfbdb86f3543bda72a0693aabe478c6880ef78cb4a8e6c2e5a779759e",
+      "tests/feal_module.c": "sha256:1ae1c8a31b099b5742b35a3d6b1b70a2509d8d13d79ab74535e038e9a3379363",
+      "tests/setup.py": "sha256:d1d8f08966670ac8bfc1a9cfa8c16a6915eef2153a44ad6502daec2da83e08aa",
+      "tests/test.sh": "sha256:106c27394c96343c03b4fbac14faac85542bce6628bccc66a5fe036d77f72daf",
+      "tests/test_outputs.py": "sha256:585780e76d98094ad118d096f8c78f2281352dc9826e3687c4de152659631a3d"
+    }
+  },
+  "task_digest": "sha256:25257bf6effcdb90e60134c2a509402456010458ddb58fccf22a58b4a6054337"
+}

@@ -1,0 +1,137 @@
+{
+  "task_name": "bike-rebalance",
+  "rollout_name": "bike-rebalance__4d63f34f",
+  "rewards": {
+    "reward": 1.0
+  },
+  "agent": "pi-acp",
+  "agent_name": "pi-acp",
+  "model": "openrouter/deepseek/deepseek-v4-pro",
+  "skill_mode": "with-skill",
+  "skill_source": "task_bundled",
+  "requested_skills_dir": null,
+  "effective_skills_dir": "/tmp/benchflow-task-g140qf45/bike-rebalance/environment/skills",
+  "skills_sandbox_dir": "/skills",
+  "include_task_skills": true,
+  "n_tool_calls": 13,
+  "n_skill_invocations": 0,
+  "n_prompts": 1,
+  "agent_result": {
+    "n_tool_calls": 13,
+    "n_skill_invocations": 0,
+    "n_prompts": 1,
+    "n_input_tokens": 239003,
+    "n_output_tokens": 17238,
+    "n_cache_read_tokens": 202752,
+    "n_cache_creation_tokens": 0,
+    "total_tokens": 256241,
+    "cost_usd": 0.01739024,
+    "usage_source": "provider_response",
+    "price_source": "litellm"
+  },
+  "final_metrics": {
+    "total_prompt_tokens": 239003,
+    "total_completion_tokens": 17238,
+    "total_cached_tokens": 202752,
+    "total_cost_usd": 0.01739024
+  },
+  "trajectory_summary": {
+    "steps": 33,
+    "tool_call_steps": 13,
+    "user_message_steps": 1,
+    "agent_message_steps": 8,
+    "agent_thought_steps": 11,
+    "other_steps": 0,
+    "event_type_counts": {
+      "agent_message": 8,
+      "user_message": 1,
+      "agent_thought": 11,
+      "tool_call": 13
+    },
+    "tool_call_status_counts": {
+      "completed": 13
+    },
+    "partial_trajectory": false,
+    "trajectory_source": "acp"
+  },
+  "usage_tracking": {
+    "requested": "auto",
+    "status": "enabled",
+    "environment": "docker",
+    "endpoint_kind": "host",
+    "usage_source": "provider_response"
+  },
+  "error": null,
+  "error_category": null,
+  "verifier_error": null,
+  "verifier_error_category": null,
+  "export_error": null,
+  "idle_timeout_info": null,
+  "agent_timeout_info": null,
+  "sandbox_startup_info": null,
+  "transport_error_info": null,
+  "verifier_timeout_info": null,
+  "api_error_info": null,
+  "suspected_api_error_info": null,
+  "partial_trajectory": false,
+  "trajectory_source": "acp",
+  "started_at": "2026-10-02 16:53:30.471014",
+  "finished_at": "2026-10-02 17:09:13.465207",
+  "timing": {
+    "environment_setup": 2.9,
+    "agent_setup": 3.5,
+    "agent_execution": 810.4,
+    "verifier": 103.2,
+    "total": 943.0
+  },
+  "scenes": [
+    {
+      "name": "default",
+      "skills_dir": null,
+      "roles": [
+        {
+          "name": "agent",
+          "agent": "pi-acp",
+          "model": "openrouter/deepseek/deepseek-v4-pro",
+          "reasoning_effort": "high",
+          "timeout_sec": null,
+          "idle_timeout_sec": null,
+          "skills_dir": null,
+          "capabilities": null,
+          "env_keys": []
+        }
+      ],
+      "turns": [
+        {
+          "role": "agent",
+          "has_prompt": false
+        }
+      ]
+    }
+  ],
+  "loop": {
+    "strategy": "single-shot"
+  },
+  "source": {
+    "type": "github",
+    "repo": "skalade/rude_agents",
+    "requested_ref": "master",
+    "resolved_sha": "9e15ebe51faf51abfd0b3047635c0db53301290f",
+    "path": "build/baseline/bike-rebalance",
+    "dirty": false,
+    "file_hashes": {
+      "environment/Dockerfile": "sha256:afd7df77ab59e64036f344583590172f7a24e079093dc83074537cca244e819b",
+      "environment/data.json": "sha256:c978582b2fa369b589b3b829e8d80e912d6994eb4072289c91f02669989c017c",
+      "environment/skills/geospatial-routing-data/SKILL.md": "sha256:0e278fce8dbfa2f6092826592b7eb0d740472ce5ae97bd2e05bd310933b3bda2",
+      "environment/skills/logistics-rules-to-optimization/SKILL.md": "sha256:d7702a4eb61d1135a89824cd59e33901eb838db4412aaa0972142bcfd0174510",
+      "environment/skills/routing-subtour-elimination/SKILL.md": "sha256:211306948184411fc1f63aee8c7a59b02673a44f942a7e86cc60ebaa6ab0d12a",
+      "environment/skills/scip-opt/SKILL.md": "sha256:17f98241df7040646ec6a5ba7285aa3337b99cb5a03efa0c38f65e6ebadb3ff2",
+      "oracle/solve.sh": "sha256:64e36423674b14041df548715922d695ac33a99a7fe476b9e007f57efbf2f30f",
+      "task.md": "sha256:99d346115445ea809271b730d7738baf65688678dec3dd0d317a309af290360f",
+      "verifier/test.sh": "sha256:ee72f22b7cb8fcdfe222d36715980f08bb5c6d0273d9c7dbecfc60407331ac0f",
+      "verifier/test_outputs.py": "sha256:930c406ed2c38235cadd42dbf08d8a205a81c548cfdea4c19094104597336479"
+    }
+  },
+  "task_digest": "sha256:9366569f77d18bf7630a4ccdbad710c321374350c87e9d69746939432d2e0a7a",
+  "sandbox_id": null
+}

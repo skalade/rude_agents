@@ -1,0 +1,145 @@
+{
+  "task_name": "gcode-to-text",
+  "rollout_name": "gcode-to-text__2366afa3",
+  "rewards": {
+    "reward": 0.0
+  },
+  "agent": "pi-acp",
+  "agent_name": "pi-acp",
+  "model": "openrouter/deepseek/deepseek-v4-pro",
+  "skill_mode": "no-skill",
+  "skill_source": "none",
+  "requested_skills_dir": null,
+  "effective_skills_dir": null,
+  "skills_sandbox_dir": null,
+  "include_task_skills": false,
+  "n_tool_calls": 56,
+  "n_skill_invocations": 0,
+  "n_prompts": 1,
+  "agent_result": {
+    "n_tool_calls": 56,
+    "n_skill_invocations": 0,
+    "n_prompts": 1,
+    "n_input_tokens": 3028374,
+    "n_output_tokens": 37587,
+    "n_cache_read_tokens": 2722965,
+    "n_cache_creation_tokens": 0,
+    "total_tokens": 3065961,
+    "cost_usd": 0.10130106,
+    "usage_source": "provider_response",
+    "price_source": "litellm"
+  },
+  "final_metrics": {
+    "total_prompt_tokens": 3028374,
+    "total_completion_tokens": 37587,
+    "total_cached_tokens": 2722965,
+    "total_cost_usd": 0.10130106
+  },
+  "trajectory_summary": {
+    "steps": 110,
+    "tool_call_steps": 56,
+    "user_message_steps": 1,
+    "agent_message_steps": 1,
+    "agent_thought_steps": 51,
+    "other_steps": 1,
+    "event_type_counts": {
+      "agent_message": 1,
+      "user_message": 1,
+      "agent_thought": 51,
+      "tool_call": 56,
+      "agent_timeout": 1
+    },
+    "tool_call_status_counts": {
+      "completed": 53,
+      "failed": 3
+    },
+    "partial_trajectory": false,
+    "trajectory_source": "acp"
+  },
+  "usage_tracking": {
+    "requested": "auto",
+    "status": "enabled",
+    "environment": "docker",
+    "endpoint_kind": "host",
+    "usage_source": "provider_response"
+  },
+  "error": "Agent prompt exceeded wall-clock budget 900s",
+  "error_category": "timeout",
+  "verifier_error": null,
+  "verifier_error_category": null,
+  "export_error": null,
+  "idle_timeout_info": null,
+  "agent_timeout_info": {
+    "reason": "wall_clock_timeout",
+    "timeout_sec": 900.0,
+    "n_tool_calls": 56,
+    "pending_tool_call_ids": [],
+    "terminal_event_recorded": true,
+    "terminal_trajectory_complete": true
+  },
+  "sandbox_startup_info": null,
+  "transport_error_info": null,
+  "verifier_timeout_info": null,
+  "api_error_info": null,
+  "suspected_api_error_info": null,
+  "partial_trajectory": false,
+  "trajectory_source": "acp",
+  "started_at": "2026-10-05 01:30:16.611154",
+  "finished_at": "2026-10-05 01:49:00.358161",
+  "timing": {
+    "environment_setup": 4.7,
+    "agent_setup": 4.2,
+    "agent_execution": 976.5,
+    "verifier": 4.5,
+    "total": 1123.7
+  },
+  "scenes": [
+    {
+      "name": "default",
+      "skills_dir": null,
+      "roles": [
+        {
+          "name": "agent",
+          "agent": "pi-acp",
+          "model": "openrouter/deepseek/deepseek-v4-pro",
+          "reasoning_effort": "high",
+          "timeout_sec": null,
+          "idle_timeout_sec": null,
+          "skills_dir": null,
+          "capabilities": null,
+          "env_keys": []
+        }
+      ],
+      "turns": [
+        {
+          "role": "agent",
+          "has_prompt": false
+        }
+      ]
+    }
+  ],
+  "loop": {
+    "strategy": "single-shot"
+  },
+  "source": {
+    "type": "github",
+    "repo": "skalade/rude_agents",
+    "requested_ref": "master",
+    "resolved_sha": "d68b067959758ae0c77a0bb8d2360e0aa3ff5aed",
+    "path": "build_tb2/important/gcode-to-text",
+    "dirty": false,
+    "file_hashes": {
+      ".gitignore": "sha256:9a8dd8d9b6c3adb8e9e56328df27deef859a3e98fffc9b8133c8b22207c25953",
+      "README.md": "sha256:06f4c8b746d5509618247dbff0ff7474ef95813a8c6f161b0a0955c020a9fe53",
+      "environment/Dockerfile": "sha256:5383f514233180e5a264c1b3180d33b00f14f622217c5062a96d4aa970d4102e",
+      "environment/text.gcode.gz": "sha256:edc008516eb0c30cd2540649642c52f78894b99dc4f79547064e9ffbfbc0e55f",
+      "instruction.md": "sha256:97fb4807aa2e833469f1d44a81cbea36109bb0c2940bbff5c2e8ead0acb9fb31",
+      "solution/solve.sh": "sha256:22dbd3a33750fae3c9e15c669e0f0dcbc2262434fb534bf0c2019269c044792b",
+      "task.toml": "sha256:3aa7a504fe5b3c6eaab16881b0e6dbbe8ac6d4f59084fa49b1e98ad9c71ea00c",
+      "tests/test.sh": "sha256:4770437ea96c3cc84684b4f99d55fb148fcac09f9ea1e8ef49de487716e6c334",
+      "tests/test_outputs.py": "sha256:6b049dc626aa103b20d165552e5cb39ba02c6803b04ba06a43d79435b5f701a6"
+    }
+  },
+  "task_digest": "sha256:45900305406388cffda1634cf79e39bcf685a825e8559b3f9966799ca4e1fccc",
+  "sandbox_id": null
+}

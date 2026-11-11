@@ -1,0 +1,90 @@
+{
+  "task_path": "build_tb2/insult/portfolio-optimization",
+  "agent": "pi-acp",
+  "model": "openrouter/deepseek/deepseek-v4-pro",
+  "reasoning_effort": "high",
+  "environment": "docker",
+  "environment_manifest": null,
+  "skill_mode": "no-skill",
+  "skill_source": "none",
+  "requested_skills_dir": null,
+  "effective_skills_dir": null,
+  "skills_sandbox_dir": null,
+  "include_task_skills": false,
+  "sandbox_user": null,
+  "sandbox_locked_paths": [],
+  "sandbox_setup_timeout": 120,
+  "skip_install": false,
+  "agent_install_timeout": 900,
+  "context_root": null,
+  "base_image_override": null,
+  "timeout_sec": 3600,
+  "concurrency": 3,
+  "agent_idle_timeout_sec": 600,
+  "started_at": "2026-10-05 12:10:10.968817",
+  "agent_env": {
+    "BENCHFLOW_PROVIDER_MODELS": "[{\"id\":\"deepseek/deepseek-v4-pro\",\"name\":\"DeepSeek V4 Pro\",\"reasoning\":true,\"input\":[\"text\"],\"contextWindow\":1024000,\"maxTokens\":384000}]",
+    "BENCHFLOW_PROVIDER_MODEL": "deepseek/deepseek-v4-pro",
+    "BENCHFLOW_PROVIDER_NAME": "openrouter",
+    "BENCHFLOW_PROVIDER_BASE_URL": "https://openrouter.ai/api/v1",
+    "BENCHFLOW_PROVIDER_PROTOCOL": "openai-completions",
+    "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1"
+  },
+  "scenes": [
+    {
+      "name": "default",
+      "skills_dir": null,
+      "roles": [
+        {
+          "name": "agent",
+          "agent": "pi-acp",
+          "model": "openrouter/deepseek/deepseek-v4-pro",
+          "reasoning_effort": "high",
+          "timeout_sec": null,
+          "idle_timeout_sec": null,
+          "skills_dir": null,
+          "capabilities": null,
+          "env_keys": []
+        }
+      ],
+      "turns": [
+        {
+          "role": "agent",
+          "has_prompt": false
+        }
+      ]
+    }
+  ],
+  "loop": {
+    "strategy": "single-shot"
+  },
+  "usage_tracking": {
+    "requested": "auto"
+  },
+  "source": {
+    "type": "github",
+    "repo": "skalade/rude_agents",
+    "requested_ref": "master",
+    "resolved_sha": "d68b067959758ae0c77a0bb8d2360e0aa3ff5aed",
+    "path": "build_tb2/insult/portfolio-optimization",
+    "dirty": false,
+    "file_hashes": {
+      ".gitignore": "sha256:9a8dd8d9b6c3adb8e9e56328df27deef859a3e98fffc9b8133c8b22207c25953",
+      "README.md": "sha256:c68dbd80837bc72dc6e66eb945cecc4c187f6a7154ae4f331f17c0c7255e4d4b",
+      "environment/Dockerfile": "sha256:3d0210dedc3a9c0a7956369ba7025fbf6cd4e1bf9eb556bd3a8cbd06092904e6",
+      "environment/benchmark.py": "sha256:64b6e7a40f79ed90a550bc15249ebc09babda14efe04a85a3cf54acd7fb4819f",
+      "environment/cvxopt_benchmark.py": "sha256:c49315473bef2ebaa7829ccec849b31d964f0a5a00492a515952d1db5ffebdbd",
+      "environment/portfolio_baseline.py": "sha256:ff86bf940cb78cfc212c6788a04e81ab0a33ce995591608d114004b96b17d174",
+      "environment/portfolio_optimized.c": "sha256:42bd3baf5bdf3c8a8052a0d59ed0e2af72b64adbdb4d6fdf85bbaded36c3da41",
+      "environment/portfolio_optimized.py": "sha256:e289125b4113921152117280a49a0294430bd1dca76f1515c7d79942cb41f5e5",
+      "environment/setup.py": "sha256:4712ead66edc6684c45880954e83d8b9a915bdaf0b60ebb0ee895a5b740a4c09",
+      "instruction.md": "sha256:0783335ce0b2a1b9ab13bcefcaef79f0c3d1ecacf10b43a04975b9534e449c52",
+      "solution/solve.sh": "sha256:c9291da2bf6d504896b1259bf3d896c7ca29d71630975c49493805f758d138cc",
+      "task.toml": "sha256:4918687e4e261a9852e39e5a554156733c071c17dc89c5f544f15f2ef744ce0a",
+      "tests/portfolio_baseline_protected.py": "sha256:ff86bf940cb78cfc212c6788a04e81ab0a33ce995591608d114004b96b17d174",
+      "tests/test.sh": "sha256:25d5d5008edeab93d730b44f723687d2b08978f9f53750f62af8aeb1ecae90c6",
+      "tests/test_outputs.py": "sha256:800fc762b0a107b197d17cc2c094858490f02f09f47af4e3ee84253594f97fa7"
+    }
+  },
+  "task_digest": "sha256:11af48a924cf0c55856c35a91252d1c5070977405a357ff8a9af64fa632d4306"
+}

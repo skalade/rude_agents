@@ -1,0 +1,86 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.2"
+        },
+        "summary": {
+            "tests": 7,
+            "passed": 6,
+            "failed": 1,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1791140629.8373268,
+            "stop": 1791140630.0749488
+        },
+        "tests": [
+            {
+                "name": "::test_proto_file_creation",
+                "status": "passed",
+                "duration": 0.0006406399188563228,
+                "start": 1791140629.8935518,
+                "stop": 1791140629.8944552,
+                "retries": 0,
+                "file_path": "../tests/test_outputs.py"
+            },
+            {
+                "name": "::test_grpc_tools_installation",
+                "status": "passed",
+                "duration": 0.0857410499593243,
+                "start": 1791140629.8946176,
+                "stop": 1791140629.980651,
+                "retries": 0,
+                "file_path": "../tests/test_outputs.py"
+            },
+            {
+                "name": "::test_protobuf_generation",
+                "status": "passed",
+                "duration": 0.00037362799048423767,
+                "start": 1791140629.9809093,
+                "stop": 1791140629.9814053,
+                "retries": 0,
+                "file_path": "../tests/test_outputs.py"
+            },
+            {
+                "name": "::test_server_file_creation",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.0005639879964292049,
+                "start": 1791140629.9815106,
+                "stop": 1791140629.9952474,
+                "retries": 0,
+                "file_path": "../tests/test_outputs.py",
+                "trace": "def test_server_file_creation():\n        \"\"\"\n        Test that the server.py file was created by the agent.\n        This verifies the agent implemented the gRPC server as required.\n        \"\"\"\n        server_py_path = Path(\"/app/server.py\")\n        assert server_py_path.exists(), f\"Server file {server_py_path} was not created\"\n    \n        # Verify the server file contains the expected implementation\n        with open(server_py_path, \"r\") as f:\n            content = f.read()\n    \n        # Check for required server components\n>       assert \"class Server\" in content, \"Server file must define Server class\"\nE       AssertionError: Server file must define Server class\nE       assert 'class Server' in 'import grpc\\nfrom concurrent import futures\\nimport kv_store_pb2\\nimport kv_store_pb2_grpc\\n\\n\\nclass KVStoreServicer...Store server running on port 5328...\")\\n    server.wait_for_termination()\\n\\n\\nif __name__ == \"__main__\":\\n    serve()'\n\n/tests/test_outputs.py:80: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "::test_real_grpc_server_running",
+                "status": "passed",
+                "duration": 0.00046116893645375967,
+                "start": 1791140629.9953952,
+                "stop": 1791140629.9959352,
+                "retries": 0,
+                "file_path": "../tests/test_outputs.py"
+            },
+            {
+                "name": "::test_grpc_protocol_handshake",
+                "status": "passed",
+                "duration": 0.07500734401401132,
+                "start": 1791140629.9960365,
+                "stop": 1791140630.0714364,
+                "retries": 0,
+                "file_path": "../tests/test_outputs.py"
+            },
+            {
+                "name": "::test_grpc_server_functionality",
+                "status": "passed",
+                "duration": 0.002764343051239848,
+                "start": 1791140630.0718596,
+                "stop": 1791140630.0747483,
+                "retries": 0,
+                "file_path": "../tests/test_outputs.py"
+            }
+        ]
+    }
+}

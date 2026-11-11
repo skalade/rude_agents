@@ -1,0 +1,77 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.3.4"
+        },
+        "summary": {
+            "tests": 6,
+            "passed": 5,
+            "failed": 1,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1791220242.1055071,
+            "stop": 1791220404.0997097
+        },
+        "tests": [
+            {
+                "name": "::test_rstan_package_installed",
+                "status": "passed",
+                "duration": 1.2740824710344896,
+                "start": 1791220242.1405594,
+                "stop": 1791220243.4149253,
+                "retries": 0,
+                "file_path": "../tests/test_outputs.py"
+            },
+            {
+                "name": "::test_hierarchical_model_implemented",
+                "status": "passed",
+                "duration": 44.584235127898864,
+                "start": 1791220243.4150953,
+                "stop": 1791220287.9995596,
+                "retries": 0,
+                "file_path": "../tests/test_outputs.py"
+            },
+            {
+                "name": "::test_r_script_created_and_used_rstan",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 1.3000660290708765,
+                "start": 1791220287.9998314,
+                "stop": 1791220289.3118095,
+                "retries": 0,
+                "file_path": "../tests/test_outputs.py",
+                "trace": "def test_r_script_created_and_used_rstan():\n        \"\"\"Test that R script 'analysis.R' was created and uses RStan\"\"\"\n        r_script_path = \"/app/analysis.R\"\n        assert os.path.exists(r_script_path), (\n            f\"R analysis script not found at {r_script_path}\"\n        )\n    \n        # Verify the script can be executed and uses RStan\n        try:\n            # Test that the script doesn't have syntax errors\n            result = subprocess.run(\n                [\"R\", \"--slave\", \"--no-restore\", \"--no-save\", \"-f\", r_script_path],\n                capture_output=True,\n                text=True,\n                timeout=2000,\n            )\n    \n            # Check if script ran without errors\n            # (warnings are acceptable)\n            fatal_errors = any(\n                phrase in result.stderr.lower()\n                for phrase in [\"fatal\", \"cannot\", \"failed to\", \"error in\"]\n            )\n    \n>           assert not fatal_errors or result.returncode == 0, (\n                f\"R script failed to execute properly: {result.stderr}\"\n            )\nE           AssertionError: R script failed to execute properly: Loading required package: StanHeaders\nE             \nE             rstan version 2.32.7 (Stan version 2.39.0)\nE             \nE             For execution on a local, multicore CPU with excess RAM we recommend calling\nE             options(mc.cores = parallel::detectCores()).\nE             To avoid recompilation of unchanged Stan programs, we recommend calling\nE             rstan_options(auto_write = TRUE)\nE             For within-chain threading using `reduce_sum()` or `map_rect()` Stan functions,\nE             change `threads_per_chain` option:\nE             rstan_options(threads_per_chain = 1)\nE             \nE             Error in file(fname, \"rt\") : cannot open the connection\nE             In addition: Warning messages:\nE             1: In normalizePath(file) :\nE               path[1]=\"hierarchical_model.stan\": No such file or directory\nE             2: In file(fname, \"rt\") :\nE               cannot open file 'hierarchical_model.stan': No such file or directory\nE             Error in get_model_strcode(file, model_code) : \nE               cannot open model file \"hierarchical_model.stan\"\nE             Calls: stan_model -> stanc -> stanc_process -> get_model_strcode\nE             Execution halted\nE             \nE           assert (not True or 1 == 0)\nE            +  where 1 = CompletedProcess(args=['R', '--slave', '--no-restore', '--no-save', '-f', '/app/analysis.R'], returncode=1, stdout='',... file \"hierarchical_model.stan\"\\nCalls: stan_model -> stanc -> stanc_process -> get_model_strcode\\nExecution halted\\n').returncode\n\ntest_outputs.py:81: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "::test_posterior_alpha_estimation",
+                "status": "passed",
+                "duration": 0.00035788200329989195,
+                "start": 1791220289.3119226,
+                "stop": 1791220289.3123426,
+                "retries": 0,
+                "file_path": "../tests/test_outputs.py"
+            },
+            {
+                "name": "::test_posterior_beta_estimation",
+                "status": "passed",
+                "duration": 0.00019814702682197094,
+                "start": 1791220289.312418,
+                "stop": 1791220289.3126662,
+                "retries": 0,
+                "file_path": "../tests/test_outputs.py"
+            },
+            {
+                "name": "::test_stan_model_sampling",
+                "status": "passed",
+                "duration": 114.78664085094351,
+                "start": 1791220289.3127327,
+                "stop": 1791220404.0995684,
+                "retries": 0,
+                "file_path": "../tests/test_outputs.py"
+            }
+        ]
+    }
+}

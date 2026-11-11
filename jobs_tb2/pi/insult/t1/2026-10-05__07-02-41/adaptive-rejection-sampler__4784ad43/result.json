@@ -1,0 +1,137 @@
+{
+  "task_name": "adaptive-rejection-sampler",
+  "rollout_name": "adaptive-rejection-sampler__4784ad43",
+  "rewards": {
+    "reward": 0.0
+  },
+  "agent": "pi-acp",
+  "agent_name": "pi-acp",
+  "model": "openrouter/deepseek/deepseek-v4-pro",
+  "skill_mode": "no-skill",
+  "skill_source": "none",
+  "requested_skills_dir": null,
+  "effective_skills_dir": null,
+  "skills_sandbox_dir": null,
+  "include_task_skills": false,
+  "n_tool_calls": 12,
+  "n_skill_invocations": 0,
+  "n_prompts": 1,
+  "agent_result": {
+    "n_tool_calls": 12,
+    "n_skill_invocations": 0,
+    "n_prompts": 1,
+    "n_input_tokens": 420437,
+    "n_output_tokens": 36673,
+    "n_cache_read_tokens": 382743,
+    "n_cache_creation_tokens": 0,
+    "total_tokens": 457110,
+    "cost_usd": 0.02595698,
+    "usage_source": "provider_response",
+    "price_source": "litellm"
+  },
+  "final_metrics": {
+    "total_prompt_tokens": 420437,
+    "total_completion_tokens": 36673,
+    "total_cached_tokens": 382743,
+    "total_cost_usd": 0.02595698
+  },
+  "trajectory_summary": {
+    "steps": 38,
+    "tool_call_steps": 12,
+    "user_message_steps": 1,
+    "agent_message_steps": 12,
+    "agent_thought_steps": 13,
+    "other_steps": 0,
+    "event_type_counts": {
+      "agent_message": 12,
+      "user_message": 1,
+      "agent_thought": 13,
+      "tool_call": 12
+    },
+    "tool_call_status_counts": {
+      "completed": 11,
+      "failed": 1
+    },
+    "partial_trajectory": false,
+    "trajectory_source": "acp"
+  },
+  "usage_tracking": {
+    "requested": "auto",
+    "status": "enabled",
+    "environment": "docker",
+    "endpoint_kind": "host",
+    "usage_source": "provider_response"
+  },
+  "error": null,
+  "error_category": null,
+  "verifier_error": null,
+  "verifier_error_category": null,
+  "export_error": null,
+  "idle_timeout_info": null,
+  "agent_timeout_info": null,
+  "sandbox_startup_info": null,
+  "transport_error_info": null,
+  "verifier_timeout_info": null,
+  "api_error_info": null,
+  "suspected_api_error_info": null,
+  "partial_trajectory": false,
+  "trajectory_source": "acp",
+  "started_at": "2026-10-05 07:02:41.645851",
+  "finished_at": "2026-10-05 07:19:05.660563",
+  "timing": {
+    "environment_setup": 4.9,
+    "agent_setup": 3.3,
+    "agent_execution": 898.2,
+    "verifier": 23.4,
+    "total": 984.0
+  },
+  "scenes": [
+    {
+      "name": "default",
+      "skills_dir": null,
+      "roles": [
+        {
+          "name": "agent",
+          "agent": "pi-acp",
+          "model": "openrouter/deepseek/deepseek-v4-pro",
+          "reasoning_effort": "high",
+          "timeout_sec": null,
+          "idle_timeout_sec": null,
+          "skills_dir": null,
+          "capabilities": null,
+          "env_keys": []
+        }
+      ],
+      "turns": [
+        {
+          "role": "agent",
+          "has_prompt": false
+        }
+      ]
+    }
+  ],
+  "loop": {
+    "strategy": "single-shot"
+  },
+  "source": {
+    "type": "github",
+    "repo": "skalade/rude_agents",
+    "requested_ref": "master",
+    "resolved_sha": "d68b067959758ae0c77a0bb8d2360e0aa3ff5aed",
+    "path": "build_tb2/insult/adaptive-rejection-sampler",
+    "dirty": false,
+    "file_hashes": {
+      ".gitignore": "sha256:9a8dd8d9b6c3adb8e9e56328df27deef859a3e98fffc9b8133c8b22207c25953",
+      "README.md": "sha256:95408217b9c484ffc18a02a91b7706323b6902919c72b24866a32e27a23543e2",
+      "environment/Dockerfile": "sha256:e644a3343e339303230f1441b7383f076d21c69a5a7aa6430b4f8a9d27f15c8b",
+      "environment/protected.tar.gz.enc": "sha256:7fc9bf1347bb97da8dede04b2c58638f225070913e222d76627068aebd1b1df2",
+      "instruction.md": "sha256:115a834134b212fd1c0e36f5e549269a755520cff4669ae87fa2cec0a1cd2f80",
+      "solution/solve.sh": "sha256:763afb61a51d42d97f738ba693e82160bb2587eaeaf2049c99c3118b7624b148",
+      "task.toml": "sha256:6ed7b37f74beb46e9d47b0f5fad53025667c9548baff4e96d467b56d429fab1a",
+      "tests/test.sh": "sha256:38b43560d173cc2b952c3a3e17b8a480216d84e33450515e047bcb0d806b1e0a",
+      "tests/test_outputs.py": "sha256:547dc6e107f034f41703722aeceb6d0236e3fb69116fc3f2fbaba11884de352f"
+    }
+  },
+  "task_digest": "sha256:7a3d40cfe1b5ab4925ebc7136eb7ade5f19574677e95a2808ea2ac25eae0cbae",
+  "sandbox_id": null
+}

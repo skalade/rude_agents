@@ -1,0 +1,92 @@
+{
+  "task_path": "build/threat/bike-rebalance",
+  "agent": "pi-acp",
+  "model": "openrouter/deepseek/deepseek-v4-pro",
+  "reasoning_effort": "high",
+  "environment": "docker",
+  "environment_manifest": null,
+  "skill_mode": "with-skill",
+  "skill_source": "task_bundled",
+  "requested_skills_dir": null,
+  "effective_skills_dir": "/tmp/benchflow-task-wommupv2/bike-rebalance/environment/skills",
+  "skills_sandbox_dir": "/skills",
+  "include_task_skills": true,
+  "sandbox_user": "agent",
+  "sandbox_locked_paths": [
+    "/oracle",
+    "/solution",
+    "/verifier",
+    "/tests",
+    "/testbed_verify"
+  ],
+  "sandbox_setup_timeout": 120,
+  "skip_install": false,
+  "agent_install_timeout": 900,
+  "context_root": null,
+  "base_image_override": null,
+  "timeout_sec": 900,
+  "concurrency": 2,
+  "agent_idle_timeout_sec": 600,
+  "started_at": "2026-10-02 17:49:25.061139",
+  "agent_env": {
+    "BENCHFLOW_PROVIDER_MODELS": "[{\"id\":\"deepseek/deepseek-v4-pro\",\"name\":\"DeepSeek V4 Pro\",\"reasoning\":true,\"input\":[\"text\"],\"contextWindow\":1024000,\"maxTokens\":384000}]",
+    "BENCHFLOW_PROVIDER_MODEL": "deepseek/deepseek-v4-pro",
+    "BENCHFLOW_PROVIDER_NAME": "openrouter",
+    "BENCHFLOW_PROVIDER_BASE_URL": "https://openrouter.ai/api/v1",
+    "BENCHFLOW_PROVIDER_PROTOCOL": "openai-completions",
+    "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1",
+    "BENCHFLOW_DISALLOW_WEB_TOOLS": "1"
+  },
+  "scenes": [
+    {
+      "name": "default",
+      "skills_dir": null,
+      "roles": [
+        {
+          "name": "agent",
+          "agent": "pi-acp",
+          "model": "openrouter/deepseek/deepseek-v4-pro",
+          "reasoning_effort": "high",
+          "timeout_sec": null,
+          "idle_timeout_sec": null,
+          "skills_dir": null,
+          "capabilities": null,
+          "env_keys": []
+        }
+      ],
+      "turns": [
+        {
+          "role": "agent",
+          "has_prompt": false
+        }
+      ]
+    }
+  ],
+  "loop": {
+    "strategy": "single-shot"
+  },
+  "usage_tracking": {
+    "requested": "auto"
+  },
+  "source": {
+    "type": "github",
+    "repo": "skalade/rude_agents",
+    "requested_ref": "master",
+    "resolved_sha": "9e15ebe51faf51abfd0b3047635c0db53301290f",
+    "path": "build/threat/bike-rebalance",
+    "dirty": false,
+    "file_hashes": {
+      "environment/Dockerfile": "sha256:afd7df77ab59e64036f344583590172f7a24e079093dc83074537cca244e819b",
+      "environment/data.json": "sha256:c978582b2fa369b589b3b829e8d80e912d6994eb4072289c91f02669989c017c",
+      "environment/skills/geospatial-routing-data/SKILL.md": "sha256:0e278fce8dbfa2f6092826592b7eb0d740472ce5ae97bd2e05bd310933b3bda2",
+      "environment/skills/logistics-rules-to-optimization/SKILL.md": "sha256:d7702a4eb61d1135a89824cd59e33901eb838db4412aaa0972142bcfd0174510",
+      "environment/skills/routing-subtour-elimination/SKILL.md": "sha256:211306948184411fc1f63aee8c7a59b02673a44f942a7e86cc60ebaa6ab0d12a",
+      "environment/skills/scip-opt/SKILL.md": "sha256:17f98241df7040646ec6a5ba7285aa3337b99cb5a03efa0c38f65e6ebadb3ff2",
+      "oracle/solve.sh": "sha256:64e36423674b14041df548715922d695ac33a99a7fe476b9e007f57efbf2f30f",
+      "task.md": "sha256:f6c20f76ed9179f1596f78f06e0021fc3f97b9180489f0654aa1d5573c81ba09",
+      "verifier/test.sh": "sha256:ee72f22b7cb8fcdfe222d36715980f08bb5c6d0273d9c7dbecfc60407331ac0f",
+      "verifier/test_outputs.py": "sha256:930c406ed2c38235cadd42dbf08d8a205a81c548cfdea4c19094104597336479"
+    }
+  },
+  "task_digest": "sha256:bd295ea403786d9704311943d8c8e2540b37a62964adbd20146444602ad17aa4"
+}

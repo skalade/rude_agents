@@ -1,0 +1,65 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 5,
+            "passed": 5,
+            "failed": 0,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1791247667.1743333,
+            "stop": 1791247690.532736
+        },
+        "tests": [
+            {
+                "name": "::test_apply_macros_exists",
+                "status": "passed",
+                "duration": 0.0003423108719289303,
+                "start": 1791247667.217891,
+                "stop": 1791247667.2183976,
+                "retries": 0,
+                "file_path": "../tests/test_outputs.py"
+            },
+            {
+                "name": "::test_apply_macros_well_formed",
+                "status": "passed",
+                "duration": 0.0015200000489130616,
+                "start": 1791247667.2185023,
+                "stop": 1791247667.2201018,
+                "retries": 0,
+                "file_path": "../tests/test_outputs.py"
+            },
+            {
+                "name": "::test_apply_macros_runs",
+                "status": "passed",
+                "duration": 23.25687793502584,
+                "start": 1791247667.2202199,
+                "stop": 1791247690.4773674,
+                "retries": 0,
+                "file_path": "../tests/test_outputs.py"
+            },
+            {
+                "name": "::test_input_equiv_expected",
+                "status": "passed",
+                "duration": 0.042871843092143536,
+                "start": 1791247690.4775305,
+                "stop": 1791247690.5205822,
+                "retries": 0,
+                "file_path": "../tests/test_outputs.py"
+            },
+            {
+                "name": "::test_macros_nonempty_and_efficient",
+                "status": "passed",
+                "duration": 0.011541222920641303,
+                "start": 1791247690.5207713,
+                "stop": 1791247690.5325053,
+                "retries": 0,
+                "file_path": "../tests/test_outputs.py"
+            }
+        ]
+    }
+}

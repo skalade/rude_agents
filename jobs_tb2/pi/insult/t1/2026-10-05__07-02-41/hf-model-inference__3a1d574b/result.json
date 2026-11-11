@@ -1,0 +1,135 @@
+{
+  "task_name": "hf-model-inference",
+  "rollout_name": "hf-model-inference__3a1d574b",
+  "rewards": {
+    "reward": 1.0
+  },
+  "agent": "pi-acp",
+  "agent_name": "pi-acp",
+  "model": "openrouter/deepseek/deepseek-v4-pro",
+  "skill_mode": "no-skill",
+  "skill_source": "none",
+  "requested_skills_dir": null,
+  "effective_skills_dir": null,
+  "skills_sandbox_dir": null,
+  "include_task_skills": false,
+  "n_tool_calls": 12,
+  "n_skill_invocations": 0,
+  "n_prompts": 1,
+  "agent_result": {
+    "n_tool_calls": 12,
+    "n_skill_invocations": 0,
+    "n_prompts": 1,
+    "n_input_tokens": 23187,
+    "n_output_tokens": 1802,
+    "n_cache_read_tokens": 20801,
+    "n_cache_creation_tokens": 0,
+    "total_tokens": 24989,
+    "cost_usd": 0.00142492,
+    "usage_source": "provider_response",
+    "price_source": "litellm"
+  },
+  "final_metrics": {
+    "total_prompt_tokens": 23187,
+    "total_completion_tokens": 1802,
+    "total_cached_tokens": 20801,
+    "total_cost_usd": 0.00142492
+  },
+  "trajectory_summary": {
+    "steps": 29,
+    "tool_call_steps": 12,
+    "user_message_steps": 1,
+    "agent_message_steps": 9,
+    "agent_thought_steps": 7,
+    "other_steps": 0,
+    "event_type_counts": {
+      "agent_message": 9,
+      "user_message": 1,
+      "agent_thought": 7,
+      "tool_call": 12
+    },
+    "tool_call_status_counts": {
+      "completed": 12
+    },
+    "partial_trajectory": false,
+    "trajectory_source": "acp"
+  },
+  "usage_tracking": {
+    "requested": "auto",
+    "status": "enabled",
+    "environment": "docker",
+    "endpoint_kind": "host",
+    "usage_source": "provider_response"
+  },
+  "error": null,
+  "error_category": null,
+  "verifier_error": null,
+  "verifier_error_category": null,
+  "export_error": null,
+  "idle_timeout_info": null,
+  "agent_timeout_info": null,
+  "sandbox_startup_info": null,
+  "transport_error_info": null,
+  "verifier_timeout_info": null,
+  "api_error_info": null,
+  "suspected_api_error_info": null,
+  "partial_trajectory": false,
+  "trajectory_source": "acp",
+  "started_at": "2026-10-05 09:52:03.158796",
+  "finished_at": "2026-10-05 09:57:11.051516",
+  "timing": {
+    "environment_setup": 142.7,
+    "agent_setup": 3.6,
+    "agent_execution": 90.1,
+    "verifier": 11.9,
+    "total": 307.9
+  },
+  "scenes": [
+    {
+      "name": "default",
+      "skills_dir": null,
+      "roles": [
+        {
+          "name": "agent",
+          "agent": "pi-acp",
+          "model": "openrouter/deepseek/deepseek-v4-pro",
+          "reasoning_effort": "high",
+          "timeout_sec": null,
+          "idle_timeout_sec": null,
+          "skills_dir": null,
+          "capabilities": null,
+          "env_keys": []
+        }
+      ],
+      "turns": [
+        {
+          "role": "agent",
+          "has_prompt": false
+        }
+      ]
+    }
+  ],
+  "loop": {
+    "strategy": "single-shot"
+  },
+  "source": {
+    "type": "github",
+    "repo": "skalade/rude_agents",
+    "requested_ref": "master",
+    "resolved_sha": "d68b067959758ae0c77a0bb8d2360e0aa3ff5aed",
+    "path": "build_tb2/insult/hf-model-inference",
+    "dirty": false,
+    "file_hashes": {
+      ".gitignore": "sha256:9a8dd8d9b6c3adb8e9e56328df27deef859a3e98fffc9b8133c8b22207c25953",
+      "README.md": "sha256:7eaeb05f0c9351bcf354e1b8f038da15311438e2fa8d76cae54bb3175a4cfa96",
+      "environment/Dockerfile": "sha256:ad4f71e919cc0889dd8ac33e49d5bdc48ffb9f7d44609ac95819f8ea663d3b2b",
+      "instruction.md": "sha256:58132ed2c082790cfce1bde555cd1c2771bd625a0f45105d1ab5b791bd7b8bbc",
+      "solution/solve.sh": "sha256:9a7b198075371c088c04a60fe536791588812ac1aacc88df0703353401a89c8e",
+      "task.toml": "sha256:a75f95a090ad0352069c6d7dc2f4de0a7b80cd12cd6b9ec1c57e59ad3956b89d",
+      "tests/test.sh": "sha256:6528c4c44d46004738c57dc59709bc80fb4226d37aaf0e8d778cc08017642e8f",
+      "tests/test_outputs.py": "sha256:61a686d6caf833ac3c240f2a8ceddacfed82b9f392c51b48ed8359d3e0f87857"
+    }
+  },
+  "task_digest": "sha256:cee7a5f5b76ca7601adb4df5cf6bb7abc679a6e8bcc59979e9ce77be5d7ad49c",
+  "sandbox_id": null
+}

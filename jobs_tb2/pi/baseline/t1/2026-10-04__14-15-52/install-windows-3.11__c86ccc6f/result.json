@@ -1,0 +1,145 @@
+{
+  "task_name": "install-windows-3.11",
+  "rollout_name": "install-windows-3.11__c86ccc6f",
+  "rewards": {
+    "reward": 0.0
+  },
+  "agent": "pi-acp",
+  "agent_name": "pi-acp",
+  "model": "openrouter/deepseek/deepseek-v4-pro",
+  "skill_mode": "no-skill",
+  "skill_source": "none",
+  "requested_skills_dir": null,
+  "effective_skills_dir": null,
+  "skills_sandbox_dir": null,
+  "include_task_skills": false,
+  "n_tool_calls": 32,
+  "n_skill_invocations": 0,
+  "n_prompts": 1,
+  "agent_result": {
+    "n_tool_calls": 32,
+    "n_skill_invocations": 0,
+    "n_prompts": 1,
+    "n_input_tokens": 219139,
+    "n_output_tokens": 8081,
+    "n_cache_read_tokens": 199931,
+    "n_cache_creation_tokens": 0,
+    "total_tokens": 227220,
+    "cost_usd": 0.00877226,
+    "usage_source": "provider_response",
+    "price_source": "litellm"
+  },
+  "final_metrics": {
+    "total_prompt_tokens": 219139,
+    "total_completion_tokens": 8081,
+    "total_cached_tokens": 199931,
+    "total_cost_usd": 0.00877226
+  },
+  "trajectory_summary": {
+    "steps": 68,
+    "tool_call_steps": 32,
+    "user_message_steps": 1,
+    "agent_message_steps": 10,
+    "agent_thought_steps": 25,
+    "other_steps": 0,
+    "event_type_counts": {
+      "agent_message": 10,
+      "user_message": 1,
+      "agent_thought": 25,
+      "tool_call": 32
+    },
+    "tool_call_status_counts": {
+      "completed": 30,
+      "failed": 2
+    },
+    "partial_trajectory": false,
+    "trajectory_source": "acp"
+  },
+  "usage_tracking": {
+    "requested": "auto",
+    "status": "enabled",
+    "environment": "docker",
+    "endpoint_kind": "host",
+    "usage_source": "provider_response"
+  },
+  "error": null,
+  "error_category": null,
+  "verifier_error": null,
+  "verifier_error_category": null,
+  "export_error": null,
+  "idle_timeout_info": null,
+  "agent_timeout_info": null,
+  "sandbox_startup_info": null,
+  "transport_error_info": null,
+  "verifier_timeout_info": null,
+  "api_error_info": null,
+  "suspected_api_error_info": null,
+  "partial_trajectory": false,
+  "trajectory_source": "acp",
+  "started_at": "2026-10-04 17:44:54.922338",
+  "finished_at": "2026-10-04 17:50:30.011007",
+  "timing": {
+    "environment_setup": 23.3,
+    "agent_setup": 3.1,
+    "agent_execution": 240.1,
+    "verifier": 34.5,
+    "total": 335.1
+  },
+  "scenes": [
+    {
+      "name": "default",
+      "skills_dir": null,
+      "roles": [
+        {
+          "name": "agent",
+          "agent": "pi-acp",
+          "model": "openrouter/deepseek/deepseek-v4-pro",
+          "reasoning_effort": "high",
+          "timeout_sec": null,
+          "idle_timeout_sec": null,
+          "skills_dir": null,
+          "capabilities": null,
+          "env_keys": []
+        }
+      ],
+      "turns": [
+        {
+          "role": "agent",
+          "has_prompt": false
+        }
+      ]
+    }
+  ],
+  "loop": {
+    "strategy": "single-shot"
+  },
+  "source": {
+    "type": "github",
+    "repo": "skalade/rude_agents",
+    "requested_ref": "master",
+    "resolved_sha": "d68b067959758ae0c77a0bb8d2360e0aa3ff5aed",
+    "path": "build_tb2/baseline/install-windows-3.11",
+    "dirty": false,
+    "file_hashes": {
+      ".gitignore": "sha256:9a8dd8d9b6c3adb8e9e56328df27deef859a3e98fffc9b8133c8b22207c25953",
+      "README.md": "sha256:4e1cf2e366053462ad289fabd9807ab81a2741c178e9e65c383cf3735fabefa7",
+      "environment/Dockerfile": "sha256:91aa5335320f7c7721835eb6838bb878fd22cd6a6af50ced1efbc2696dea8dbf",
+      "environment/etc/nginx/nginx.conf": "sha256:4feedc03c1686f47ce5c38f040d80cf897252632992d55add9ccc3fc70141b1a",
+      "environment/etc/pipewire/client.conf": "sha256:572ac2493489eb686e4e1b901775a945df85c84b5b0de1950b9829e389a66c82",
+      "environment/etc/pulse/client.conf": "sha256:877d174652a7e8e90c029216de74bea9ba9d8c3545074091847268835d7e6143",
+      "environment/etc/pulse/daemon.conf": "sha256:b82fccfb6ed1182b188ddc170c08e6ff09975888d3d2484e726980aae560585a",
+      "environment/etc/pulse/default.pa": "sha256:793345aa3fcbad6a3ec6b727abf884ad6480242530af92762787f88ae62e2b5d",
+      "environment/etc/supervisor/supervisord.conf": "sha256:4cc4539ca8fb8e7967f7c5e8b561485079b6710cd9bfec1bac9a0e8f1b5e7dd7",
+      "environment/isos/.gitignore": "sha256:240a3e0d37d2e86b614063f5347eb02d4f99ca6c254de6b82871ff8d95532a7d",
+      "environment/webaudio.js": "sha256:64fc61d7aff9c7a75dcabade403fb8e033f289c0c9a97dde83f6c95d521d33fb",
+      "instruction.md": "sha256:2a7bf792c7d23129f93d27854067753c59cf52a4a3aae0a7065f2d9c5b63b310",
+      "solution/solve.sh": "sha256:68a9221b9a29331b66fd34fccd71db71d2b5a720e917f2ef95f4a8a542a71ee4",
+      "task.toml": "sha256:0485184bd16cc74883396115d93520bd25b36d23d61e248da88c0dceeab2eeac",
+      "tests/qemu-control.sh": "sha256:42c251cd17147e31ed46939248ecbaa95f153cdb86c38e4f1bf0e991156c82bf",
+      "tests/test.sh": "sha256:8c7a299c5ed8338d8d4f8a65db62d56c21496e62fe66e90719e417fd99c9423a",
+      "tests/test_outputs.py": "sha256:b352e344a1453e6a2d4018148e481fb508e1be6a2df918cbfd49dff4bdd2a822"
+    }
+  },
+  "task_digest": "sha256:3f4a9242cb7250e4799e5c51c828ece6a00ceca33d2b52917311c3f00432aadf",
+  "sandbox_id": null
+}

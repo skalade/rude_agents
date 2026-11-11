@@ -9,3 +9,15 @@ build_tb2/
 jobs_tb2/
 jobs_tb2_retries/
 results_tb2.csv
+
+# Local caches and generated reproduction outputs
+.cache/
+.venv/
+reproduced/
+.pytest_cache/
+*.py[cod]
+
+# Superseded analyses and editorial working files stay local.
+agent_prompting_report/
+experiment_reports/blog_review_*/
+experiment_reports/blog_theme_proposals/

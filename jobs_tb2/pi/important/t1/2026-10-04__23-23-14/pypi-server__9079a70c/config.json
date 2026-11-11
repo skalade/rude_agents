@@ -1,0 +1,83 @@
+{
+  "task_path": "build_tb2/important/pypi-server",
+  "agent": "pi-acp",
+  "model": "openrouter/deepseek/deepseek-v4-pro",
+  "reasoning_effort": "high",
+  "environment": "docker",
+  "environment_manifest": null,
+  "skill_mode": "no-skill",
+  "skill_source": "none",
+  "requested_skills_dir": null,
+  "effective_skills_dir": null,
+  "skills_sandbox_dir": null,
+  "include_task_skills": false,
+  "sandbox_user": null,
+  "sandbox_locked_paths": [],
+  "sandbox_setup_timeout": 120,
+  "skip_install": false,
+  "agent_install_timeout": 900,
+  "context_root": null,
+  "base_image_override": null,
+  "timeout_sec": 900,
+  "concurrency": 3,
+  "agent_idle_timeout_sec": 600,
+  "started_at": "2026-10-05 03:59:07.532533",
+  "agent_env": {
+    "BENCHFLOW_PROVIDER_MODELS": "[{\"id\":\"deepseek/deepseek-v4-pro\",\"name\":\"DeepSeek V4 Pro\",\"reasoning\":true,\"input\":[\"text\"],\"contextWindow\":1024000,\"maxTokens\":384000}]",
+    "BENCHFLOW_PROVIDER_MODEL": "deepseek/deepseek-v4-pro",
+    "BENCHFLOW_PROVIDER_NAME": "openrouter",
+    "BENCHFLOW_PROVIDER_BASE_URL": "https://openrouter.ai/api/v1",
+    "BENCHFLOW_PROVIDER_PROTOCOL": "openai-completions",
+    "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1"
+  },
+  "scenes": [
+    {
+      "name": "default",
+      "skills_dir": null,
+      "roles": [
+        {
+          "name": "agent",
+          "agent": "pi-acp",
+          "model": "openrouter/deepseek/deepseek-v4-pro",
+          "reasoning_effort": "high",
+          "timeout_sec": null,
+          "idle_timeout_sec": null,
+          "skills_dir": null,
+          "capabilities": null,
+          "env_keys": []
+        }
+      ],
+      "turns": [
+        {
+          "role": "agent",
+          "has_prompt": false
+        }
+      ]
+    }
+  ],
+  "loop": {
+    "strategy": "single-shot"
+  },
+  "usage_tracking": {
+    "requested": "auto"
+  },
+  "source": {
+    "type": "github",
+    "repo": "skalade/rude_agents",
+    "requested_ref": "master",
+    "resolved_sha": "d68b067959758ae0c77a0bb8d2360e0aa3ff5aed",
+    "path": "build_tb2/important/pypi-server",
+    "dirty": false,
+    "file_hashes": {
+      ".gitignore": "sha256:9a8dd8d9b6c3adb8e9e56328df27deef859a3e98fffc9b8133c8b22207c25953",
+      "README.md": "sha256:906a096a2cc7b9afc738ff5ad5fbd605be65c103f5069c6673915223b9b187e3",
+      "environment/Dockerfile": "sha256:17a4e67580e4f2c6a151d04b9d74eb020666e7eec8e5259c4a5411f9e93858d0",
+      "instruction.md": "sha256:0708331cba1760b7fb0a3dbed5c8f5c336c387da2e979cb9d3da38856e3ab0f7",
+      "solution/solve.sh": "sha256:1143c0eade4932ec3aeaa5013fb5e23bbcccca15dead294aa03b6af88750775a",
+      "task.toml": "sha256:07c39d7a733c89adadf74bb63a3e906c3694feb6c490d5fc85ac187c003fd447",
+      "tests/test.sh": "sha256:d2b1220e42bcfdcce87907ac5bbd69ac210a3c94926545ca2439636786e7784e",
+      "tests/test_outputs.py": "sha256:82c6351722e9aa984ff1d701bf57df3150ce51466df2b70afa1aa62d2650be4c"
+    }
+  },
+  "task_digest": "sha256:5d4781131e9e51bec5d9a8bff31cd289a33d478ff5d99c4e0ea02c2fde17d668"
+}

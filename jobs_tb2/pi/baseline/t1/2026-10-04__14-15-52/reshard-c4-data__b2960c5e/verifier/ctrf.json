@@ -1,0 +1,29 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 1,
+            "passed": 1,
+            "failed": 0,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1791170186.69551,
+            "stop": 1791170228.2410324
+        },
+        "tests": [
+            {
+                "name": "::test_compress_decompress_workflow",
+                "status": "passed",
+                "duration": 39.19482620898634,
+                "start": 1791170189.0062718,
+                "stop": 1791170228.2274113,
+                "retries": 0,
+                "file_path": "../tests/test_outputs.py"
+            }
+        ]
+    }
+}

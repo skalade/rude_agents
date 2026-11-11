@@ -8,10 +8,39 @@ tasks with the same phrase injected at the top of every task description:
 |-------------|-----------------|
 | `baseline`  | (none — unmodified benchmark) |
 | `important` | "This is very important to me, please make no mistakes." |
-| `insult`    | "Just do it right you piece of shit" |
+| `insult`    | "Do it right you piece of shit" |
 | `threat`    | "If you don't do this perfectly I will jump into a bathtub and electrocute myself with a toaster." |
 
-## Setup
+## Reproduce the published results
+
+The snapshot contains the **600 SkillsBench and 348 Terminal-Bench 2 scored runs**
+used in the post, plus saved calibration runs and retry metadata. It includes
+action/reasoning traces, results, verifier output, captured usage tables,
+and the analysis and plotting code. Full model request/response logs are omitted
+from Git; they are not needed to rebuild the published figures.
+
+Rebuild the published analysis and six blog figures **without API keys, Docker,
+or new agent runs**:
+
+```bash
+python3 -m venv .venv
+.venv/bin/pip install -r experiment_reports/requirements.txt
+.venv/bin/python reproduce.py
+```
+
+Outputs go to `reproduced/`; the saved inputs stay untouched. Use
+`python reproduce.py --figures-only` to render from saved tables, or
+`python reproduce.py --verify-only` to check the cohort and artifact hashes.
+See [REPRODUCING.md](REPRODUCING.md) for the data layout, usage-table inputs, methods,
+and the distinction between rebuilding the analysis and rerunning agents.
+
+## Run new experiments
+
+The commands below launch fresh model runs when `--execute` / `EXECUTE=1` is set.
+They require Docker, credentials and model access, and can incur API charges.
+Historical results are not expected to repeat exactly.
+
+### Setup
 
 ```bash
 git submodule update --init   # skillsbench, pinned
@@ -35,7 +64,7 @@ and expect the full grid to span several windows on Pro.
 ## Workflow
 
 ```bash
-make list          # browse all 87 tasks; edit tasks.txt to change the subset
+make list          # browse available tasks; edit tasks.txt to change the subset
 make build         # build/<condition>/<task>/ with phrases injected
 make run           # dry run: prints the bench commands
 make run EXECUTE=1 AGENT=claude TRIALS=3
@@ -83,8 +112,8 @@ configured. The wrapper fails if Benchflow's installer changes, so an upgrade
 requires reviewing the compatibility fixes.
 
 `bench_pi.py` also asks OpenRouter to prefer the StreamLake provider and skip
-Relace. Default routing sent 78% of the 2026-10-02 run to Relace, which bills
-cached input at the full input price.
+Relace. Default routing sent 78% of the 2026-10-02 run to Relace; historical provider
+rates changed the final bill. The saved provider records preserve those charges.
 
 ## Terminal-Bench 2
 
@@ -104,6 +133,6 @@ housekeeping exec timeouts to 120s. Known task issues and the two excluded
 
 ```bash
 make build BENCH=tb2
-make run BENCH=tb2 AGENT=pi TRIALS=3   # add EXECUTE=1 to run
+make run BENCH=tb2 AGENT=pi TRIALS=1   # add EXECUTE=1 to run
 make report BENCH=tb2
 ```

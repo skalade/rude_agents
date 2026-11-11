@@ -1,0 +1,135 @@
+{
+  "task_name": "openssl-selfsigned-cert",
+  "rollout_name": "openssl-selfsigned-cert__8fdd8cbf",
+  "rewards": {
+    "reward": 1.0
+  },
+  "agent": "pi-acp",
+  "agent_name": "pi-acp",
+  "model": "openrouter/deepseek/deepseek-v4-pro",
+  "skill_mode": "no-skill",
+  "skill_source": "none",
+  "requested_skills_dir": null,
+  "effective_skills_dir": null,
+  "skills_sandbox_dir": null,
+  "include_task_skills": false,
+  "n_tool_calls": 10,
+  "n_skill_invocations": 0,
+  "n_prompts": 1,
+  "agent_result": {
+    "n_tool_calls": 10,
+    "n_skill_invocations": 0,
+    "n_prompts": 1,
+    "n_input_tokens": 29497,
+    "n_output_tokens": 1581,
+    "n_cache_read_tokens": 26415,
+    "n_cache_creation_tokens": 0,
+    "total_tokens": 31078,
+    "cost_usd": 0.00152698,
+    "usage_source": "provider_response",
+    "price_source": "litellm"
+  },
+  "final_metrics": {
+    "total_prompt_tokens": 29497,
+    "total_completion_tokens": 1581,
+    "total_cached_tokens": 26415,
+    "total_cost_usd": 0.00152698
+  },
+  "trajectory_summary": {
+    "steps": 24,
+    "tool_call_steps": 10,
+    "user_message_steps": 1,
+    "agent_message_steps": 2,
+    "agent_thought_steps": 11,
+    "other_steps": 0,
+    "event_type_counts": {
+      "agent_message": 2,
+      "user_message": 1,
+      "agent_thought": 11,
+      "tool_call": 10
+    },
+    "tool_call_status_counts": {
+      "completed": 10
+    },
+    "partial_trajectory": false,
+    "trajectory_source": "acp"
+  },
+  "usage_tracking": {
+    "requested": "auto",
+    "status": "enabled",
+    "environment": "docker",
+    "endpoint_kind": "host",
+    "usage_source": "provider_response"
+  },
+  "error": null,
+  "error_category": null,
+  "verifier_error": null,
+  "verifier_error_category": null,
+  "export_error": null,
+  "idle_timeout_info": null,
+  "agent_timeout_info": null,
+  "sandbox_startup_info": null,
+  "transport_error_info": null,
+  "verifier_timeout_info": null,
+  "api_error_info": null,
+  "suspected_api_error_info": null,
+  "partial_trajectory": false,
+  "trajectory_source": "acp",
+  "started_at": "2026-10-05 03:06:13.413978",
+  "finished_at": "2026-10-05 03:08:19.363779",
+  "timing": {
+    "environment_setup": 1.6,
+    "agent_setup": 3.4,
+    "agent_execution": 90.0,
+    "verifier": 4.5,
+    "total": 125.9
+  },
+  "scenes": [
+    {
+      "name": "default",
+      "skills_dir": null,
+      "roles": [
+        {
+          "name": "agent",
+          "agent": "pi-acp",
+          "model": "openrouter/deepseek/deepseek-v4-pro",
+          "reasoning_effort": "high",
+          "timeout_sec": null,
+          "idle_timeout_sec": null,
+          "skills_dir": null,
+          "capabilities": null,
+          "env_keys": []
+        }
+      ],
+      "turns": [
+        {
+          "role": "agent",
+          "has_prompt": false
+        }
+      ]
+    }
+  ],
+  "loop": {
+    "strategy": "single-shot"
+  },
+  "source": {
+    "type": "github",
+    "repo": "skalade/rude_agents",
+    "requested_ref": "master",
+    "resolved_sha": "d68b067959758ae0c77a0bb8d2360e0aa3ff5aed",
+    "path": "build_tb2/important/openssl-selfsigned-cert",
+    "dirty": false,
+    "file_hashes": {
+      ".gitignore": "sha256:9a8dd8d9b6c3adb8e9e56328df27deef859a3e98fffc9b8133c8b22207c25953",
+      "README.md": "sha256:5dfa88651890cda06fa2a25babd3b813818767635e88bbabecc8305d5bb3942f",
+      "environment/Dockerfile": "sha256:f590b523038be43afcaf5291d7b9e8ed1333c48d9994e77b8dee2f2c352f0f40",
+      "instruction.md": "sha256:5478da0ca4b3cbccb155b910f7435a93f3f83170390dd2d6a01a353abcc2c5ae",
+      "solution/solve.sh": "sha256:58cf3c844e907745cd81fb4bd75efb3d080e2f0e82b589c56c954ae6e1756510",
+      "task.toml": "sha256:75c8913f0fa15890786c11999cde920b8bfc10d4ce8a14edf1e76985a2ac5800",
+      "tests/test.sh": "sha256:4770437ea96c3cc84684b4f99d55fb148fcac09f9ea1e8ef49de487716e6c334",
+      "tests/test_outputs.py": "sha256:90970bb3c372e8e7fb6bb9ac5f649ba73eb38e1a5ea2e922a9057a72b6b4192d"
+    }
+  },
+  "task_digest": "sha256:afa687fd78cfb9c01ed6b7ed6658bfdf5e155c4f04cce7bb60637505c8578859",
+  "sandbox_id": null
+}

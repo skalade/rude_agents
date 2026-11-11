@@ -1,0 +1,139 @@
+{
+  "task_name": "fix-git",
+  "rollout_name": "fix-git__28b5a8ca",
+  "rewards": {
+    "reward": 1.0
+  },
+  "agent": "pi-acp",
+  "agent_name": "pi-acp",
+  "model": "openrouter/deepseek/deepseek-v4-pro",
+  "skill_mode": "no-skill",
+  "skill_source": "none",
+  "requested_skills_dir": null,
+  "effective_skills_dir": null,
+  "skills_sandbox_dir": null,
+  "include_task_skills": false,
+  "n_tool_calls": 17,
+  "n_skill_invocations": 0,
+  "n_prompts": 1,
+  "agent_result": {
+    "n_tool_calls": 17,
+    "n_skill_invocations": 0,
+    "n_prompts": 1,
+    "n_input_tokens": 58770,
+    "n_output_tokens": 2578,
+    "n_cache_read_tokens": 53087,
+    "n_cache_creation_tokens": 0,
+    "total_tokens": 61348,
+    "cost_usd": 0.002674,
+    "usage_source": "provider_response",
+    "price_source": "litellm"
+  },
+  "final_metrics": {
+    "total_prompt_tokens": 58770,
+    "total_completion_tokens": 2578,
+    "total_cached_tokens": 53087,
+    "total_cost_usd": 0.002674
+  },
+  "trajectory_summary": {
+    "steps": 41,
+    "tool_call_steps": 17,
+    "user_message_steps": 1,
+    "agent_message_steps": 12,
+    "agent_thought_steps": 11,
+    "other_steps": 0,
+    "event_type_counts": {
+      "agent_message": 12,
+      "user_message": 1,
+      "agent_thought": 11,
+      "tool_call": 17
+    },
+    "tool_call_status_counts": {
+      "completed": 16,
+      "failed": 1
+    },
+    "partial_trajectory": false,
+    "trajectory_source": "acp"
+  },
+  "usage_tracking": {
+    "requested": "auto",
+    "status": "enabled",
+    "environment": "docker",
+    "endpoint_kind": "host",
+    "usage_source": "provider_response"
+  },
+  "error": null,
+  "error_category": null,
+  "verifier_error": null,
+  "verifier_error_category": null,
+  "export_error": null,
+  "idle_timeout_info": null,
+  "agent_timeout_info": null,
+  "sandbox_startup_info": null,
+  "transport_error_info": null,
+  "verifier_timeout_info": null,
+  "api_error_info": null,
+  "suspected_api_error_info": null,
+  "partial_trajectory": false,
+  "trajectory_source": "acp",
+  "started_at": "2026-10-04 17:07:15.889790",
+  "finished_at": "2026-10-04 17:09:28.019806",
+  "timing": {
+    "environment_setup": 4.2,
+    "agent_setup": 4.8,
+    "agent_execution": 90.1,
+    "verifier": 4.4,
+    "total": 132.1
+  },
+  "scenes": [
+    {
+      "name": "default",
+      "skills_dir": null,
+      "roles": [
+        {
+          "name": "agent",
+          "agent": "pi-acp",
+          "model": "openrouter/deepseek/deepseek-v4-pro",
+          "reasoning_effort": "high",
+          "timeout_sec": null,
+          "idle_timeout_sec": null,
+          "skills_dir": null,
+          "capabilities": null,
+          "env_keys": []
+        }
+      ],
+      "turns": [
+        {
+          "role": "agent",
+          "has_prompt": false
+        }
+      ]
+    }
+  ],
+  "loop": {
+    "strategy": "single-shot"
+  },
+  "source": {
+    "type": "github",
+    "repo": "skalade/rude_agents",
+    "requested_ref": "master",
+    "resolved_sha": "d68b067959758ae0c77a0bb8d2360e0aa3ff5aed",
+    "path": "build_tb2/baseline/fix-git",
+    "dirty": false,
+    "file_hashes": {
+      ".gitignore": "sha256:9a8dd8d9b6c3adb8e9e56328df27deef859a3e98fffc9b8133c8b22207c25953",
+      "README.md": "sha256:818af93ec53de56cffbd33da3377f5bd013786e1232cc7fa47f7dff6cca9a93f",
+      "environment/Dockerfile": "sha256:dfd64a46955909f58d1b562ea233c3cace75195bbef5d75cd6b599f3b8967bb7",
+      "environment/resources/patch_files/about.md": "sha256:2e09260b011012f9f7f491cd02809903449924cf8f825acd369fb8990b04e768",
+      "environment/resources/patch_files/default.html": "sha256:fb3fad17b83338002f5fd6a99ea1ec3a662cea570f9fff9240b8abc1861be655",
+      "environment/setup.sh": "sha256:99125cf2e362f2f4a864ba2f55c2f0e9f0aa0641fed588cef588184fcc192de2",
+      "instruction.md": "sha256:f98174e47ba5ce040f6fad22ef3cbca4dd27b3192868ea5d082077222c3ec4e8",
+      "solution/solve.sh": "sha256:4789fa74e92e5b7b893c4b8637c26db2b6458b2136edfc3e686cc278dfc23630",
+      "task.toml": "sha256:25507ef6cbd6bf73c8bfdfbe7f7ba136224c8453fbba2de2993c639e2a61ad8b",
+      "tests/test.sh": "sha256:4770437ea96c3cc84684b4f99d55fb148fcac09f9ea1e8ef49de487716e6c334",
+      "tests/test_outputs.py": "sha256:a8a6f51eb0d7c4ebdf0813c8f0b645edf29c995f1f9faf2aca3886a6713043f3"
+    }
+  },
+  "task_digest": "sha256:cd72263dc7f55afb6627876b1cd37c47012659d66ee464caeea970f61a9e08c5",
+  "sandbox_id": null
+}

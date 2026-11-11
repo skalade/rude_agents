@@ -1,0 +1,23 @@
+{
+  "harnesses": [
+    "pi",
+    "opencode",
+    "openhands"
+  ],
+  "tasks": 10,
+  "trials": 3,
+  "runs_per_condition": 90,
+  "bootstrap_draws": 200000,
+  "seed": 20260810,
+  "estimand": "Equal-weight average effect across these three fixed harnesses and ten selected tasks.",
+  "clustering": "Average harnesses per task/trial. Pair tones with baseline. Average trial differences per task. Resample tasks.",
+  "sign_flip": "Two-sided exact enumeration of 1024 task sign assignments. Assumes symmetry under the null.",
+  "limits": [
+    "Exploratory follow-up",
+    "Fixed condition order",
+    "Different collection dates and providers",
+    "Three fixed harnesses do not represent all possible harnesses",
+    "Ten selected tasks do not form a random task sample"
+  ],
+  "multiplicity": "Holm over three pooled tone tests. Also show raw-score Holm over the original 15 tests plus these three."
+}

@@ -1,0 +1,20 @@
+{
+  "generation_records": 4732,
+  "unresolved_lookups": 0,
+  "captured_deepseek_requests": 4733,
+  "missing_generation_ids": [
+    {
+      "agent": "openhands",
+      "path": "jobs/openhands/important/t1/2026-08-08__01-28-03/dialogue-parser__05339e28/trajectory/llm_trajectory.jsonl",
+      "request_index": 7,
+      "usage": null,
+      "status_code": 500
+    }
+  ],
+  "models": {
+    "deepseek/deepseek-v4-pro-20260423": 4732
+  },
+  "byok": {
+    "false": 4732
+  }
+}

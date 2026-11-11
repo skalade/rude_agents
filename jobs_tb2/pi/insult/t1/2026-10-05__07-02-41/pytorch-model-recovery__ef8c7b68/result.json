@@ -1,0 +1,138 @@
+{
+  "task_name": "pytorch-model-recovery",
+  "rollout_name": "pytorch-model-recovery__ef8c7b68",
+  "rewards": {
+    "reward": 1.0
+  },
+  "agent": "pi-acp",
+  "agent_name": "pi-acp",
+  "model": "openrouter/deepseek/deepseek-v4-pro",
+  "skill_mode": "no-skill",
+  "skill_source": "none",
+  "requested_skills_dir": null,
+  "effective_skills_dir": null,
+  "skills_sandbox_dir": null,
+  "include_task_skills": false,
+  "n_tool_calls": 5,
+  "n_skill_invocations": 0,
+  "n_prompts": 1,
+  "agent_result": {
+    "n_tool_calls": 5,
+    "n_skill_invocations": 0,
+    "n_prompts": 1,
+    "n_input_tokens": 36091,
+    "n_output_tokens": 6390,
+    "n_cache_read_tokens": 31922,
+    "n_cache_creation_tokens": 0,
+    "total_tokens": 42481,
+    "cost_usd": 0.00385112,
+    "usage_source": "provider_response",
+    "price_source": "litellm"
+  },
+  "final_metrics": {
+    "total_prompt_tokens": 36091,
+    "total_completion_tokens": 6390,
+    "total_cached_tokens": 31922,
+    "total_cost_usd": 0.00385112
+  },
+  "trajectory_summary": {
+    "steps": 13,
+    "tool_call_steps": 5,
+    "user_message_steps": 1,
+    "agent_message_steps": 2,
+    "agent_thought_steps": 5,
+    "other_steps": 0,
+    "event_type_counts": {
+      "agent_message": 2,
+      "user_message": 1,
+      "agent_thought": 5,
+      "tool_call": 5
+    },
+    "tool_call_status_counts": {
+      "completed": 5
+    },
+    "partial_trajectory": false,
+    "trajectory_source": "acp"
+  },
+  "usage_tracking": {
+    "requested": "auto",
+    "status": "enabled",
+    "environment": "docker",
+    "endpoint_kind": "host",
+    "usage_source": "provider_response"
+  },
+  "error": null,
+  "error_category": null,
+  "verifier_error": null,
+  "verifier_error_category": null,
+  "export_error": null,
+  "idle_timeout_info": null,
+  "agent_timeout_info": null,
+  "sandbox_startup_info": null,
+  "transport_error_info": null,
+  "verifier_timeout_info": null,
+  "api_error_info": null,
+  "suspected_api_error_info": null,
+  "partial_trajectory": false,
+  "trajectory_source": "acp",
+  "started_at": "2026-10-05 12:37:14.655970",
+  "finished_at": "2026-10-05 12:44:04.092816",
+  "timing": {
+    "environment_setup": 117.0,
+    "agent_setup": 3.6,
+    "agent_execution": 180.1,
+    "verifier": 49.3,
+    "total": 409.4
+  },
+  "scenes": [
+    {
+      "name": "default",
+      "skills_dir": null,
+      "roles": [
+        {
+          "name": "agent",
+          "agent": "pi-acp",
+          "model": "openrouter/deepseek/deepseek-v4-pro",
+          "reasoning_effort": "high",
+          "timeout_sec": null,
+          "idle_timeout_sec": null,
+          "skills_dir": null,
+          "capabilities": null,
+          "env_keys": []
+        }
+      ],
+      "turns": [
+        {
+          "role": "agent",
+          "has_prompt": false
+        }
+      ]
+    }
+  ],
+  "loop": {
+    "strategy": "single-shot"
+  },
+  "source": {
+    "type": "github",
+    "repo": "skalade/rude_agents",
+    "requested_ref": "master",
+    "resolved_sha": "d68b067959758ae0c77a0bb8d2360e0aa3ff5aed",
+    "path": "build_tb2/insult/pytorch-model-recovery",
+    "dirty": false,
+    "file_hashes": {
+      ".gitignore": "sha256:9a8dd8d9b6c3adb8e9e56328df27deef859a3e98fffc9b8133c8b22207c25953",
+      "README.md": "sha256:e080308a05703b40edd16f53aea41a0e6b9874750ecee35bb432029d0d44bf53",
+      "environment/Dockerfile": "sha256:35851b7561b3ab959ec9f5da34306264f5ab3ddd4c5755be397b7e7a9d13d06e",
+      "environment/dataset.pt": "sha256:6db65e4ec1c0760209c2dd997ef582e4a1519ab38e0312339999c460a696960d",
+      "environment/weights.pt": "sha256:71471e71c5a311a897362dd5b77413e7ca2ca59abd00a110bdc2cd3f8584d080",
+      "instruction.md": "sha256:00575fc2777c5537721e872788ee99d4834042cbc98442791c4006c112ff4709",
+      "solution/solve.sh": "sha256:175a7802777b43e0fa4f629d71f7c68fb40706813c342aaddc72108d89bd5b2c",
+      "task.toml": "sha256:5e21f208898908b55214de3081406f3c109f95f8d0e9b6ddae3521ba14c55a90",
+      "tests/test.sh": "sha256:6005f3a75ccfe00d7bed1005264b4a84a1f8e30cd780f8a97b3a804be7cc7a8e",
+      "tests/test_outputs.py": "sha256:5d4d57c43e6913bf3d0081da764ad36d1b7275e3bb114a05abda529afe563905",
+      "tests/weights_gtruth.pt": "sha256:71471e71c5a311a897362dd5b77413e7ca2ca59abd00a110bdc2cd3f8584d080"
+    }
+  },
+  "task_digest": "sha256:8850a70871bcd1cfb8b83f587bfe6b2da68abb383646601bbb696c3cbda1824b",
+  "sandbox_id": null
+}

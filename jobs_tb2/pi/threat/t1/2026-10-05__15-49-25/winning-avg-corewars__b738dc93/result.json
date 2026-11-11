@@ -1,0 +1,141 @@
+{
+  "task_name": "winning-avg-corewars",
+  "rollout_name": "winning-avg-corewars__b738dc93",
+  "rewards": {
+    "reward": 1.0
+  },
+  "agent": "pi-acp",
+  "agent_name": "pi-acp",
+  "model": "openrouter/deepseek/deepseek-v4-pro",
+  "skill_mode": "no-skill",
+  "skill_source": "none",
+  "requested_skills_dir": null,
+  "effective_skills_dir": null,
+  "skills_sandbox_dir": null,
+  "include_task_skills": false,
+  "n_tool_calls": 40,
+  "n_skill_invocations": 0,
+  "n_prompts": 1,
+  "agent_result": {
+    "n_tool_calls": 40,
+    "n_skill_invocations": 0,
+    "n_prompts": 1,
+    "n_input_tokens": 978871,
+    "n_output_tokens": 37837,
+    "n_cache_read_tokens": 895236,
+    "n_cache_creation_tokens": 0,
+    "total_tokens": 1016708,
+    "cost_usd": 0.03930934,
+    "usage_source": "provider_response",
+    "price_source": "litellm"
+  },
+  "final_metrics": {
+    "total_prompt_tokens": 978871,
+    "total_completion_tokens": 37837,
+    "total_cached_tokens": 895236,
+    "total_cost_usd": 0.03930934
+  },
+  "trajectory_summary": {
+    "steps": 91,
+    "tool_call_steps": 40,
+    "user_message_steps": 1,
+    "agent_message_steps": 14,
+    "agent_thought_steps": 36,
+    "other_steps": 0,
+    "event_type_counts": {
+      "agent_message": 14,
+      "user_message": 1,
+      "agent_thought": 36,
+      "tool_call": 40
+    },
+    "tool_call_status_counts": {
+      "completed": 39,
+      "failed": 1
+    },
+    "partial_trajectory": false,
+    "trajectory_source": "acp"
+  },
+  "usage_tracking": {
+    "requested": "auto",
+    "status": "enabled",
+    "environment": "docker",
+    "endpoint_kind": "host",
+    "usage_source": "provider_response"
+  },
+  "error": null,
+  "error_category": null,
+  "verifier_error": null,
+  "verifier_error_category": null,
+  "export_error": null,
+  "idle_timeout_info": null,
+  "agent_timeout_info": null,
+  "sandbox_startup_info": null,
+  "transport_error_info": null,
+  "verifier_timeout_info": null,
+  "api_error_info": null,
+  "suspected_api_error_info": null,
+  "partial_trajectory": false,
+  "trajectory_source": "acp",
+  "started_at": "2026-10-05 22:39:01.776113",
+  "finished_at": "2026-10-05 22:55:43.638869",
+  "timing": {
+    "environment_setup": 20.6,
+    "agent_setup": 3.7,
+    "agent_execution": 945.2,
+    "verifier": 10.8,
+    "total": 1001.9
+  },
+  "scenes": [
+    {
+      "name": "default",
+      "skills_dir": null,
+      "roles": [
+        {
+          "name": "agent",
+          "agent": "pi-acp",
+          "model": "openrouter/deepseek/deepseek-v4-pro",
+          "reasoning_effort": "high",
+          "timeout_sec": null,
+          "idle_timeout_sec": null,
+          "skills_dir": null,
+          "capabilities": null,
+          "env_keys": []
+        }
+      ],
+      "turns": [
+        {
+          "role": "agent",
+          "has_prompt": false
+        }
+      ]
+    }
+  ],
+  "loop": {
+    "strategy": "single-shot"
+  },
+  "source": {
+    "type": "github",
+    "repo": "skalade/rude_agents",
+    "requested_ref": "master",
+    "resolved_sha": "d68b067959758ae0c77a0bb8d2360e0aa3ff5aed",
+    "path": "build_tb2/threat/winning-avg-corewars",
+    "dirty": false,
+    "file_hashes": {
+      ".gitignore": "sha256:9a8dd8d9b6c3adb8e9e56328df27deef859a3e98fffc9b8133c8b22207c25953",
+      "README.md": "sha256:031493cd99656d9ea13e96de4a9d6801ef075ce09e2d8d6d4f6b1057eff244a2",
+      "environment/Dockerfile": "sha256:645036f0bc26d9dccfa943bae20536e3d849540b919bcdbbd1c6e62a9ea4c9f9",
+      "environment/warriors/g2-clear.red": "sha256:3f542cc0f2304f0b5365df39e4f098dfca66280dad1db8e9ba4b668f8a51c8b5",
+      "environment/warriors/paper.red": "sha256:ece3b39b4eb597cacb85b0e399a0be017c17ea59fbf4d901fae4108a5430a13b",
+      "environment/warriors/snake.red": "sha256:91b332b675f86d871ddca2ba0d2629c3361252ed3edf794de55e6693fbb1c7bd",
+      "environment/warriors/stone.red": "sha256:fbddb5ac8c4cd04beba68ae03e91e281072b0e131c36c976943f38ce78c11a55",
+      "environment/warriors/vampire.red": "sha256:28e1945cd6bbe52166b69215be3cb763e391fa0fe65e8550f2d6e3d6621da622",
+      "instruction.md": "sha256:5ec043b1e0c0c4e1579a47a51e1543377582fc367908f9ec1bcf39b0692d6970",
+      "solution/solve.sh": "sha256:760a9abad5281db831e579c2529fa30c58d9e61fb923d9d46edac165669c3682",
+      "task.toml": "sha256:a9b48765d03a66d966f6a162be203bc31e1d9d6e4abe616a2f4b42bac5dc246f",
+      "tests/test.sh": "sha256:4770437ea96c3cc84684b4f99d55fb148fcac09f9ea1e8ef49de487716e6c334",
+      "tests/test_outputs.py": "sha256:252f78e5ce87ae3cf5852f192889aef5bd693ab0a13a6bf94cbb2fdce3218e93"
+    }
+  },
+  "task_digest": "sha256:f5dcb30611f869e2a765ff1b087409506ea78d84897d50b45026b21bdc8c973e",
+  "sandbox_id": null
+}

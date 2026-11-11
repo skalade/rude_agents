@@ -1,0 +1,59 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 4,
+            "passed": 4,
+            "failed": 0,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1791164125.1394446,
+            "stop": 1791164180.5704372
+        },
+        "tests": [
+            {
+                "name": "::test_c_extension_exists",
+                "status": "passed",
+                "duration": 0.23409786203410476,
+                "start": 1791164125.1838858,
+                "stop": 1791164125.4182198,
+                "retries": 0,
+                "file_path": "../tests/test_outputs.py"
+            },
+            {
+                "name": "::test_baseline_functionality",
+                "status": "passed",
+                "duration": 0.00028958404436707497,
+                "start": 1791164125.4184082,
+                "stop": 1791164125.4187746,
+                "retries": 0,
+                "file_path": "../tests/test_outputs.py"
+            },
+            {
+                "name": "::test_correctness_small",
+                "status": "passed",
+                "duration": 0.0014569549821317196,
+                "start": 1791164125.4188654,
+                "stop": 1791164125.4203947,
+                "retries": 0,
+                "file_path": "../tests/test_outputs.py"
+            },
+            {
+                "name": "::test_performance_and_scalability",
+                "status": "passed",
+                "duration": 10.445226022973657,
+                "start": 1791164125.4204907,
+                "stop": 1791164135.8658912,
+                "retries": 2,
+                "file_path": "../tests/test_outputs.py",
+                "tags": [
+                    "parametrize::n::[5000, 6000, 8000]"
+                ]
+            }
+        ]
+    }
+}

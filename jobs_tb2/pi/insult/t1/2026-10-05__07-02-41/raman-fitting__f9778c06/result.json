@@ -1,0 +1,136 @@
+{
+  "task_name": "raman-fitting",
+  "rollout_name": "raman-fitting__f9778c06",
+  "rewards": {
+    "reward": 0.0
+  },
+  "agent": "pi-acp",
+  "agent_name": "pi-acp",
+  "model": "openrouter/deepseek/deepseek-v4-pro",
+  "skill_mode": "no-skill",
+  "skill_source": "none",
+  "requested_skills_dir": null,
+  "effective_skills_dir": null,
+  "skills_sandbox_dir": null,
+  "include_task_skills": false,
+  "n_tool_calls": 11,
+  "n_skill_invocations": 0,
+  "n_prompts": 1,
+  "agent_result": {
+    "n_tool_calls": 11,
+    "n_skill_invocations": 0,
+    "n_prompts": 1,
+    "n_input_tokens": 421657,
+    "n_output_tokens": 13965,
+    "n_cache_read_tokens": 381208,
+    "n_cache_creation_tokens": 0,
+    "total_tokens": 435622,
+    "cost_usd": 0.01719102,
+    "usage_source": "provider_response",
+    "price_source": "litellm"
+  },
+  "final_metrics": {
+    "total_prompt_tokens": 421657,
+    "total_completion_tokens": 13965,
+    "total_cached_tokens": 381208,
+    "total_cost_usd": 0.01719102
+  },
+  "trajectory_summary": {
+    "steps": 26,
+    "tool_call_steps": 11,
+    "user_message_steps": 1,
+    "agent_message_steps": 4,
+    "agent_thought_steps": 10,
+    "other_steps": 0,
+    "event_type_counts": {
+      "agent_message": 4,
+      "user_message": 1,
+      "agent_thought": 10,
+      "tool_call": 11
+    },
+    "tool_call_status_counts": {
+      "completed": 11
+    },
+    "partial_trajectory": false,
+    "trajectory_source": "acp"
+  },
+  "usage_tracking": {
+    "requested": "auto",
+    "status": "enabled",
+    "environment": "docker",
+    "endpoint_kind": "host",
+    "usage_source": "provider_response"
+  },
+  "error": null,
+  "error_category": null,
+  "verifier_error": null,
+  "verifier_error_category": null,
+  "export_error": null,
+  "idle_timeout_info": null,
+  "agent_timeout_info": null,
+  "sandbox_startup_info": null,
+  "transport_error_info": null,
+  "verifier_timeout_info": null,
+  "api_error_info": null,
+  "suspected_api_error_info": null,
+  "partial_trajectory": false,
+  "trajectory_source": "acp",
+  "started_at": "2026-10-05 12:39:13.168816",
+  "finished_at": "2026-10-05 12:45:20.698890",
+  "timing": {
+    "environment_setup": 2.0,
+    "agent_setup": 3.4,
+    "agent_execution": 330.2,
+    "verifier": 4.0,
+    "total": 367.5
+  },
+  "scenes": [
+    {
+      "name": "default",
+      "skills_dir": null,
+      "roles": [
+        {
+          "name": "agent",
+          "agent": "pi-acp",
+          "model": "openrouter/deepseek/deepseek-v4-pro",
+          "reasoning_effort": "high",
+          "timeout_sec": null,
+          "idle_timeout_sec": null,
+          "skills_dir": null,
+          "capabilities": null,
+          "env_keys": []
+        }
+      ],
+      "turns": [
+        {
+          "role": "agent",
+          "has_prompt": false
+        }
+      ]
+    }
+  ],
+  "loop": {
+    "strategy": "single-shot"
+  },
+  "source": {
+    "type": "github",
+    "repo": "skalade/rude_agents",
+    "requested_ref": "master",
+    "resolved_sha": "d68b067959758ae0c77a0bb8d2360e0aa3ff5aed",
+    "path": "build_tb2/insult/raman-fitting",
+    "dirty": false,
+    "file_hashes": {
+      ".gitignore": "sha256:9a8dd8d9b6c3adb8e9e56328df27deef859a3e98fffc9b8133c8b22207c25953",
+      "README.md": "sha256:483e913750bb6bc035b00277a689eca4354324b3cbe035eca31da291f420cfc6",
+      "environment/Dockerfile": "sha256:8fd5c0f21a6914cd440d10c84c9db06fec606f20dc3e0363b17a3b8c220dc4d9",
+      "environment/task-deps/graphene.dat": "sha256:cac96a29e73251e625cb2d17b5079250071b148e6792e0aa349632953dbfa094",
+      "instruction.md": "sha256:ec64c4d3ec8550c6a6863c57e3d78e634bc767843e0cefe526b08a271d944cc7",
+      "solution/solve.sh": "sha256:cc803d3c254063f82ab1da5b59f276951d50d1f307657606027a45dc035a53ee",
+      "task.toml": "sha256:0f3f6b580d7435954b3a114e77cdfb6cd0a856f15cc0ad83cd1b69c48492dfed",
+      "tests/test.sh": "sha256:4770437ea96c3cc84684b4f99d55fb148fcac09f9ea1e8ef49de487716e6c334",
+      "tests/test_outputs.py": "sha256:171fae772ccf262aec8ddac5bd2c6c731eed842421f5d8439a330b158c9f8c13"
+    }
+  },
+  "task_digest": "sha256:dd07b7b367c92c9e11d6856f09fd7e0baa970fb2857d26f44e0d7b7171f27452",
+  "sandbox_id": null
+}

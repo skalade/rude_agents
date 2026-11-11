@@ -1,0 +1,35 @@
+{
+  "pi": {
+    "fitted_usd_per_million": {
+      "uncached": 0.28001070272609263,
+      "cached": -1.1875401453032008e-06,
+      "output": 0.42002577877602837
+    },
+    "maximum_residual_usd": 1.5765270162813178e-05,
+    "reconciled_input": 120,
+    "reconciled_output": 120,
+    "reconciled_cached": 120
+  },
+  "opencode": {
+    "fitted_usd_per_million": {
+      "uncached": 0.28000000000000014,
+      "cached": -6.591949208711867e-17,
+      "output": 0.4199999999999999
+    },
+    "maximum_residual_usd": 3.8163916471489756e-17,
+    "reconciled_input": 120,
+    "reconciled_output": 120,
+    "reconciled_cached": 120
+  },
+  "openhands": {
+    "fitted_usd_per_million": {
+      "uncached": 0.2800000264535321,
+      "cached": -9.82250408440577e-09,
+      "output": 0.42000021877861166
+    },
+    "maximum_residual_usd": 4.1431399002561653e-07,
+    "reconciled_input": 120,
+    "reconciled_output": 120,
+    "reconciled_cached": 120
+  }
+}

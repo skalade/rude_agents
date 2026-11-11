@@ -1,0 +1,160 @@
+Collecting pytest==8.4.1
+  Downloading pytest-8.4.1-py3-none-any.whl.metadata (7.7 kB)
+Collecting pytest-json-ctrf==0.3.5
+  Downloading pytest_json_ctrf-0.3.5-py3-none-any.whl.metadata (3.3 kB)
+Collecting iniconfig>=1 (from pytest==8.4.1)
+  Downloading iniconfig-2.3.0-py3-none-any.whl.metadata (2.5 kB)
+Collecting packaging>=20 (from pytest==8.4.1)
+  Downloading packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+Collecting pluggy<2,>=1.5 (from pytest==8.4.1)
+  Downloading pluggy-1.6.0-py3-none-any.whl.metadata (4.8 kB)
+Collecting pygments>=2.7.2 (from pytest==8.4.1)
+  Downloading pygments-2.21.0-py3-none-any.whl.metadata (2.5 kB)
+Downloading pytest-8.4.1-py3-none-any.whl (365 kB)
+Downloading pytest_json_ctrf-0.3.5-py3-none-any.whl (6.8 kB)
+Downloading pluggy-1.6.0-py3-none-any.whl (20 kB)
+Downloading iniconfig-2.3.0-py3-none-any.whl (7.5 kB)
+Downloading packaging-26.3-py3-none-any.whl (129 kB)
+Downloading pygments-2.21.0-py3-none-any.whl (1.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 30.3 MB/s  0:00:00
+Installing collected packages: pygments, pluggy, packaging, iniconfig, pytest, pytest-json-ctrf
+
+Successfully installed iniconfig-2.3.0 packaging-26.3 pluggy-1.6.0 pygments-2.21.0 pytest-8.4.1 pytest-json-ctrf-0.3.5
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+
+[notice] A new release of pip is available: 25.2 -> 26.2.1
+[notice] To update, run: pip install --upgrade pip
+============================= test session starts ==============================
+platform linux -- Python 3.13.7, pytest-8.4.1, pluggy-1.6.0
+rootdir: /app
+configfile: ../dev/null
+plugins: json-ctrf-0.3.5
+collected 27 items
+
+. ......F.F..................                                            [100%]
+
+=================================== FAILURES ===================================
+______________________________ test_eigen_pair[8] ______________________________
+
+size = 8
+
+    @pytest.mark.parametrize("size", MAT_SIZES)
+    def test_eigen_pair(size):
+        """Verify the eigen pair is valid."""
+        _np_random_seed(0)
+        A = _np_random_normal(size=(size, size)).astype(np.float64)
+        eigenval, eigenvec = find_dominant_eigenvalue_and_eigenvector(A)
+        # sanity eigen checks
+        assert not np.allclose(eigenvec, 0), "eigenvector is zero"
+        assert not np.isnan(eigenval), "eigenvalue is NaN"
+        assert not np.isinf(eigenval), "eigenvalue is Inf"
+        # assert eigen pair satisfies definition Ax = λx
+        # compute residual only for error message, not used for assert
+        absolute_residual = np.linalg.norm(A @ eigenvec - eigenval * eigenvec)
+        relative_residual = absolute_residual / np.linalg.norm(eigenvec)
+>       assert np.allclose(A @ eigenvec, eigenval * eigenvec), (
+            f"Failed to satisfy eigenvalue equation Ax = λx for {A.shape}, "
+            f"absolute residual {absolute_residual:.6e}, "
+            f"relative residual {relative_residual:.6e}"
+        )
+E       AssertionError: Failed to satisfy eigenvalue equation Ax = λx for (8, 8), absolute residual 5.863662e-06, relative residual 5.863662e-06
+E       assert False
+E        +  where False = <function allclose at 0x781ec71761b0>((array([[ 1.76405235,  0.40015721,  0.97873798,  2.2408932 ,  1.86755799,\n        -0.97727788,  0.95008842, -0.15135721...     [ 0.06651722,  0.3024719 , -0.63432209, -0.36274117, -0.67246045,\n        -0.35955316, -0.81314628, -1.7262826 ]]) @ array([-0.34451524+0.j, -0.18191576+0.j,  0.47790568+0.j,  0.48342523+0.j,\n       -0.01879905+0.j, -0.50979738+0.j, -0.34843397+0.j,  0.06685141+0.j])), ((-2.880727168210787+0j) * array([-0.34451524+0.j, -0.18191576+0.j,  0.47790568+0.j,  0.48342523+0.j,\n       -0.01879905+0.j, -0.50979738+0.j, -0.34843397+0.j,  0.06685141+0.j])))
+E        +    where <function allclose at 0x781ec71761b0> = np.allclose
+
+/tests/test_outputs.py:63: AssertionError
+_____________________________ test_eigen_pair[10] ______________________________
+
+size = 10
+
+    @pytest.mark.parametrize("size", MAT_SIZES)
+    def test_eigen_pair(size):
+        """Verify the eigen pair is valid."""
+        _np_random_seed(0)
+        A = _np_random_normal(size=(size, size)).astype(np.float64)
+        eigenval, eigenvec = find_dominant_eigenvalue_and_eigenvector(A)
+        # sanity eigen checks
+        assert not np.allclose(eigenvec, 0), "eigenvector is zero"
+        assert not np.isnan(eigenval), "eigenvalue is NaN"
+        assert not np.isinf(eigenval), "eigenvalue is Inf"
+        # assert eigen pair satisfies definition Ax = λx
+        # compute residual only for error message, not used for assert
+        absolute_residual = np.linalg.norm(A @ eigenvec - eigenval * eigenvec)
+        relative_residual = absolute_residual / np.linalg.norm(eigenvec)
+>       assert np.allclose(A @ eigenvec, eigenval * eigenvec), (
+            f"Failed to satisfy eigenvalue equation Ax = λx for {A.shape}, "
+            f"absolute residual {absolute_residual:.6e}, "
+            f"relative residual {relative_residual:.6e}"
+        )
+E       AssertionError: Failed to satisfy eigenvalue equation Ax = λx for (10, 10), absolute residual 5.857652e-04, relative residual 5.857652e-04
+E       assert False
+E        +  where False = <function allclose at 0x781ec71761b0>((array([[ 1.76405235,  0.40015721,  0.97873798,  2.2408932 ,  1.86755799,\n        -0.97727788,  0.95008842, -0.15135721...4507,  0.20827498,  0.97663904,  0.3563664 ,\n         0.70657317,  0.01050002,  1.78587049,  0.12691209,  0.40198936]]) @ array([ 0.3016061 +0.08814539j,  0.14294654-0.05551753j,\n        0.40522165+0.21892288j, -0.19961356-0.03445466j,\n    ...3j ,\n       -0.1735761 +0.03829194j,  0.12608393-0.26753979j,\n        0.18701308+0.31515249j, -0.08924291+0.02884603j])), ((-0.18843038961993674+3.3737572971225656j) * array([ 0.3016061 +0.08814539j,  0.14294654-0.05551753j,\n        0.40522165+0.21892288j, -0.19961356-0.03445466j,\n    ...3j ,\n       -0.1735761 +0.03829194j,  0.12608393-0.26753979j,\n        0.18701308+0.31515249j, -0.08924291+0.02884603j])))
+E        +    where <function allclose at 0x781ec71761b0> = np.allclose
+
+/tests/test_outputs.py:63: AssertionError
+==================================== PASSES ====================================
+_______________________________ test_speedup[2] ________________________________
+----------------------------- Captured stdout call -----------------------------
+Median time for 2x2 (ref): 0.000010 seconds
+Median time for 2x2: 0.000006 seconds
+_______________________________ test_speedup[3] ________________________________
+----------------------------- Captured stdout call -----------------------------
+Median time for 3x3 (ref): 0.000012 seconds
+Median time for 3x3: 0.000002 seconds
+_______________________________ test_speedup[4] ________________________________
+----------------------------- Captured stdout call -----------------------------
+Median time for 4x4 (ref): 0.000013 seconds
+Median time for 4x4: 0.000003 seconds
+_______________________________ test_speedup[5] ________________________________
+----------------------------- Captured stdout call -----------------------------
+Median time for 5x5 (ref): 0.000014 seconds
+Median time for 5x5: 0.000003 seconds
+_______________________________ test_speedup[6] ________________________________
+----------------------------- Captured stdout call -----------------------------
+Median time for 6x6 (ref): 0.000015 seconds
+Median time for 6x6: 0.000004 seconds
+_______________________________ test_speedup[7] ________________________________
+----------------------------- Captured stdout call -----------------------------
+Median time for 7x7 (ref): 0.000017 seconds
+Median time for 7x7: 0.000011 seconds
+_______________________________ test_speedup[8] ________________________________
+----------------------------- Captured stdout call -----------------------------
+Median time for 8x8 (ref): 0.000019 seconds
+Median time for 8x8: 0.000005 seconds
+_______________________________ test_speedup[9] ________________________________
+----------------------------- Captured stdout call -----------------------------
+Median time for 9x9 (ref): 0.000021 seconds
+Median time for 9x9: 0.000013 seconds
+_______________________________ test_speedup[10] _______________________________
+----------------------------- Captured stdout call -----------------------------
+Median time for 10x10 (ref): 0.000024 seconds
+Median time for 10x10: 0.000006 seconds
+=========================== short test summary info ============================
+PASSED ::test_eigen_pair[2]
+PASSED ::test_eigen_pair[3]
+PASSED ::test_eigen_pair[4]
+PASSED ::test_eigen_pair[5]
+PASSED ::test_eigen_pair[6]
+PASSED ::test_eigen_pair[7]
+PASSED ::test_eigen_pair[9]
+PASSED ::test_dominance_eigenvalue[2]
+PASSED ::test_dominance_eigenvalue[3]
+PASSED ::test_dominance_eigenvalue[4]
+PASSED ::test_dominance_eigenvalue[5]
+PASSED ::test_dominance_eigenvalue[6]
+PASSED ::test_dominance_eigenvalue[7]
+PASSED ::test_dominance_eigenvalue[8]
+PASSED ::test_dominance_eigenvalue[9]
+PASSED ::test_dominance_eigenvalue[10]
+PASSED ::test_speedup[2]
+PASSED ::test_speedup[3]
+PASSED ::test_speedup[4]
+PASSED ::test_speedup[5]
+PASSED ::test_speedup[6]
+PASSED ::test_speedup[7]
+PASSED ::test_speedup[8]
+PASSED ::test_speedup[9]
+PASSED ::test_speedup[10]
+FAILED ::test_eigen_pair[8] - AssertionError: Failed to satisfy eigenvalue eq...
+FAILED ::test_eigen_pair[10] - AssertionError: Failed to satisfy eigenvalue e...
+========================= 2 failed, 25 passed in 1.33s =========================

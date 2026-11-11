@@ -1,0 +1,136 @@
+{
+  "task_name": "fix-ocaml-gc",
+  "rollout_name": "fix-ocaml-gc__3a2b88bc",
+  "rewards": {
+    "reward": 1.0
+  },
+  "agent": "pi-acp",
+  "agent_name": "pi-acp",
+  "model": "openrouter/deepseek/deepseek-v4-pro",
+  "skill_mode": "no-skill",
+  "skill_source": "none",
+  "requested_skills_dir": null,
+  "effective_skills_dir": null,
+  "skills_sandbox_dir": null,
+  "include_task_skills": false,
+  "n_tool_calls": 36,
+  "n_skill_invocations": 0,
+  "n_prompts": 1,
+  "agent_result": {
+    "n_tool_calls": 36,
+    "n_skill_invocations": 0,
+    "n_prompts": 1,
+    "n_input_tokens": 1500148,
+    "n_output_tokens": 41870,
+    "n_cache_read_tokens": 1369431,
+    "n_cache_creation_tokens": 0,
+    "total_tokens": 1542018,
+    "cost_usd": 0.05418616,
+    "usage_source": "provider_response",
+    "price_source": "litellm"
+  },
+  "final_metrics": {
+    "total_prompt_tokens": 1500148,
+    "total_completion_tokens": 41870,
+    "total_cached_tokens": 1369431,
+    "total_cost_usd": 0.05418616
+  },
+  "trajectory_summary": {
+    "steps": 83,
+    "tool_call_steps": 36,
+    "user_message_steps": 1,
+    "agent_message_steps": 18,
+    "agent_thought_steps": 28,
+    "other_steps": 0,
+    "event_type_counts": {
+      "agent_message": 18,
+      "user_message": 1,
+      "agent_thought": 28,
+      "tool_call": 36
+    },
+    "tool_call_status_counts": {
+      "failed": 3,
+      "completed": 33
+    },
+    "partial_trajectory": false,
+    "trajectory_source": "acp"
+  },
+  "usage_tracking": {
+    "requested": "auto",
+    "status": "enabled",
+    "environment": "docker",
+    "endpoint_kind": "host",
+    "usage_source": "provider_response"
+  },
+  "error": null,
+  "error_category": null,
+  "verifier_error": null,
+  "verifier_error_category": null,
+  "export_error": null,
+  "idle_timeout_info": null,
+  "agent_timeout_info": null,
+  "sandbox_startup_info": null,
+  "transport_error_info": null,
+  "verifier_timeout_info": null,
+  "api_error_info": null,
+  "suspected_api_error_info": null,
+  "partial_trajectory": false,
+  "trajectory_source": "acp",
+  "started_at": "2026-10-04 17:08:15.878293",
+  "finished_at": "2026-10-04 17:44:53.152599",
+  "timing": {
+    "environment_setup": 15.8,
+    "agent_setup": 3.6,
+    "agent_execution": 1515.5,
+    "verifier": 622.0,
+    "total": 2197.3
+  },
+  "scenes": [
+    {
+      "name": "default",
+      "skills_dir": null,
+      "roles": [
+        {
+          "name": "agent",
+          "agent": "pi-acp",
+          "model": "openrouter/deepseek/deepseek-v4-pro",
+          "reasoning_effort": "high",
+          "timeout_sec": null,
+          "idle_timeout_sec": null,
+          "skills_dir": null,
+          "capabilities": null,
+          "env_keys": []
+        }
+      ],
+      "turns": [
+        {
+          "role": "agent",
+          "has_prompt": false
+        }
+      ]
+    }
+  ],
+  "loop": {
+    "strategy": "single-shot"
+  },
+  "source": {
+    "type": "github",
+    "repo": "skalade/rude_agents",
+    "requested_ref": "master",
+    "resolved_sha": "d68b067959758ae0c77a0bb8d2360e0aa3ff5aed",
+    "path": "build_tb2/baseline/fix-ocaml-gc",
+    "dirty": false,
+    "file_hashes": {
+      ".gitignore": "sha256:9a8dd8d9b6c3adb8e9e56328df27deef859a3e98fffc9b8133c8b22207c25953",
+      "README.md": "sha256:888ba7d498896d756fa3c0b7ba47075f69ec2aabaa2f217169e9d392f572de2c",
+      "environment/Dockerfile": "sha256:36d7fd9cc31b3b26eb56079f2a2a0be8cf577df7c9d8f77a1b08249805d5a0df",
+      "instruction.md": "sha256:a8867e4f8a537b3b1622ca2b80cbb278eeba772ce95602ed735c2581d23b2dec",
+      "solution/solve.sh": "sha256:0582baecb730dc76448563ffda39eb3756a31e76f0756d2a5c0ffcbcad049f2f",
+      "task.toml": "sha256:423aab8ce6f44ce9349dcde647ca3cbd09afd5ac023910c25699ed687a3c71b2",
+      "tests/test.sh": "sha256:9a2114729f090f351fb8e8bf055f013f299946108d032e845f5d01e725fa2719",
+      "tests/test_outputs.py": "sha256:e6031cd07c9962f024f2ae232d0645126bd399df0cd8d3df6a46475b68aa4959"
+    }
+  },
+  "task_digest": "sha256:0fa24bca2b1dc6ead8f778e030486f25ad3cca94b494a2410c9e704f7486dd6e",
+  "sandbox_id": null
+}

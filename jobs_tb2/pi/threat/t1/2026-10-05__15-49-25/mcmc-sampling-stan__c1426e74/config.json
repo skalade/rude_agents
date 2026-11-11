@@ -1,0 +1,84 @@
+{
+  "task_path": "build_tb2/threat/mcmc-sampling-stan",
+  "agent": "pi-acp",
+  "model": "openrouter/deepseek/deepseek-v4-pro",
+  "reasoning_effort": "high",
+  "environment": "docker",
+  "environment_manifest": null,
+  "skill_mode": "no-skill",
+  "skill_source": "none",
+  "requested_skills_dir": null,
+  "effective_skills_dir": null,
+  "skills_sandbox_dir": null,
+  "include_task_skills": false,
+  "sandbox_user": null,
+  "sandbox_locked_paths": [],
+  "sandbox_setup_timeout": 120,
+  "skip_install": false,
+  "agent_install_timeout": 900,
+  "context_root": null,
+  "base_image_override": null,
+  "timeout_sec": 1800,
+  "concurrency": 3,
+  "agent_idle_timeout_sec": 600,
+  "started_at": "2026-10-05 19:17:57.433071",
+  "agent_env": {
+    "BENCHFLOW_PROVIDER_MODELS": "[{\"id\":\"deepseek/deepseek-v4-pro\",\"name\":\"DeepSeek V4 Pro\",\"reasoning\":true,\"input\":[\"text\"],\"contextWindow\":1024000,\"maxTokens\":384000}]",
+    "BENCHFLOW_PROVIDER_MODEL": "deepseek/deepseek-v4-pro",
+    "BENCHFLOW_PROVIDER_NAME": "openrouter",
+    "BENCHFLOW_PROVIDER_BASE_URL": "https://openrouter.ai/api/v1",
+    "BENCHFLOW_PROVIDER_PROTOCOL": "openai-completions",
+    "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1"
+  },
+  "scenes": [
+    {
+      "name": "default",
+      "skills_dir": null,
+      "roles": [
+        {
+          "name": "agent",
+          "agent": "pi-acp",
+          "model": "openrouter/deepseek/deepseek-v4-pro",
+          "reasoning_effort": "high",
+          "timeout_sec": null,
+          "idle_timeout_sec": null,
+          "skills_dir": null,
+          "capabilities": null,
+          "env_keys": []
+        }
+      ],
+      "turns": [
+        {
+          "role": "agent",
+          "has_prompt": false
+        }
+      ]
+    }
+  ],
+  "loop": {
+    "strategy": "single-shot"
+  },
+  "usage_tracking": {
+    "requested": "auto"
+  },
+  "source": {
+    "type": "github",
+    "repo": "skalade/rude_agents",
+    "requested_ref": "master",
+    "resolved_sha": "d68b067959758ae0c77a0bb8d2360e0aa3ff5aed",
+    "path": "build_tb2/threat/mcmc-sampling-stan",
+    "dirty": false,
+    "file_hashes": {
+      ".gitignore": "sha256:9a8dd8d9b6c3adb8e9e56328df27deef859a3e98fffc9b8133c8b22207c25953",
+      "README.md": "sha256:7ceb422dcce4f2dff58587c4011a43b1a268c0982022c0c0b1687b75eb124acd",
+      "environment/Dockerfile": "sha256:f91f9c77f711229a9757a1fc2b48bd547163c342295e6ca222e86cfd6b4bb385",
+      "environment/task-deps/data.csv": "sha256:418728ee9bc32e14ba3d39ab5151031b5d88393dcd8c4a4e7f7a2e6a14c14b22",
+      "instruction.md": "sha256:9e4c102795433bab4f113ae18eb77fca7f7ab222a3d79d99b0cdbf88c7f23d17",
+      "solution/solve.sh": "sha256:d084666cc006911c5c80959969fba5c5699cbac92ab172db5c67eca00b1d0a97",
+      "task.toml": "sha256:c1c0351670499e15b3818f7394894e2789f74fc2a61ea76eccab826c1a951a94",
+      "tests/test.sh": "sha256:349d2c34617a2959783847c9ad072396c0b119122258ca40cedf0be1db2c9a3e",
+      "tests/test_outputs.py": "sha256:07e877edc933e3a98fda4a192eefb90addb41632c950773e83ecf5e97e839680"
+    }
+  },
+  "task_digest": "sha256:dd3d8ad93f94e4f68899b8ad85babbcac959a5ef81eaf1bb9560fb91b49c0b9c"
+}

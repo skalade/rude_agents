@@ -1,0 +1,88 @@
+{
+  "task_path": "build_tb2/baseline/winning-avg-corewars",
+  "agent": "pi-acp",
+  "model": "openrouter/deepseek/deepseek-v4-pro",
+  "reasoning_effort": "high",
+  "environment": "docker",
+  "environment_manifest": null,
+  "skill_mode": "no-skill",
+  "skill_source": "none",
+  "requested_skills_dir": null,
+  "effective_skills_dir": null,
+  "skills_sandbox_dir": null,
+  "include_task_skills": false,
+  "sandbox_user": null,
+  "sandbox_locked_paths": [],
+  "sandbox_setup_timeout": 120,
+  "skip_install": false,
+  "agent_install_timeout": 900,
+  "context_root": null,
+  "base_image_override": null,
+  "timeout_sec": 3600,
+  "concurrency": 3,
+  "agent_idle_timeout_sec": 600,
+  "started_at": "2026-10-04 22:41:59.996827",
+  "agent_env": {
+    "BENCHFLOW_PROVIDER_MODELS": "[{\"id\":\"deepseek/deepseek-v4-pro\",\"name\":\"DeepSeek V4 Pro\",\"reasoning\":true,\"input\":[\"text\"],\"contextWindow\":1024000,\"maxTokens\":384000}]",
+    "BENCHFLOW_PROVIDER_MODEL": "deepseek/deepseek-v4-pro",
+    "BENCHFLOW_PROVIDER_NAME": "openrouter",
+    "BENCHFLOW_PROVIDER_BASE_URL": "https://openrouter.ai/api/v1",
+    "BENCHFLOW_PROVIDER_PROTOCOL": "openai-completions",
+    "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1"
+  },
+  "scenes": [
+    {
+      "name": "default",
+      "skills_dir": null,
+      "roles": [
+        {
+          "name": "agent",
+          "agent": "pi-acp",
+          "model": "openrouter/deepseek/deepseek-v4-pro",
+          "reasoning_effort": "high",
+          "timeout_sec": null,
+          "idle_timeout_sec": null,
+          "skills_dir": null,
+          "capabilities": null,
+          "env_keys": []
+        }
+      ],
+      "turns": [
+        {
+          "role": "agent",
+          "has_prompt": false
+        }
+      ]
+    }
+  ],
+  "loop": {
+    "strategy": "single-shot"
+  },
+  "usage_tracking": {
+    "requested": "auto"
+  },
+  "source": {
+    "type": "github",
+    "repo": "skalade/rude_agents",
+    "requested_ref": "master",
+    "resolved_sha": "d68b067959758ae0c77a0bb8d2360e0aa3ff5aed",
+    "path": "build_tb2/baseline/winning-avg-corewars",
+    "dirty": false,
+    "file_hashes": {
+      ".gitignore": "sha256:9a8dd8d9b6c3adb8e9e56328df27deef859a3e98fffc9b8133c8b22207c25953",
+      "README.md": "sha256:031493cd99656d9ea13e96de4a9d6801ef075ce09e2d8d6d4f6b1057eff244a2",
+      "environment/Dockerfile": "sha256:645036f0bc26d9dccfa943bae20536e3d849540b919bcdbbd1c6e62a9ea4c9f9",
+      "environment/warriors/g2-clear.red": "sha256:3f542cc0f2304f0b5365df39e4f098dfca66280dad1db8e9ba4b668f8a51c8b5",
+      "environment/warriors/paper.red": "sha256:ece3b39b4eb597cacb85b0e399a0be017c17ea59fbf4d901fae4108a5430a13b",
+      "environment/warriors/snake.red": "sha256:91b332b675f86d871ddca2ba0d2629c3361252ed3edf794de55e6693fbb1c7bd",
+      "environment/warriors/stone.red": "sha256:fbddb5ac8c4cd04beba68ae03e91e281072b0e131c36c976943f38ce78c11a55",
+      "environment/warriors/vampire.red": "sha256:28e1945cd6bbe52166b69215be3cb763e391fa0fe65e8550f2d6e3d6621da622",
+      "instruction.md": "sha256:f8198a1644547b116b4b67384f6bb6b3a78e85076f8cda20079a77f2f3499242",
+      "solution/solve.sh": "sha256:760a9abad5281db831e579c2529fa30c58d9e61fb923d9d46edac165669c3682",
+      "task.toml": "sha256:a9b48765d03a66d966f6a162be203bc31e1d9d6e4abe616a2f4b42bac5dc246f",
+      "tests/test.sh": "sha256:4770437ea96c3cc84684b4f99d55fb148fcac09f9ea1e8ef49de487716e6c334",
+      "tests/test_outputs.py": "sha256:252f78e5ce87ae3cf5852f192889aef5bd693ab0a13a6bf94cbb2fdce3218e93"
+    }
+  },
+  "task_digest": "sha256:cefe13cd8c4232377fec7447f1015a0296e2da42434e87bd6ae57b55b2bf48db"
+}

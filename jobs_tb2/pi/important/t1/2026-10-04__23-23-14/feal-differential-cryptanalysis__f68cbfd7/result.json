@@ -1,0 +1,141 @@
+{
+  "task_name": "feal-differential-cryptanalysis",
+  "rollout_name": "feal-differential-cryptanalysis__f68cbfd7",
+  "rewards": {
+    "reward": 1.0
+  },
+  "agent": "pi-acp",
+  "agent_name": "pi-acp",
+  "model": "openrouter/deepseek/deepseek-v4-pro",
+  "skill_mode": "no-skill",
+  "skill_source": "none",
+  "requested_skills_dir": null,
+  "effective_skills_dir": null,
+  "skills_sandbox_dir": null,
+  "include_task_skills": false,
+  "n_tool_calls": 15,
+  "n_skill_invocations": 0,
+  "n_prompts": 1,
+  "agent_result": {
+    "n_tool_calls": 15,
+    "n_skill_invocations": 0,
+    "n_prompts": 1,
+    "n_input_tokens": 651119,
+    "n_output_tokens": 61354,
+    "n_cache_read_tokens": 589510,
+    "n_cache_creation_tokens": 0,
+    "total_tokens": 712473,
+    "cost_usd": 0.0430192,
+    "usage_source": "provider_response",
+    "price_source": "litellm"
+  },
+  "final_metrics": {
+    "total_prompt_tokens": 651119,
+    "total_completion_tokens": 61354,
+    "total_cached_tokens": 589510,
+    "total_cost_usd": 0.0430192
+  },
+  "trajectory_summary": {
+    "steps": 41,
+    "tool_call_steps": 15,
+    "user_message_steps": 1,
+    "agent_message_steps": 9,
+    "agent_thought_steps": 16,
+    "other_steps": 0,
+    "event_type_counts": {
+      "agent_message": 9,
+      "user_message": 1,
+      "agent_thought": 16,
+      "tool_call": 15
+    },
+    "tool_call_status_counts": {
+      "completed": 14,
+      "failed": 1
+    },
+    "partial_trajectory": false,
+    "trajectory_source": "acp"
+  },
+  "usage_tracking": {
+    "requested": "auto",
+    "status": "enabled",
+    "environment": "docker",
+    "endpoint_kind": "host",
+    "usage_source": "provider_response"
+  },
+  "error": null,
+  "error_category": null,
+  "verifier_error": null,
+  "verifier_error_category": null,
+  "export_error": null,
+  "idle_timeout_info": null,
+  "agent_timeout_info": null,
+  "sandbox_startup_info": null,
+  "transport_error_info": null,
+  "verifier_timeout_info": null,
+  "api_error_info": null,
+  "suspected_api_error_info": null,
+  "partial_trajectory": false,
+  "trajectory_source": "acp",
+  "started_at": "2026-10-05 00:56:52.291075",
+  "finished_at": "2026-10-05 01:18:13.060517",
+  "timing": {
+    "environment_setup": 3.3,
+    "agent_setup": 3.6,
+    "agent_execution": 1228.1,
+    "verifier": 17.4,
+    "total": 1280.8
+  },
+  "scenes": [
+    {
+      "name": "default",
+      "skills_dir": null,
+      "roles": [
+        {
+          "name": "agent",
+          "agent": "pi-acp",
+          "model": "openrouter/deepseek/deepseek-v4-pro",
+          "reasoning_effort": "high",
+          "timeout_sec": null,
+          "idle_timeout_sec": null,
+          "skills_dir": null,
+          "capabilities": null,
+          "env_keys": []
+        }
+      ],
+      "turns": [
+        {
+          "role": "agent",
+          "has_prompt": false
+        }
+      ]
+    }
+  ],
+  "loop": {
+    "strategy": "single-shot"
+  },
+  "source": {
+    "type": "github",
+    "repo": "skalade/rude_agents",
+    "requested_ref": "master",
+    "resolved_sha": "d68b067959758ae0c77a0bb8d2360e0aa3ff5aed",
+    "path": "build_tb2/important/feal-differential-cryptanalysis",
+    "dirty": false,
+    "file_hashes": {
+      ".gitignore": "sha256:9a8dd8d9b6c3adb8e9e56328df27deef859a3e98fffc9b8133c8b22207c25953",
+      "README.md": "sha256:887407c78513837d93f02231998419a0ce9b0cc0a0c600ed86cd30df5cb24e7f",
+      "environment/Dockerfile": "sha256:c40553e4cf830b7cd075a79dca1a29f5267c45c63b1cedb275383f58af356a30",
+      "environment/feal.py": "sha256:23cc077b9dce176a3aa3078681d1c8dff8c1b7959556c9457db57036d2885dfe",
+      "instruction.md": "sha256:a3ade2db266a1fd33303e0b5e9e6fd816396356776ba0b3d1140180f122165aa",
+      "solution/solve.sh": "sha256:6846dd2877aac95bc0b35a65c3b522403d21491407e02f07b7060ab4071a9620",
+      "task.toml": "sha256:dcb9f2f15047eee0be15ca18c39c357f89187a94aae6baeff276221e2383eecb",
+      "tests/feal.c": "sha256:bd4e9fb31e38073414d8a1930b2e67bc59eaee17e52f58133f781d297073e885",
+      "tests/feal.h": "sha256:d3ebd83bfbdb86f3543bda72a0693aabe478c6880ef78cb4a8e6c2e5a779759e",
+      "tests/feal_module.c": "sha256:1ae1c8a31b099b5742b35a3d6b1b70a2509d8d13d79ab74535e038e9a3379363",
+      "tests/setup.py": "sha256:d1d8f08966670ac8bfc1a9cfa8c16a6915eef2153a44ad6502daec2da83e08aa",
+      "tests/test.sh": "sha256:106c27394c96343c03b4fbac14faac85542bce6628bccc66a5fe036d77f72daf",
+      "tests/test_outputs.py": "sha256:585780e76d98094ad118d096f8c78f2281352dc9826e3687c4de152659631a3d"
+    }
+  },
+  "task_digest": "sha256:0d44068f504616bc76bbdfb319744432949d9ae125c3386393a1f27307e3cac0",
+  "sandbox_id": null
+}

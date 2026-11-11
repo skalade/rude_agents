@@ -1,0 +1,7 @@
+{
+  "environment_setup": 49.4,
+  "agent_setup": 11.5,
+  "agent_execution": 780.3,
+  "verifier": 12.0,
+  "total": 902.7
+}

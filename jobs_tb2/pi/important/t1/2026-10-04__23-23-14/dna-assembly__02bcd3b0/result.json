@@ -1,0 +1,137 @@
+{
+  "task_name": "dna-assembly",
+  "rollout_name": "dna-assembly__02bcd3b0",
+  "rewards": {
+    "reward": 0.0
+  },
+  "agent": "pi-acp",
+  "agent_name": "pi-acp",
+  "model": "openrouter/deepseek/deepseek-v4-pro",
+  "skill_mode": "no-skill",
+  "skill_source": "none",
+  "requested_skills_dir": null,
+  "effective_skills_dir": null,
+  "skills_sandbox_dir": null,
+  "include_task_skills": false,
+  "n_tool_calls": 29,
+  "n_skill_invocations": 0,
+  "n_prompts": 1,
+  "agent_result": {
+    "n_tool_calls": 29,
+    "n_skill_invocations": 0,
+    "n_prompts": 1,
+    "n_input_tokens": 1324650,
+    "n_output_tokens": 79379,
+    "n_cache_read_tokens": 1203675,
+    "n_cache_creation_tokens": 0,
+    "total_tokens": 1404029,
+    "cost_usd": 0.06721218,
+    "usage_source": "provider_response",
+    "price_source": "litellm"
+  },
+  "final_metrics": {
+    "total_prompt_tokens": 1324650,
+    "total_completion_tokens": 79379,
+    "total_cached_tokens": 1203675,
+    "total_cost_usd": 0.06721218
+  },
+  "trajectory_summary": {
+    "steps": 70,
+    "tool_call_steps": 29,
+    "user_message_steps": 1,
+    "agent_message_steps": 12,
+    "agent_thought_steps": 28,
+    "other_steps": 0,
+    "event_type_counts": {
+      "agent_message": 12,
+      "user_message": 1,
+      "agent_thought": 28,
+      "tool_call": 29
+    },
+    "tool_call_status_counts": {
+      "completed": 28,
+      "failed": 1
+    },
+    "partial_trajectory": false,
+    "trajectory_source": "acp"
+  },
+  "usage_tracking": {
+    "requested": "auto",
+    "status": "enabled",
+    "environment": "docker",
+    "endpoint_kind": "host",
+    "usage_source": "provider_response"
+  },
+  "error": null,
+  "error_category": null,
+  "verifier_error": null,
+  "verifier_error_category": null,
+  "export_error": null,
+  "idle_timeout_info": null,
+  "agent_timeout_info": null,
+  "sandbox_startup_info": null,
+  "transport_error_info": null,
+  "verifier_timeout_info": null,
+  "api_error_info": null,
+  "suspected_api_error_info": null,
+  "partial_trajectory": false,
+  "trajectory_source": "acp",
+  "started_at": "2026-10-05 00:26:13.226209",
+  "finished_at": "2026-10-05 00:56:48.768571",
+  "timing": {
+    "environment_setup": 1.9,
+    "agent_setup": 3.8,
+    "agent_execution": 1777.4,
+    "verifier": 6.7,
+    "total": 1835.5
+  },
+  "scenes": [
+    {
+      "name": "default",
+      "skills_dir": null,
+      "roles": [
+        {
+          "name": "agent",
+          "agent": "pi-acp",
+          "model": "openrouter/deepseek/deepseek-v4-pro",
+          "reasoning_effort": "high",
+          "timeout_sec": null,
+          "idle_timeout_sec": null,
+          "skills_dir": null,
+          "capabilities": null,
+          "env_keys": []
+        }
+      ],
+      "turns": [
+        {
+          "role": "agent",
+          "has_prompt": false
+        }
+      ]
+    }
+  ],
+  "loop": {
+    "strategy": "single-shot"
+  },
+  "source": {
+    "type": "github",
+    "repo": "skalade/rude_agents",
+    "requested_ref": "master",
+    "resolved_sha": "d68b067959758ae0c77a0bb8d2360e0aa3ff5aed",
+    "path": "build_tb2/important/dna-assembly",
+    "dirty": false,
+    "file_hashes": {
+      ".gitignore": "sha256:9a8dd8d9b6c3adb8e9e56328df27deef859a3e98fffc9b8133c8b22207c25953",
+      "README.md": "sha256:e7855c23d9822f688eec4dd89ca0f1caf91c6a69e1c8f3c9eb544b4ab2a94821",
+      "environment/Dockerfile": "sha256:26e9e43a98f0b1d132bb638f44b7dc882b0d0ca32d56fa33048adeee00ab600d",
+      "environment/sequences.fasta": "sha256:ebdc361b5fba28eb0a2c7a8a8a444ccb12cc842c8cbc6df5a2c24254f130736f",
+      "instruction.md": "sha256:4611b3f2655e9febbf1be1ded2b965c8c08bf2501f9ab3478e047f0c2329b7c3",
+      "solution/solve.sh": "sha256:c976cb118c8ef1befd846ba05fd5cadb1b1f529bc76b9f2ea9cb3049e6e11a47",
+      "task.toml": "sha256:7b571544b64d9be1c91526837e5d805c2181afe0e6fd57a7f0676bba36c868d7",
+      "tests/test.sh": "sha256:271c8317c98539e3b49233d017fe51fb0e5fba8114e76830fe698565499b2b1d",
+      "tests/test_outputs.py": "sha256:5c2d0fd2e5f6303263e9750f67acda7db491ef04841832b4fc62bcfb61b08924"
+    }
+  },
+  "task_digest": "sha256:97af18480cb8026e3082589644a5dfc39a06965f75e844bc9d14c20e3c8ce69d",
+  "sandbox_id": null
+}

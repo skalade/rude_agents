@@ -1,0 +1,87 @@
+{
+  "task_path": "build_tb2/important/large-scale-text-editing",
+  "agent": "pi-acp",
+  "model": "openrouter/deepseek/deepseek-v4-pro",
+  "reasoning_effort": "high",
+  "environment": "docker",
+  "environment_manifest": null,
+  "skill_mode": "no-skill",
+  "skill_source": "none",
+  "requested_skills_dir": null,
+  "effective_skills_dir": null,
+  "skills_sandbox_dir": null,
+  "include_task_skills": false,
+  "sandbox_user": null,
+  "sandbox_locked_paths": [],
+  "sandbox_setup_timeout": 120,
+  "skip_install": false,
+  "agent_install_timeout": 900,
+  "context_root": null,
+  "base_image_override": null,
+  "timeout_sec": 1200,
+  "concurrency": 3,
+  "agent_idle_timeout_sec": 600,
+  "started_at": "2026-10-05 02:04:22.251641",
+  "agent_env": {
+    "BENCHFLOW_PROVIDER_MODELS": "[{\"id\":\"deepseek/deepseek-v4-pro\",\"name\":\"DeepSeek V4 Pro\",\"reasoning\":true,\"input\":[\"text\"],\"contextWindow\":1024000,\"maxTokens\":384000}]",
+    "BENCHFLOW_PROVIDER_MODEL": "deepseek/deepseek-v4-pro",
+    "BENCHFLOW_PROVIDER_NAME": "openrouter",
+    "BENCHFLOW_PROVIDER_BASE_URL": "https://openrouter.ai/api/v1",
+    "BENCHFLOW_PROVIDER_PROTOCOL": "openai-completions",
+    "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1"
+  },
+  "scenes": [
+    {
+      "name": "default",
+      "skills_dir": null,
+      "roles": [
+        {
+          "name": "agent",
+          "agent": "pi-acp",
+          "model": "openrouter/deepseek/deepseek-v4-pro",
+          "reasoning_effort": "high",
+          "timeout_sec": null,
+          "idle_timeout_sec": null,
+          "skills_dir": null,
+          "capabilities": null,
+          "env_keys": []
+        }
+      ],
+      "turns": [
+        {
+          "role": "agent",
+          "has_prompt": false
+        }
+      ]
+    }
+  ],
+  "loop": {
+    "strategy": "single-shot"
+  },
+  "usage_tracking": {
+    "requested": "auto"
+  },
+  "source": {
+    "type": "github",
+    "repo": "skalade/rude_agents",
+    "requested_ref": "master",
+    "resolved_sha": "d68b067959758ae0c77a0bb8d2360e0aa3ff5aed",
+    "path": "build_tb2/important/large-scale-text-editing",
+    "dirty": false,
+    "file_hashes": {
+      ".gitignore": "sha256:9a8dd8d9b6c3adb8e9e56328df27deef859a3e98fffc9b8133c8b22207c25953",
+      "README.md": "sha256:6eff0990be57c2c2e9a1739152a188e3da911c6b7687ed595b08f3898fbde900",
+      "environment/Dockerfile": "sha256:609759efe5a6bca4c0f4d0011dd1dda814896ca6873ead803af68d92b92d8aa2",
+      "environment/gen_large_csv.py": "sha256:167daab578dc75ba1385c40492037f11708b06ea4cda836cd05f12017ae54654",
+      "environment/tests/gen_large_csv.py": "sha256:167daab578dc75ba1385c40492037f11708b06ea4cda836cd05f12017ae54654",
+      "environment/tests/test_outputs.py": "sha256:f5e69f4fedeefa23197745888a5847161529f454e6b5c32a4057363d9ae4cd43",
+      "instruction.md": "sha256:c96ee4a62ece77653f61cca986c3e869cc9c47314f99ac8d2fa8d196d854088e",
+      "solution/solve.sh": "sha256:a4fb27c7fa4cd4da26f7fbccbaaca24c290dc41ab9dbbb6e1dc916e72743c55d",
+      "task.toml": "sha256:5c9488e80c1186f72efb8193e6be13c74eadf334b3846db2e794d24513a88f5f",
+      "tests/gen_large_csv.py": "sha256:167daab578dc75ba1385c40492037f11708b06ea4cda836cd05f12017ae54654",
+      "tests/test.sh": "sha256:e5edb6fcd43d7e638ffcf64522c11185a8355afb5daf6ad805cdfedd47e9ceb3",
+      "tests/test_outputs.py": "sha256:f5e69f4fedeefa23197745888a5847161529f454e6b5c32a4057363d9ae4cd43"
+    }
+  },
+  "task_digest": "sha256:bb00d97596ab9745fd74679cb46adc9f7e2bc844fb54a7f735ec4aae2ab976bd"
+}

@@ -1,0 +1,83 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 7,
+            "passed": 7,
+            "failed": 0,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1791150969.5994327,
+            "stop": 1791150969.6369786
+        },
+        "tests": [
+            {
+                "name": "::test_recovered_json_exists",
+                "status": "passed",
+                "duration": 0.00027712201699614525,
+                "start": 1791150969.6345437,
+                "stop": 1791150969.634943,
+                "retries": 0,
+                "file_path": "../tests/test_outputs.py"
+            },
+            {
+                "name": "::test_recovered_json_is_valid",
+                "status": "passed",
+                "duration": 0.00024050509091466665,
+                "start": 1791150969.635037,
+                "stop": 1791150969.6353407,
+                "retries": 0,
+                "file_path": "../tests/test_outputs.py"
+            },
+            {
+                "name": "::test_recovered_data_structure",
+                "status": "passed",
+                "duration": 0.00021087087225168943,
+                "start": 1791150969.635416,
+                "stop": 1791150969.6356783,
+                "retries": 0,
+                "file_path": "../tests/test_outputs.py"
+            },
+            {
+                "name": "::test_recovered_data_sorted",
+                "status": "passed",
+                "duration": 0.0001981469104066491,
+                "start": 1791150969.635747,
+                "stop": 1791150969.6359959,
+                "retries": 0,
+                "file_path": "../tests/test_outputs.py"
+            },
+            {
+                "name": "::test_recovered_data_completeness",
+                "status": "passed",
+                "duration": 0.00020100094843655825,
+                "start": 1791150969.6360626,
+                "stop": 1791150969.6363204,
+                "retries": 0,
+                "file_path": "../tests/test_outputs.py"
+            },
+            {
+                "name": "::test_no_duplicate_ids",
+                "status": "passed",
+                "duration": 0.00018625403754413128,
+                "start": 1791150969.6363862,
+                "stop": 1791150969.6366193,
+                "retries": 0,
+                "file_path": "../tests/test_outputs.py"
+            },
+            {
+                "name": "::test_wal_was_decrypted",
+                "status": "passed",
+                "duration": 0.00018425099551677704,
+                "start": 1791150969.6366806,
+                "stop": 1791150969.6369085,
+                "retries": 0,
+                "file_path": "../tests/test_outputs.py"
+            }
+        ]
+    }
+}

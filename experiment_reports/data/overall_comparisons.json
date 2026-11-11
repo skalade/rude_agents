@@ -1,0 +1,26 @@
+[
+  {
+    "comparison": "pi - codex",
+    "delta_pp": -1.5258333333333323,
+    "low_pp": -19.16666666666667,
+    "high_pp": 17.781666666666666
+  },
+  {
+    "comparison": "pi - opencode",
+    "delta_pp": 2.918333333333333,
+    "low_pp": -8.329999999999998,
+    "high_pp": 13.33333333333333
+  },
+  {
+    "comparison": "pi - openhands",
+    "delta_pp": 8.473333333333333,
+    "low_pp": -3.193333333333333,
+    "high_pp": 17.919999999999998
+  },
+  {
+    "comparison": "pi - claude",
+    "delta_pp": 19.444166666666668,
+    "low_pp": -1.1116666666666664,
+    "high_pp": 40.0
+  }
+]

@@ -1,0 +1,47 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 3,
+            "passed": 3,
+            "failed": 0,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1791142061.0173867,
+            "stop": 1791142061.3952355
+        },
+        "tests": [
+            {
+                "name": "::test_sparql_file_exists",
+                "status": "passed",
+                "duration": 0.0003236490301787853,
+                "start": 1791142061.1741476,
+                "stop": 1791142061.1746118,
+                "retries": 0,
+                "file_path": "../tests/test_outputs.py"
+            },
+            {
+                "name": "::test_sparql_runs_without_error",
+                "status": "passed",
+                "duration": 0.1714492739411071,
+                "start": 1791142061.174708,
+                "stop": 1791142061.3463345,
+                "retries": 0,
+                "file_path": "../tests/test_outputs.py"
+            },
+            {
+                "name": "::test_sparql_query_results",
+                "status": "passed",
+                "duration": 0.04633942898362875,
+                "start": 1791142061.3483574,
+                "stop": 1791142061.394947,
+                "retries": 0,
+                "file_path": "../tests/test_outputs.py"
+            }
+        ]
+    }
+}

@@ -1,0 +1,131 @@
+{
+  "deepseek_agreement": {
+    "all_full_passes": 32,
+    "any_full_passes": 101,
+    "best_observed_mean": 0.8624916666666667
+  },
+  "pi_pairwise": {
+    "opencode": {
+      "wins": 26,
+      "losses": 20,
+      "ties": 74
+    },
+    "openhands": {
+      "wins": 36,
+      "losses": 20,
+      "ties": 64
+    }
+  },
+  "tone_resources": {
+    "codex": {
+      "important": {
+        "seconds": -9.75382767937556,
+        "output": 13.455349134418682
+      },
+      "insult": {
+        "seconds": -4.184929450615426,
+        "output": 1.6479168010130385
+      },
+      "threat": {
+        "seconds": -5.385770039027326,
+        "output": -1.2686204046219007
+      }
+    },
+    "pi": {
+      "important": {
+        "seconds": 1.5942800638929056,
+        "output": 7.203360560899386
+      },
+      "insult": {
+        "seconds": -7.639765726021153,
+        "output": 2.123663805757503
+      },
+      "threat": {
+        "seconds": -21.897010724880197,
+        "output": 3.8143056970659783
+      }
+    },
+    "opencode": {
+      "important": {
+        "seconds": -9.750481410916045,
+        "output": 17.160009686999445
+      },
+      "insult": {
+        "seconds": -6.862015914578857,
+        "output": 17.77097044190561
+      },
+      "threat": {
+        "seconds": -12.471854017870786,
+        "output": 6.908360135448066
+      }
+    },
+    "openhands": {
+      "important": {
+        "seconds": 4.931544881917094,
+        "output": 3.4586386683429504
+      },
+      "insult": {
+        "seconds": -10.938069374793946,
+        "output": -8.783265942546048
+      },
+      "threat": {
+        "seconds": 1.2866785819639182,
+        "output": -0.988020674058887
+      }
+    },
+    "claude": {
+      "important": {
+        "seconds": 24.817890721675774,
+        "output": 34.34661469351745
+      },
+      "insult": {
+        "seconds": 14.85450393560157,
+        "output": 20.227667599902777
+      },
+      "threat": {
+        "seconds": 17.58454845829027,
+        "output": 20.122115895321492
+      }
+    }
+  },
+  "xlsx_corrected_tone": {
+    "codex": {
+      "baseline": 0.0,
+      "important": 6.666666666666665,
+      "insult": 0.0,
+      "threat": -6.663333333333332
+    },
+    "pi": {
+      "baseline": 0.0,
+      "important": 7.7766666666666655,
+      "insult": 18.333333333333336,
+      "threat": 7.7766666666666655
+    },
+    "opencode": {
+      "baseline": 0.0,
+      "important": 4.446666666666665,
+      "insult": 17.223333333333347,
+      "threat": 13.890000000000013
+    },
+    "openhands": {
+      "baseline": 0.0,
+      "important": 9.999999999999998,
+      "insult": 11.109999999999998,
+      "threat": 17.776666666666674
+    },
+    "claude": {
+      "baseline": 0.0,
+      "important": 3.3333333333333326,
+      "insult": 6.666666666666665,
+      "threat": 6.109999999999993
+    }
+  },
+  "zero_scores": 228,
+  "false_zeros": 59,
+  "pi_bike": {
+    "hours": 2.7204166666666665,
+    "share_of_time": 0.40043422795741135,
+    "timeout_hours": 2.0030555555555556,
+    "timeout_share_of_time": 0.29484160083738126
+  }
+}

@@ -1,0 +1,32 @@
+{
+ "sonnet5": {
+  "concern": 2,
+  "joke": 3,
+  "ignored": 25
+ },
+ "terra": {
+  "concern": 30,
+  "joke": 0,
+  "ignored": 0
+ },
+ "opencode": {
+  "concern": 0,
+  "joke": 4,
+  "ignored": 26
+ },
+ "openhands": {
+  "concern": 0,
+  "joke": 6,
+  "ignored": 24
+ },
+ "pi": {
+  "concern": 0,
+  "joke": 3,
+  "ignored": 27
+ },
+ "pi_tb2": {
+  "concern": 0,
+  "joke": 7,
+  "ignored": 80
+ }
+}

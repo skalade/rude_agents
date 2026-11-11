@@ -1,0 +1,74 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 6,
+            "passed": 6,
+            "failed": 0,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1791242246.671431,
+            "stop": 1791242249.7875164
+        },
+        "tests": [
+            {
+                "name": "::test_protected_files_not_modified",
+                "status": "passed",
+                "duration": 0.0003531620604917407,
+                "start": 1791242246.7050974,
+                "stop": 1791242246.7055783,
+                "retries": 0,
+                "file_path": "../tests/test_outputs.py"
+            },
+            {
+                "name": "::test_program_compiles_debug",
+                "status": "passed",
+                "duration": 0.4095263200579211,
+                "start": 1791242246.7056713,
+                "stop": 1791242247.115361,
+                "retries": 0,
+                "file_path": "../tests/test_outputs.py"
+            },
+            {
+                "name": "::test_program_compiles_release",
+                "status": "passed",
+                "duration": 0.4423265070654452,
+                "start": 1791242247.1155133,
+                "stop": 1791242247.5579932,
+                "retries": 0,
+                "file_path": "../tests/test_outputs.py"
+            },
+            {
+                "name": "::test_debug_build_runs_without_crash",
+                "status": "passed",
+                "duration": 0.6742018989752978,
+                "start": 1791242247.5581465,
+                "stop": 1791242248.2325644,
+                "retries": 0,
+                "file_path": "../tests/test_outputs.py"
+            },
+            {
+                "name": "::test_release_build_runs_without_crash",
+                "status": "passed",
+                "duration": 0.45869077485986054,
+                "start": 1791242248.2328396,
+                "stop": 1791242248.6917753,
+                "retries": 0,
+                "file_path": "../tests/test_outputs.py"
+            },
+            {
+                "name": "::test_no_memory_leaks_with_valgrind",
+                "status": "passed",
+                "duration": 1.0951735569396988,
+                "start": 1791242248.6919363,
+                "stop": 1791242249.7873685,
+                "retries": 0,
+                "file_path": "../tests/test_outputs.py"
+            }
+        ]
+    }
+}

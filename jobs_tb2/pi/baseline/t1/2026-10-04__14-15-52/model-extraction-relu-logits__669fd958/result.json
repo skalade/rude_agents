@@ -1,0 +1,137 @@
+{
+  "task_name": "model-extraction-relu-logits",
+  "rollout_name": "model-extraction-relu-logits__669fd958",
+  "rewards": {
+    "reward": 0.0
+  },
+  "agent": "pi-acp",
+  "agent_name": "pi-acp",
+  "model": "openrouter/deepseek/deepseek-v4-pro",
+  "skill_mode": "no-skill",
+  "skill_source": "none",
+  "requested_skills_dir": null,
+  "effective_skills_dir": null,
+  "skills_sandbox_dir": null,
+  "include_task_skills": false,
+  "n_tool_calls": 20,
+  "n_skill_invocations": 0,
+  "n_prompts": 1,
+  "agent_result": {
+    "n_tool_calls": 20,
+    "n_skill_invocations": 0,
+    "n_prompts": 1,
+    "n_input_tokens": 397492,
+    "n_output_tokens": 27619,
+    "n_cache_read_tokens": 361622,
+    "n_cache_creation_tokens": 0,
+    "total_tokens": 425111,
+    "cost_usd": 0.02164358,
+    "usage_source": "provider_response",
+    "price_source": "litellm"
+  },
+  "final_metrics": {
+    "total_prompt_tokens": 397492,
+    "total_completion_tokens": 27619,
+    "total_cached_tokens": 361622,
+    "total_cost_usd": 0.02164358
+  },
+  "trajectory_summary": {
+    "steps": 52,
+    "tool_call_steps": 20,
+    "user_message_steps": 1,
+    "agent_message_steps": 11,
+    "agent_thought_steps": 20,
+    "other_steps": 0,
+    "event_type_counts": {
+      "agent_message": 11,
+      "user_message": 1,
+      "agent_thought": 20,
+      "tool_call": 20
+    },
+    "tool_call_status_counts": {
+      "completed": 18,
+      "failed": 2
+    },
+    "partial_trajectory": false,
+    "trajectory_source": "acp"
+  },
+  "usage_tracking": {
+    "requested": "auto",
+    "status": "enabled",
+    "environment": "docker",
+    "endpoint_kind": "host",
+    "usage_source": "provider_response"
+  },
+  "error": null,
+  "error_category": null,
+  "verifier_error": null,
+  "verifier_error_category": null,
+  "export_error": null,
+  "idle_timeout_info": null,
+  "agent_timeout_info": null,
+  "sandbox_startup_info": null,
+  "transport_error_info": null,
+  "verifier_timeout_info": null,
+  "api_error_info": null,
+  "suspected_api_error_info": null,
+  "partial_trajectory": false,
+  "trajectory_source": "acp",
+  "started_at": "2026-10-04 18:29:08.587986",
+  "finished_at": "2026-10-04 18:45:26.064278",
+  "timing": {
+    "environment_setup": 2.4,
+    "agent_setup": 3.9,
+    "agent_execution": 860.0,
+    "verifier": 21.4,
+    "total": 977.5
+  },
+  "scenes": [
+    {
+      "name": "default",
+      "skills_dir": null,
+      "roles": [
+        {
+          "name": "agent",
+          "agent": "pi-acp",
+          "model": "openrouter/deepseek/deepseek-v4-pro",
+          "reasoning_effort": "high",
+          "timeout_sec": null,
+          "idle_timeout_sec": null,
+          "skills_dir": null,
+          "capabilities": null,
+          "env_keys": []
+        }
+      ],
+      "turns": [
+        {
+          "role": "agent",
+          "has_prompt": false
+        }
+      ]
+    }
+  ],
+  "loop": {
+    "strategy": "single-shot"
+  },
+  "source": {
+    "type": "github",
+    "repo": "skalade/rude_agents",
+    "requested_ref": "master",
+    "resolved_sha": "d68b067959758ae0c77a0bb8d2360e0aa3ff5aed",
+    "path": "build_tb2/baseline/model-extraction-relu-logits",
+    "dirty": false,
+    "file_hashes": {
+      ".gitignore": "sha256:9a8dd8d9b6c3adb8e9e56328df27deef859a3e98fffc9b8133c8b22207c25953",
+      "README.md": "sha256:9465accba6c57e5de9a196eed776a16eeb0852a8afc18fc3f8979e2de71b0c7b",
+      "environment/Dockerfile": "sha256:598b1f80d3b7194e97cbf02c8d245de30e303909e0cbe6465125d1d3179fddb5",
+      "environment/forward.py": "sha256:af1a23efd8e4390d16a29777c28116b2f8623ae3f7b628fe14db9f94dac26f5b",
+      "instruction.md": "sha256:c9e179dd099065a34c362a865b0eb9fab5f7d96be582cf117e7519580c036ebe",
+      "solution/solve.sh": "sha256:4cea5094f074ff21453d4423aa1b415a104ed90caa55a4acbb4f09941a3994ea",
+      "task.toml": "sha256:eb64dfaf8ae88868911ae28855cdc4f767de464001e2704919015b595be6dc29",
+      "tests/test.sh": "sha256:3b2d8f5e0353c2bab3515d6387468a863a4f9f241ee131c73f545f3fdf9e2d52",
+      "tests/test_outputs.py": "sha256:e5189c7eb9942ede55e1b48a80388590b80a486b75497613f257b3373ad9b2c9"
+    }
+  },
+  "task_digest": "sha256:deffbd7a8d58f39c467d32c0f220e13708ec4c65d360f115d52c2ab7f482c6cc",
+  "sandbox_id": null
+}

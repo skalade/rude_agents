@@ -1,0 +1,92 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 8,
+            "passed": 8,
+            "failed": 0,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1791252147.1564603,
+            "stop": 1791252149.6541781
+        },
+        "tests": [
+            {
+                "name": "::test_nginx_installed",
+                "status": "passed",
+                "duration": 0.0018372630001977086,
+                "start": 1791252147.3441947,
+                "stop": 1791252147.3463726,
+                "retries": 0,
+                "file_path": "../tests/test_outputs.py"
+            },
+            {
+                "name": "::test_nginx_running",
+                "status": "passed",
+                "duration": 0.003136423067189753,
+                "start": 1791252147.3466637,
+                "stop": 1791252147.3499377,
+                "retries": 0,
+                "file_path": "../tests/test_outputs.py"
+            },
+            {
+                "name": "::test_index_page_content",
+                "status": "passed",
+                "duration": 0.10063524404540658,
+                "start": 1791252147.35005,
+                "stop": 1791252147.450996,
+                "retries": 0,
+                "file_path": "../tests/test_outputs.py"
+            },
+            {
+                "name": "::test_custom_404_page",
+                "status": "passed",
+                "duration": 0.09917244187090546,
+                "start": 1791252147.451231,
+                "stop": 1791252147.5506234,
+                "retries": 0,
+                "file_path": "../tests/test_outputs.py"
+            },
+            {
+                "name": "::test_nginx_config_syntax",
+                "status": "passed",
+                "duration": 0.004659054102376103,
+                "start": 1791252147.550788,
+                "stop": 1791252147.5556636,
+                "retries": 0,
+                "file_path": "../tests/test_outputs.py"
+            },
+            {
+                "name": "::test_nginx_config_settings",
+                "status": "passed",
+                "duration": 0.0007845589425414801,
+                "start": 1791252147.5559237,
+                "stop": 1791252147.5568583,
+                "retries": 0,
+                "file_path": "../tests/test_outputs.py"
+            },
+            {
+                "name": "::test_log_file_creation",
+                "status": "passed",
+                "duration": 1.0933116258820519,
+                "start": 1791252147.5569499,
+                "stop": 1791252148.6505644,
+                "retries": 0,
+                "file_path": "../tests/test_outputs.py"
+            },
+            {
+                "name": "::test_log_file_format",
+                "status": "passed",
+                "duration": 1.0028689560713246,
+                "start": 1791252148.6508539,
+                "stop": 1791252149.6540327,
+                "retries": 0,
+                "file_path": "../tests/test_outputs.py"
+            }
+        ]
+    }
+}

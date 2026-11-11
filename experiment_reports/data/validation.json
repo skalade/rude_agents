@@ -1,0 +1,40 @@
+{
+  "scored_runs": 600,
+  "unique_cells": 600,
+  "provider_ids": 4732,
+  "model_ids": 1,
+  "unresolved_lookups": 0,
+  "token_reconciliation": "exact for all three DeepSeek harness totals",
+  "false_zeros": 59,
+  "timeouts": 60,
+  "full_passes_after_timeout": 17,
+  "local_links": "all exist",
+  "language_check": "sentence and paragraph limits only; not a full dictionary check",
+  "reports": {
+    "FULL_EXPERIMENT.md": {
+      "max_sentence_words": 21,
+      "max_paragraph_sentences": 3,
+      "sha256": "66a704158a6b5ca3f085d551277f74ef3f1857c3cdf659c9d2c7052362517391"
+    },
+    "README.md": {
+      "max_sentence_words": 19,
+      "max_paragraph_sentences": 6,
+      "sha256": "defcb60cd626fd049f614330b8c170ec2f4231374d4ed112295992178fc39889"
+    },
+    "POOLED_DEEPSEEK.md": {
+      "max_sentence_words": 19,
+      "max_paragraph_sentences": 3,
+      "sha256": "01413290029aa1a281477702394d3c160df42ffefcd5d07b7d3ad8e59676c1fe"
+    },
+    "TRACE_EFFECTS.md": {
+      "max_sentence_words": 20,
+      "max_paragraph_sentences": 3,
+      "sha256": "76e399317f922a81b9a98fbee556d824d722363e9a4ce42c8b902d8ca01fbf12"
+    },
+    "DEEPSEEK_HARNESSES.md": {
+      "max_sentence_words": 15,
+      "max_paragraph_sentences": 4,
+      "sha256": "9622f2bd863900eea91f0d46c90c8a505ad3d54412f1b303e2cea004f7b8df66"
+    }
+  }
+}

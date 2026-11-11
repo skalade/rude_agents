@@ -1,0 +1,137 @@
+{
+  "task_name": "mteb-retrieve",
+  "rollout_name": "mteb-retrieve__190b8d49",
+  "rewards": {
+    "reward": 1.0
+  },
+  "agent": "pi-acp",
+  "agent_name": "pi-acp",
+  "model": "openrouter/deepseek/deepseek-v4-pro",
+  "skill_mode": "no-skill",
+  "skill_source": "none",
+  "requested_skills_dir": null,
+  "effective_skills_dir": null,
+  "skills_sandbox_dir": null,
+  "include_task_skills": false,
+  "n_tool_calls": 15,
+  "n_skill_invocations": 0,
+  "n_prompts": 1,
+  "agent_result": {
+    "n_tool_calls": 15,
+    "n_skill_invocations": 0,
+    "n_prompts": 1,
+    "n_input_tokens": 150310,
+    "n_output_tokens": 3627,
+    "n_cache_read_tokens": 136509,
+    "n_cache_creation_tokens": 0,
+    "total_tokens": 153937,
+    "cost_usd": 0.00538762,
+    "usage_source": "provider_response",
+    "price_source": "litellm"
+  },
+  "final_metrics": {
+    "total_prompt_tokens": 150310,
+    "total_completion_tokens": 3627,
+    "total_cached_tokens": 136509,
+    "total_cost_usd": 0.00538762
+  },
+  "trajectory_summary": {
+    "steps": 28,
+    "tool_call_steps": 15,
+    "user_message_steps": 1,
+    "agent_message_steps": 2,
+    "agent_thought_steps": 10,
+    "other_steps": 0,
+    "event_type_counts": {
+      "agent_message": 2,
+      "user_message": 1,
+      "agent_thought": 10,
+      "tool_call": 15
+    },
+    "tool_call_status_counts": {
+      "completed": 13,
+      "failed": 2
+    },
+    "partial_trajectory": false,
+    "trajectory_source": "acp"
+  },
+  "usage_tracking": {
+    "requested": "auto",
+    "status": "enabled",
+    "environment": "docker",
+    "endpoint_kind": "host",
+    "usage_source": "provider_response"
+  },
+  "error": null,
+  "error_category": null,
+  "verifier_error": null,
+  "verifier_error_category": null,
+  "export_error": null,
+  "idle_timeout_info": null,
+  "agent_timeout_info": null,
+  "sandbox_startup_info": null,
+  "transport_error_info": null,
+  "verifier_timeout_info": null,
+  "api_error_info": null,
+  "suspected_api_error_info": null,
+  "partial_trajectory": false,
+  "trajectory_source": "acp",
+  "started_at": "2026-10-04 18:41:15.121171",
+  "finished_at": "2026-10-04 18:56:57.987899",
+  "timing": {
+    "environment_setup": 626.6,
+    "agent_setup": 3.7,
+    "agent_execution": 182.4,
+    "verifier": 77.6,
+    "total": 942.9
+  },
+  "scenes": [
+    {
+      "name": "default",
+      "skills_dir": null,
+      "roles": [
+        {
+          "name": "agent",
+          "agent": "pi-acp",
+          "model": "openrouter/deepseek/deepseek-v4-pro",
+          "reasoning_effort": "high",
+          "timeout_sec": null,
+          "idle_timeout_sec": null,
+          "skills_dir": null,
+          "capabilities": null,
+          "env_keys": []
+        }
+      ],
+      "turns": [
+        {
+          "role": "agent",
+          "has_prompt": false
+        }
+      ]
+    }
+  ],
+  "loop": {
+    "strategy": "single-shot"
+  },
+  "source": {
+    "type": "github",
+    "repo": "skalade/rude_agents",
+    "requested_ref": "master",
+    "resolved_sha": "d68b067959758ae0c77a0bb8d2360e0aa3ff5aed",
+    "path": "build_tb2/baseline/mteb-retrieve",
+    "dirty": false,
+    "file_hashes": {
+      ".gitignore": "sha256:9a8dd8d9b6c3adb8e9e56328df27deef859a3e98fffc9b8133c8b22207c25953",
+      "README.md": "sha256:e2033cae1b39e2476f5bce62a5c8931830cabe5d2c01ae10c12a7cbbb0a56070",
+      "environment/Dockerfile": "sha256:97c880635fbfbaec860a9255f849b1a1c4630e2dca8588eb838c4a95669d917e",
+      "environment/task-deps/data.txt": "sha256:1dec6f9ca469216638e8158e992fb5eb093e180361136570003e81d4573d24bb",
+      "instruction.md": "sha256:0f6289f5492b6d814833fba328c3aeb93a722d8aecad4bfb5e7c8c2979dc8678",
+      "solution/solve.sh": "sha256:97adb02c74de75d6d66829cf12d0a3d05b35b1b48b597ab67b90388517286553",
+      "task.toml": "sha256:35b8c675ae847e33652c6ce64fe1f914ddb05d0ae6a3a87be80821bd75fb2d2a",
+      "tests/test.sh": "sha256:404ce42339d0b4df9912282a16f7c875ebc2453d40a9312b671f356208238215",
+      "tests/test_outputs.py": "sha256:e4e6b21fed6662adb4a42aba23d35609450392839a2282f3ba77c70c8d907c0b"
+    }
+  },
+  "task_digest": "sha256:1b168427fdc987f2c589005861562f6ce4918a3b72679b59c173d204b310576b",
+  "sandbox_id": null
+}

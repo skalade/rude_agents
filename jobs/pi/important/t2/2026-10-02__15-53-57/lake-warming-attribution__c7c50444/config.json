@@ -1,0 +1,94 @@
+{
+  "task_path": "build/important/lake-warming-attribution",
+  "agent": "pi-acp",
+  "model": "openrouter/deepseek/deepseek-v4-pro",
+  "reasoning_effort": "high",
+  "environment": "docker",
+  "environment_manifest": null,
+  "skill_mode": "with-skill",
+  "skill_source": "task_bundled",
+  "requested_skills_dir": null,
+  "effective_skills_dir": "/tmp/benchflow-task-e9b_0n_9/lake-warming-attribution/environment/skills",
+  "skills_sandbox_dir": "/skills",
+  "include_task_skills": true,
+  "sandbox_user": "agent",
+  "sandbox_locked_paths": [
+    "/oracle",
+    "/solution",
+    "/verifier",
+    "/tests",
+    "/testbed_verify"
+  ],
+  "sandbox_setup_timeout": 120,
+  "skip_install": false,
+  "agent_install_timeout": 900,
+  "context_root": null,
+  "base_image_override": null,
+  "timeout_sec": 300,
+  "concurrency": 2,
+  "agent_idle_timeout_sec": 600,
+  "started_at": "2026-10-02 15:58:32.180968",
+  "agent_env": {
+    "BENCHFLOW_PROVIDER_MODELS": "[{\"id\":\"deepseek/deepseek-v4-pro\",\"name\":\"DeepSeek V4 Pro\",\"reasoning\":true,\"input\":[\"text\"],\"contextWindow\":1024000,\"maxTokens\":384000}]",
+    "BENCHFLOW_PROVIDER_MODEL": "deepseek/deepseek-v4-pro",
+    "BENCHFLOW_PROVIDER_NAME": "openrouter",
+    "BENCHFLOW_PROVIDER_BASE_URL": "https://openrouter.ai/api/v1",
+    "BENCHFLOW_PROVIDER_PROTOCOL": "openai-completions",
+    "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1"
+  },
+  "scenes": [
+    {
+      "name": "default",
+      "skills_dir": null,
+      "roles": [
+        {
+          "name": "agent",
+          "agent": "pi-acp",
+          "model": "openrouter/deepseek/deepseek-v4-pro",
+          "reasoning_effort": "high",
+          "timeout_sec": null,
+          "idle_timeout_sec": null,
+          "skills_dir": null,
+          "capabilities": null,
+          "env_keys": []
+        }
+      ],
+      "turns": [
+        {
+          "role": "agent",
+          "has_prompt": false
+        }
+      ]
+    }
+  ],
+  "loop": {
+    "strategy": "single-shot"
+  },
+  "usage_tracking": {
+    "requested": "auto"
+  },
+  "source": {
+    "type": "github",
+    "repo": "skalade/rude_agents",
+    "requested_ref": "master",
+    "resolved_sha": "9e15ebe51faf51abfd0b3047635c0db53301290f",
+    "path": "build/important/lake-warming-attribution",
+    "dirty": false,
+    "file_hashes": {
+      "environment/Dockerfile": "sha256:26d08cccf9fa1098265521ffca78ac3a787c39eb797334ef0aa889a325a12170",
+      "environment/data/climate.csv": "sha256:cf25e05768be29bbe65d16b0ab8ef86f6171649d6efcfd3d02d6d59aa19f8c4f",
+      "environment/data/hydrology.csv": "sha256:419539b43291f763f5c3da425d5a6004bff63897ec8d3109990a67cfcf18e5b3",
+      "environment/data/land_cover.csv": "sha256:e83fac4f3de0984ade22cd2c61e74fde87695f0dc6a3a2266f0730fb0ac718ee",
+      "environment/data/water_temperature.csv": "sha256:02fae144ffcd2caa066109512c914a5515671d64eb257615202f481044c68fcb",
+      "environment/skills/contribution-analysis/SKILL.md": "sha256:ec9531b6b06a4e7a699da04bf0e86279af14cc0b7aba77476adbfc4766015c63",
+      "environment/skills/meteorology-driver-classification/SKILL.md": "sha256:5faebbffdf7c5a5a46c22a11b08d5950f378e71f3a4c967c9495ffb70f64fc2f",
+      "environment/skills/pca-decomposition/SKILL.md": "sha256:651fe7e01b2bc9abcf21a51d213398ef27c225ad2ea1a49b5bd681e934015ac2",
+      "environment/skills/trend-analysis/SKILL.md": "sha256:eec026677dd73c7407170d01fc2358ba10dacfd4b8b3b9bf669b8f922491514f",
+      "oracle/solve.sh": "sha256:1d94077d4f6fa10440a30e2960e16c2a932561804e18714ba7bd5e2e648cf7e3",
+      "task.md": "sha256:66470f7812f927ec4341e185c7a82633f0f8b10192a5fb5de9a0318ddb6ec971",
+      "verifier/test.sh": "sha256:3c5baf21d06f82fd4b25a3111b82e9308a9e479980c98bb87832f8b8c21ad29a",
+      "verifier/test_outputs.py": "sha256:94424ee977ae3435c75f420b4dfce346e1b66937e165f9999ea3288f632811f9"
+    }
+  },
+  "task_digest": "sha256:254967dc387acdfb69ed8a86e419592ef2ee4b5e7bef02f62b8e2c0d4be91b77"
+}

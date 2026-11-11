@@ -1,0 +1,65 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 5,
+            "passed": 5,
+            "failed": 0,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1791155484.2081723,
+            "stop": 1791155484.2666383
+        },
+        "tests": [
+            {
+                "name": "::test_flag_file_exists_and_correct",
+                "status": "passed",
+                "duration": 0.00033620093017816544,
+                "start": 1791155484.2433662,
+                "stop": 1791155484.2438362,
+                "retries": 0,
+                "file_path": "../tests/test_outputs.py"
+            },
+            {
+                "name": "::test_no_secrets_in_commits",
+                "status": "passed",
+                "duration": 0.006410715053789318,
+                "start": 1791155484.24393,
+                "stop": 1791155484.25049,
+                "retries": 0,
+                "file_path": "../tests/test_outputs.py"
+            },
+            {
+                "name": "::test_good_commits_preserved",
+                "status": "passed",
+                "duration": 0.0026367061072960496,
+                "start": 1791155484.25065,
+                "stop": 1791155484.253414,
+                "retries": 0,
+                "file_path": "../tests/test_outputs.py"
+            },
+            {
+                "name": "::test_no_secrets_in_unreachable_objects",
+                "status": "passed",
+                "duration": 0.006936768069863319,
+                "start": 1791155484.2535465,
+                "stop": 1791155484.2606168,
+                "retries": 0,
+                "file_path": "../tests/test_outputs.py"
+            },
+            {
+                "name": "::test_repository_contents_checksum",
+                "status": "passed",
+                "duration": 0.00545443594455719,
+                "start": 1791155484.2607706,
+                "stop": 1791155484.2664192,
+                "retries": 0,
+                "file_path": "../tests/test_outputs.py"
+            }
+        ]
+    }
+}

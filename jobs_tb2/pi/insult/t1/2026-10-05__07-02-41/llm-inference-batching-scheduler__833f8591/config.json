@@ -1,0 +1,90 @@
+{
+  "task_path": "build_tb2/insult/llm-inference-batching-scheduler",
+  "agent": "pi-acp",
+  "model": "openrouter/deepseek/deepseek-v4-pro",
+  "reasoning_effort": "high",
+  "environment": "docker",
+  "environment_manifest": null,
+  "skill_mode": "no-skill",
+  "skill_source": "none",
+  "requested_skills_dir": null,
+  "effective_skills_dir": null,
+  "skills_sandbox_dir": null,
+  "include_task_skills": false,
+  "sandbox_user": null,
+  "sandbox_locked_paths": [],
+  "sandbox_setup_timeout": 120,
+  "skip_install": false,
+  "agent_install_timeout": 900,
+  "context_root": null,
+  "base_image_override": null,
+  "timeout_sec": 1800,
+  "concurrency": 3,
+  "agent_idle_timeout_sec": 600,
+  "started_at": "2026-10-05 10:06:25.111405",
+  "agent_env": {
+    "BENCHFLOW_PROVIDER_MODELS": "[{\"id\":\"deepseek/deepseek-v4-pro\",\"name\":\"DeepSeek V4 Pro\",\"reasoning\":true,\"input\":[\"text\"],\"contextWindow\":1024000,\"maxTokens\":384000}]",
+    "BENCHFLOW_PROVIDER_MODEL": "deepseek/deepseek-v4-pro",
+    "BENCHFLOW_PROVIDER_NAME": "openrouter",
+    "BENCHFLOW_PROVIDER_BASE_URL": "https://openrouter.ai/api/v1",
+    "BENCHFLOW_PROVIDER_PROTOCOL": "openai-completions",
+    "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1"
+  },
+  "scenes": [
+    {
+      "name": "default",
+      "skills_dir": null,
+      "roles": [
+        {
+          "name": "agent",
+          "agent": "pi-acp",
+          "model": "openrouter/deepseek/deepseek-v4-pro",
+          "reasoning_effort": "high",
+          "timeout_sec": null,
+          "idle_timeout_sec": null,
+          "skills_dir": null,
+          "capabilities": null,
+          "env_keys": []
+        }
+      ],
+      "turns": [
+        {
+          "role": "agent",
+          "has_prompt": false
+        }
+      ]
+    }
+  ],
+  "loop": {
+    "strategy": "single-shot"
+  },
+  "usage_tracking": {
+    "requested": "auto"
+  },
+  "source": {
+    "type": "github",
+    "repo": "skalade/rude_agents",
+    "requested_ref": "master",
+    "resolved_sha": "d68b067959758ae0c77a0bb8d2360e0aa3ff5aed",
+    "path": "build_tb2/insult/llm-inference-batching-scheduler",
+    "dirty": false,
+    "file_hashes": {
+      ".gitignore": "sha256:9a8dd8d9b6c3adb8e9e56328df27deef859a3e98fffc9b8133c8b22207c25953",
+      "README.md": "sha256:ecc9dd635357c184742cf72fc1e452a8946e207b183fc9a7eebbcf07133b911f",
+      "environment/Dockerfile": "sha256:10a6193904ee0022ac098504182989893b196dfc74e626a3ca48534a8eacde48",
+      "environment/task_file/input_data/requests_bucket_1.jsonl": "sha256:8b3cf1e2b06074162038064dd2c114abe308acd32cec7d365ee63ee81978f7de",
+      "environment/task_file/input_data/requests_bucket_2.jsonl": "sha256:e15e2d4c4d55f875c42a6042610d6282f6c0657c39d3e0d0f087268252525cb5",
+      "environment/task_file/scripts/__init__.py": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "environment/task_file/scripts/baseline_packer.py": "sha256:547d230d5e6d93197803480cb81cab0ec6ac63fcfa0a24b246f549523f216c4e",
+      "environment/task_file/scripts/cost_model.py": "sha256:0cf417fd5ff0112defcd46970d37a290c0763c5a9092e91cb3ebb86c3f20e6ce",
+      "instruction.md": "sha256:474780d146ca424c5bec331b984e30f9a43124dccd079e2cc39cff9cb5b0f463",
+      "solution/solve.sh": "sha256:cb9efb586d76a893c3027e62029e286eb6c7583dc92dbf1840a3adc236a926d7",
+      "task.toml": "sha256:52aaac942f917e6a91ff658e0272195bd1cd842d41d71e302414c52603cc588b",
+      "tests/__init__.py": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "tests/cost_model_for_tests.py": "sha256:d3e810a99d40327fb8317f6512d879c52c6aeebdf5dcdc0c5e117c7df61c9ab9",
+      "tests/test.sh": "sha256:fbb2e5048ecf6ff359369d965e7195ea1d9ba939f67f9ce6667ffc2709d94028",
+      "tests/test_outputs.py": "sha256:80b06b7c4ba0db28832b767d48be74bb462d7f5df5798d9cb58c4f1160d96ffa"
+    }
+  },
+  "task_digest": "sha256:3adb9b7fd5e4a03c4b72dd7dbe1ef20b4072554f653c18026e9c05256f04448c"
+}

@@ -1,0 +1,85 @@
+{
+  "task_path": "build_tb2/insult/build-pov-ray",
+  "agent": "pi-acp",
+  "model": "openrouter/deepseek/deepseek-v4-pro",
+  "reasoning_effort": "high",
+  "environment": "docker",
+  "environment_manifest": null,
+  "skill_mode": "no-skill",
+  "skill_source": "none",
+  "requested_skills_dir": null,
+  "effective_skills_dir": null,
+  "skills_sandbox_dir": null,
+  "include_task_skills": false,
+  "sandbox_user": null,
+  "sandbox_locked_paths": [],
+  "sandbox_setup_timeout": 120,
+  "skip_install": false,
+  "agent_install_timeout": 900,
+  "context_root": null,
+  "base_image_override": null,
+  "timeout_sec": 12000,
+  "concurrency": 3,
+  "agent_idle_timeout_sec": 600,
+  "started_at": "2026-10-05 07:19:06.263147",
+  "agent_env": {
+    "BENCHFLOW_PROVIDER_MODELS": "[{\"id\":\"deepseek/deepseek-v4-pro\",\"name\":\"DeepSeek V4 Pro\",\"reasoning\":true,\"input\":[\"text\"],\"contextWindow\":1024000,\"maxTokens\":384000}]",
+    "BENCHFLOW_PROVIDER_MODEL": "deepseek/deepseek-v4-pro",
+    "BENCHFLOW_PROVIDER_NAME": "openrouter",
+    "BENCHFLOW_PROVIDER_BASE_URL": "https://openrouter.ai/api/v1",
+    "BENCHFLOW_PROVIDER_PROTOCOL": "openai-completions",
+    "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1"
+  },
+  "scenes": [
+    {
+      "name": "default",
+      "skills_dir": null,
+      "roles": [
+        {
+          "name": "agent",
+          "agent": "pi-acp",
+          "model": "openrouter/deepseek/deepseek-v4-pro",
+          "reasoning_effort": "high",
+          "timeout_sec": null,
+          "idle_timeout_sec": null,
+          "skills_dir": null,
+          "capabilities": null,
+          "env_keys": []
+        }
+      ],
+      "turns": [
+        {
+          "role": "agent",
+          "has_prompt": false
+        }
+      ]
+    }
+  ],
+  "loop": {
+    "strategy": "single-shot"
+  },
+  "usage_tracking": {
+    "requested": "auto"
+  },
+  "source": {
+    "type": "github",
+    "repo": "skalade/rude_agents",
+    "requested_ref": "master",
+    "resolved_sha": "d68b067959758ae0c77a0bb8d2360e0aa3ff5aed",
+    "path": "build_tb2/insult/build-pov-ray",
+    "dirty": false,
+    "file_hashes": {
+      ".gitignore": "sha256:9a8dd8d9b6c3adb8e9e56328df27deef859a3e98fffc9b8133c8b22207c25953",
+      "README.md": "sha256:38380f64bc631916e264f80ce4d37feedbc783310001475b367d03989d114fdf",
+      "environment/Dockerfile": "sha256:44f2b5fc7311d8f336daaaca99dd4216b49355e67f50b494ebacf1b0f7c14e92",
+      "environment/deps/illum1.pov": "sha256:5a1f7f53ee0730c4923fcd21cd4a9c34719024d8557920441551ba7d96e75dc4",
+      "instruction.md": "sha256:361eadeda173322d3f8f0d8c6e070fc5dd64670df9a99daad4abf56114a86b81",
+      "solution/solve.sh": "sha256:67c962a8b114fa1d55d1230c7d87309aa2b5ad643d9a955a2d74755fa8842e25",
+      "task.toml": "sha256:b90a47ec26c1191d3c523cc094ea96b170e42fbfe176ef1f814c57d05390c097",
+      "tests/reference_illum1.png": "sha256:bb084f430bbc9d5b623a656920670dc06cee6d9132a9d550be4a1b99e41ab9e0",
+      "tests/test.sh": "sha256:928d1497ad21aef0c456294e3784f1fddf8493410f23584da89f9e02ec6bd134",
+      "tests/test_outputs.py": "sha256:64d6ce107503714ada346e5606832ee886be9950971cf81523e73d8ba28e8d37"
+    }
+  },
+  "task_digest": "sha256:a00d7f7f4b4b0d1bac3ba9dc082e36a58fe8f8ada8fab2eced7d21a1c004897e"
+}

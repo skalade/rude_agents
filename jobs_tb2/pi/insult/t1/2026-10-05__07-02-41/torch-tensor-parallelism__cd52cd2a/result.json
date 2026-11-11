@@ -1,0 +1,136 @@
+{
+  "task_name": "torch-tensor-parallelism",
+  "rollout_name": "torch-tensor-parallelism__cd52cd2a",
+  "rewards": {
+    "reward": 0.0
+  },
+  "agent": "pi-acp",
+  "agent_name": "pi-acp",
+  "model": "openrouter/deepseek/deepseek-v4-pro",
+  "skill_mode": "no-skill",
+  "skill_source": "none",
+  "requested_skills_dir": null,
+  "effective_skills_dir": null,
+  "skills_sandbox_dir": null,
+  "include_task_skills": false,
+  "n_tool_calls": 8,
+  "n_skill_invocations": 0,
+  "n_prompts": 1,
+  "agent_result": {
+    "n_tool_calls": 8,
+    "n_skill_invocations": 0,
+    "n_prompts": 1,
+    "n_input_tokens": 73190,
+    "n_output_tokens": 8810,
+    "n_cache_read_tokens": 49837,
+    "n_cache_creation_tokens": 0,
+    "total_tokens": 82000,
+    "cost_usd": 0.01023904,
+    "usage_source": "provider_response",
+    "price_source": "litellm"
+  },
+  "final_metrics": {
+    "total_prompt_tokens": 73190,
+    "total_completion_tokens": 8810,
+    "total_cached_tokens": 49837,
+    "total_cost_usd": 0.01023904
+  },
+  "trajectory_summary": {
+    "steps": 21,
+    "tool_call_steps": 8,
+    "user_message_steps": 1,
+    "agent_message_steps": 3,
+    "agent_thought_steps": 9,
+    "other_steps": 0,
+    "event_type_counts": {
+      "agent_message": 3,
+      "user_message": 1,
+      "agent_thought": 9,
+      "tool_call": 8
+    },
+    "tool_call_status_counts": {
+      "completed": 5,
+      "failed": 3
+    },
+    "partial_trajectory": false,
+    "trajectory_source": "acp"
+  },
+  "usage_tracking": {
+    "requested": "auto",
+    "status": "enabled",
+    "environment": "docker",
+    "endpoint_kind": "host",
+    "usage_source": "provider_response"
+  },
+  "error": null,
+  "error_category": null,
+  "verifier_error": null,
+  "verifier_error_category": null,
+  "export_error": null,
+  "idle_timeout_info": null,
+  "agent_timeout_info": null,
+  "sandbox_startup_info": null,
+  "transport_error_info": null,
+  "verifier_timeout_info": null,
+  "api_error_info": null,
+  "suspected_api_error_info": null,
+  "partial_trajectory": false,
+  "trajectory_source": "acp",
+  "started_at": "2026-10-05 14:00:01.005761",
+  "finished_at": "2026-10-05 14:37:20.826886",
+  "timing": {
+    "environment_setup": 8.9,
+    "agent_setup": 3.3,
+    "agent_execution": 283.3,
+    "verifier": 1477.0,
+    "total": 2239.8
+  },
+  "scenes": [
+    {
+      "name": "default",
+      "skills_dir": null,
+      "roles": [
+        {
+          "name": "agent",
+          "agent": "pi-acp",
+          "model": "openrouter/deepseek/deepseek-v4-pro",
+          "reasoning_effort": "high",
+          "timeout_sec": null,
+          "idle_timeout_sec": null,
+          "skills_dir": null,
+          "capabilities": null,
+          "env_keys": []
+        }
+      ],
+      "turns": [
+        {
+          "role": "agent",
+          "has_prompt": false
+        }
+      ]
+    }
+  ],
+  "loop": {
+    "strategy": "single-shot"
+  },
+  "source": {
+    "type": "github",
+    "repo": "skalade/rude_agents",
+    "requested_ref": "master",
+    "resolved_sha": "d68b067959758ae0c77a0bb8d2360e0aa3ff5aed",
+    "path": "build_tb2/insult/torch-tensor-parallelism",
+    "dirty": false,
+    "file_hashes": {
+      ".gitignore": "sha256:9a8dd8d9b6c3adb8e9e56328df27deef859a3e98fffc9b8133c8b22207c25953",
+      "README.md": "sha256:4c1b3c3be30548f1f94c6f5503b1bc74b006af7f192dc4cd026f411df1a54604",
+      "environment/Dockerfile": "sha256:5f264ff0bf62a49aee3c6398447de5108df141e7a2ad35c6de8ef39fa62049c6",
+      "instruction.md": "sha256:c3a6380b3a85d8e85cd2f6617f315272b2647da152e1ba9af61e95665acd99ad",
+      "solution/solve.sh": "sha256:d083b7cbf9dbb6cc2ff38c8f2acc150f0059c04aea42d6c2183aeaecc5a19385",
+      "task.toml": "sha256:9e45f2211615b8a7f0ade68c7b45e343b02ef4b6d3978285b695a9a01837f682",
+      "tests/test.sh": "sha256:a7e6c9408b2401e4e7448371f7ddc72f3284caccfb56277d3cd4e98051868cdf",
+      "tests/test_outputs.py": "sha256:4ae4285e15fba1fcf13d7b7c0638ac8c2e2b0797c937abab1fb6b136fd508290"
+    }
+  },
+  "task_digest": "sha256:fd4f9b25298e0c20143876661c744d871b9e91ea6be277347ed7780060c3bc3c",
+  "sandbox_id": null
+}

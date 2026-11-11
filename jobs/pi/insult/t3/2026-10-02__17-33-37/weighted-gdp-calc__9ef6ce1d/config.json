@@ -1,0 +1,90 @@
+{
+  "task_path": "build/insult/weighted-gdp-calc",
+  "agent": "pi-acp",
+  "model": "openrouter/deepseek/deepseek-v4-pro",
+  "reasoning_effort": "high",
+  "environment": "docker",
+  "environment_manifest": null,
+  "skill_mode": "with-skill",
+  "skill_source": "task_bundled",
+  "requested_skills_dir": null,
+  "effective_skills_dir": "/tmp/benchflow-task-ut_4fyq9/weighted-gdp-calc/environment/skills",
+  "skills_sandbox_dir": "/skills",
+  "include_task_skills": true,
+  "sandbox_user": "agent",
+  "sandbox_locked_paths": [
+    "/oracle",
+    "/solution",
+    "/verifier",
+    "/tests",
+    "/testbed_verify"
+  ],
+  "sandbox_setup_timeout": 120,
+  "skip_install": false,
+  "agent_install_timeout": 900,
+  "context_root": null,
+  "base_image_override": null,
+  "timeout_sec": 900,
+  "concurrency": 2,
+  "agent_idle_timeout_sec": 600,
+  "started_at": "2026-10-02 17:44:30.212880",
+  "agent_env": {
+    "BENCHFLOW_PROVIDER_MODELS": "[{\"id\":\"deepseek/deepseek-v4-pro\",\"name\":\"DeepSeek V4 Pro\",\"reasoning\":true,\"input\":[\"text\"],\"contextWindow\":1024000,\"maxTokens\":384000}]",
+    "BENCHFLOW_PROVIDER_MODEL": "deepseek/deepseek-v4-pro",
+    "BENCHFLOW_PROVIDER_NAME": "openrouter",
+    "BENCHFLOW_PROVIDER_BASE_URL": "https://openrouter.ai/api/v1",
+    "BENCHFLOW_PROVIDER_PROTOCOL": "openai-completions",
+    "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1"
+  },
+  "scenes": [
+    {
+      "name": "default",
+      "skills_dir": null,
+      "roles": [
+        {
+          "name": "agent",
+          "agent": "pi-acp",
+          "model": "openrouter/deepseek/deepseek-v4-pro",
+          "reasoning_effort": "high",
+          "timeout_sec": null,
+          "idle_timeout_sec": null,
+          "skills_dir": null,
+          "capabilities": null,
+          "env_keys": []
+        }
+      ],
+      "turns": [
+        {
+          "role": "agent",
+          "has_prompt": false
+        }
+      ]
+    }
+  ],
+  "loop": {
+    "strategy": "single-shot"
+  },
+  "usage_tracking": {
+    "requested": "auto"
+  },
+  "source": {
+    "type": "github",
+    "repo": "skalade/rude_agents",
+    "requested_ref": "master",
+    "resolved_sha": "9e15ebe51faf51abfd0b3047635c0db53301290f",
+    "path": "build/insult/weighted-gdp-calc",
+    "dirty": false,
+    "file_hashes": {
+      "environment/Dockerfile": "sha256:dacf1b76b9c377c29ce69d4febabbdfb0bfb0b1e14e522116c0ac5ddab2b3266",
+      "environment/gdp.xlsx": "sha256:fb8873433c7206cf431a01d2dec7e943b91d3faacfe2ce4c30b9de65c8842caa",
+      "environment/skills/xlsx/LICENSE.txt": "sha256:79f6d8f5b427252fa3b1c11ecdbdb6bf610b944f7530b4de78f770f38741cfaa",
+      "environment/skills/xlsx/SKILL.md": "sha256:9bdc1fee81f3be9cb34ac49f8890c094a3855d3d0236783d10e0ea6df1515e01",
+      "environment/skills/xlsx/recalc.py": "sha256:f0833720e26fa894c9c1ccf0bd71dfc4609f8a310360fb2de2071efb64fbd409",
+      "oracle/solve.sh": "sha256:5e50a0083bd4c06a236382bd7af472d2a6384f7f3415bbe4eaa3207e232a9f31",
+      "task.md": "sha256:6833345ea034d0482d109e6dc17eded4bf775084deeaa4379b231acbe7d5ecac",
+      "verifier/test.sh": "sha256:f6d94159004f2dcf9488d3f80920a60675f7b45fb22353592fa9b3a61c24843a",
+      "verifier/test_outputs.py": "sha256:94b1b6089c1c143cb1f54c5110cfe932e2d85194c19286c7201f5c29c2c87055"
+    }
+  },
+  "task_digest": "sha256:e6847a04a693c9858443b2dba913e07df92ae4061011f9f46867a09e853dbbb2"
+}

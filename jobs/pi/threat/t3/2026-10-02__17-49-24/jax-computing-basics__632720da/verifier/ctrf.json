@@ -1,0 +1,71 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 5,
+            "passed": 4,
+            "failed": 1,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1790985266.2995262,
+            "stop": 1790985266.5591652
+        },
+        "tests": [
+            {
+                "name": "::TestOutputFilesExist::test_all_output_files_exist",
+                "status": "passed",
+                "duration": 0.00038709607906639576,
+                "start": 1790985266.5411232,
+                "stop": 1790985266.5416427,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::TestOutputFilesExist::test_all_answer_files_exist",
+                "status": "passed",
+                "duration": 0.00026340701151639223,
+                "start": 1790985266.5417452,
+                "stop": 1790985266.5420754,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::TestOutputShapes::test_shapes_match",
+                "status": "passed",
+                "duration": 0.0008762491634115577,
+                "start": 1790985266.5421596,
+                "stop": 1790985266.543104,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            },
+            {
+                "name": "::TestNumericalCorrectness::test_allclose",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.0013803309993818402,
+                "start": 1790985266.5431957,
+                "stop": 1790985266.5586607,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py",
+                "tags": [
+                    "parametrize::rtol, atol::[(1e-05, 1e-06)]"
+                ],
+                "trace": "self = <test_outputs.TestNumericalCorrectness object at 0x7e9aefe97d70>\nrtol = 1e-05, atol = 1e-06\n\n    @pytest.mark.parametrize(\"rtol, atol\", [(1e-5, 1e-6)])\n    def test_allclose(self, rtol, atol):\n        tasks = load_problem()\n        for t in tasks:\n            out = np.load(output_path(t[\"output\"]))\n            ans = np.load(answer_path(t[\"output\"]))\n>           assert np.allclose(out, ans, rtol=rtol, atol=atol), f\"Numerical mismatch in task {t['id']}\"\nE           AssertionError: Numerical mismatch in task jit_mlp\nE           assert False\nE            +  where False = <function allclose at 0x7e9aed9800b0>(array([[-0.02035573,  0.06599276],\\n       [ 0.00499253,  0.03804577],\\n       [ 0.07326841,  0.03570365],\\n       [ 0.00...      [-0.06126443,  0.12760969],\\n       [-0.0393528 ,  0.1083625 ],\\n       [-0.02875906,  0.07366263]], dtype=float32), array([[-0.0513665 ,  0.05811364],\\n       [-0.04591793,  0.03966586],\\n       [-0.07444491,  0.02187082],\\n       [-0.04...      [-0.09311429,  0.0630042 ],\\n       [-0.05988615,  0.04832265],\\n       [-0.06672809,  0.03961332]], dtype=float32), rtol=1e-05, atol=1e-06)\nE            +    where <function allclose at 0x7e9aed9800b0> = np.allclose\n\n/verifier/test_outputs.py:91: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "::TestTaskIDs::test_no_duplicate_ids",
+                "status": "passed",
+                "duration": 0.0002455128123983741,
+                "start": 1790985266.558775,
+                "stop": 1790985266.5590825,
+                "retries": 0,
+                "file_path": "../verifier/test_outputs.py"
+            }
+        ]
+    }
+}

@@ -1,0 +1,101 @@
+{
+  "task_path": "build_tb2/insult/financial-document-processor",
+  "agent": "pi-acp",
+  "model": "openrouter/deepseek/deepseek-v4-pro",
+  "reasoning_effort": "high",
+  "environment": "docker",
+  "environment_manifest": null,
+  "skill_mode": "no-skill",
+  "skill_source": "none",
+  "requested_skills_dir": null,
+  "effective_skills_dir": null,
+  "skills_sandbox_dir": null,
+  "include_task_skills": false,
+  "sandbox_user": null,
+  "sandbox_locked_paths": [],
+  "sandbox_setup_timeout": 120,
+  "skip_install": false,
+  "agent_install_timeout": 900,
+  "context_root": null,
+  "base_image_override": null,
+  "timeout_sec": 1200,
+  "concurrency": 3,
+  "agent_idle_timeout_sec": 600,
+  "started_at": "2026-10-05 09:22:02.261702",
+  "agent_env": {
+    "BENCHFLOW_PROVIDER_MODELS": "[{\"id\":\"deepseek/deepseek-v4-pro\",\"name\":\"DeepSeek V4 Pro\",\"reasoning\":true,\"input\":[\"text\"],\"contextWindow\":1024000,\"maxTokens\":384000}]",
+    "BENCHFLOW_PROVIDER_MODEL": "deepseek/deepseek-v4-pro",
+    "BENCHFLOW_PROVIDER_NAME": "openrouter",
+    "BENCHFLOW_PROVIDER_BASE_URL": "https://openrouter.ai/api/v1",
+    "BENCHFLOW_PROVIDER_PROTOCOL": "openai-completions",
+    "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1"
+  },
+  "scenes": [
+    {
+      "name": "default",
+      "skills_dir": null,
+      "roles": [
+        {
+          "name": "agent",
+          "agent": "pi-acp",
+          "model": "openrouter/deepseek/deepseek-v4-pro",
+          "reasoning_effort": "high",
+          "timeout_sec": null,
+          "idle_timeout_sec": null,
+          "skills_dir": null,
+          "capabilities": null,
+          "env_keys": []
+        }
+      ],
+      "turns": [
+        {
+          "role": "agent",
+          "has_prompt": false
+        }
+      ]
+    }
+  ],
+  "loop": {
+    "strategy": "single-shot"
+  },
+  "usage_tracking": {
+    "requested": "auto"
+  },
+  "source": {
+    "type": "github",
+    "repo": "skalade/rude_agents",
+    "requested_ref": "master",
+    "resolved_sha": "d68b067959758ae0c77a0bb8d2360e0aa3ff5aed",
+    "path": "build_tb2/insult/financial-document-processor",
+    "dirty": false,
+    "file_hashes": {
+      ".gitignore": "sha256:9a8dd8d9b6c3adb8e9e56328df27deef859a3e98fffc9b8133c8b22207c25953",
+      "README.md": "sha256:32438e7780d235dd609f4740e36512c4cd2f34ef26842ea52c5bbde46fcf5e86",
+      "environment/Dockerfile": "sha256:2ea485aead008998d7a551e8c80b6bd354a74cbffc310a1f4b88d0b7c53d23ff",
+      "environment/documents/1t2tala7.jpg": "sha256:d5fc89cdc92240baa7fc6506237e3841af88880a6f57fa6e3f60b925e605fd22",
+      "environment/documents/41ibljh7.pdf": "sha256:bc95a144939b7f21abd832019625a3f2c182a7abe8d57f9bd25e7c6f5d6b3ba5",
+      "environment/documents/53lc58dr.jpg": "sha256:2c8607b9c75907077e23f45ce7bc75335a4a46e9f9aab5ee0d901b86b63e7a8e",
+      "environment/documents/5lxo6qji.pdf": "sha256:0b3873d45510867d3063637d01f8e9255c4be96586b1f6b06682a208877d441c",
+      "environment/documents/8mdd4v30.jpg": "sha256:56238d4d934c433c24e53d0674f0530e11024f284e8ffcb3bb0bcc0d58850740",
+      "environment/documents/9t84azyt.pdf": "sha256:d46a7397df8e7903ddef31b76c1633c4989f09b8c301e0cf87dab00cd08a4663",
+      "environment/documents/c11ertj5.pdf": "sha256:570adcb1be1800cca727420b543e9c68bb7607ebaddf80524c7380560e549434",
+      "environment/documents/dbdw2pcn.pdf": "sha256:ad8f14ad77a98d0926a68d17e5ce822c2f9d3a355ccf4a6b1ded5327c31cbb87",
+      "environment/documents/g0fn9xuy.jpg": "sha256:807a6b0b942eb2ce406db3c57a833bba539e165017c81e2b1a0a98104d213677",
+      "environment/documents/hv3a3zmf.jpg": "sha256:c212aa5440b23e4b5e97af3c271685769b1050edd73a1ee461acce2c5998eb3c",
+      "environment/documents/jxepq85j.jpg": "sha256:a51b4a78c278c1b755e674511729d8514681b94094a4130c457ed71c533a0083",
+      "environment/documents/pbhsahxt.jpg": "sha256:badb1930a086c35b1484463098cbfb7823beb21abae71a9fe95bf90807fa9e41",
+      "environment/documents/sg65kxvf.jpg": "sha256:53d8335a156bd0b18bd1808693cc805c39e013d9768fd7eb7497f22e18b1c5cb",
+      "environment/documents/ujv6oh9s.jpg": "sha256:ad3359faf1126b33fc587098ed3f5b722734eeb4364794eea66e10112014f25a",
+      "environment/documents/wnnhj7xv.pdf": "sha256:5ee01b997176b9124302899471651ce4d4b160f292caf79f2250e2e8324e3480",
+      "environment/documents/xaji0y6d.jpg": "sha256:e0b8a2c7078efe82d7657f5023f01ff5498d59cca54a74ef2b6983bc979a1c54",
+      "environment/documents/zbikcidk.jpg": "sha256:862f7d313f1233f3e44a89610a4015d861dc771ad2ba8028ad56e2d4fd37ac71",
+      "environment/randomize_filenames.py": "sha256:09828ee53e8f2165a9888c5de84e40fcb057bb889d93bfc90d9aeca8c4e23be4",
+      "instruction.md": "sha256:a8a51f700f23ef0a918f7d08cad4155f6d3255a6d7c85495411ce1d471caf7df",
+      "solution/solve.sh": "sha256:90861b79c4bd7733909616ffa058151847eb67a4d43395a964c449cf7e24c4fb",
+      "task.toml": "sha256:163ee252895c05d36ca37137dba4d6c24b46be28d56ce84ef8bb35bb5b894bda",
+      "tests/test.sh": "sha256:48abbda713ace5cee00dd28c7398959f28280062350eb88206a6697a28c72790",
+      "tests/test_outputs.py": "sha256:978f506ad5c1bfaf28f9bc774dfe4347d33d046ca009b8496eb513956b7f5a9a"
+    }
+  },
+  "task_digest": "sha256:5d6155db9e4eaff2ae11195a8897990cfab85bfa75c3058d7b117da66ebec54c"
+}

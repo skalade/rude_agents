@@ -1,0 +1,137 @@
+{
+  "task_name": "git-leak-recovery",
+  "rollout_name": "git-leak-recovery__97ace650",
+  "rewards": {
+    "reward": 1.0
+  },
+  "agent": "pi-acp",
+  "agent_name": "pi-acp",
+  "model": "openrouter/deepseek/deepseek-v4-pro",
+  "skill_mode": "no-skill",
+  "skill_source": "none",
+  "requested_skills_dir": null,
+  "effective_skills_dir": null,
+  "skills_sandbox_dir": null,
+  "include_task_skills": false,
+  "n_tool_calls": 11,
+  "n_skill_invocations": 0,
+  "n_prompts": 1,
+  "agent_result": {
+    "n_tool_calls": 11,
+    "n_skill_invocations": 0,
+    "n_prompts": 1,
+    "n_input_tokens": 13093,
+    "n_output_tokens": 1368,
+    "n_cache_read_tokens": 11438,
+    "n_cache_creation_tokens": 0,
+    "total_tokens": 14461,
+    "cost_usd": 0.00103796,
+    "usage_source": "provider_response",
+    "price_source": "litellm"
+  },
+  "final_metrics": {
+    "total_prompt_tokens": 13093,
+    "total_completion_tokens": 1368,
+    "total_cached_tokens": 11438,
+    "total_cost_usd": 0.00103796
+  },
+  "trajectory_summary": {
+    "steps": 23,
+    "tool_call_steps": 11,
+    "user_message_steps": 1,
+    "agent_message_steps": 6,
+    "agent_thought_steps": 5,
+    "other_steps": 0,
+    "event_type_counts": {
+      "agent_message": 6,
+      "user_message": 1,
+      "agent_thought": 5,
+      "tool_call": 11
+    },
+    "tool_call_status_counts": {
+      "completed": 10,
+      "failed": 1
+    },
+    "partial_trajectory": false,
+    "trajectory_source": "acp"
+  },
+  "usage_tracking": {
+    "requested": "auto",
+    "status": "enabled",
+    "environment": "docker",
+    "endpoint_kind": "host",
+    "usage_source": "provider_response"
+  },
+  "error": null,
+  "error_category": null,
+  "verifier_error": null,
+  "verifier_error_category": null,
+  "export_error": null,
+  "idle_timeout_info": null,
+  "agent_timeout_info": null,
+  "sandbox_startup_info": null,
+  "transport_error_info": null,
+  "verifier_timeout_info": null,
+  "api_error_info": null,
+  "suspected_api_error_info": null,
+  "partial_trajectory": false,
+  "trajectory_source": "acp",
+  "started_at": "2026-10-05 18:07:10.855086",
+  "finished_at": "2026-10-05 18:23:24.633042",
+  "timing": {
+    "environment_setup": 26.2,
+    "agent_setup": 3.6,
+    "agent_execution": 60.0,
+    "verifier": 6.1,
+    "total": 973.8
+  },
+  "scenes": [
+    {
+      "name": "default",
+      "skills_dir": null,
+      "roles": [
+        {
+          "name": "agent",
+          "agent": "pi-acp",
+          "model": "openrouter/deepseek/deepseek-v4-pro",
+          "reasoning_effort": "high",
+          "timeout_sec": null,
+          "idle_timeout_sec": null,
+          "skills_dir": null,
+          "capabilities": null,
+          "env_keys": []
+        }
+      ],
+      "turns": [
+        {
+          "role": "agent",
+          "has_prompt": false
+        }
+      ]
+    }
+  ],
+  "loop": {
+    "strategy": "single-shot"
+  },
+  "source": {
+    "type": "github",
+    "repo": "skalade/rude_agents",
+    "requested_ref": "master",
+    "resolved_sha": "d68b067959758ae0c77a0bb8d2360e0aa3ff5aed",
+    "path": "build_tb2/threat/git-leak-recovery",
+    "dirty": false,
+    "file_hashes": {
+      ".gitignore": "sha256:9a8dd8d9b6c3adb8e9e56328df27deef859a3e98fffc9b8133c8b22207c25953",
+      "README.md": "sha256:8914c63fc4edd7dd3636f3c6572840908d957cca50cfb8a8849e55e1041b2cfc",
+      "environment/Dockerfile": "sha256:006bf5d2e3502a059f9a87bc855a7f85d6c40c67bf8a523dd3f1e9c6f64cc112",
+      "environment/challenge-setup.sh": "sha256:a0a19652fc595b0bd06b6970e1d6a455bd4c50991c2ffdcc37fe5b66452b23e2",
+      "instruction.md": "sha256:ea60116de20873ed255dd8e948d80d83026df308102de7e3bfe9d8896e959777",
+      "solution/solve.sh": "sha256:791a7eb23019ee7c93307b35cc77ea334469c4d3688e1171fe1e5ba6fd9a14dd",
+      "task.toml": "sha256:d7f23fda4a6ba3fff902d2a475db8ff74feb5d328980696a77068c02c57d3044",
+      "tests/test.sh": "sha256:4770437ea96c3cc84684b4f99d55fb148fcac09f9ea1e8ef49de487716e6c334",
+      "tests/test_outputs.py": "sha256:dc7b01c1b9dbb0c123def54b146dc1dd399a600edee5970d043a5db5eac4c775"
+    }
+  },
+  "task_digest": "sha256:0fc0c5e9648b8bf8c3fece6a9fba6cd2799ffd9ee7a5507b7e034ee467022c62",
+  "sandbox_id": null
+}

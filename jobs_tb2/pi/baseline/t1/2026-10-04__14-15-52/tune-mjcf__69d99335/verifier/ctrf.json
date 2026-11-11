@@ -1,0 +1,56 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 4,
+            "passed": 4,
+            "failed": 0,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1791175163.5733,
+            "stop": 1791175173.8569593
+        },
+        "tests": [
+            {
+                "name": "::test_model_ref_unchanged",
+                "status": "passed",
+                "duration": 0.00045941793359816074,
+                "start": 1791175164.0165179,
+                "stop": 1791175164.017146,
+                "retries": 0,
+                "file_path": "../tests/test_outputs.py"
+            },
+            {
+                "name": "::test_tuned_model_exists",
+                "status": "passed",
+                "duration": 0.00024421210400760174,
+                "start": 1791175164.0172846,
+                "stop": 1791175164.0176024,
+                "retries": 0,
+                "file_path": "../tests/test_outputs.py"
+            },
+            {
+                "name": "::test_correctness",
+                "status": "passed",
+                "duration": 0.4840379828820005,
+                "start": 1791175164.0176966,
+                "stop": 1791175164.5018969,
+                "retries": 0,
+                "file_path": "../tests/test_outputs.py"
+            },
+            {
+                "name": "::test_model_speed",
+                "status": "passed",
+                "duration": 9.354083754937164,
+                "start": 1791175164.5021293,
+                "stop": 1791175173.856638,
+                "retries": 0,
+                "file_path": "../tests/test_outputs.py"
+            }
+        ]
+    }
+}

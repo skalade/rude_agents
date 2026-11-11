@@ -1,0 +1,136 @@
+{
+  "task_name": "torch-pipeline-parallelism",
+  "rollout_name": "torch-pipeline-parallelism__9f4a1dc5",
+  "rewards": {
+    "reward": 0.0
+  },
+  "agent": "pi-acp",
+  "agent_name": "pi-acp",
+  "model": "openrouter/deepseek/deepseek-v4-pro",
+  "skill_mode": "no-skill",
+  "skill_source": "none",
+  "requested_skills_dir": null,
+  "effective_skills_dir": null,
+  "skills_sandbox_dir": null,
+  "include_task_skills": false,
+  "n_tool_calls": 6,
+  "n_skill_invocations": 0,
+  "n_prompts": 1,
+  "agent_result": {
+    "n_tool_calls": 6,
+    "n_skill_invocations": 0,
+    "n_prompts": 1,
+    "n_input_tokens": 31392,
+    "n_output_tokens": 11197,
+    "n_cache_read_tokens": 25784,
+    "n_cache_creation_tokens": 0,
+    "total_tokens": 42589,
+    "cost_usd": 0.00627298,
+    "usage_source": "provider_response",
+    "price_source": "litellm"
+  },
+  "final_metrics": {
+    "total_prompt_tokens": 31392,
+    "total_completion_tokens": 11197,
+    "total_cached_tokens": 25784,
+    "total_cost_usd": 0.00627298
+  },
+  "trajectory_summary": {
+    "steps": 14,
+    "tool_call_steps": 6,
+    "user_message_steps": 1,
+    "agent_message_steps": 2,
+    "agent_thought_steps": 5,
+    "other_steps": 0,
+    "event_type_counts": {
+      "agent_message": 2,
+      "user_message": 1,
+      "agent_thought": 5,
+      "tool_call": 6
+    },
+    "tool_call_status_counts": {
+      "completed": 3,
+      "failed": 3
+    },
+    "partial_trajectory": false,
+    "trajectory_source": "acp"
+  },
+  "usage_tracking": {
+    "requested": "auto",
+    "status": "enabled",
+    "environment": "docker",
+    "endpoint_kind": "host",
+    "usage_source": "provider_response"
+  },
+  "error": null,
+  "error_category": null,
+  "verifier_error": null,
+  "verifier_error_category": null,
+  "export_error": null,
+  "idle_timeout_info": null,
+  "agent_timeout_info": null,
+  "sandbox_startup_info": null,
+  "transport_error_info": null,
+  "verifier_timeout_info": null,
+  "api_error_info": null,
+  "suspected_api_error_info": null,
+  "partial_trajectory": false,
+  "trajectory_source": "acp",
+  "started_at": "2026-10-05 13:58:11.467678",
+  "finished_at": "2026-10-05 14:36:48.942528",
+  "timing": {
+    "environment_setup": 2.1,
+    "agent_setup": 4.0,
+    "agent_execution": 333.6,
+    "verifier": 1526.1,
+    "total": 2317.5
+  },
+  "scenes": [
+    {
+      "name": "default",
+      "skills_dir": null,
+      "roles": [
+        {
+          "name": "agent",
+          "agent": "pi-acp",
+          "model": "openrouter/deepseek/deepseek-v4-pro",
+          "reasoning_effort": "high",
+          "timeout_sec": null,
+          "idle_timeout_sec": null,
+          "skills_dir": null,
+          "capabilities": null,
+          "env_keys": []
+        }
+      ],
+      "turns": [
+        {
+          "role": "agent",
+          "has_prompt": false
+        }
+      ]
+    }
+  ],
+  "loop": {
+    "strategy": "single-shot"
+  },
+  "source": {
+    "type": "github",
+    "repo": "skalade/rude_agents",
+    "requested_ref": "master",
+    "resolved_sha": "d68b067959758ae0c77a0bb8d2360e0aa3ff5aed",
+    "path": "build_tb2/insult/torch-pipeline-parallelism",
+    "dirty": false,
+    "file_hashes": {
+      ".gitignore": "sha256:9a8dd8d9b6c3adb8e9e56328df27deef859a3e98fffc9b8133c8b22207c25953",
+      "README.md": "sha256:297ddea07c230dfd246a8ab07337dd7abcd8e5e2a2b2e26590cb0a8af779839c",
+      "environment/Dockerfile": "sha256:c357ea41e4a4013c5c5980b8fef04af6a5ae250ccc6697cf3bad3127401a931f",
+      "instruction.md": "sha256:16aa298c48a9e486f284c2a1b0d365d85abdad203190f8b9a527e6248bb5766a",
+      "solution/solve.sh": "sha256:787198e4178d88b887697aefdd29819f29435ffdfe356545d92f58a30fb38b70",
+      "task.toml": "sha256:6c2d193855224486ba436a4104bd25247ee9f0db3c8474b0050b41e866940ad5",
+      "tests/test.sh": "sha256:cc9fd28b6590993fc37e4a99da771cbf04726c8c62fe308e802612241da69dea",
+      "tests/test_outputs.py": "sha256:23574246a407163a8e6581c84287cc2f1eb745efbaad2a317a5a28c39958c64f"
+    }
+  },
+  "task_digest": "sha256:874ea0592822200701578e6e29389f48cd69a1527a0857ef5d1509d56b177e72",
+  "sandbox_id": null
+}

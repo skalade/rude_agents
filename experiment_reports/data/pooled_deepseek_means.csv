@@ -1,0 +1,9 @@
+metric,condition,score_percent
+reward,baseline,53.70222222222224
+reward,important,62.221111111111114
+reward,insult,69.25777777777779
+reward,threat,66.85
+adjusted_reward,baseline,63.70222222222224
+adjusted_reward,important,71.11000000000001
+adjusted_reward,insult,79.25777777777779
+adjusted_reward,threat,76.85

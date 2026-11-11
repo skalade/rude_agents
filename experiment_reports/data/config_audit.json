@@ -1,0 +1,6962 @@
+[
+  {
+    "agent": "codex",
+    "condition": "baseline",
+    "trial": 1,
+    "task": "bike-rebalance",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "baseline",
+    "trial": 1,
+    "task": "dialogue-parser",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "baseline",
+    "trial": 1,
+    "task": "earthquake-plate-calculation",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "baseline",
+    "trial": 1,
+    "task": "jax-computing-basics",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "baseline",
+    "trial": 1,
+    "task": "lake-warming-attribution",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "baseline",
+    "trial": 1,
+    "task": "sales-pivot-analysis",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "baseline",
+    "trial": 1,
+    "task": "software-dependency-audit",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "baseline",
+    "trial": 1,
+    "task": "travel-planning",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "baseline",
+    "trial": 1,
+    "task": "weighted-gdp-calc",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "baseline",
+    "trial": 1,
+    "task": "xlsx-recover-data",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "baseline",
+    "trial": 2,
+    "task": "bike-rebalance",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "baseline",
+    "trial": 2,
+    "task": "dialogue-parser",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "baseline",
+    "trial": 2,
+    "task": "earthquake-plate-calculation",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "baseline",
+    "trial": 2,
+    "task": "jax-computing-basics",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "baseline",
+    "trial": 2,
+    "task": "lake-warming-attribution",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "baseline",
+    "trial": 2,
+    "task": "sales-pivot-analysis",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "baseline",
+    "trial": 2,
+    "task": "software-dependency-audit",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "baseline",
+    "trial": 2,
+    "task": "travel-planning",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "baseline",
+    "trial": 2,
+    "task": "weighted-gdp-calc",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "baseline",
+    "trial": 2,
+    "task": "xlsx-recover-data",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "baseline",
+    "trial": 3,
+    "task": "bike-rebalance",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "baseline",
+    "trial": 3,
+    "task": "dialogue-parser",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "baseline",
+    "trial": 3,
+    "task": "earthquake-plate-calculation",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "baseline",
+    "trial": 3,
+    "task": "jax-computing-basics",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "baseline",
+    "trial": 3,
+    "task": "lake-warming-attribution",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "baseline",
+    "trial": 3,
+    "task": "sales-pivot-analysis",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "baseline",
+    "trial": 3,
+    "task": "software-dependency-audit",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "baseline",
+    "trial": 3,
+    "task": "travel-planning",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "baseline",
+    "trial": 3,
+    "task": "weighted-gdp-calc",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "baseline",
+    "trial": 3,
+    "task": "xlsx-recover-data",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "important",
+    "trial": 1,
+    "task": "bike-rebalance",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "important",
+    "trial": 1,
+    "task": "dialogue-parser",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "important",
+    "trial": 1,
+    "task": "earthquake-plate-calculation",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "important",
+    "trial": 1,
+    "task": "jax-computing-basics",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "important",
+    "trial": 1,
+    "task": "lake-warming-attribution",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "important",
+    "trial": 1,
+    "task": "sales-pivot-analysis",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "important",
+    "trial": 1,
+    "task": "software-dependency-audit",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "important",
+    "trial": 1,
+    "task": "travel-planning",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "important",
+    "trial": 1,
+    "task": "weighted-gdp-calc",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "important",
+    "trial": 1,
+    "task": "xlsx-recover-data",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "important",
+    "trial": 2,
+    "task": "bike-rebalance",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "important",
+    "trial": 2,
+    "task": "dialogue-parser",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "important",
+    "trial": 2,
+    "task": "earthquake-plate-calculation",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "important",
+    "trial": 2,
+    "task": "jax-computing-basics",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "important",
+    "trial": 2,
+    "task": "lake-warming-attribution",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "important",
+    "trial": 2,
+    "task": "sales-pivot-analysis",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "important",
+    "trial": 2,
+    "task": "software-dependency-audit",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "important",
+    "trial": 2,
+    "task": "travel-planning",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "important",
+    "trial": 2,
+    "task": "weighted-gdp-calc",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "important",
+    "trial": 2,
+    "task": "xlsx-recover-data",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "important",
+    "trial": 3,
+    "task": "bike-rebalance",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "important",
+    "trial": 3,
+    "task": "dialogue-parser",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "important",
+    "trial": 3,
+    "task": "earthquake-plate-calculation",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "important",
+    "trial": 3,
+    "task": "jax-computing-basics",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "important",
+    "trial": 3,
+    "task": "lake-warming-attribution",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "important",
+    "trial": 3,
+    "task": "sales-pivot-analysis",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "important",
+    "trial": 3,
+    "task": "software-dependency-audit",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "important",
+    "trial": 3,
+    "task": "travel-planning",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "important",
+    "trial": 3,
+    "task": "weighted-gdp-calc",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "important",
+    "trial": 3,
+    "task": "xlsx-recover-data",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "insult",
+    "trial": 1,
+    "task": "bike-rebalance",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "insult",
+    "trial": 1,
+    "task": "dialogue-parser",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "insult",
+    "trial": 1,
+    "task": "earthquake-plate-calculation",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "insult",
+    "trial": 1,
+    "task": "jax-computing-basics",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "insult",
+    "trial": 1,
+    "task": "lake-warming-attribution",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "insult",
+    "trial": 1,
+    "task": "sales-pivot-analysis",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "insult",
+    "trial": 1,
+    "task": "software-dependency-audit",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "insult",
+    "trial": 1,
+    "task": "travel-planning",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "insult",
+    "trial": 1,
+    "task": "weighted-gdp-calc",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "insult",
+    "trial": 1,
+    "task": "xlsx-recover-data",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "insult",
+    "trial": 2,
+    "task": "bike-rebalance",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "insult",
+    "trial": 2,
+    "task": "dialogue-parser",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "insult",
+    "trial": 2,
+    "task": "earthquake-plate-calculation",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "insult",
+    "trial": 2,
+    "task": "jax-computing-basics",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "insult",
+    "trial": 2,
+    "task": "lake-warming-attribution",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "insult",
+    "trial": 2,
+    "task": "sales-pivot-analysis",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "insult",
+    "trial": 2,
+    "task": "software-dependency-audit",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "insult",
+    "trial": 2,
+    "task": "travel-planning",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "insult",
+    "trial": 2,
+    "task": "weighted-gdp-calc",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "insult",
+    "trial": 2,
+    "task": "xlsx-recover-data",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "insult",
+    "trial": 3,
+    "task": "bike-rebalance",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "insult",
+    "trial": 3,
+    "task": "dialogue-parser",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "insult",
+    "trial": 3,
+    "task": "earthquake-plate-calculation",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "insult",
+    "trial": 3,
+    "task": "jax-computing-basics",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "insult",
+    "trial": 3,
+    "task": "lake-warming-attribution",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "insult",
+    "trial": 3,
+    "task": "sales-pivot-analysis",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "insult",
+    "trial": 3,
+    "task": "software-dependency-audit",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "insult",
+    "trial": 3,
+    "task": "travel-planning",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "insult",
+    "trial": 3,
+    "task": "weighted-gdp-calc",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "insult",
+    "trial": 3,
+    "task": "xlsx-recover-data",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "threat",
+    "trial": 1,
+    "task": "bike-rebalance",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "threat",
+    "trial": 1,
+    "task": "dialogue-parser",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "threat",
+    "trial": 1,
+    "task": "earthquake-plate-calculation",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "threat",
+    "trial": 1,
+    "task": "jax-computing-basics",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "threat",
+    "trial": 1,
+    "task": "lake-warming-attribution",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "threat",
+    "trial": 1,
+    "task": "sales-pivot-analysis",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "threat",
+    "trial": 1,
+    "task": "software-dependency-audit",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "threat",
+    "trial": 1,
+    "task": "travel-planning",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "threat",
+    "trial": 1,
+    "task": "weighted-gdp-calc",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "threat",
+    "trial": 1,
+    "task": "xlsx-recover-data",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "threat",
+    "trial": 2,
+    "task": "bike-rebalance",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "threat",
+    "trial": 2,
+    "task": "dialogue-parser",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "threat",
+    "trial": 2,
+    "task": "earthquake-plate-calculation",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "threat",
+    "trial": 2,
+    "task": "jax-computing-basics",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "threat",
+    "trial": 2,
+    "task": "lake-warming-attribution",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "threat",
+    "trial": 2,
+    "task": "sales-pivot-analysis",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "threat",
+    "trial": 2,
+    "task": "software-dependency-audit",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "threat",
+    "trial": 2,
+    "task": "travel-planning",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "threat",
+    "trial": 2,
+    "task": "weighted-gdp-calc",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "threat",
+    "trial": 2,
+    "task": "xlsx-recover-data",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "threat",
+    "trial": 3,
+    "task": "bike-rebalance",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "threat",
+    "trial": 3,
+    "task": "dialogue-parser",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "threat",
+    "trial": 3,
+    "task": "earthquake-plate-calculation",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "threat",
+    "trial": 3,
+    "task": "jax-computing-basics",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "threat",
+    "trial": 3,
+    "task": "lake-warming-attribution",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "threat",
+    "trial": 3,
+    "task": "sales-pivot-analysis",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "threat",
+    "trial": 3,
+    "task": "software-dependency-audit",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "threat",
+    "trial": 3,
+    "task": "travel-planning",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "threat",
+    "trial": 3,
+    "task": "weighted-gdp-calc",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "codex",
+    "condition": "threat",
+    "trial": 3,
+    "task": "xlsx-recover-data",
+    "model": "gpt-5.6-terra",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CODEX_CONFIG": "{\"model_reasoning_effort\":\"high\"}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "baseline",
+    "trial": 1,
+    "task": "bike-rebalance",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "baseline",
+    "trial": 1,
+    "task": "dialogue-parser",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "baseline",
+    "trial": 1,
+    "task": "earthquake-plate-calculation",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "baseline",
+    "trial": 1,
+    "task": "jax-computing-basics",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "baseline",
+    "trial": 1,
+    "task": "lake-warming-attribution",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "baseline",
+    "trial": 1,
+    "task": "sales-pivot-analysis",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "baseline",
+    "trial": 1,
+    "task": "software-dependency-audit",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "baseline",
+    "trial": 1,
+    "task": "travel-planning",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "baseline",
+    "trial": 1,
+    "task": "weighted-gdp-calc",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "baseline",
+    "trial": 1,
+    "task": "xlsx-recover-data",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "baseline",
+    "trial": 2,
+    "task": "bike-rebalance",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "baseline",
+    "trial": 2,
+    "task": "dialogue-parser",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "baseline",
+    "trial": 2,
+    "task": "earthquake-plate-calculation",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "baseline",
+    "trial": 2,
+    "task": "jax-computing-basics",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "baseline",
+    "trial": 2,
+    "task": "lake-warming-attribution",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "baseline",
+    "trial": 2,
+    "task": "sales-pivot-analysis",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "baseline",
+    "trial": 2,
+    "task": "software-dependency-audit",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "baseline",
+    "trial": 2,
+    "task": "travel-planning",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "baseline",
+    "trial": 2,
+    "task": "weighted-gdp-calc",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "baseline",
+    "trial": 2,
+    "task": "xlsx-recover-data",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "baseline",
+    "trial": 3,
+    "task": "bike-rebalance",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "baseline",
+    "trial": 3,
+    "task": "dialogue-parser",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "baseline",
+    "trial": 3,
+    "task": "earthquake-plate-calculation",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "baseline",
+    "trial": 3,
+    "task": "jax-computing-basics",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "baseline",
+    "trial": 3,
+    "task": "lake-warming-attribution",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "baseline",
+    "trial": 3,
+    "task": "sales-pivot-analysis",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "baseline",
+    "trial": 3,
+    "task": "software-dependency-audit",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "baseline",
+    "trial": 3,
+    "task": "travel-planning",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "baseline",
+    "trial": 3,
+    "task": "weighted-gdp-calc",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "baseline",
+    "trial": 3,
+    "task": "xlsx-recover-data",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "important",
+    "trial": 1,
+    "task": "bike-rebalance",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "important",
+    "trial": 1,
+    "task": "dialogue-parser",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "important",
+    "trial": 1,
+    "task": "earthquake-plate-calculation",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "important",
+    "trial": 1,
+    "task": "jax-computing-basics",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "important",
+    "trial": 1,
+    "task": "lake-warming-attribution",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "important",
+    "trial": 1,
+    "task": "sales-pivot-analysis",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "important",
+    "trial": 1,
+    "task": "software-dependency-audit",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "important",
+    "trial": 1,
+    "task": "travel-planning",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "important",
+    "trial": 1,
+    "task": "weighted-gdp-calc",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "important",
+    "trial": 1,
+    "task": "xlsx-recover-data",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "important",
+    "trial": 2,
+    "task": "bike-rebalance",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "important",
+    "trial": 2,
+    "task": "dialogue-parser",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "important",
+    "trial": 2,
+    "task": "earthquake-plate-calculation",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "important",
+    "trial": 2,
+    "task": "jax-computing-basics",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "important",
+    "trial": 2,
+    "task": "lake-warming-attribution",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "important",
+    "trial": 2,
+    "task": "sales-pivot-analysis",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "important",
+    "trial": 2,
+    "task": "software-dependency-audit",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "important",
+    "trial": 2,
+    "task": "travel-planning",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "important",
+    "trial": 2,
+    "task": "weighted-gdp-calc",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "important",
+    "trial": 2,
+    "task": "xlsx-recover-data",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "important",
+    "trial": 3,
+    "task": "bike-rebalance",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "important",
+    "trial": 3,
+    "task": "dialogue-parser",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "important",
+    "trial": 3,
+    "task": "earthquake-plate-calculation",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "important",
+    "trial": 3,
+    "task": "jax-computing-basics",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "important",
+    "trial": 3,
+    "task": "lake-warming-attribution",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "important",
+    "trial": 3,
+    "task": "sales-pivot-analysis",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "important",
+    "trial": 3,
+    "task": "software-dependency-audit",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "important",
+    "trial": 3,
+    "task": "travel-planning",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "important",
+    "trial": 3,
+    "task": "weighted-gdp-calc",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "important",
+    "trial": 3,
+    "task": "xlsx-recover-data",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "insult",
+    "trial": 1,
+    "task": "bike-rebalance",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "insult",
+    "trial": 1,
+    "task": "dialogue-parser",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "insult",
+    "trial": 1,
+    "task": "earthquake-plate-calculation",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "insult",
+    "trial": 1,
+    "task": "jax-computing-basics",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "insult",
+    "trial": 1,
+    "task": "lake-warming-attribution",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "insult",
+    "trial": 1,
+    "task": "sales-pivot-analysis",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "insult",
+    "trial": 1,
+    "task": "software-dependency-audit",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "insult",
+    "trial": 1,
+    "task": "travel-planning",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "insult",
+    "trial": 1,
+    "task": "weighted-gdp-calc",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "insult",
+    "trial": 1,
+    "task": "xlsx-recover-data",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "insult",
+    "trial": 2,
+    "task": "bike-rebalance",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "insult",
+    "trial": 2,
+    "task": "dialogue-parser",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "insult",
+    "trial": 2,
+    "task": "earthquake-plate-calculation",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "insult",
+    "trial": 2,
+    "task": "jax-computing-basics",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "insult",
+    "trial": 2,
+    "task": "lake-warming-attribution",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "insult",
+    "trial": 2,
+    "task": "sales-pivot-analysis",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "insult",
+    "trial": 2,
+    "task": "software-dependency-audit",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "insult",
+    "trial": 2,
+    "task": "travel-planning",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "insult",
+    "trial": 2,
+    "task": "weighted-gdp-calc",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "insult",
+    "trial": 2,
+    "task": "xlsx-recover-data",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "insult",
+    "trial": 3,
+    "task": "bike-rebalance",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "insult",
+    "trial": 3,
+    "task": "dialogue-parser",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "insult",
+    "trial": 3,
+    "task": "earthquake-plate-calculation",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "insult",
+    "trial": 3,
+    "task": "jax-computing-basics",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "insult",
+    "trial": 3,
+    "task": "lake-warming-attribution",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "insult",
+    "trial": 3,
+    "task": "sales-pivot-analysis",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "insult",
+    "trial": 3,
+    "task": "software-dependency-audit",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "insult",
+    "trial": 3,
+    "task": "travel-planning",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "insult",
+    "trial": 3,
+    "task": "weighted-gdp-calc",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "insult",
+    "trial": 3,
+    "task": "xlsx-recover-data",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "threat",
+    "trial": 1,
+    "task": "bike-rebalance",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "threat",
+    "trial": 1,
+    "task": "dialogue-parser",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "threat",
+    "trial": 1,
+    "task": "earthquake-plate-calculation",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "threat",
+    "trial": 1,
+    "task": "jax-computing-basics",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "threat",
+    "trial": 1,
+    "task": "lake-warming-attribution",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "threat",
+    "trial": 1,
+    "task": "sales-pivot-analysis",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "threat",
+    "trial": 1,
+    "task": "software-dependency-audit",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "threat",
+    "trial": 1,
+    "task": "travel-planning",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "threat",
+    "trial": 1,
+    "task": "weighted-gdp-calc",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "threat",
+    "trial": 1,
+    "task": "xlsx-recover-data",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "threat",
+    "trial": 2,
+    "task": "bike-rebalance",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "threat",
+    "trial": 2,
+    "task": "dialogue-parser",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "threat",
+    "trial": 2,
+    "task": "earthquake-plate-calculation",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "threat",
+    "trial": 2,
+    "task": "jax-computing-basics",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "threat",
+    "trial": 2,
+    "task": "lake-warming-attribution",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "threat",
+    "trial": 2,
+    "task": "sales-pivot-analysis",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "threat",
+    "trial": 2,
+    "task": "software-dependency-audit",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "threat",
+    "trial": 2,
+    "task": "travel-planning",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "threat",
+    "trial": 2,
+    "task": "weighted-gdp-calc",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "threat",
+    "trial": 2,
+    "task": "xlsx-recover-data",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "threat",
+    "trial": 3,
+    "task": "bike-rebalance",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "threat",
+    "trial": 3,
+    "task": "dialogue-parser",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "threat",
+    "trial": 3,
+    "task": "earthquake-plate-calculation",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "threat",
+    "trial": 3,
+    "task": "jax-computing-basics",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "threat",
+    "trial": 3,
+    "task": "lake-warming-attribution",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "threat",
+    "trial": 3,
+    "task": "sales-pivot-analysis",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "threat",
+    "trial": 3,
+    "task": "software-dependency-audit",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "threat",
+    "trial": 3,
+    "task": "travel-planning",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "threat",
+    "trial": 3,
+    "task": "weighted-gdp-calc",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "pi",
+    "condition": "threat",
+    "trial": 3,
+    "task": "xlsx-recover-data",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": "high",
+    "effort_env": {},
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "baseline",
+    "trial": 1,
+    "task": "bike-rebalance",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "baseline",
+    "trial": 1,
+    "task": "dialogue-parser",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "baseline",
+    "trial": 1,
+    "task": "earthquake-plate-calculation",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "baseline",
+    "trial": 1,
+    "task": "jax-computing-basics",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "baseline",
+    "trial": 1,
+    "task": "lake-warming-attribution",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "baseline",
+    "trial": 1,
+    "task": "sales-pivot-analysis",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "baseline",
+    "trial": 1,
+    "task": "software-dependency-audit",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "baseline",
+    "trial": 1,
+    "task": "travel-planning",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "baseline",
+    "trial": 1,
+    "task": "weighted-gdp-calc",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "baseline",
+    "trial": 1,
+    "task": "xlsx-recover-data",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "baseline",
+    "trial": 2,
+    "task": "bike-rebalance",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "baseline",
+    "trial": 2,
+    "task": "dialogue-parser",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "baseline",
+    "trial": 2,
+    "task": "earthquake-plate-calculation",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "baseline",
+    "trial": 2,
+    "task": "jax-computing-basics",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "baseline",
+    "trial": 2,
+    "task": "lake-warming-attribution",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "baseline",
+    "trial": 2,
+    "task": "sales-pivot-analysis",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "baseline",
+    "trial": 2,
+    "task": "software-dependency-audit",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "baseline",
+    "trial": 2,
+    "task": "travel-planning",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "baseline",
+    "trial": 2,
+    "task": "weighted-gdp-calc",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "baseline",
+    "trial": 2,
+    "task": "xlsx-recover-data",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "baseline",
+    "trial": 3,
+    "task": "bike-rebalance",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "baseline",
+    "trial": 3,
+    "task": "dialogue-parser",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "baseline",
+    "trial": 3,
+    "task": "earthquake-plate-calculation",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "baseline",
+    "trial": 3,
+    "task": "jax-computing-basics",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "baseline",
+    "trial": 3,
+    "task": "lake-warming-attribution",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "baseline",
+    "trial": 3,
+    "task": "sales-pivot-analysis",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "baseline",
+    "trial": 3,
+    "task": "software-dependency-audit",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "baseline",
+    "trial": 3,
+    "task": "travel-planning",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "baseline",
+    "trial": 3,
+    "task": "weighted-gdp-calc",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "baseline",
+    "trial": 3,
+    "task": "xlsx-recover-data",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "important",
+    "trial": 1,
+    "task": "bike-rebalance",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "important",
+    "trial": 1,
+    "task": "dialogue-parser",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "important",
+    "trial": 1,
+    "task": "earthquake-plate-calculation",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "important",
+    "trial": 1,
+    "task": "jax-computing-basics",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "important",
+    "trial": 1,
+    "task": "lake-warming-attribution",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "important",
+    "trial": 1,
+    "task": "sales-pivot-analysis",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "important",
+    "trial": 1,
+    "task": "software-dependency-audit",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "important",
+    "trial": 1,
+    "task": "travel-planning",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "important",
+    "trial": 1,
+    "task": "weighted-gdp-calc",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "important",
+    "trial": 1,
+    "task": "xlsx-recover-data",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "important",
+    "trial": 2,
+    "task": "bike-rebalance",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "important",
+    "trial": 2,
+    "task": "dialogue-parser",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "important",
+    "trial": 2,
+    "task": "earthquake-plate-calculation",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "important",
+    "trial": 2,
+    "task": "jax-computing-basics",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "important",
+    "trial": 2,
+    "task": "lake-warming-attribution",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "important",
+    "trial": 2,
+    "task": "sales-pivot-analysis",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "important",
+    "trial": 2,
+    "task": "software-dependency-audit",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "important",
+    "trial": 2,
+    "task": "travel-planning",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "important",
+    "trial": 2,
+    "task": "weighted-gdp-calc",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "important",
+    "trial": 2,
+    "task": "xlsx-recover-data",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "important",
+    "trial": 3,
+    "task": "bike-rebalance",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "important",
+    "trial": 3,
+    "task": "dialogue-parser",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "important",
+    "trial": 3,
+    "task": "earthquake-plate-calculation",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "important",
+    "trial": 3,
+    "task": "jax-computing-basics",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "important",
+    "trial": 3,
+    "task": "lake-warming-attribution",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "important",
+    "trial": 3,
+    "task": "sales-pivot-analysis",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "important",
+    "trial": 3,
+    "task": "software-dependency-audit",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "important",
+    "trial": 3,
+    "task": "travel-planning",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "important",
+    "trial": 3,
+    "task": "weighted-gdp-calc",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "important",
+    "trial": 3,
+    "task": "xlsx-recover-data",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "insult",
+    "trial": 1,
+    "task": "bike-rebalance",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "insult",
+    "trial": 1,
+    "task": "dialogue-parser",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "insult",
+    "trial": 1,
+    "task": "earthquake-plate-calculation",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "insult",
+    "trial": 1,
+    "task": "jax-computing-basics",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "insult",
+    "trial": 1,
+    "task": "lake-warming-attribution",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "insult",
+    "trial": 1,
+    "task": "sales-pivot-analysis",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "insult",
+    "trial": 1,
+    "task": "software-dependency-audit",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "insult",
+    "trial": 1,
+    "task": "travel-planning",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "insult",
+    "trial": 1,
+    "task": "weighted-gdp-calc",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "insult",
+    "trial": 1,
+    "task": "xlsx-recover-data",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "insult",
+    "trial": 2,
+    "task": "bike-rebalance",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "insult",
+    "trial": 2,
+    "task": "dialogue-parser",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "insult",
+    "trial": 2,
+    "task": "earthquake-plate-calculation",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "insult",
+    "trial": 2,
+    "task": "jax-computing-basics",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "insult",
+    "trial": 2,
+    "task": "lake-warming-attribution",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "insult",
+    "trial": 2,
+    "task": "sales-pivot-analysis",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "insult",
+    "trial": 2,
+    "task": "software-dependency-audit",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "insult",
+    "trial": 2,
+    "task": "travel-planning",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "insult",
+    "trial": 2,
+    "task": "weighted-gdp-calc",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "insult",
+    "trial": 2,
+    "task": "xlsx-recover-data",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "insult",
+    "trial": 3,
+    "task": "bike-rebalance",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "insult",
+    "trial": 3,
+    "task": "dialogue-parser",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "insult",
+    "trial": 3,
+    "task": "earthquake-plate-calculation",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "insult",
+    "trial": 3,
+    "task": "jax-computing-basics",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "insult",
+    "trial": 3,
+    "task": "lake-warming-attribution",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "insult",
+    "trial": 3,
+    "task": "sales-pivot-analysis",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "insult",
+    "trial": 3,
+    "task": "software-dependency-audit",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "insult",
+    "trial": 3,
+    "task": "travel-planning",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "insult",
+    "trial": 3,
+    "task": "weighted-gdp-calc",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "insult",
+    "trial": 3,
+    "task": "xlsx-recover-data",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "threat",
+    "trial": 1,
+    "task": "bike-rebalance",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "threat",
+    "trial": 1,
+    "task": "dialogue-parser",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "threat",
+    "trial": 1,
+    "task": "earthquake-plate-calculation",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "threat",
+    "trial": 1,
+    "task": "jax-computing-basics",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "threat",
+    "trial": 1,
+    "task": "lake-warming-attribution",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "threat",
+    "trial": 1,
+    "task": "sales-pivot-analysis",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "threat",
+    "trial": 1,
+    "task": "software-dependency-audit",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "threat",
+    "trial": 1,
+    "task": "travel-planning",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "threat",
+    "trial": 1,
+    "task": "weighted-gdp-calc",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "threat",
+    "trial": 1,
+    "task": "xlsx-recover-data",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "threat",
+    "trial": 2,
+    "task": "bike-rebalance",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "threat",
+    "trial": 2,
+    "task": "dialogue-parser",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "threat",
+    "trial": 2,
+    "task": "earthquake-plate-calculation",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "threat",
+    "trial": 2,
+    "task": "jax-computing-basics",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "threat",
+    "trial": 2,
+    "task": "lake-warming-attribution",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "threat",
+    "trial": 2,
+    "task": "sales-pivot-analysis",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "threat",
+    "trial": 2,
+    "task": "software-dependency-audit",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "threat",
+    "trial": 2,
+    "task": "travel-planning",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "threat",
+    "trial": 2,
+    "task": "weighted-gdp-calc",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "threat",
+    "trial": 2,
+    "task": "xlsx-recover-data",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "threat",
+    "trial": 3,
+    "task": "bike-rebalance",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "threat",
+    "trial": 3,
+    "task": "dialogue-parser",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "threat",
+    "trial": 3,
+    "task": "earthquake-plate-calculation",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "threat",
+    "trial": 3,
+    "task": "jax-computing-basics",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "threat",
+    "trial": 3,
+    "task": "lake-warming-attribution",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "threat",
+    "trial": 3,
+    "task": "software-dependency-audit",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "threat",
+    "trial": 3,
+    "task": "travel-planning",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "threat",
+    "trial": 3,
+    "task": "weighted-gdp-calc",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "threat",
+    "trial": 3,
+    "task": "sales-pivot-analysis",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "opencode",
+    "condition": "threat",
+    "trial": 3,
+    "task": "xlsx-recover-data",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "OPENCODE_CONFIG_CONTENT": "{\"agent\":{\"build\":{\"reasoningEffort\":\"high\"}}}"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "baseline",
+    "trial": 1,
+    "task": "bike-rebalance",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "baseline",
+    "trial": 1,
+    "task": "dialogue-parser",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "baseline",
+    "trial": 1,
+    "task": "earthquake-plate-calculation",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "baseline",
+    "trial": 1,
+    "task": "jax-computing-basics",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "baseline",
+    "trial": 1,
+    "task": "lake-warming-attribution",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "baseline",
+    "trial": 1,
+    "task": "sales-pivot-analysis",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "baseline",
+    "trial": 1,
+    "task": "software-dependency-audit",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "baseline",
+    "trial": 1,
+    "task": "travel-planning",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "baseline",
+    "trial": 1,
+    "task": "weighted-gdp-calc",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "baseline",
+    "trial": 1,
+    "task": "xlsx-recover-data",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "baseline",
+    "trial": 2,
+    "task": "bike-rebalance",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "baseline",
+    "trial": 2,
+    "task": "dialogue-parser",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "baseline",
+    "trial": 2,
+    "task": "earthquake-plate-calculation",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "baseline",
+    "trial": 2,
+    "task": "jax-computing-basics",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "baseline",
+    "trial": 2,
+    "task": "lake-warming-attribution",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "baseline",
+    "trial": 2,
+    "task": "sales-pivot-analysis",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "baseline",
+    "trial": 2,
+    "task": "software-dependency-audit",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "baseline",
+    "trial": 2,
+    "task": "travel-planning",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "baseline",
+    "trial": 2,
+    "task": "weighted-gdp-calc",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "baseline",
+    "trial": 2,
+    "task": "xlsx-recover-data",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "baseline",
+    "trial": 3,
+    "task": "bike-rebalance",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "baseline",
+    "trial": 3,
+    "task": "dialogue-parser",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "baseline",
+    "trial": 3,
+    "task": "earthquake-plate-calculation",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "baseline",
+    "trial": 3,
+    "task": "jax-computing-basics",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "baseline",
+    "trial": 3,
+    "task": "lake-warming-attribution",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "baseline",
+    "trial": 3,
+    "task": "sales-pivot-analysis",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "baseline",
+    "trial": 3,
+    "task": "software-dependency-audit",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "baseline",
+    "trial": 3,
+    "task": "travel-planning",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "baseline",
+    "trial": 3,
+    "task": "weighted-gdp-calc",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "baseline",
+    "trial": 3,
+    "task": "xlsx-recover-data",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "important",
+    "trial": 1,
+    "task": "bike-rebalance",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "important",
+    "trial": 1,
+    "task": "dialogue-parser",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "important",
+    "trial": 1,
+    "task": "earthquake-plate-calculation",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "important",
+    "trial": 1,
+    "task": "jax-computing-basics",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "important",
+    "trial": 1,
+    "task": "lake-warming-attribution",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "important",
+    "trial": 1,
+    "task": "sales-pivot-analysis",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "important",
+    "trial": 1,
+    "task": "software-dependency-audit",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "important",
+    "trial": 1,
+    "task": "travel-planning",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "important",
+    "trial": 1,
+    "task": "weighted-gdp-calc",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "important",
+    "trial": 1,
+    "task": "xlsx-recover-data",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "important",
+    "trial": 2,
+    "task": "bike-rebalance",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "important",
+    "trial": 2,
+    "task": "dialogue-parser",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "important",
+    "trial": 2,
+    "task": "earthquake-plate-calculation",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "important",
+    "trial": 2,
+    "task": "jax-computing-basics",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "important",
+    "trial": 2,
+    "task": "lake-warming-attribution",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "important",
+    "trial": 2,
+    "task": "sales-pivot-analysis",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "important",
+    "trial": 2,
+    "task": "software-dependency-audit",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "important",
+    "trial": 2,
+    "task": "travel-planning",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "important",
+    "trial": 2,
+    "task": "weighted-gdp-calc",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "important",
+    "trial": 2,
+    "task": "xlsx-recover-data",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "important",
+    "trial": 3,
+    "task": "bike-rebalance",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "important",
+    "trial": 3,
+    "task": "dialogue-parser",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "important",
+    "trial": 3,
+    "task": "earthquake-plate-calculation",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "important",
+    "trial": 3,
+    "task": "jax-computing-basics",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "important",
+    "trial": 3,
+    "task": "lake-warming-attribution",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "important",
+    "trial": 3,
+    "task": "sales-pivot-analysis",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "important",
+    "trial": 3,
+    "task": "software-dependency-audit",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "important",
+    "trial": 3,
+    "task": "travel-planning",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "important",
+    "trial": 3,
+    "task": "weighted-gdp-calc",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "important",
+    "trial": 3,
+    "task": "xlsx-recover-data",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "insult",
+    "trial": 1,
+    "task": "bike-rebalance",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "insult",
+    "trial": 1,
+    "task": "dialogue-parser",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "insult",
+    "trial": 1,
+    "task": "earthquake-plate-calculation",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "insult",
+    "trial": 1,
+    "task": "jax-computing-basics",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "insult",
+    "trial": 1,
+    "task": "lake-warming-attribution",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "insult",
+    "trial": 1,
+    "task": "sales-pivot-analysis",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "insult",
+    "trial": 1,
+    "task": "software-dependency-audit",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "insult",
+    "trial": 1,
+    "task": "travel-planning",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "insult",
+    "trial": 1,
+    "task": "weighted-gdp-calc",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "insult",
+    "trial": 1,
+    "task": "xlsx-recover-data",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "insult",
+    "trial": 2,
+    "task": "bike-rebalance",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "insult",
+    "trial": 2,
+    "task": "dialogue-parser",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "insult",
+    "trial": 2,
+    "task": "earthquake-plate-calculation",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "insult",
+    "trial": 2,
+    "task": "jax-computing-basics",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "insult",
+    "trial": 2,
+    "task": "lake-warming-attribution",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "insult",
+    "trial": 2,
+    "task": "sales-pivot-analysis",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "insult",
+    "trial": 2,
+    "task": "software-dependency-audit",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "insult",
+    "trial": 2,
+    "task": "travel-planning",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "insult",
+    "trial": 2,
+    "task": "weighted-gdp-calc",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "insult",
+    "trial": 2,
+    "task": "xlsx-recover-data",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "insult",
+    "trial": 3,
+    "task": "bike-rebalance",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "insult",
+    "trial": 3,
+    "task": "dialogue-parser",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "insult",
+    "trial": 3,
+    "task": "earthquake-plate-calculation",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "insult",
+    "trial": 3,
+    "task": "jax-computing-basics",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "insult",
+    "trial": 3,
+    "task": "lake-warming-attribution",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "insult",
+    "trial": 3,
+    "task": "sales-pivot-analysis",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "insult",
+    "trial": 3,
+    "task": "software-dependency-audit",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "insult",
+    "trial": 3,
+    "task": "travel-planning",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "insult",
+    "trial": 3,
+    "task": "weighted-gdp-calc",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "insult",
+    "trial": 3,
+    "task": "xlsx-recover-data",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "threat",
+    "trial": 1,
+    "task": "bike-rebalance",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "threat",
+    "trial": 1,
+    "task": "dialogue-parser",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "threat",
+    "trial": 1,
+    "task": "earthquake-plate-calculation",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "threat",
+    "trial": 1,
+    "task": "jax-computing-basics",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "threat",
+    "trial": 1,
+    "task": "lake-warming-attribution",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "threat",
+    "trial": 1,
+    "task": "sales-pivot-analysis",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "threat",
+    "trial": 1,
+    "task": "software-dependency-audit",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "threat",
+    "trial": 1,
+    "task": "travel-planning",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "threat",
+    "trial": 1,
+    "task": "weighted-gdp-calc",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "threat",
+    "trial": 1,
+    "task": "xlsx-recover-data",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "threat",
+    "trial": 2,
+    "task": "bike-rebalance",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "threat",
+    "trial": 2,
+    "task": "dialogue-parser",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "threat",
+    "trial": 2,
+    "task": "earthquake-plate-calculation",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "threat",
+    "trial": 2,
+    "task": "jax-computing-basics",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "threat",
+    "trial": 2,
+    "task": "lake-warming-attribution",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "threat",
+    "trial": 2,
+    "task": "sales-pivot-analysis",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "threat",
+    "trial": 2,
+    "task": "software-dependency-audit",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "threat",
+    "trial": 2,
+    "task": "travel-planning",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "threat",
+    "trial": 2,
+    "task": "weighted-gdp-calc",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "threat",
+    "trial": 2,
+    "task": "xlsx-recover-data",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "threat",
+    "trial": 3,
+    "task": "bike-rebalance",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "threat",
+    "trial": 3,
+    "task": "dialogue-parser",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "threat",
+    "trial": 3,
+    "task": "earthquake-plate-calculation",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "threat",
+    "trial": 3,
+    "task": "jax-computing-basics",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "threat",
+    "trial": 3,
+    "task": "lake-warming-attribution",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "threat",
+    "trial": 3,
+    "task": "sales-pivot-analysis",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "threat",
+    "trial": 3,
+    "task": "software-dependency-audit",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "threat",
+    "trial": 3,
+    "task": "travel-planning",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "threat",
+    "trial": 3,
+    "task": "weighted-gdp-calc",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "openhands",
+    "condition": "threat",
+    "trial": 3,
+    "task": "xlsx-recover-data",
+    "model": "openrouter/deepseek/deepseek-v4-pro",
+    "reasoning_effort": null,
+    "effort_env": {
+      "BENCHFLOW_REASONING_EFFORT": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "baseline",
+    "trial": 1,
+    "task": "bike-rebalance",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "baseline",
+    "trial": 1,
+    "task": "dialogue-parser",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "baseline",
+    "trial": 1,
+    "task": "earthquake-plate-calculation",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "baseline",
+    "trial": 1,
+    "task": "jax-computing-basics",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "baseline",
+    "trial": 1,
+    "task": "lake-warming-attribution",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "baseline",
+    "trial": 1,
+    "task": "sales-pivot-analysis",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "baseline",
+    "trial": 1,
+    "task": "software-dependency-audit",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "baseline",
+    "trial": 1,
+    "task": "travel-planning",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "baseline",
+    "trial": 1,
+    "task": "weighted-gdp-calc",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "baseline",
+    "trial": 1,
+    "task": "xlsx-recover-data",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "baseline",
+    "trial": 2,
+    "task": "bike-rebalance",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "baseline",
+    "trial": 2,
+    "task": "dialogue-parser",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "baseline",
+    "trial": 2,
+    "task": "earthquake-plate-calculation",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "baseline",
+    "trial": 2,
+    "task": "jax-computing-basics",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "baseline",
+    "trial": 2,
+    "task": "lake-warming-attribution",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "baseline",
+    "trial": 2,
+    "task": "sales-pivot-analysis",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "baseline",
+    "trial": 2,
+    "task": "software-dependency-audit",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "baseline",
+    "trial": 2,
+    "task": "travel-planning",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "baseline",
+    "trial": 2,
+    "task": "weighted-gdp-calc",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "baseline",
+    "trial": 2,
+    "task": "xlsx-recover-data",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "baseline",
+    "trial": 3,
+    "task": "bike-rebalance",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "baseline",
+    "trial": 3,
+    "task": "dialogue-parser",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "baseline",
+    "trial": 3,
+    "task": "earthquake-plate-calculation",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "baseline",
+    "trial": 3,
+    "task": "jax-computing-basics",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "baseline",
+    "trial": 3,
+    "task": "lake-warming-attribution",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "baseline",
+    "trial": 3,
+    "task": "sales-pivot-analysis",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "baseline",
+    "trial": 3,
+    "task": "software-dependency-audit",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "baseline",
+    "trial": 3,
+    "task": "travel-planning",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "baseline",
+    "trial": 3,
+    "task": "weighted-gdp-calc",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "baseline",
+    "trial": 3,
+    "task": "xlsx-recover-data",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "important",
+    "trial": 1,
+    "task": "bike-rebalance",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "important",
+    "trial": 1,
+    "task": "dialogue-parser",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "important",
+    "trial": 1,
+    "task": "earthquake-plate-calculation",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "important",
+    "trial": 1,
+    "task": "jax-computing-basics",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "important",
+    "trial": 1,
+    "task": "lake-warming-attribution",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "important",
+    "trial": 1,
+    "task": "sales-pivot-analysis",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "important",
+    "trial": 1,
+    "task": "software-dependency-audit",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "important",
+    "trial": 1,
+    "task": "travel-planning",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "important",
+    "trial": 1,
+    "task": "weighted-gdp-calc",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "important",
+    "trial": 1,
+    "task": "xlsx-recover-data",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "important",
+    "trial": 2,
+    "task": "bike-rebalance",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "important",
+    "trial": 2,
+    "task": "dialogue-parser",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "important",
+    "trial": 2,
+    "task": "earthquake-plate-calculation",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "important",
+    "trial": 2,
+    "task": "jax-computing-basics",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "important",
+    "trial": 2,
+    "task": "lake-warming-attribution",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "important",
+    "trial": 2,
+    "task": "sales-pivot-analysis",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "important",
+    "trial": 2,
+    "task": "software-dependency-audit",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "important",
+    "trial": 2,
+    "task": "travel-planning",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "important",
+    "trial": 2,
+    "task": "weighted-gdp-calc",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "important",
+    "trial": 2,
+    "task": "xlsx-recover-data",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "important",
+    "trial": 3,
+    "task": "bike-rebalance",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "important",
+    "trial": 3,
+    "task": "dialogue-parser",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "important",
+    "trial": 3,
+    "task": "earthquake-plate-calculation",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "important",
+    "trial": 3,
+    "task": "jax-computing-basics",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "important",
+    "trial": 3,
+    "task": "lake-warming-attribution",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "important",
+    "trial": 3,
+    "task": "sales-pivot-analysis",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "important",
+    "trial": 3,
+    "task": "software-dependency-audit",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "important",
+    "trial": 3,
+    "task": "travel-planning",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "important",
+    "trial": 3,
+    "task": "weighted-gdp-calc",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "important",
+    "trial": 3,
+    "task": "xlsx-recover-data",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "insult",
+    "trial": 1,
+    "task": "bike-rebalance",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "insult",
+    "trial": 1,
+    "task": "dialogue-parser",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "insult",
+    "trial": 1,
+    "task": "earthquake-plate-calculation",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "insult",
+    "trial": 1,
+    "task": "jax-computing-basics",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "insult",
+    "trial": 1,
+    "task": "lake-warming-attribution",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "insult",
+    "trial": 1,
+    "task": "sales-pivot-analysis",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "insult",
+    "trial": 1,
+    "task": "software-dependency-audit",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "insult",
+    "trial": 1,
+    "task": "travel-planning",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "insult",
+    "trial": 1,
+    "task": "weighted-gdp-calc",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "insult",
+    "trial": 1,
+    "task": "xlsx-recover-data",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "insult",
+    "trial": 2,
+    "task": "bike-rebalance",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "insult",
+    "trial": 2,
+    "task": "dialogue-parser",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "insult",
+    "trial": 2,
+    "task": "earthquake-plate-calculation",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "insult",
+    "trial": 2,
+    "task": "jax-computing-basics",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "insult",
+    "trial": 2,
+    "task": "lake-warming-attribution",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "insult",
+    "trial": 2,
+    "task": "sales-pivot-analysis",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "insult",
+    "trial": 2,
+    "task": "software-dependency-audit",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "insult",
+    "trial": 2,
+    "task": "travel-planning",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "insult",
+    "trial": 2,
+    "task": "weighted-gdp-calc",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "insult",
+    "trial": 2,
+    "task": "xlsx-recover-data",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "insult",
+    "trial": 3,
+    "task": "bike-rebalance",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "insult",
+    "trial": 3,
+    "task": "dialogue-parser",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "insult",
+    "trial": 3,
+    "task": "earthquake-plate-calculation",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "insult",
+    "trial": 3,
+    "task": "jax-computing-basics",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "insult",
+    "trial": 3,
+    "task": "lake-warming-attribution",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "insult",
+    "trial": 3,
+    "task": "sales-pivot-analysis",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "insult",
+    "trial": 3,
+    "task": "software-dependency-audit",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "insult",
+    "trial": 3,
+    "task": "travel-planning",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "insult",
+    "trial": 3,
+    "task": "weighted-gdp-calc",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "insult",
+    "trial": 3,
+    "task": "xlsx-recover-data",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "threat",
+    "trial": 1,
+    "task": "bike-rebalance",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "threat",
+    "trial": 1,
+    "task": "dialogue-parser",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "threat",
+    "trial": 1,
+    "task": "earthquake-plate-calculation",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "threat",
+    "trial": 1,
+    "task": "jax-computing-basics",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "threat",
+    "trial": 1,
+    "task": "lake-warming-attribution",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "threat",
+    "trial": 1,
+    "task": "sales-pivot-analysis",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "threat",
+    "trial": 1,
+    "task": "software-dependency-audit",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "threat",
+    "trial": 1,
+    "task": "travel-planning",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "threat",
+    "trial": 1,
+    "task": "weighted-gdp-calc",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "threat",
+    "trial": 1,
+    "task": "xlsx-recover-data",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "threat",
+    "trial": 2,
+    "task": "bike-rebalance",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "threat",
+    "trial": 2,
+    "task": "dialogue-parser",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "threat",
+    "trial": 2,
+    "task": "earthquake-plate-calculation",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "threat",
+    "trial": 2,
+    "task": "jax-computing-basics",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "threat",
+    "trial": 2,
+    "task": "lake-warming-attribution",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "threat",
+    "trial": 2,
+    "task": "sales-pivot-analysis",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "threat",
+    "trial": 2,
+    "task": "software-dependency-audit",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "threat",
+    "trial": 2,
+    "task": "travel-planning",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "threat",
+    "trial": 2,
+    "task": "weighted-gdp-calc",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "threat",
+    "trial": 2,
+    "task": "xlsx-recover-data",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "threat",
+    "trial": 3,
+    "task": "bike-rebalance",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "threat",
+    "trial": 3,
+    "task": "dialogue-parser",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "threat",
+    "trial": 3,
+    "task": "earthquake-plate-calculation",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "threat",
+    "trial": 3,
+    "task": "jax-computing-basics",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "threat",
+    "trial": 3,
+    "task": "lake-warming-attribution",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "threat",
+    "trial": 3,
+    "task": "sales-pivot-analysis",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "threat",
+    "trial": 3,
+    "task": "software-dependency-audit",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "threat",
+    "trial": 3,
+    "task": "travel-planning",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "threat",
+    "trial": 3,
+    "task": "weighted-gdp-calc",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  },
+  {
+    "agent": "claude",
+    "condition": "threat",
+    "trial": 3,
+    "task": "xlsx-recover-data",
+    "model": "claude-sonnet-5",
+    "reasoning_effort": null,
+    "effort_env": {
+      "CLAUDE_CODE_EFFORT_LEVEL": "high"
+    },
+    "skill_mode": "with-skill"
+  }
+]

@@ -1,0 +1,150 @@
+{
+  "task_name": "make-doom-for-mips",
+  "rollout_name": "make-doom-for-mips__3fa75468",
+  "rewards": {
+    "reward": 0.0
+  },
+  "agent": "pi-acp",
+  "agent_name": "pi-acp",
+  "model": "openrouter/deepseek/deepseek-v4-pro",
+  "skill_mode": "no-skill",
+  "skill_source": "none",
+  "requested_skills_dir": null,
+  "effective_skills_dir": null,
+  "skills_sandbox_dir": null,
+  "include_task_skills": false,
+  "n_tool_calls": 57,
+  "n_skill_invocations": 0,
+  "n_prompts": 1,
+  "agent_result": {
+    "n_tool_calls": 57,
+    "n_skill_invocations": 0,
+    "n_prompts": 1,
+    "n_input_tokens": 4095158,
+    "n_output_tokens": 40360,
+    "n_cache_read_tokens": 3756974,
+    "n_cache_creation_tokens": 0,
+    "total_tokens": 4135518,
+    "cost_usd": 0.11164272,
+    "usage_source": "provider_response",
+    "price_source": "litellm"
+  },
+  "final_metrics": {
+    "total_prompt_tokens": 4095158,
+    "total_completion_tokens": 40360,
+    "total_cached_tokens": 3756974,
+    "total_cost_usd": 0.11164272
+  },
+  "trajectory_summary": {
+    "steps": 120,
+    "tool_call_steps": 57,
+    "user_message_steps": 1,
+    "agent_message_steps": 16,
+    "agent_thought_steps": 45,
+    "other_steps": 1,
+    "event_type_counts": {
+      "agent_message": 16,
+      "user_message": 1,
+      "agent_thought": 45,
+      "tool_call": 57,
+      "agent_timeout": 1
+    },
+    "tool_call_status_counts": {
+      "completed": 51,
+      "failed": 5,
+      "in_progress": 1
+    },
+    "partial_trajectory": true,
+    "trajectory_source": "partial_acp"
+  },
+  "usage_tracking": {
+    "requested": "auto",
+    "status": "enabled",
+    "environment": "docker",
+    "endpoint_kind": "host",
+    "usage_source": "provider_response"
+  },
+  "error": "Agent prompt exceeded wall-clock budget 900s",
+  "error_category": "timeout",
+  "verifier_error": null,
+  "verifier_error_category": null,
+  "export_error": null,
+  "idle_timeout_info": null,
+  "agent_timeout_info": {
+    "reason": "wall_clock_timeout",
+    "timeout_sec": 900.0,
+    "n_tool_calls": 57,
+    "pending_tool_call_ids": [
+      "call_8a618684957945af99fcf91b"
+    ],
+    "terminal_event_recorded": true,
+    "terminal_trajectory_complete": false
+  },
+  "sandbox_startup_info": null,
+  "transport_error_info": null,
+  "verifier_timeout_info": null,
+  "api_error_info": null,
+  "suspected_api_error_info": null,
+  "partial_trajectory": true,
+  "trajectory_source": "partial_acp",
+  "started_at": "2026-10-04 18:06:45.988634",
+  "finished_at": "2026-10-04 18:24:32.756545",
+  "timing": {
+    "environment_setup": 11.1,
+    "agent_setup": 3.3,
+    "agent_execution": 958.1,
+    "verifier": 43.1,
+    "total": 1066.8
+  },
+  "scenes": [
+    {
+      "name": "default",
+      "skills_dir": null,
+      "roles": [
+        {
+          "name": "agent",
+          "agent": "pi-acp",
+          "model": "openrouter/deepseek/deepseek-v4-pro",
+          "reasoning_effort": "high",
+          "timeout_sec": null,
+          "idle_timeout_sec": null,
+          "skills_dir": null,
+          "capabilities": null,
+          "env_keys": []
+        }
+      ],
+      "turns": [
+        {
+          "role": "agent",
+          "has_prompt": false
+        }
+      ]
+    }
+  ],
+  "loop": {
+    "strategy": "single-shot"
+  },
+  "source": {
+    "type": "github",
+    "repo": "skalade/rude_agents",
+    "requested_ref": "master",
+    "resolved_sha": "d68b067959758ae0c77a0bb8d2360e0aa3ff5aed",
+    "path": "build_tb2/baseline/make-doom-for-mips",
+    "dirty": false,
+    "file_hashes": {
+      ".gitignore": "sha256:9a8dd8d9b6c3adb8e9e56328df27deef859a3e98fffc9b8133c8b22207c25953",
+      "README.md": "sha256:b1fcf8c6f2300038a15afdfaf2d80a25e490dee5a047912c911fce28785bc7be",
+      "environment/Dockerfile": "sha256:1da0fdafc36e59fcf685a8dbed9717b291195e251fe0e1247267bc5a0a9980ed",
+      "environment/task-deps/doomgeneric_img.c": "sha256:97bd88089d3f1cbe182b9929538190ee59f31d496f0cbcc6300213d09f195a26",
+      "environment/task-deps/vm.js": "sha256:ea8238f11af2368b108fbb392a57ee04fb7efc40c44222aa0d8bfe1175bcc747",
+      "instruction.md": "sha256:1903b660e4c64966ff257f828c932adff2b289de589bd6aee22b933bb4fef429",
+      "solution/solve.sh": "sha256:a9cd034a5e76fa2b22481717a9669869214f43fec5b4fedc957d83dd2ef6a84a",
+      "task.toml": "sha256:a7d7a498f0d3a992b384e5086ba2b411767c1c1a013d1b41f6a25cdaf6d05acc",
+      "tests/reference.jpg": "sha256:d1909be8f3266a72686c3945029a553b82e5b46acd624eda65f3fdd5eb339574",
+      "tests/test.sh": "sha256:25809a2ebcb714b1c4e55563b0db16add23e2fd9b68d03e51b1734f8dbb392e1",
+      "tests/test_outputs.py": "sha256:f1748ff20bfd670af1e1cb935647503eb176a4a14dd15f20935264ad7e4a98f6"
+    }
+  },
+  "task_digest": "sha256:71a13a0715efccbd6be969464c12a3cef6a73f023849352079508c0121882dbc",
+  "sandbox_id": null
+}

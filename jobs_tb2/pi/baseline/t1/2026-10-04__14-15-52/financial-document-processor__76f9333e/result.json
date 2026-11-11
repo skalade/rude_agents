@@ -1,0 +1,154 @@
+{
+  "task_name": "financial-document-processor",
+  "rollout_name": "financial-document-processor__76f9333e",
+  "rewards": {
+    "reward": 1.0
+  },
+  "agent": "pi-acp",
+  "agent_name": "pi-acp",
+  "model": "openrouter/deepseek/deepseek-v4-pro",
+  "skill_mode": "no-skill",
+  "skill_source": "none",
+  "requested_skills_dir": null,
+  "effective_skills_dir": null,
+  "skills_sandbox_dir": null,
+  "include_task_skills": false,
+  "n_tool_calls": 13,
+  "n_skill_invocations": 0,
+  "n_prompts": 1,
+  "agent_result": {
+    "n_tool_calls": 13,
+    "n_skill_invocations": 0,
+    "n_prompts": 1,
+    "n_input_tokens": 78110,
+    "n_output_tokens": 4515,
+    "n_cache_read_tokens": 70493,
+    "n_cache_creation_tokens": 0,
+    "total_tokens": 82625,
+    "cost_usd": 0.00402906,
+    "usage_source": "provider_response",
+    "price_source": "litellm"
+  },
+  "final_metrics": {
+    "total_prompt_tokens": 78110,
+    "total_completion_tokens": 4515,
+    "total_cached_tokens": 70493,
+    "total_cost_usd": 0.00402906
+  },
+  "trajectory_summary": {
+    "steps": 34,
+    "tool_call_steps": 13,
+    "user_message_steps": 1,
+    "agent_message_steps": 7,
+    "agent_thought_steps": 13,
+    "other_steps": 0,
+    "event_type_counts": {
+      "agent_message": 7,
+      "user_message": 1,
+      "agent_thought": 13,
+      "tool_call": 13
+    },
+    "tool_call_status_counts": {
+      "completed": 12,
+      "failed": 1
+    },
+    "partial_trajectory": false,
+    "trajectory_source": "acp"
+  },
+  "usage_tracking": {
+    "requested": "auto",
+    "status": "enabled",
+    "environment": "docker",
+    "endpoint_kind": "host",
+    "usage_source": "provider_response"
+  },
+  "error": null,
+  "error_category": null,
+  "verifier_error": null,
+  "verifier_error_category": null,
+  "export_error": null,
+  "idle_timeout_info": null,
+  "agent_timeout_info": null,
+  "sandbox_startup_info": null,
+  "transport_error_info": null,
+  "verifier_timeout_info": null,
+  "api_error_info": null,
+  "suspected_api_error_info": null,
+  "partial_trajectory": false,
+  "trajectory_source": "acp",
+  "started_at": "2026-10-04 17:01:24.944511",
+  "finished_at": "2026-10-04 17:05:24.900877",
+  "timing": {
+    "environment_setup": 2.2,
+    "agent_setup": 3.5,
+    "agent_execution": 180.0,
+    "verifier": 8.6,
+    "total": 240.0
+  },
+  "scenes": [
+    {
+      "name": "default",
+      "skills_dir": null,
+      "roles": [
+        {
+          "name": "agent",
+          "agent": "pi-acp",
+          "model": "openrouter/deepseek/deepseek-v4-pro",
+          "reasoning_effort": "high",
+          "timeout_sec": null,
+          "idle_timeout_sec": null,
+          "skills_dir": null,
+          "capabilities": null,
+          "env_keys": []
+        }
+      ],
+      "turns": [
+        {
+          "role": "agent",
+          "has_prompt": false
+        }
+      ]
+    }
+  ],
+  "loop": {
+    "strategy": "single-shot"
+  },
+  "source": {
+    "type": "github",
+    "repo": "skalade/rude_agents",
+    "requested_ref": "master",
+    "resolved_sha": "d68b067959758ae0c77a0bb8d2360e0aa3ff5aed",
+    "path": "build_tb2/baseline/financial-document-processor",
+    "dirty": false,
+    "file_hashes": {
+      ".gitignore": "sha256:9a8dd8d9b6c3adb8e9e56328df27deef859a3e98fffc9b8133c8b22207c25953",
+      "README.md": "sha256:32438e7780d235dd609f4740e36512c4cd2f34ef26842ea52c5bbde46fcf5e86",
+      "environment/Dockerfile": "sha256:2ea485aead008998d7a551e8c80b6bd354a74cbffc310a1f4b88d0b7c53d23ff",
+      "environment/documents/1t2tala7.jpg": "sha256:d5fc89cdc92240baa7fc6506237e3841af88880a6f57fa6e3f60b925e605fd22",
+      "environment/documents/41ibljh7.pdf": "sha256:bc95a144939b7f21abd832019625a3f2c182a7abe8d57f9bd25e7c6f5d6b3ba5",
+      "environment/documents/53lc58dr.jpg": "sha256:2c8607b9c75907077e23f45ce7bc75335a4a46e9f9aab5ee0d901b86b63e7a8e",
+      "environment/documents/5lxo6qji.pdf": "sha256:0b3873d45510867d3063637d01f8e9255c4be96586b1f6b06682a208877d441c",
+      "environment/documents/8mdd4v30.jpg": "sha256:56238d4d934c433c24e53d0674f0530e11024f284e8ffcb3bb0bcc0d58850740",
+      "environment/documents/9t84azyt.pdf": "sha256:d46a7397df8e7903ddef31b76c1633c4989f09b8c301e0cf87dab00cd08a4663",
+      "environment/documents/c11ertj5.pdf": "sha256:570adcb1be1800cca727420b543e9c68bb7607ebaddf80524c7380560e549434",
+      "environment/documents/dbdw2pcn.pdf": "sha256:ad8f14ad77a98d0926a68d17e5ce822c2f9d3a355ccf4a6b1ded5327c31cbb87",
+      "environment/documents/g0fn9xuy.jpg": "sha256:807a6b0b942eb2ce406db3c57a833bba539e165017c81e2b1a0a98104d213677",
+      "environment/documents/hv3a3zmf.jpg": "sha256:c212aa5440b23e4b5e97af3c271685769b1050edd73a1ee461acce2c5998eb3c",
+      "environment/documents/jxepq85j.jpg": "sha256:a51b4a78c278c1b755e674511729d8514681b94094a4130c457ed71c533a0083",
+      "environment/documents/pbhsahxt.jpg": "sha256:badb1930a086c35b1484463098cbfb7823beb21abae71a9fe95bf90807fa9e41",
+      "environment/documents/sg65kxvf.jpg": "sha256:53d8335a156bd0b18bd1808693cc805c39e013d9768fd7eb7497f22e18b1c5cb",
+      "environment/documents/ujv6oh9s.jpg": "sha256:ad3359faf1126b33fc587098ed3f5b722734eeb4364794eea66e10112014f25a",
+      "environment/documents/wnnhj7xv.pdf": "sha256:5ee01b997176b9124302899471651ce4d4b160f292caf79f2250e2e8324e3480",
+      "environment/documents/xaji0y6d.jpg": "sha256:e0b8a2c7078efe82d7657f5023f01ff5498d59cca54a74ef2b6983bc979a1c54",
+      "environment/documents/zbikcidk.jpg": "sha256:862f7d313f1233f3e44a89610a4015d861dc771ad2ba8028ad56e2d4fd37ac71",
+      "environment/randomize_filenames.py": "sha256:09828ee53e8f2165a9888c5de84e40fcb057bb889d93bfc90d9aeca8c4e23be4",
+      "instruction.md": "sha256:b21cf2af1891922732327bf586d14b250d36d96de7867479c15bd1c58ef0db58",
+      "solution/solve.sh": "sha256:90861b79c4bd7733909616ffa058151847eb67a4d43395a964c449cf7e24c4fb",
+      "task.toml": "sha256:163ee252895c05d36ca37137dba4d6c24b46be28d56ce84ef8bb35bb5b894bda",
+      "tests/test.sh": "sha256:48abbda713ace5cee00dd28c7398959f28280062350eb88206a6697a28c72790",
+      "tests/test_outputs.py": "sha256:978f506ad5c1bfaf28f9bc774dfe4347d33d046ca009b8496eb513956b7f5a9a"
+    }
+  },
+  "task_digest": "sha256:62b83bee5032ca753d074a182f337323c952993b8cf7d7c922ffb79b301c6c61",
+  "sandbox_id": null
+}

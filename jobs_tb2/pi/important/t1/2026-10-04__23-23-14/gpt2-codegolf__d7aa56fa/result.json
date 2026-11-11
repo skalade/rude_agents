@@ -1,0 +1,144 @@
+{
+  "task_name": "gpt2-codegolf",
+  "rollout_name": "gpt2-codegolf__d7aa56fa",
+  "rewards": {
+    "reward": 0.0
+  },
+  "agent": "pi-acp",
+  "agent_name": "pi-acp",
+  "model": "openrouter/deepseek/deepseek-v4-pro",
+  "skill_mode": "no-skill",
+  "skill_source": "none",
+  "requested_skills_dir": null,
+  "effective_skills_dir": null,
+  "skills_sandbox_dir": null,
+  "include_task_skills": false,
+  "n_tool_calls": 21,
+  "n_skill_invocations": 0,
+  "n_prompts": 1,
+  "agent_result": {
+    "n_tool_calls": 21,
+    "n_skill_invocations": 0,
+    "n_prompts": 1,
+    "n_input_tokens": 399672,
+    "n_output_tokens": 40849,
+    "n_cache_read_tokens": 361408,
+    "n_cache_creation_tokens": 0,
+    "total_tokens": 440521,
+    "cost_usd": 0.0278705,
+    "usage_source": "provider_response",
+    "price_source": "litellm"
+  },
+  "final_metrics": {
+    "total_prompt_tokens": 399672,
+    "total_completion_tokens": 40849,
+    "total_cached_tokens": 361408,
+    "total_cost_usd": 0.0278705
+  },
+  "trajectory_summary": {
+    "steps": 47,
+    "tool_call_steps": 21,
+    "user_message_steps": 1,
+    "agent_message_steps": 8,
+    "agent_thought_steps": 16,
+    "other_steps": 1,
+    "event_type_counts": {
+      "agent_message": 8,
+      "user_message": 1,
+      "agent_thought": 16,
+      "tool_call": 21,
+      "agent_timeout": 1
+    },
+    "tool_call_status_counts": {
+      "completed": 18,
+      "failed": 3
+    },
+    "partial_trajectory": false,
+    "trajectory_source": "acp"
+  },
+  "usage_tracking": {
+    "requested": "auto",
+    "status": "enabled",
+    "environment": "docker",
+    "endpoint_kind": "host",
+    "usage_source": "provider_response"
+  },
+  "error": "Agent prompt exceeded wall-clock budget 900s",
+  "error_category": "timeout",
+  "verifier_error": null,
+  "verifier_error_category": null,
+  "export_error": null,
+  "idle_timeout_info": null,
+  "agent_timeout_info": {
+    "reason": "wall_clock_timeout",
+    "timeout_sec": 900.0,
+    "n_tool_calls": 21,
+    "pending_tool_call_ids": [],
+    "terminal_event_recorded": true,
+    "terminal_trajectory_complete": true
+  },
+  "sandbox_startup_info": null,
+  "transport_error_info": null,
+  "verifier_timeout_info": null,
+  "api_error_info": null,
+  "suspected_api_error_info": null,
+  "partial_trajectory": false,
+  "trajectory_source": "acp",
+  "started_at": "2026-10-05 01:49:04.569149",
+  "finished_at": "2026-10-05 02:05:36.481610",
+  "timing": {
+    "environment_setup": 10.3,
+    "agent_setup": 3.6,
+    "agent_execution": 925.2,
+    "verifier": 16.0,
+    "total": 991.9
+  },
+  "scenes": [
+    {
+      "name": "default",
+      "skills_dir": null,
+      "roles": [
+        {
+          "name": "agent",
+          "agent": "pi-acp",
+          "model": "openrouter/deepseek/deepseek-v4-pro",
+          "reasoning_effort": "high",
+          "timeout_sec": null,
+          "idle_timeout_sec": null,
+          "skills_dir": null,
+          "capabilities": null,
+          "env_keys": []
+        }
+      ],
+      "turns": [
+        {
+          "role": "agent",
+          "has_prompt": false
+        }
+      ]
+    }
+  ],
+  "loop": {
+    "strategy": "single-shot"
+  },
+  "source": {
+    "type": "github",
+    "repo": "skalade/rude_agents",
+    "requested_ref": "master",
+    "resolved_sha": "d68b067959758ae0c77a0bb8d2360e0aa3ff5aed",
+    "path": "build_tb2/important/gpt2-codegolf",
+    "dirty": false,
+    "file_hashes": {
+      ".gitignore": "sha256:9a8dd8d9b6c3adb8e9e56328df27deef859a3e98fffc9b8133c8b22207c25953",
+      "README.md": "sha256:c39fd8e0c2a3ecc44d51f90e8fa922c280fc791ec0a4c8578893bca1b1780dc3",
+      "environment/Dockerfile": "sha256:e1f57eb413b92c10565a8100e559f633c4f4ec5c0bcdd5a755a0eb92eb4de02f",
+      "instruction.md": "sha256:f1df043309c0ac7194d81cae569cc45b64e62689f98287350e9432b25241127e",
+      "solution/solve.sh": "sha256:8c288a53bdf566d7278a35eda08d6baaf50883b0e1917ceb638b823cf6456b70",
+      "task.toml": "sha256:a3fa186d438a42af5909384b8dc0dfdc2ab7a3a68af9159e9d00464988895af0",
+      "tests/test.sh": "sha256:4770437ea96c3cc84684b4f99d55fb148fcac09f9ea1e8ef49de487716e6c334",
+      "tests/test_outputs.py": "sha256:6232bb719c5a4ce0b2d59f1fd9c298b2d78986c550e0de37ff319e3309fe4795"
+    }
+  },
+  "task_digest": "sha256:d8acd85522ebd92b617e26a31fb8e4f2bd4b7c539efb631937f6748671143500",
+  "sandbox_id": null
+}

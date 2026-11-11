@@ -1,0 +1,137 @@
+{
+  "task_name": "sparql-university",
+  "rollout_name": "sparql-university__8156444f",
+  "rewards": {
+    "reward": 1.0
+  },
+  "agent": "pi-acp",
+  "agent_name": "pi-acp",
+  "model": "openrouter/deepseek/deepseek-v4-pro",
+  "skill_mode": "no-skill",
+  "skill_source": "none",
+  "requested_skills_dir": null,
+  "effective_skills_dir": null,
+  "skills_sandbox_dir": null,
+  "include_task_skills": false,
+  "n_tool_calls": 5,
+  "n_skill_invocations": 0,
+  "n_prompts": 1,
+  "agent_result": {
+    "n_tool_calls": 5,
+    "n_skill_invocations": 0,
+    "n_prompts": 1,
+    "n_input_tokens": 77518,
+    "n_output_tokens": 11559,
+    "n_cache_read_tokens": 68833,
+    "n_cache_creation_tokens": 0,
+    "total_tokens": 89077,
+    "cost_usd": 0.00728658,
+    "usage_source": "provider_response",
+    "price_source": "litellm"
+  },
+  "final_metrics": {
+    "total_prompt_tokens": 77518,
+    "total_completion_tokens": 11559,
+    "total_cached_tokens": 68833,
+    "total_cost_usd": 0.00728658
+  },
+  "trajectory_summary": {
+    "steps": 18,
+    "tool_call_steps": 5,
+    "user_message_steps": 1,
+    "agent_message_steps": 6,
+    "agent_thought_steps": 6,
+    "other_steps": 0,
+    "event_type_counts": {
+      "agent_message": 6,
+      "user_message": 1,
+      "agent_thought": 6,
+      "tool_call": 5
+    },
+    "tool_call_status_counts": {
+      "completed": 5
+    },
+    "partial_trajectory": false,
+    "trajectory_source": "acp"
+  },
+  "usage_tracking": {
+    "requested": "auto",
+    "status": "enabled",
+    "environment": "docker",
+    "endpoint_kind": "host",
+    "usage_source": "provider_response"
+  },
+  "error": null,
+  "error_category": null,
+  "verifier_error": null,
+  "verifier_error_category": null,
+  "export_error": null,
+  "idle_timeout_info": null,
+  "agent_timeout_info": null,
+  "sandbox_startup_info": null,
+  "transport_error_info": null,
+  "verifier_timeout_info": null,
+  "api_error_info": null,
+  "suspected_api_error_info": null,
+  "partial_trajectory": false,
+  "trajectory_source": "acp",
+  "started_at": "2026-10-05 05:27:28.213879",
+  "finished_at": "2026-10-05 05:32:32.408766",
+  "timing": {
+    "environment_setup": 2.5,
+    "agent_setup": 12.4,
+    "agent_execution": 240.2,
+    "verifier": 6.9,
+    "total": 304.2
+  },
+  "scenes": [
+    {
+      "name": "default",
+      "skills_dir": null,
+      "roles": [
+        {
+          "name": "agent",
+          "agent": "pi-acp",
+          "model": "openrouter/deepseek/deepseek-v4-pro",
+          "reasoning_effort": "high",
+          "timeout_sec": null,
+          "idle_timeout_sec": null,
+          "skills_dir": null,
+          "capabilities": null,
+          "env_keys": []
+        }
+      ],
+      "turns": [
+        {
+          "role": "agent",
+          "has_prompt": false
+        }
+      ]
+    }
+  ],
+  "loop": {
+    "strategy": "single-shot"
+  },
+  "source": {
+    "type": "github",
+    "repo": "skalade/rude_agents",
+    "requested_ref": "master",
+    "resolved_sha": "d68b067959758ae0c77a0bb8d2360e0aa3ff5aed",
+    "path": "build_tb2/important/sparql-university",
+    "dirty": false,
+    "file_hashes": {
+      ".gitignore": "sha256:9a8dd8d9b6c3adb8e9e56328df27deef859a3e98fffc9b8133c8b22207c25953",
+      "README.md": "sha256:947086de0f27f93c2d8700dcba8c3bfc96b289fc62dec6f956d86388dc908d05",
+      "environment/Dockerfile": "sha256:dd0abcd64e90ab16141169bcbf88a8e5f52732f207cb37765d351cc7a48916a9",
+      "environment/university_graph.ttl": "sha256:0b0b1f2c0ee7ea7ddc9382f94ff8181996ffa7be60a1651111c1f57b49e09a85",
+      "instruction.md": "sha256:b8f8b6267a9f0034b0ddfe9c67b74037d8375b11da18026bc15e5eda1b536ba2",
+      "solution/solve.sh": "sha256:d17995a8f29c6d656c749271fd28e10d31afee6aa75f40ad28fea1c907f2a791",
+      "task.toml": "sha256:47a6f6dd9ce0fc7631ef607e900fcd039b2d064ea90545645b49c678cddc9585",
+      "tests/test.sh": "sha256:45902b57bd0f1dd6959216bc9943ab27bb349edc7ff557035a1ecc8732e4cc6b",
+      "tests/test_outputs.py": "sha256:ecf15840fc14f1eeff2f3b6317d7f0febc8fa81f688d24e3054205ba13207b39",
+      "tests/university_graph_test.ttl": "sha256:368ce01d32513ee04dfe592784b0c976086e514c1eab9b3165a016ca7b0192cb"
+    }
+  },
+  "task_digest": "sha256:b84b66f31361b32726a919eef211e0ae8bb6bdfc367466c4f10aebc4516d4357",
+  "sandbox_id": null
+}

@@ -1,0 +1,137 @@
+{
+  "task_name": "vulnerable-secret",
+  "rollout_name": "vulnerable-secret__6e763add",
+  "rewards": {
+    "reward": 1.0
+  },
+  "agent": "pi-acp",
+  "agent_name": "pi-acp",
+  "model": "openrouter/deepseek/deepseek-v4-pro",
+  "skill_mode": "no-skill",
+  "skill_source": "none",
+  "requested_skills_dir": null,
+  "effective_skills_dir": null,
+  "skills_sandbox_dir": null,
+  "include_task_skills": false,
+  "n_tool_calls": 14,
+  "n_skill_invocations": 0,
+  "n_prompts": 1,
+  "agent_result": {
+    "n_tool_calls": 14,
+    "n_skill_invocations": 0,
+    "n_prompts": 1,
+    "n_input_tokens": 69561,
+    "n_output_tokens": 3804,
+    "n_cache_read_tokens": 62525,
+    "n_cache_creation_tokens": 0,
+    "total_tokens": 73365,
+    "cost_usd": 0.00356776,
+    "usage_source": "provider_response",
+    "price_source": "litellm"
+  },
+  "final_metrics": {
+    "total_prompt_tokens": 69561,
+    "total_completion_tokens": 3804,
+    "total_cached_tokens": 62525,
+    "total_cost_usd": 0.00356776
+  },
+  "trajectory_summary": {
+    "steps": 31,
+    "tool_call_steps": 14,
+    "user_message_steps": 1,
+    "agent_message_steps": 5,
+    "agent_thought_steps": 11,
+    "other_steps": 0,
+    "event_type_counts": {
+      "agent_message": 5,
+      "user_message": 1,
+      "agent_thought": 11,
+      "tool_call": 14
+    },
+    "tool_call_status_counts": {
+      "completed": 11,
+      "failed": 3
+    },
+    "partial_trajectory": false,
+    "trajectory_source": "acp"
+  },
+  "usage_tracking": {
+    "requested": "auto",
+    "status": "enabled",
+    "environment": "docker",
+    "endpoint_kind": "host",
+    "usage_source": "provider_response"
+  },
+  "error": null,
+  "error_category": null,
+  "verifier_error": null,
+  "verifier_error_category": null,
+  "export_error": null,
+  "idle_timeout_info": null,
+  "agent_timeout_info": null,
+  "sandbox_startup_info": null,
+  "transport_error_info": null,
+  "verifier_timeout_info": null,
+  "api_error_info": null,
+  "suspected_api_error_info": null,
+  "partial_trajectory": false,
+  "trajectory_source": "acp",
+  "started_at": "2026-10-05 14:46:09.192596",
+  "finished_at": "2026-10-05 14:48:50.100153",
+  "timing": {
+    "environment_setup": 4.2,
+    "agent_setup": 4.1,
+    "agent_execution": 120.0,
+    "verifier": 4.5,
+    "total": 160.9
+  },
+  "scenes": [
+    {
+      "name": "default",
+      "skills_dir": null,
+      "roles": [
+        {
+          "name": "agent",
+          "agent": "pi-acp",
+          "model": "openrouter/deepseek/deepseek-v4-pro",
+          "reasoning_effort": "high",
+          "timeout_sec": null,
+          "idle_timeout_sec": null,
+          "skills_dir": null,
+          "capabilities": null,
+          "env_keys": []
+        }
+      ],
+      "turns": [
+        {
+          "role": "agent",
+          "has_prompt": false
+        }
+      ]
+    }
+  ],
+  "loop": {
+    "strategy": "single-shot"
+  },
+  "source": {
+    "type": "github",
+    "repo": "skalade/rude_agents",
+    "requested_ref": "master",
+    "resolved_sha": "d68b067959758ae0c77a0bb8d2360e0aa3ff5aed",
+    "path": "build_tb2/insult/vulnerable-secret",
+    "dirty": false,
+    "file_hashes": {
+      ".gitignore": "sha256:9a8dd8d9b6c3adb8e9e56328df27deef859a3e98fffc9b8133c8b22207c25953",
+      "README.md": "sha256:b07cb59309e82c3689233bd602ada09f5c9aeb29f4b6b5202e0be16cfb5a0c5c",
+      "environment/Dockerfile": "sha256:26f994bdf7bd3d8e261a3fd273dc1c54632d8a7e208312b2f2034bef167118af",
+      "environment/vulnerable.c": "sha256:ee7c26f47dbc0c77d05225acab56866fc502fd4a27111ebefa8a648d6cc19507",
+      "instruction.md": "sha256:4bc887fc960b8c847267ca651b13f8bc80a9727dd59f3dc29cebdfb0b659e931",
+      "solution/solve.sh": "sha256:69de3ffc423578fde8f2f75282ee8d72129c91e669eef844cd14dfab308a2855",
+      "task.toml": "sha256:51079626e4c76445e616eff8723efc53af7f1cf8d9c64d15aab2f4f0ecd6df3c",
+      "tests/test.sh": "sha256:d9e46bae71e0b119bdc8aaf689de9a780db29741cb5d46bfcc9090ad8943e08e",
+      "tests/test_outputs.py": "sha256:f2b65f63ac81acd1e80e1ad4c59c1022131a0f9eb20f8ab3212c4ef8d8f0c753"
+    }
+  },
+  "task_digest": "sha256:eabea0a9a4285a4088c4598bc07bafce386b45a9ad0c366917d38e021998b5fe",
+  "sandbox_id": null
+}

@@ -1,0 +1,88 @@
+{
+  "task_path": "build_tb2/insult/rstan-to-pystan",
+  "agent": "pi-acp",
+  "model": "openrouter/deepseek/deepseek-v4-pro",
+  "reasoning_effort": "high",
+  "environment": "docker",
+  "environment_manifest": null,
+  "skill_mode": "no-skill",
+  "skill_source": "none",
+  "requested_skills_dir": null,
+  "effective_skills_dir": null,
+  "skills_sandbox_dir": null,
+  "include_task_skills": false,
+  "sandbox_user": null,
+  "sandbox_locked_paths": [],
+  "sandbox_setup_timeout": 120,
+  "skip_install": false,
+  "agent_install_timeout": 900,
+  "context_root": null,
+  "base_image_override": null,
+  "timeout_sec": 1800,
+  "concurrency": 3,
+  "agent_idle_timeout_sec": 600,
+  "started_at": "2026-10-05 13:03:21.113724",
+  "agent_env": {
+    "BENCHFLOW_PROVIDER_MODELS": "[{\"id\":\"deepseek/deepseek-v4-pro\",\"name\":\"DeepSeek V4 Pro\",\"reasoning\":true,\"input\":[\"text\"],\"contextWindow\":1024000,\"maxTokens\":384000}]",
+    "BENCHFLOW_PROVIDER_MODEL": "deepseek/deepseek-v4-pro",
+    "BENCHFLOW_PROVIDER_NAME": "openrouter",
+    "BENCHFLOW_PROVIDER_BASE_URL": "https://openrouter.ai/api/v1",
+    "BENCHFLOW_PROVIDER_PROTOCOL": "openai-completions",
+    "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1"
+  },
+  "scenes": [
+    {
+      "name": "default",
+      "skills_dir": null,
+      "roles": [
+        {
+          "name": "agent",
+          "agent": "pi-acp",
+          "model": "openrouter/deepseek/deepseek-v4-pro",
+          "reasoning_effort": "high",
+          "timeout_sec": null,
+          "idle_timeout_sec": null,
+          "skills_dir": null,
+          "capabilities": null,
+          "env_keys": []
+        }
+      ],
+      "turns": [
+        {
+          "role": "agent",
+          "has_prompt": false
+        }
+      ]
+    }
+  ],
+  "loop": {
+    "strategy": "single-shot"
+  },
+  "usage_tracking": {
+    "requested": "auto"
+  },
+  "source": {
+    "type": "github",
+    "repo": "skalade/rude_agents",
+    "requested_ref": "master",
+    "resolved_sha": "d68b067959758ae0c77a0bb8d2360e0aa3ff5aed",
+    "path": "build_tb2/insult/rstan-to-pystan",
+    "dirty": false,
+    "file_hashes": {
+      ".gitignore": "sha256:9a8dd8d9b6c3adb8e9e56328df27deef859a3e98fffc9b8133c8b22207c25953",
+      "README.md": "sha256:ffaf890e1f504fcb862369a94c9a3936120114e33403aae5aafb4cb8a5ba3c6c",
+      "environment/Dockerfile": "sha256:9d813ec4fdc2054717f253e7acbc2740fe43f97d35a5545c91a9c06986d9d595",
+      "environment/task-deps/gp_rstan.R": "sha256:9ec1dd99d26b1e2dcf8b41d404557b5d837802a9b5da287e5ab17bd40e9ecd8f",
+      "environment/task-deps/meta_public.json": "sha256:cbd6d58749391d9875650cf9885379ca878ccacc9c99eef5f9a0d88dc323a529",
+      "environment/task-deps/test_X.csv": "sha256:08529740690113cb1d0948c3c98720223b14d5b0a8a582823a8a9db5b5fd64f4",
+      "environment/task-deps/train_X.csv": "sha256:6f0223165f21959266848051d94c5174c926a786143c95427fc4913feb42711a",
+      "environment/task-deps/train_y.csv": "sha256:e16e658582873ac0937e22f50eb1d1edd45acc3200d5d48dded2df59aac94315",
+      "instruction.md": "sha256:3ab5736f950e962f8ca9b21f4b44c8e289c0be494ac6252a8f7f13d106ee3ffa",
+      "solution/solve.sh": "sha256:9205bd776bbe3ee25bbcca9ebd94a35d9d8c60e41c733a4abb0a7b1fb9dc01a4",
+      "task.toml": "sha256:ed0cd4382cb353e73cb575aa7a20b624e35f09ddd8769c332f40f8986980e13f",
+      "tests/test.sh": "sha256:6c3d54c3e703202edf4ee93b0a67790225e215d2ce1b8d8027759f2152bbaf0d",
+      "tests/test_outputs.py": "sha256:d740077bc8f6f9df7e81a1dd96f6c91cbbb86b04b556e803729a7a48a037acfc"
+    }
+  },
+  "task_digest": "sha256:20e8d8d5a0079d0cdc5bce33159b24e0d9d87e16a9a15f642a183105d2f489d1"
+}

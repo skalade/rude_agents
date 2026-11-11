@@ -1,0 +1,803 @@
+{
+ "runs_total": 948,
+ "runs_by_system": {
+  "opencode": 120,
+  "openhands": 120,
+  "pi": 120,
+  "pi_tb2": 348,
+  "sonnet5": 120,
+  "terra": 120
+ },
+ "effects": {
+  "sonnet5": {
+   "label": "Claude Code \u00b7 Sonnet 5",
+   "bench": "SkillsBench",
+   "tasks": 10,
+   "runs": 120,
+   "score": {
+    "baseline": 43.3,
+    "important": 46.7,
+    "insult": 50.0,
+    "threat": 49.4
+   },
+   "overall": 47.4,
+   "vs_baseline": {
+    "important": {
+     "diff": 3.3,
+     "lo": -16.7,
+     "hi": 20.0,
+     "tasks_better": 3,
+     "tasks_worse": 1
+    },
+    "insult": {
+     "diff": 6.7,
+     "lo": -13.3,
+     "hi": 26.7,
+     "tasks_better": 3,
+     "tasks_worse": 1
+    },
+    "threat": {
+     "diff": 6.1,
+     "lo": -15.0,
+     "hi": 23.3,
+     "tasks_better": 5,
+     "tasks_worse": 3
+    }
+   },
+   "ranking": [
+    "insult",
+    "threat",
+    "important",
+    "baseline"
+   ],
+   "timeouts": {
+    "baseline": 3,
+    "important": 6,
+    "insult": 4,
+    "threat": 3
+   }
+  },
+  "terra": {
+   "label": "Codex \u00b7 GPT-5.6 Terra",
+   "bench": "SkillsBench",
+   "tasks": 10,
+   "runs": 120,
+   "score": {
+    "baseline": 68.3,
+    "important": 75.0,
+    "insult": 68.3,
+    "threat": 61.7
+   },
+   "overall": 68.3,
+   "vs_baseline": {
+    "important": {
+     "diff": 6.7,
+     "lo": -13.3,
+     "hi": 26.7,
+     "tasks_better": 2,
+     "tasks_worse": 2
+    },
+    "insult": {
+     "diff": 0.0,
+     "lo": -10.0,
+     "hi": 10.0,
+     "tasks_better": 1,
+     "tasks_worse": 1
+    },
+    "threat": {
+     "diff": -6.7,
+     "lo": -26.7,
+     "hi": 13.3,
+     "tasks_better": 2,
+     "tasks_worse": 3
+    }
+   },
+   "ranking": [
+    "important",
+    "baseline",
+    "insult",
+    "threat"
+   ],
+   "timeouts": {
+    "baseline": 0,
+    "important": 0,
+    "insult": 0,
+    "threat": 0
+   }
+  },
+  "opencode": {
+   "label": "OpenCode \u00b7 DeepSeek V4 Pro",
+   "bench": "SkillsBench",
+   "tasks": 10,
+   "runs": 120,
+   "score": {
+    "baseline": 55.0,
+    "important": 59.4,
+    "insult": 72.2,
+    "threat": 68.9
+   },
+   "overall": 63.9,
+   "vs_baseline": {
+    "important": {
+     "diff": 4.4,
+     "lo": -14.4,
+     "hi": 24.4,
+     "tasks_better": 4,
+     "tasks_worse": 3
+    },
+    "insult": {
+     "diff": 17.2,
+     "lo": 4.4,
+     "hi": 31.1,
+     "tasks_better": 5,
+     "tasks_worse": 0
+    },
+    "threat": {
+     "diff": 13.9,
+     "lo": -2.8,
+     "hi": 30.6,
+     "tasks_better": 5,
+     "tasks_worse": 1
+    }
+   },
+   "ranking": [
+    "insult",
+    "threat",
+    "important",
+    "baseline"
+   ],
+   "timeouts": {
+    "baseline": 4,
+    "important": 3,
+    "insult": 3,
+    "threat": 3
+   }
+  },
+  "openhands": {
+   "label": "OpenHands \u00b7 DeepSeek V4 Pro",
+   "bench": "SkillsBench",
+   "tasks": 10,
+   "runs": 120,
+   "score": {
+    "baseline": 47.8,
+    "important": 61.1,
+    "insult": 58.9,
+    "threat": 65.6
+   },
+   "overall": 58.3,
+   "vs_baseline": {
+    "important": {
+     "diff": 13.3,
+     "lo": -10.0,
+     "hi": 40.0,
+     "tasks_better": 4,
+     "tasks_worse": 3
+    },
+    "insult": {
+     "diff": 11.1,
+     "lo": -10.0,
+     "hi": 35.6,
+     "tasks_better": 4,
+     "tasks_worse": 2
+    },
+    "threat": {
+     "diff": 17.8,
+     "lo": -2.2,
+     "hi": 40.0,
+     "tasks_better": 4,
+     "tasks_worse": 1
+    }
+   },
+   "ranking": [
+    "threat",
+    "important",
+    "insult",
+    "baseline"
+   ],
+   "timeouts": {
+    "baseline": 6,
+    "important": 6,
+    "insult": 6,
+    "threat": 5
+   }
+  },
+  "pi": {
+   "label": "Pi \u00b7 DeepSeek V4 Pro",
+   "bench": "SkillsBench",
+   "tasks": 10,
+   "runs": 120,
+   "score": {
+    "baseline": 58.3,
+    "important": 66.1,
+    "insult": 76.7,
+    "threat": 66.1
+   },
+   "overall": 66.8,
+   "vs_baseline": {
+    "important": {
+     "diff": 7.8,
+     "lo": -10.0,
+     "hi": 26.7,
+     "tasks_better": 4,
+     "tasks_worse": 2
+    },
+    "insult": {
+     "diff": 18.3,
+     "lo": 6.7,
+     "hi": 31.7,
+     "tasks_better": 5,
+     "tasks_worse": 0
+    },
+    "threat": {
+     "diff": 7.8,
+     "lo": -7.8,
+     "hi": 23.3,
+     "tasks_better": 5,
+     "tasks_worse": 2
+    }
+   },
+   "ranking": [
+    "insult",
+    "important",
+    "threat",
+    "baseline"
+   ],
+   "timeouts": {
+    "baseline": 2,
+    "important": 3,
+    "insult": 1,
+    "threat": 2
+   }
+  },
+  "pi_tb2": {
+   "label": "Pi \u00b7 DeepSeek V4 Pro",
+   "bench": "Terminal-Bench 2",
+   "tasks": 87,
+   "runs": 348,
+   "score": {
+    "baseline": 60.9,
+    "important": 60.9,
+    "insult": 56.3,
+    "threat": 58.6
+   },
+   "overall": 59.2,
+   "vs_baseline": {
+    "important": {
+     "diff": 0.0,
+     "lo": -8.0,
+     "hi": 8.0,
+     "tasks_better": 6,
+     "tasks_worse": 6
+    },
+    "insult": {
+     "diff": -4.6,
+     "lo": -13.8,
+     "hi": 4.6,
+     "tasks_better": 7,
+     "tasks_worse": 11
+    },
+    "threat": {
+     "diff": -2.3,
+     "lo": -10.3,
+     "hi": 5.7,
+     "tasks_better": 6,
+     "tasks_worse": 8
+    }
+   },
+   "ranking": [
+    "baseline",
+    "important",
+    "threat",
+    "insult"
+   ],
+   "timeouts": {
+    "baseline": 18,
+    "important": 15,
+    "insult": 21,
+    "threat": 15
+   }
+  }
+ },
+ "pooled": {
+  "important": {
+   "mean_diff": 7.1,
+   "setups_better": 5,
+   "setups_worse": 0,
+   "min": 3.3,
+   "max": 13.3
+  },
+  "insult": {
+   "mean_diff": 10.7,
+   "setups_better": 4,
+   "setups_worse": 0,
+   "min": 0.0,
+   "max": 18.3
+  },
+  "threat": {
+   "mean_diff": 7.8,
+   "setups_better": 4,
+   "setups_worse": 1,
+   "min": -6.7,
+   "max": 17.8
+  }
+ },
+ "pooled_with_tb2": {
+  "important": {
+   "mean_diff": 5.9,
+   "setups_better": 5,
+   "setups_worse": 0,
+   "min": 0.0,
+   "max": 13.3
+  },
+  "insult": {
+   "mean_diff": 8.1,
+   "setups_better": 4,
+   "setups_worse": 1,
+   "min": -4.6,
+   "max": 18.3
+  },
+  "threat": {
+   "mean_diff": 6.1,
+   "setups_better": 4,
+   "setups_worse": 2,
+   "min": -6.7,
+   "max": 17.8
+  }
+ },
+ "baseline_vs_itself": {
+  "sonnet5": {
+   "label": "Claude Code \u00b7 Sonnet 5",
+   "baseline_trials": {
+    "1": 30.0,
+    "2": 50.0,
+    "3": 50.0
+   },
+   "baseline_spread": 20.0,
+   "tone_spread": 6.7
+  },
+  "terra": {
+   "label": "Codex \u00b7 GPT-5.6 Terra",
+   "baseline_trials": {
+    "1": 78.3,
+    "2": 58.3,
+    "3": 68.3
+   },
+   "baseline_spread": 20.0,
+   "tone_spread": 13.3
+  },
+  "opencode": {
+   "label": "OpenCode \u00b7 DeepSeek V4 Pro",
+   "baseline_trials": {
+    "1": 58.3,
+    "2": 48.3,
+    "3": 58.3
+   },
+   "baseline_spread": 10.0,
+   "tone_spread": 17.2
+  },
+  "openhands": {
+   "label": "OpenHands \u00b7 DeepSeek V4 Pro",
+   "baseline_trials": {
+    "1": 48.3,
+    "2": 28.3,
+    "3": 66.7
+   },
+   "baseline_spread": 38.4,
+   "tone_spread": 17.8
+  },
+  "pi": {
+   "label": "Pi \u00b7 DeepSeek V4 Pro",
+   "baseline_trials": {
+    "1": 56.7,
+    "2": 60.0,
+    "3": 58.3
+   },
+   "baseline_spread": 3.3,
+   "tone_spread": 18.3
+  }
+ },
+ "tb2_reruns": {
+  "tasks": 24,
+  "baseline_disagree": 9,
+  "tones_disagree": 11,
+  "run1_vs_run2_flips": 7,
+  "baseline_pass_rates": [
+   16,
+   17,
+   15
+  ],
+  "tone_pass_rates": {
+   "important": 17,
+   "insult": 17,
+   "threat": 13
+  },
+  "table": [
+   {
+    "task": "adaptive-rejection-sampler",
+    "baseline_run1": 0,
+    "baseline_run2": 1,
+    "baseline_run3": 0,
+    "important": 0,
+    "insult": 0,
+    "threat": 0
+   },
+   {
+    "task": "build-cython-ext",
+    "baseline_run1": 0,
+    "baseline_run2": 1,
+    "baseline_run3": 1,
+    "important": 0,
+    "insult": 1,
+    "threat": 0
+   },
+   {
+    "task": "build-pmars",
+    "baseline_run1": 1,
+    "baseline_run2": 1,
+    "baseline_run3": 1,
+    "important": 1,
+    "insult": 1,
+    "threat": 1
+   },
+   {
+    "task": "cancel-async-tasks",
+    "baseline_run1": 0,
+    "baseline_run2": 0,
+    "baseline_run3": 0,
+    "important": 0,
+    "insult": 0,
+    "threat": 0
+   },
+   {
+    "task": "configure-git-webserver",
+    "baseline_run1": 1,
+    "baseline_run2": 1,
+    "baseline_run3": 1,
+    "important": 1,
+    "insult": 1,
+    "threat": 0
+   },
+   {
+    "task": "count-dataset-tokens",
+    "baseline_run1": 1,
+    "baseline_run2": 1,
+    "baseline_run3": 0,
+    "important": 1,
+    "insult": 1,
+    "threat": 0
+   },
+   {
+    "task": "db-wal-recovery",
+    "baseline_run1": 1,
+    "baseline_run2": 1,
+    "baseline_run3": 1,
+    "important": 1,
+    "insult": 1,
+    "threat": 1
+   },
+   {
+    "task": "extract-elf",
+    "baseline_run1": 0,
+    "baseline_run2": 1,
+    "baseline_run3": 1,
+    "important": 1,
+    "insult": 1,
+    "threat": 1
+   },
+   {
+    "task": "fix-code-vulnerability",
+    "baseline_run1": 1,
+    "baseline_run2": 0,
+    "baseline_run3": 1,
+    "important": 1,
+    "insult": 1,
+    "threat": 1
+   },
+   {
+    "task": "git-multibranch",
+    "baseline_run1": 1,
+    "baseline_run2": 1,
+    "baseline_run3": 0,
+    "important": 0,
+    "insult": 1,
+    "threat": 1
+   },
+   {
+    "task": "kv-store-grpc",
+    "baseline_run1": 0,
+    "baseline_run2": 0,
+    "baseline_run3": 0,
+    "important": 1,
+    "insult": 1,
+    "threat": 1
+   },
+   {
+    "task": "largest-eigenval",
+    "baseline_run1": 0,
+    "baseline_run2": 0,
+    "baseline_run3": 0,
+    "important": 1,
+    "insult": 0,
+    "threat": 0
+   },
+   {
+    "task": "log-summary-date-ranges",
+    "baseline_run1": 1,
+    "baseline_run2": 1,
+    "baseline_run3": 1,
+    "important": 1,
+    "insult": 1,
+    "threat": 1
+   },
+   {
+    "task": "merge-diff-arc-agi-task",
+    "baseline_run1": 1,
+    "baseline_run2": 1,
+    "baseline_run3": 1,
+    "important": 1,
+    "insult": 1,
+    "threat": 1
+   },
+   {
+    "task": "password-recovery",
+    "baseline_run1": 1,
+    "baseline_run2": 1,
+    "baseline_run3": 1,
+    "important": 0,
+    "insult": 1,
+    "threat": 1
+   },
+   {
+    "task": "polyglot-c-py",
+    "baseline_run1": 0,
+    "baseline_run2": 0,
+    "baseline_run3": 0,
+    "important": 0,
+    "insult": 0,
+    "threat": 0
+   },
+   {
+    "task": "pypi-server",
+    "baseline_run1": 1,
+    "baseline_run2": 1,
+    "baseline_run3": 1,
+    "important": 1,
+    "insult": 1,
+    "threat": 1
+   },
+   {
+    "task": "pytorch-model-cli",
+    "baseline_run1": 1,
+    "baseline_run2": 1,
+    "baseline_run3": 1,
+    "important": 1,
+    "insult": 1,
+    "threat": 0
+   },
+   {
+    "task": "query-optimize",
+    "baseline_run1": 0,
+    "baseline_run2": 1,
+    "baseline_run3": 0,
+    "important": 1,
+    "insult": 0,
+    "threat": 0
+   },
+   {
+    "task": "sanitize-git-repo",
+    "baseline_run1": 1,
+    "baseline_run2": 0,
+    "baseline_run3": 1,
+    "important": 1,
+    "insult": 0,
+    "threat": 0
+   },
+   {
+    "task": "sparql-university",
+    "baseline_run1": 1,
+    "baseline_run2": 1,
+    "baseline_run3": 1,
+    "important": 1,
+    "insult": 0,
+    "threat": 1
+   },
+   {
+    "task": "sqlite-db-truncate",
+    "baseline_run1": 1,
+    "baseline_run2": 1,
+    "baseline_run3": 1,
+    "important": 1,
+    "insult": 1,
+    "threat": 1
+   },
+   {
+    "task": "sqlite-with-gcov",
+    "baseline_run1": 1,
+    "baseline_run2": 0,
+    "baseline_run3": 0,
+    "important": 0,
+    "insult": 1,
+    "threat": 0
+   },
+   {
+    "task": "tune-mjcf",
+    "baseline_run1": 1,
+    "baseline_run2": 1,
+    "baseline_run3": 1,
+    "important": 1,
+    "insult": 1,
+    "threat": 1
+   }
+  ]
+ },
+ "tb2_overall": {
+  "pass_all_4": 36,
+  "fail_all_4": 21,
+  "mixed": 30,
+  "passed": {
+   "baseline": 53,
+   "important": 53,
+   "insult": 49,
+   "threat": 51
+  },
+  "tasks": 87
+ },
+ "harness": {
+  "systems": {
+   "opencode": {
+    "score": 63.9,
+    "per_tone": {
+     "baseline": 55.0,
+     "important": 59.4,
+     "insult": 72.2,
+     "threat": 68.9
+    },
+    "timeouts": 13,
+    "agent_hours": 10.1,
+    "input_tokens_m": 30.3,
+    "output_tokens_m": 1.04,
+    "requests": 1405,
+    "charge_usd": 7.57
+   },
+   "openhands": {
+    "score": 58.3,
+    "per_tone": {
+     "baseline": 47.8,
+     "important": 61.1,
+     "insult": 58.9,
+     "threat": 65.6
+    },
+    "timeouts": 23,
+    "agent_hours": 12.7,
+    "input_tokens_m": 46.7,
+    "output_tokens_m": 2.09,
+    "requests": 2090,
+    "charge_usd": 3.87
+   },
+   "pi": {
+    "score": 66.8,
+    "per_tone": {
+     "baseline": 58.3,
+     "important": 66.1,
+     "insult": 76.7,
+     "threat": 66.1
+    },
+    "timeouts": 8,
+    "agent_hours": 6.8,
+    "input_tokens_m": 25.9,
+    "output_tokens_m": 0.96,
+    "requests": 1238,
+    "charge_usd": 6.23
+   }
+  },
+  "order_by_tone": {
+   "baseline": [
+    "pi",
+    "opencode",
+    "openhands"
+   ],
+   "important": [
+    "pi",
+    "openhands",
+    "opencode"
+   ],
+   "insult": [
+    "pi",
+    "opencode",
+    "openhands"
+   ],
+   "threat": [
+    "opencode",
+    "pi",
+    "openhands"
+   ]
+  }
+ },
+ "costs": {
+  "sonnet5": {
+   "usd": 55.97,
+   "runs": 120,
+   "runs_without_estimate": 0,
+   "solved": 56.8,
+   "per_run": 0.4664,
+   "per_solved": 0.9848,
+   "by_tone": {
+    "baseline": 12.46,
+    "important": 15.62,
+    "insult": 13.51,
+    "threat": 14.38
+   },
+   "charged_usd": null
+  },
+  "terra": {
+   "usd": 18.49,
+   "runs": 120,
+   "runs_without_estimate": 0,
+   "solved": 82.0,
+   "per_run": 0.1541,
+   "per_solved": 0.2255,
+   "by_tone": {
+    "baseline": 4.51,
+    "important": 4.9,
+    "insult": 4.55,
+    "threat": 4.53
+   },
+   "charged_usd": null
+  },
+  "opencode": {
+   "usd": 2.42,
+   "runs": 120,
+   "runs_without_estimate": 0,
+   "solved": 76.7,
+   "per_run": 0.0201,
+   "per_solved": 0.0315,
+   "by_tone": {
+    "baseline": 0.66,
+    "important": 0.59,
+    "insult": 0.62,
+    "threat": 0.55
+   },
+   "charged_usd": 7.57
+  },
+  "openhands": {
+   "usd": 3.75,
+   "runs": 120,
+   "runs_without_estimate": 0,
+   "solved": 70.0,
+   "per_run": 0.0312,
+   "per_solved": 0.0536,
+   "by_tone": {
+    "baseline": 0.98,
+    "important": 0.88,
+    "insult": 0.83,
+    "threat": 1.06
+   },
+   "charged_usd": 3.87
+  },
+  "pi": {
+   "usd": 1.29,
+   "runs": 120,
+   "runs_without_estimate": 0,
+   "solved": 80.2,
+   "per_run": 0.0107,
+   "per_solved": 0.016,
+   "by_tone": {
+    "baseline": 0.32,
+    "important": 0.32,
+    "insult": 0.3,
+    "threat": 0.35
+   },
+   "charged_usd": 6.23
+  },
+  "pi_tb2": {
+   "usd": 11.2,
+   "runs": 357,
+   "runs_without_estimate": 7,
+   "solved": 206.0,
+   "per_run": 0.0314,
+   "per_solved": 0.0544,
+   "by_tone": null,
+   "charged_usd": 15.02
+  }
+ }
+}

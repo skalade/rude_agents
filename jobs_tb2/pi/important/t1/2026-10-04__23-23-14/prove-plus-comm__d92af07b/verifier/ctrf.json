@@ -1,0 +1,56 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 4,
+            "passed": 4,
+            "failed": 0,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1791194339.7571971,
+            "stop": 1791194339.9671323
+        },
+        "tests": [
+            {
+                "name": "::test_proof_file_exists",
+                "status": "passed",
+                "duration": 0.0002748280530795455,
+                "start": 1791194339.787142,
+                "stop": 1791194339.7875328,
+                "retries": 0,
+                "file_path": "../tests/test_outputs.py"
+            },
+            {
+                "name": "::test_compiled_proof_exists",
+                "status": "passed",
+                "duration": 0.00017428200226277113,
+                "start": 1791194339.7876163,
+                "stop": 1791194339.7878451,
+                "retries": 0,
+                "file_path": "../tests/test_outputs.py"
+            },
+            {
+                "name": "::test_proof_contents",
+                "status": "passed",
+                "duration": 0.0001838398166000843,
+                "start": 1791194339.7879114,
+                "stop": 1791194339.788146,
+                "retries": 0,
+                "file_path": "../tests/test_outputs.py"
+            },
+            {
+                "name": "::test_compiled_proof_content",
+                "status": "passed",
+                "duration": 0.1784964919788763,
+                "start": 1791194339.7882178,
+                "stop": 1791194339.9669068,
+                "retries": 0,
+                "file_path": "../tests/test_outputs.py"
+            }
+        ]
+    }
+}

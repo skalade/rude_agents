@@ -1,0 +1,91 @@
+{
+  "task_path": "build/insult/earthquake-plate-calculation",
+  "agent": "pi-acp",
+  "model": "openrouter/deepseek/deepseek-v4-pro",
+  "reasoning_effort": "high",
+  "environment": "docker",
+  "environment_manifest": null,
+  "skill_mode": "with-skill",
+  "skill_source": "task_bundled",
+  "requested_skills_dir": null,
+  "effective_skills_dir": "/tmp/benchflow-task-zfkoo2gb/earthquake-plate-calculation/environment/skills",
+  "skills_sandbox_dir": "/skills",
+  "include_task_skills": true,
+  "sandbox_user": "agent",
+  "sandbox_locked_paths": [
+    "/oracle",
+    "/solution",
+    "/verifier",
+    "/tests",
+    "/testbed_verify"
+  ],
+  "sandbox_setup_timeout": 120,
+  "skip_install": false,
+  "agent_install_timeout": 900,
+  "context_root": null,
+  "base_image_override": null,
+  "timeout_sec": 900,
+  "concurrency": 2,
+  "agent_idle_timeout_sec": 600,
+  "started_at": "2026-10-02 17:35:18.351920",
+  "agent_env": {
+    "BENCHFLOW_PROVIDER_MODELS": "[{\"id\":\"deepseek/deepseek-v4-pro\",\"name\":\"DeepSeek V4 Pro\",\"reasoning\":true,\"input\":[\"text\"],\"contextWindow\":1024000,\"maxTokens\":384000}]",
+    "BENCHFLOW_PROVIDER_MODEL": "deepseek/deepseek-v4-pro",
+    "BENCHFLOW_PROVIDER_NAME": "openrouter",
+    "BENCHFLOW_PROVIDER_BASE_URL": "https://openrouter.ai/api/v1",
+    "BENCHFLOW_PROVIDER_PROTOCOL": "openai-completions",
+    "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1"
+  },
+  "scenes": [
+    {
+      "name": "default",
+      "skills_dir": null,
+      "roles": [
+        {
+          "name": "agent",
+          "agent": "pi-acp",
+          "model": "openrouter/deepseek/deepseek-v4-pro",
+          "reasoning_effort": "high",
+          "timeout_sec": null,
+          "idle_timeout_sec": null,
+          "skills_dir": null,
+          "capabilities": null,
+          "env_keys": []
+        }
+      ],
+      "turns": [
+        {
+          "role": "agent",
+          "has_prompt": false
+        }
+      ]
+    }
+  ],
+  "loop": {
+    "strategy": "single-shot"
+  },
+  "usage_tracking": {
+    "requested": "auto"
+  },
+  "source": {
+    "type": "github",
+    "repo": "skalade/rude_agents",
+    "requested_ref": "master",
+    "resolved_sha": "9e15ebe51faf51abfd0b3047635c0db53301290f",
+    "path": "build/insult/earthquake-plate-calculation",
+    "dirty": false,
+    "file_hashes": {
+      "environment/Dockerfile": "sha256:ffe7cc9b40c43210daeeb01cbf52fbc7f660ca766682a689ca9897acce8330f4",
+      "environment/PB2002_boundaries.json": "sha256:42b3e0876a7e40f133e958ba7ab85f8851b5c693a046fbc3b138e7751863d92a",
+      "environment/PB2002_plates.json": "sha256:922918f970baf7e645821a4a728b945dbb5eeac1337d71d087fba021bcc79e21",
+      "environment/earthquakes_2024.json": "sha256:55580cfc907cb4fada9e0ca57de17d36399a04936cfe736b81b5f128b0f246ec",
+      "environment/skills/geospatial-analysis/SKILL.md": "sha256:9ec15d10424e46ab4339f8a1ca9bb0f3b71a76659d69e652e846abfdfd258336",
+      "oracle/solution.py": "sha256:f544a4b6793f889c2829393556ddeb1b2e88c9fc3d77e5b758a9df5ecd4a48b5",
+      "oracle/solve.sh": "sha256:73b190eb77716548dde8721633e0c4d142488e549af0ead818e7a34ffbea9b6a",
+      "task.md": "sha256:d2c2eec9403e8d0b909f9688677a94c9bf5c8e6908d6e2984d7b5c3028d67fd3",
+      "verifier/test.sh": "sha256:fe7195562321b71ace6e1f6858994939238cc7ce0ec2d0ae3b610278489a42b7",
+      "verifier/test_outputs.py": "sha256:d5ddbf850e17561cc7074bda9d0c5457fd7b263e62179ecdff620337ae3efb14"
+    }
+  },
+  "task_digest": "sha256:382834da598df78a123f02edd9eda0d8f9718026ff132b124eebf905315ad329"
+}

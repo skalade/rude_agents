@@ -1,0 +1,137 @@
+{
+  "task_name": "prove-plus-comm",
+  "rollout_name": "prove-plus-comm__bd4bdd26",
+  "rewards": {
+    "reward": 1.0
+  },
+  "agent": "pi-acp",
+  "agent_name": "pi-acp",
+  "model": "openrouter/deepseek/deepseek-v4-pro",
+  "skill_mode": "no-skill",
+  "skill_source": "none",
+  "requested_skills_dir": null,
+  "effective_skills_dir": null,
+  "skills_sandbox_dir": null,
+  "include_task_skills": false,
+  "n_tool_calls": 11,
+  "n_skill_invocations": 0,
+  "n_prompts": 1,
+  "agent_result": {
+    "n_tool_calls": 11,
+    "n_skill_invocations": 0,
+    "n_prompts": 1,
+    "n_input_tokens": 36672,
+    "n_output_tokens": 3467,
+    "n_cache_read_tokens": 32956,
+    "n_cache_creation_tokens": 0,
+    "total_tokens": 40139,
+    "cost_usd": 0.00249662,
+    "usage_source": "provider_response",
+    "price_source": "litellm"
+  },
+  "final_metrics": {
+    "total_prompt_tokens": 36672,
+    "total_completion_tokens": 3467,
+    "total_cached_tokens": 32956,
+    "total_cost_usd": 0.00249662
+  },
+  "trajectory_summary": {
+    "steps": 27,
+    "tool_call_steps": 11,
+    "user_message_steps": 1,
+    "agent_message_steps": 5,
+    "agent_thought_steps": 10,
+    "other_steps": 0,
+    "event_type_counts": {
+      "agent_message": 5,
+      "user_message": 1,
+      "agent_thought": 10,
+      "tool_call": 11
+    },
+    "tool_call_status_counts": {
+      "completed": 10,
+      "failed": 1
+    },
+    "partial_trajectory": false,
+    "trajectory_source": "acp"
+  },
+  "usage_tracking": {
+    "requested": "auto",
+    "status": "enabled",
+    "environment": "docker",
+    "endpoint_kind": "host",
+    "usage_source": "provider_response"
+  },
+  "error": null,
+  "error_category": null,
+  "verifier_error": null,
+  "verifier_error_category": null,
+  "export_error": null,
+  "idle_timeout_info": null,
+  "agent_timeout_info": null,
+  "sandbox_startup_info": null,
+  "transport_error_info": null,
+  "verifier_timeout_info": null,
+  "api_error_info": null,
+  "suspected_api_error_info": null,
+  "partial_trajectory": false,
+  "trajectory_source": "acp",
+  "started_at": "2026-10-05 20:38:59.865105",
+  "finished_at": "2026-10-05 20:41:56.083456",
+  "timing": {
+    "environment_setup": 10.0,
+    "agent_setup": 3.4,
+    "agent_execution": 120.0,
+    "verifier": 7.1,
+    "total": 176.2
+  },
+  "scenes": [
+    {
+      "name": "default",
+      "skills_dir": null,
+      "roles": [
+        {
+          "name": "agent",
+          "agent": "pi-acp",
+          "model": "openrouter/deepseek/deepseek-v4-pro",
+          "reasoning_effort": "high",
+          "timeout_sec": null,
+          "idle_timeout_sec": null,
+          "skills_dir": null,
+          "capabilities": null,
+          "env_keys": []
+        }
+      ],
+      "turns": [
+        {
+          "role": "agent",
+          "has_prompt": false
+        }
+      ]
+    }
+  ],
+  "loop": {
+    "strategy": "single-shot"
+  },
+  "source": {
+    "type": "github",
+    "repo": "skalade/rude_agents",
+    "requested_ref": "master",
+    "resolved_sha": "d68b067959758ae0c77a0bb8d2360e0aa3ff5aed",
+    "path": "build_tb2/threat/prove-plus-comm",
+    "dirty": false,
+    "file_hashes": {
+      ".gitignore": "sha256:9a8dd8d9b6c3adb8e9e56328df27deef859a3e98fffc9b8133c8b22207c25953",
+      "README.md": "sha256:90a9214c19dc6ed9014095a5fa15760d8ddaa4b8fe3085d69fa7d5b591935893",
+      "environment/Dockerfile": "sha256:6daf1ee29aa4647b06c965d86cf963c21af96d8f0b8f5e0fd4afd31ffd5ebd89",
+      "environment/partial_proof.v": "sha256:e95366c795a3b4746acaf38b527996eecb03c7d0ceb0132a9f24c3686a6965c3",
+      "instruction.md": "sha256:65a455e5b1ac098f736a6e42ef1309d051dcf8a45c0a23cbe0b0a54b814c46e9",
+      "solution/solve.sh": "sha256:efac67daf424d3add515a45ad6e9a6f89ce2639dcc8476dcc106076d956ee422",
+      "task.toml": "sha256:240f3ac0076e3362685c8598c4e56658e3882eb25a14ae6cc7e9ab3a4f6b09ea",
+      "tests/test.sh": "sha256:4770437ea96c3cc84684b4f99d55fb148fcac09f9ea1e8ef49de487716e6c334",
+      "tests/test_outputs.py": "sha256:02df5d8f2ab15eb9ec39493c5ce57b8699853304cd8dd5b853e1dcb8c4a13327"
+    }
+  },
+  "task_digest": "sha256:117b8cbf493799dc09e71b41c9ca2fcf7362f9b644a35e7038fc1ed716668906",
+  "sandbox_id": null
+}

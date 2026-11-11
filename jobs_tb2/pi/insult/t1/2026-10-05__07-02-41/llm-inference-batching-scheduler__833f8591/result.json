@@ -1,0 +1,143 @@
+{
+  "task_name": "llm-inference-batching-scheduler",
+  "rollout_name": "llm-inference-batching-scheduler__833f8591",
+  "rewards": {
+    "reward": 1.0
+  },
+  "agent": "pi-acp",
+  "agent_name": "pi-acp",
+  "model": "openrouter/deepseek/deepseek-v4-pro",
+  "skill_mode": "no-skill",
+  "skill_source": "none",
+  "requested_skills_dir": null,
+  "effective_skills_dir": null,
+  "skills_sandbox_dir": null,
+  "include_task_skills": false,
+  "n_tool_calls": 48,
+  "n_skill_invocations": 0,
+  "n_prompts": 1,
+  "agent_result": {
+    "n_tool_calls": 48,
+    "n_skill_invocations": 0,
+    "n_prompts": 1,
+    "n_input_tokens": 4307476,
+    "n_output_tokens": 76784,
+    "n_cache_read_tokens": 3936730,
+    "n_cache_creation_tokens": 0,
+    "total_tokens": 4384260,
+    "cost_usd": 0.13605816,
+    "usage_source": "provider_response",
+    "price_source": "litellm"
+  },
+  "final_metrics": {
+    "total_prompt_tokens": 4307476,
+    "total_completion_tokens": 76784,
+    "total_cached_tokens": 3936730,
+    "total_cost_usd": 0.13605816
+  },
+  "trajectory_summary": {
+    "steps": 95,
+    "tool_call_steps": 48,
+    "user_message_steps": 1,
+    "agent_message_steps": 7,
+    "agent_thought_steps": 39,
+    "other_steps": 0,
+    "event_type_counts": {
+      "agent_message": 7,
+      "user_message": 1,
+      "agent_thought": 39,
+      "tool_call": 48
+    },
+    "tool_call_status_counts": {
+      "completed": 47,
+      "failed": 1
+    },
+    "partial_trajectory": false,
+    "trajectory_source": "acp"
+  },
+  "usage_tracking": {
+    "requested": "auto",
+    "status": "enabled",
+    "environment": "docker",
+    "endpoint_kind": "host",
+    "usage_source": "provider_response"
+  },
+  "error": null,
+  "error_category": null,
+  "verifier_error": null,
+  "verifier_error_category": null,
+  "export_error": null,
+  "idle_timeout_info": null,
+  "agent_timeout_info": null,
+  "sandbox_startup_info": null,
+  "transport_error_info": null,
+  "verifier_timeout_info": null,
+  "api_error_info": null,
+  "suspected_api_error_info": null,
+  "partial_trajectory": false,
+  "trajectory_source": "acp",
+  "started_at": "2026-10-05 10:06:25.111405",
+  "finished_at": "2026-10-05 10:38:17.540487",
+  "timing": {
+    "environment_setup": 1.9,
+    "agent_setup": 3.4,
+    "agent_execution": 1857.1,
+    "verifier": 4.1,
+    "total": 1912.4
+  },
+  "scenes": [
+    {
+      "name": "default",
+      "skills_dir": null,
+      "roles": [
+        {
+          "name": "agent",
+          "agent": "pi-acp",
+          "model": "openrouter/deepseek/deepseek-v4-pro",
+          "reasoning_effort": "high",
+          "timeout_sec": null,
+          "idle_timeout_sec": null,
+          "skills_dir": null,
+          "capabilities": null,
+          "env_keys": []
+        }
+      ],
+      "turns": [
+        {
+          "role": "agent",
+          "has_prompt": false
+        }
+      ]
+    }
+  ],
+  "loop": {
+    "strategy": "single-shot"
+  },
+  "source": {
+    "type": "github",
+    "repo": "skalade/rude_agents",
+    "requested_ref": "master",
+    "resolved_sha": "d68b067959758ae0c77a0bb8d2360e0aa3ff5aed",
+    "path": "build_tb2/insult/llm-inference-batching-scheduler",
+    "dirty": false,
+    "file_hashes": {
+      ".gitignore": "sha256:9a8dd8d9b6c3adb8e9e56328df27deef859a3e98fffc9b8133c8b22207c25953",
+      "README.md": "sha256:ecc9dd635357c184742cf72fc1e452a8946e207b183fc9a7eebbcf07133b911f",
+      "environment/Dockerfile": "sha256:10a6193904ee0022ac098504182989893b196dfc74e626a3ca48534a8eacde48",
+      "environment/task_file/input_data/requests_bucket_1.jsonl": "sha256:8b3cf1e2b06074162038064dd2c114abe308acd32cec7d365ee63ee81978f7de",
+      "environment/task_file/input_data/requests_bucket_2.jsonl": "sha256:e15e2d4c4d55f875c42a6042610d6282f6c0657c39d3e0d0f087268252525cb5",
+      "environment/task_file/scripts/__init__.py": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "environment/task_file/scripts/baseline_packer.py": "sha256:547d230d5e6d93197803480cb81cab0ec6ac63fcfa0a24b246f549523f216c4e",
+      "environment/task_file/scripts/cost_model.py": "sha256:0cf417fd5ff0112defcd46970d37a290c0763c5a9092e91cb3ebb86c3f20e6ce",
+      "instruction.md": "sha256:474780d146ca424c5bec331b984e30f9a43124dccd079e2cc39cff9cb5b0f463",
+      "solution/solve.sh": "sha256:cb9efb586d76a893c3027e62029e286eb6c7583dc92dbf1840a3adc236a926d7",
+      "task.toml": "sha256:52aaac942f917e6a91ff658e0272195bd1cd842d41d71e302414c52603cc588b",
+      "tests/__init__.py": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "tests/cost_model_for_tests.py": "sha256:d3e810a99d40327fb8317f6512d879c52c6aeebdf5dcdc0c5e117c7df61c9ab9",
+      "tests/test.sh": "sha256:fbb2e5048ecf6ff359369d965e7195ea1d9ba939f67f9ce6667ffc2709d94028",
+      "tests/test_outputs.py": "sha256:80b06b7c4ba0db28832b767d48be74bb462d7f5df5798d9cb58c4f1160d96ffa"
+    }
+  },
+  "task_digest": "sha256:3adb9b7fd5e4a03c4b72dd7dbe1ef20b4072554f653c18026e9c05256f04448c",
+  "sandbox_id": null
+}

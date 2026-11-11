@@ -1,0 +1,144 @@
+{
+  "task_name": "caffe-cifar-10",
+  "rollout_name": "caffe-cifar-10__4fff8aaf",
+  "rewards": {
+    "reward": 0.0
+  },
+  "agent": "pi-acp",
+  "agent_name": "pi-acp",
+  "model": "openrouter/deepseek/deepseek-v4-pro",
+  "skill_mode": "no-skill",
+  "skill_source": "none",
+  "requested_skills_dir": null,
+  "effective_skills_dir": null,
+  "skills_sandbox_dir": null,
+  "include_task_skills": false,
+  "n_tool_calls": 33,
+  "n_skill_invocations": 0,
+  "n_prompts": 1,
+  "agent_result": {
+    "n_tool_calls": 33,
+    "n_skill_invocations": 0,
+    "n_prompts": 1,
+    "n_input_tokens": 251860,
+    "n_output_tokens": 4614,
+    "n_cache_read_tokens": 229219,
+    "n_cache_creation_tokens": 0,
+    "total_tokens": 256474,
+    "cost_usd": 0.00827736,
+    "usage_source": "provider_response",
+    "price_source": "litellm"
+  },
+  "final_metrics": {
+    "total_prompt_tokens": 251860,
+    "total_completion_tokens": 4614,
+    "total_cached_tokens": 229219,
+    "total_cost_usd": 0.00827736
+  },
+  "trajectory_summary": {
+    "steps": 61,
+    "tool_call_steps": 33,
+    "user_message_steps": 1,
+    "agent_message_steps": 4,
+    "agent_thought_steps": 22,
+    "other_steps": 1,
+    "event_type_counts": {
+      "agent_message": 4,
+      "user_message": 1,
+      "agent_thought": 22,
+      "tool_call": 33,
+      "agent_timeout": 1
+    },
+    "tool_call_status_counts": {
+      "failed": 4,
+      "completed": 29
+    },
+    "partial_trajectory": false,
+    "trajectory_source": "acp"
+  },
+  "usage_tracking": {
+    "requested": "auto",
+    "status": "enabled",
+    "environment": "docker",
+    "endpoint_kind": "host",
+    "usage_source": "provider_response"
+  },
+  "error": "Agent prompt exceeded wall-clock budget 1200s",
+  "error_category": "timeout",
+  "verifier_error": null,
+  "verifier_error_category": null,
+  "export_error": null,
+  "idle_timeout_info": null,
+  "agent_timeout_info": {
+    "reason": "wall_clock_timeout",
+    "timeout_sec": 1200.0,
+    "n_tool_calls": 33,
+    "pending_tool_call_ids": [],
+    "terminal_event_recorded": true,
+    "terminal_trajectory_complete": true
+  },
+  "sandbox_startup_info": null,
+  "transport_error_info": null,
+  "verifier_timeout_info": null,
+  "api_error_info": null,
+  "suspected_api_error_info": null,
+  "partial_trajectory": false,
+  "trajectory_source": "acp",
+  "started_at": "2026-10-04 14:38:55.587639",
+  "finished_at": "2026-10-04 15:02:07.091128",
+  "timing": {
+    "environment_setup": 33.8,
+    "agent_setup": 3.6,
+    "agent_execution": 1225.5,
+    "verifier": 7.6,
+    "total": 1391.5
+  },
+  "scenes": [
+    {
+      "name": "default",
+      "skills_dir": null,
+      "roles": [
+        {
+          "name": "agent",
+          "agent": "pi-acp",
+          "model": "openrouter/deepseek/deepseek-v4-pro",
+          "reasoning_effort": "high",
+          "timeout_sec": null,
+          "idle_timeout_sec": null,
+          "skills_dir": null,
+          "capabilities": null,
+          "env_keys": []
+        }
+      ],
+      "turns": [
+        {
+          "role": "agent",
+          "has_prompt": false
+        }
+      ]
+    }
+  ],
+  "loop": {
+    "strategy": "single-shot"
+  },
+  "source": {
+    "type": "github",
+    "repo": "skalade/rude_agents",
+    "requested_ref": "master",
+    "resolved_sha": "d68b067959758ae0c77a0bb8d2360e0aa3ff5aed",
+    "path": "build_tb2/baseline/caffe-cifar-10",
+    "dirty": false,
+    "file_hashes": {
+      ".gitignore": "sha256:9a8dd8d9b6c3adb8e9e56328df27deef859a3e98fffc9b8133c8b22207c25953",
+      "README.md": "sha256:e918e6852c5c034422b81a6be22d7596fddcee53abe088f56727b2482da32728",
+      "environment/Dockerfile": "sha256:e09b48207ea329b6a0f106d45c3307f8ad4f5acd1adbd5a2f874acf7bd048ea3",
+      "instruction.md": "sha256:55c0dd21c7f26c9e7b0a5fefb2cd2aadf8f958c2b6e5e14aa47b12754a957d07",
+      "solution/solve.sh": "sha256:771887de1ed557269c7f3160c777519aa9538e1e9b59771b2f6ef38c8952490c",
+      "task.toml": "sha256:19daf54e378e1d811883d0f0c9c16344f58871770699993477f375e5fc1fe193",
+      "tests/test.sh": "sha256:4770437ea96c3cc84684b4f99d55fb148fcac09f9ea1e8ef49de487716e6c334",
+      "tests/test_outputs.py": "sha256:10bc2d83f1a421804d122bd43aa34826d688703ec73288399aff4e827125e9f2"
+    }
+  },
+  "task_digest": "sha256:a4614ddf1442b8933e3d1d41581c0d8bfc198557374893417484bdd88aea382f",
+  "sandbox_id": null
+}

@@ -1,0 +1,136 @@
+{
+  "task_name": "bn-fit-modify",
+  "rollout_name": "bn-fit-modify__d2058efb",
+  "rewards": {
+    "reward": 1.0
+  },
+  "agent": "pi-acp",
+  "agent_name": "pi-acp",
+  "model": "openrouter/deepseek/deepseek-v4-pro",
+  "skill_mode": "no-skill",
+  "skill_source": "none",
+  "requested_skills_dir": null,
+  "effective_skills_dir": null,
+  "skills_sandbox_dir": null,
+  "include_task_skills": false,
+  "n_tool_calls": 28,
+  "n_skill_invocations": 0,
+  "n_prompts": 1,
+  "agent_result": {
+    "n_tool_calls": 28,
+    "n_skill_invocations": 0,
+    "n_prompts": 1,
+    "n_input_tokens": 377581,
+    "n_output_tokens": 11404,
+    "n_cache_read_tokens": 344385,
+    "n_cache_creation_tokens": 0,
+    "total_tokens": 388985,
+    "cost_usd": 0.01408456,
+    "usage_source": "provider_response",
+    "price_source": "litellm"
+  },
+  "final_metrics": {
+    "total_prompt_tokens": 377581,
+    "total_completion_tokens": 11404,
+    "total_cached_tokens": 344385,
+    "total_cost_usd": 0.01408456
+  },
+  "trajectory_summary": {
+    "steps": 60,
+    "tool_call_steps": 28,
+    "user_message_steps": 1,
+    "agent_message_steps": 5,
+    "agent_thought_steps": 26,
+    "other_steps": 0,
+    "event_type_counts": {
+      "agent_message": 5,
+      "user_message": 1,
+      "agent_thought": 26,
+      "tool_call": 28
+    },
+    "tool_call_status_counts": {
+      "completed": 17,
+      "failed": 11
+    },
+    "partial_trajectory": false,
+    "trajectory_source": "acp"
+  },
+  "usage_tracking": {
+    "requested": "auto",
+    "status": "enabled",
+    "environment": "docker",
+    "endpoint_kind": "host",
+    "usage_source": "provider_response"
+  },
+  "error": null,
+  "error_category": null,
+  "verifier_error": null,
+  "verifier_error_category": null,
+  "export_error": null,
+  "idle_timeout_info": null,
+  "agent_timeout_info": null,
+  "sandbox_startup_info": null,
+  "transport_error_info": null,
+  "verifier_timeout_info": null,
+  "api_error_info": null,
+  "suspected_api_error_info": null,
+  "partial_trajectory": false,
+  "trajectory_source": "acp",
+  "started_at": "2026-10-04 14:15:52.208078",
+  "finished_at": "2026-10-04 14:22:57.779560",
+  "timing": {
+    "environment_setup": 21.6,
+    "agent_setup": 4.0,
+    "agent_execution": 360.1,
+    "verifier": 19.4,
+    "total": 425.6
+  },
+  "scenes": [
+    {
+      "name": "default",
+      "skills_dir": null,
+      "roles": [
+        {
+          "name": "agent",
+          "agent": "pi-acp",
+          "model": "openrouter/deepseek/deepseek-v4-pro",
+          "reasoning_effort": "high",
+          "timeout_sec": null,
+          "idle_timeout_sec": null,
+          "skills_dir": null,
+          "capabilities": null,
+          "env_keys": []
+        }
+      ],
+      "turns": [
+        {
+          "role": "agent",
+          "has_prompt": false
+        }
+      ]
+    }
+  ],
+  "loop": {
+    "strategy": "single-shot"
+  },
+  "source": {
+    "type": "github",
+    "repo": "skalade/rude_agents",
+    "requested_ref": "master",
+    "resolved_sha": "d68b067959758ae0c77a0bb8d2360e0aa3ff5aed",
+    "path": "build_tb2/baseline/bn-fit-modify",
+    "dirty": false,
+    "file_hashes": {
+      ".gitignore": "sha256:9a8dd8d9b6c3adb8e9e56328df27deef859a3e98fffc9b8133c8b22207c25953",
+      "README.md": "sha256:647d14a74c316f554dbd6eb70dd5da79b347eb8395fb5e92bf5ad8319faf7919",
+      "environment/Dockerfile": "sha256:8b0b1056e9c66c01a14a3d79332cc425498f2926b6deda13d200591ee5e5e6cc",
+      "instruction.md": "sha256:5f5207ce23c375270c26719fb66d89843bc88cf1d40671ed87c6b7bab4d394e5",
+      "solution/solve.sh": "sha256:813eb810cf041466468703ef14fdb06ada533b9accddf774eecc7a7191d5cb79",
+      "task.toml": "sha256:6493f7162da424a4fd95da721bd3fd1ce7e5dd26e792132cb9c46db536b67090",
+      "tests/test.sh": "sha256:ea2adeb779621e9625d1f80a17f9d19b6ecec017b8ad8974b668a4a0fbdeb4c3",
+      "tests/test_outputs.py": "sha256:364069f893e336a021c907dd0ac11ff4c9e7ca7b4fa7ab506c360166960e455b"
+    }
+  },
+  "task_digest": "sha256:0b58109a7773c0ce532a0fd375e8dccfd57af2f09fb23449a2838b0e74069c79",
+  "sandbox_id": null
+}

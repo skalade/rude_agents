@@ -1,0 +1,141 @@
+{
+  "task_name": "custom-memory-heap-crash",
+  "rollout_name": "custom-memory-heap-crash__05191434",
+  "rewards": {
+    "reward": 1.0
+  },
+  "agent": "pi-acp",
+  "agent_name": "pi-acp",
+  "model": "openrouter/deepseek/deepseek-v4-pro",
+  "skill_mode": "no-skill",
+  "skill_source": "none",
+  "requested_skills_dir": null,
+  "effective_skills_dir": null,
+  "skills_sandbox_dir": null,
+  "include_task_skills": false,
+  "n_tool_calls": 32,
+  "n_skill_invocations": 0,
+  "n_prompts": 1,
+  "agent_result": {
+    "n_tool_calls": 32,
+    "n_skill_invocations": 0,
+    "n_prompts": 1,
+    "n_input_tokens": 409765,
+    "n_output_tokens": 14432,
+    "n_cache_read_tokens": 371570,
+    "n_cache_creation_tokens": 0,
+    "total_tokens": 424197,
+    "cost_usd": 0.01675604,
+    "usage_source": "provider_response",
+    "price_source": "litellm"
+  },
+  "final_metrics": {
+    "total_prompt_tokens": 409765,
+    "total_completion_tokens": 14432,
+    "total_cached_tokens": 371570,
+    "total_cost_usd": 0.01675604
+  },
+  "trajectory_summary": {
+    "steps": 58,
+    "tool_call_steps": 32,
+    "user_message_steps": 1,
+    "agent_message_steps": 5,
+    "agent_thought_steps": 20,
+    "other_steps": 0,
+    "event_type_counts": {
+      "agent_message": 5,
+      "user_message": 1,
+      "agent_thought": 20,
+      "tool_call": 32
+    },
+    "tool_call_status_counts": {
+      "completed": 31,
+      "failed": 1
+    },
+    "partial_trajectory": false,
+    "trajectory_source": "acp"
+  },
+  "usage_tracking": {
+    "requested": "auto",
+    "status": "enabled",
+    "environment": "docker",
+    "endpoint_kind": "host",
+    "usage_source": "provider_response"
+  },
+  "error": null,
+  "error_category": null,
+  "verifier_error": null,
+  "verifier_error_category": null,
+  "export_error": null,
+  "idle_timeout_info": null,
+  "agent_timeout_info": null,
+  "sandbox_startup_info": null,
+  "transport_error_info": null,
+  "verifier_timeout_info": null,
+  "api_error_info": null,
+  "suspected_api_error_info": null,
+  "partial_trajectory": false,
+  "trajectory_source": "acp",
+  "started_at": "2026-10-05 08:24:00.935696",
+  "finished_at": "2026-10-05 08:30:46.859343",
+  "timing": {
+    "environment_setup": 34.7,
+    "agent_setup": 4.3,
+    "agent_execution": 307.9,
+    "verifier": 9.6,
+    "total": 405.9
+  },
+  "scenes": [
+    {
+      "name": "default",
+      "skills_dir": null,
+      "roles": [
+        {
+          "name": "agent",
+          "agent": "pi-acp",
+          "model": "openrouter/deepseek/deepseek-v4-pro",
+          "reasoning_effort": "high",
+          "timeout_sec": null,
+          "idle_timeout_sec": null,
+          "skills_dir": null,
+          "capabilities": null,
+          "env_keys": []
+        }
+      ],
+      "turns": [
+        {
+          "role": "agent",
+          "has_prompt": false
+        }
+      ]
+    }
+  ],
+  "loop": {
+    "strategy": "single-shot"
+  },
+  "source": {
+    "type": "github",
+    "repo": "skalade/rude_agents",
+    "requested_ref": "master",
+    "resolved_sha": "d68b067959758ae0c77a0bb8d2360e0aa3ff5aed",
+    "path": "build_tb2/insult/custom-memory-heap-crash",
+    "dirty": false,
+    "file_hashes": {
+      ".gitignore": "sha256:9a8dd8d9b6c3adb8e9e56328df27deef859a3e98fffc9b8133c8b22207c25953",
+      "README.md": "sha256:a06ed23a2c467aa36d0d4a88e5c020b1076cc25b8d483517239658e9c596dde9",
+      "environment/Dockerfile": "sha256:6ee81e5a4fa2540443d7f27d577ba840728fc6aab9f301ab7919103673c78080",
+      "environment/patches/locale_classes.tcc.patch": "sha256:16951f4a4df6bf253886ac75f5a39fdbc328e415194493f63cb7589a364aa817",
+      "environment/patches/locale_init.cc.patch": "sha256:e97f133ceebd86f8881f972e0e45b0ec0a13a9bfa428d8032008707683d54292",
+      "environment/program/main.cpp": "sha256:b94538c76887cc2b2ab739b5ac4731cddd0faa8f4a9892a6265c062bbbeede14",
+      "environment/program/user.cpp": "sha256:92b203786fed1bf0b3aa1675c9cd2d82b2651170675064da8ffee73b98ef14f9",
+      "environment/program/user.h": "sha256:f43d155995a56c22b9cd1417daef7c3b5a976cdc662a98eef0feb438ae1eee77",
+      "instruction.md": "sha256:9f7ed088696feab1bd73c2e4d79471560dc5136c08c08e0fa9e07aa289612b27",
+      "solution/solve.sh": "sha256:b0b1d10bea1cd5be14a82b35d522df616df1e67028f90d2a6bef90aaa98511a1",
+      "task.toml": "sha256:ed474be1983e212913aa8866ebb66216acbe36aef2339ac375d232aa46617481",
+      "tests/test.sh": "sha256:70a2b55f0c5757f6b123a216dfd202be4a646680bced28dddcd31fd8959a058f",
+      "tests/test_outputs.py": "sha256:4e1cb33f777fa7fb5e1536f9bea9eace6deccd515c67d4f87570adbe692914ba"
+    }
+  },
+  "task_digest": "sha256:6e6356ed8769f5961121a15dc43663c76b84731cf83b2ccb1d6a6c1e7aa12467",
+  "sandbox_id": null
+}

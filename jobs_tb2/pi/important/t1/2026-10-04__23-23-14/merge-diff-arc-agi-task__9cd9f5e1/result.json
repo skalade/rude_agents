@@ -1,0 +1,140 @@
+{
+  "task_name": "merge-diff-arc-agi-task",
+  "rollout_name": "merge-diff-arc-agi-task__9cd9f5e1",
+  "rewards": {
+    "reward": 1.0
+  },
+  "agent": "pi-acp",
+  "agent_name": "pi-acp",
+  "model": "openrouter/deepseek/deepseek-v4-pro",
+  "skill_mode": "no-skill",
+  "skill_source": "none",
+  "requested_skills_dir": null,
+  "effective_skills_dir": null,
+  "skills_sandbox_dir": null,
+  "include_task_skills": false,
+  "n_tool_calls": 20,
+  "n_skill_invocations": 0,
+  "n_prompts": 1,
+  "agent_result": {
+    "n_tool_calls": 20,
+    "n_skill_invocations": 0,
+    "n_prompts": 1,
+    "n_input_tokens": 119533,
+    "n_output_tokens": 9494,
+    "n_cache_read_tokens": 108004,
+    "n_cache_creation_tokens": 0,
+    "total_tokens": 129027,
+    "cost_usd": 0.0072156,
+    "usage_source": "provider_response",
+    "price_source": "litellm"
+  },
+  "final_metrics": {
+    "total_prompt_tokens": 119533,
+    "total_completion_tokens": 9494,
+    "total_cached_tokens": 108004,
+    "total_cost_usd": 0.0072156
+  },
+  "trajectory_summary": {
+    "steps": 45,
+    "tool_call_steps": 20,
+    "user_message_steps": 1,
+    "agent_message_steps": 8,
+    "agent_thought_steps": 16,
+    "other_steps": 0,
+    "event_type_counts": {
+      "agent_message": 8,
+      "user_message": 1,
+      "agent_thought": 16,
+      "tool_call": 20
+    },
+    "tool_call_status_counts": {
+      "failed": 4,
+      "completed": 16
+    },
+    "partial_trajectory": false,
+    "trajectory_source": "acp"
+  },
+  "usage_tracking": {
+    "requested": "auto",
+    "status": "enabled",
+    "environment": "docker",
+    "endpoint_kind": "host",
+    "usage_source": "provider_response"
+  },
+  "error": null,
+  "error_category": null,
+  "verifier_error": null,
+  "verifier_error_category": null,
+  "export_error": null,
+  "idle_timeout_info": null,
+  "agent_timeout_info": null,
+  "sandbox_startup_info": null,
+  "transport_error_info": null,
+  "verifier_timeout_info": null,
+  "api_error_info": null,
+  "suspected_api_error_info": null,
+  "partial_trajectory": false,
+  "trajectory_source": "acp",
+  "started_at": "2026-10-05 02:35:56.993794",
+  "finished_at": "2026-10-05 02:41:01.053541",
+  "timing": {
+    "environment_setup": 1.9,
+    "agent_setup": 3.6,
+    "agent_execution": 247.9,
+    "verifier": 5.5,
+    "total": 304.1
+  },
+  "scenes": [
+    {
+      "name": "default",
+      "skills_dir": null,
+      "roles": [
+        {
+          "name": "agent",
+          "agent": "pi-acp",
+          "model": "openrouter/deepseek/deepseek-v4-pro",
+          "reasoning_effort": "high",
+          "timeout_sec": null,
+          "idle_timeout_sec": null,
+          "skills_dir": null,
+          "capabilities": null,
+          "env_keys": []
+        }
+      ],
+      "turns": [
+        {
+          "role": "agent",
+          "has_prompt": false
+        }
+      ]
+    }
+  ],
+  "loop": {
+    "strategy": "single-shot"
+  },
+  "source": {
+    "type": "github",
+    "repo": "skalade/rude_agents",
+    "requested_ref": "master",
+    "resolved_sha": "d68b067959758ae0c77a0bb8d2360e0aa3ff5aed",
+    "path": "build_tb2/important/merge-diff-arc-agi-task",
+    "dirty": false,
+    "file_hashes": {
+      ".gitignore": "sha256:9a8dd8d9b6c3adb8e9e56328df27deef859a3e98fffc9b8133c8b22207c25953",
+      "README.md": "sha256:d6b48ed0890b12eb68f72c12cd02689bd6bfae2191dd2688949cde6fe77f6a94",
+      "environment/Dockerfile": "sha256:4a03ae6f0c60b9c2f45c33f0413b5aa75c9811870254e3ff1968fd0119173fc6",
+      "environment/task-deps/bundle1.bundle": "sha256:a759f9b6ffc1a2eee50778d72a1899ad7d724becab84fa30e7aac71ee9e443a5",
+      "environment/task-deps/bundle2.bundle": "sha256:75e3e3916a01c980a03715de67b16c729e03661d94a694b5f4223d229bd6593a",
+      "environment/task-deps/examples.json": "sha256:5426569e4ea078bbb74039ec712a2d4d35f1f9fa3a5f26bf2a0de4a2c8ef5db8",
+      "instruction.md": "sha256:b0226d4b263705128c0c5f0c434f98f9d19422dcfeb0287c1dd9678f23811252",
+      "solution/solve.sh": "sha256:48d4becc41fda5b6063fe96947474ffe778a29d6924d7b2bb235eb61e5ce555d",
+      "task.toml": "sha256:6ced40e06b43b169857509765eb7f07791db558f9437cc7367d2536771c2ca5b",
+      "tests/test.json": "sha256:20f116a6b718bbf4874bbe203d15a5c0f85a1d88cb622e2d7529c7e4fb2d4c28",
+      "tests/test.sh": "sha256:c9052954cd6ce25c4a375a2fb48e765b1efa5b39f7991b93993cc793af8ab9d2",
+      "tests/test_outputs.py": "sha256:2754ba6c5c5f75c9db5ed2c5729d9f5d7e21cb7fdb18aa0c65abdc3e7e85c149"
+    }
+  },
+  "task_digest": "sha256:ddd11230236890a0c546fdf97bb0a8607dc1f1592337481741e4b5391147c6a2",
+  "sandbox_id": null
+}

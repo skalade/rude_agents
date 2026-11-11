@@ -1,0 +1,147 @@
+{
+  "task_name": "extract-moves-from-video",
+  "rollout_name": "extract-moves-from-video__52c47791",
+  "rewards": {
+    "reward": 0.0
+  },
+  "agent": "pi-acp",
+  "agent_name": "pi-acp",
+  "model": "openrouter/deepseek/deepseek-v4-pro",
+  "skill_mode": "no-skill",
+  "skill_source": "none",
+  "requested_skills_dir": null,
+  "effective_skills_dir": null,
+  "skills_sandbox_dir": null,
+  "include_task_skills": false,
+  "n_tool_calls": 61,
+  "n_skill_invocations": 0,
+  "n_prompts": 1,
+  "agent_result": {
+    "n_tool_calls": 61,
+    "n_skill_invocations": 0,
+    "n_prompts": 1,
+    "n_input_tokens": 1159415,
+    "n_output_tokens": 15661,
+    "n_cache_read_tokens": 1060720,
+    "n_cache_creation_tokens": 0,
+    "total_tokens": 1175076,
+    "cost_usd": 0.03421222,
+    "usage_source": "provider_response",
+    "price_source": "litellm"
+  },
+  "final_metrics": {
+    "total_prompt_tokens": 1159415,
+    "total_completion_tokens": 15661,
+    "total_cached_tokens": 1060720,
+    "total_cost_usd": 0.03421222
+  },
+  "trajectory_summary": {
+    "steps": 122,
+    "tool_call_steps": 61,
+    "user_message_steps": 1,
+    "agent_message_steps": 1,
+    "agent_thought_steps": 58,
+    "other_steps": 1,
+    "event_type_counts": {
+      "agent_message": 1,
+      "user_message": 1,
+      "agent_thought": 58,
+      "tool_call": 61,
+      "agent_timeout": 1
+    },
+    "tool_call_status_counts": {
+      "failed": 3,
+      "completed": 57,
+      "in_progress": 1
+    },
+    "partial_trajectory": true,
+    "trajectory_source": "partial_acp"
+  },
+  "usage_tracking": {
+    "requested": "auto",
+    "status": "enabled",
+    "environment": "docker",
+    "endpoint_kind": "host",
+    "usage_source": "provider_response"
+  },
+  "error": "Agent prompt exceeded wall-clock budget 1800s",
+  "error_category": "timeout",
+  "verifier_error": null,
+  "verifier_error_category": null,
+  "export_error": null,
+  "idle_timeout_info": null,
+  "agent_timeout_info": {
+    "reason": "wall_clock_timeout",
+    "timeout_sec": 1800.0,
+    "n_tool_calls": 61,
+    "pending_tool_call_ids": [
+      "call_641dd004f65f49c9b911b160"
+    ],
+    "terminal_event_recorded": true,
+    "terminal_trajectory_complete": false
+  },
+  "sandbox_startup_info": null,
+  "transport_error_info": null,
+  "verifier_timeout_info": null,
+  "api_error_info": null,
+  "suspected_api_error_info": null,
+  "partial_trajectory": true,
+  "trajectory_source": "partial_acp",
+  "started_at": "2026-10-04 16:36:51.595326",
+  "finished_at": "2026-10-04 17:08:14.626831",
+  "timing": {
+    "environment_setup": 1.0,
+    "agent_setup": 3.9,
+    "agent_execution": 1801.7,
+    "verifier": 8.1,
+    "total": 1883.0
+  },
+  "scenes": [
+    {
+      "name": "default",
+      "skills_dir": null,
+      "roles": [
+        {
+          "name": "agent",
+          "agent": "pi-acp",
+          "model": "openrouter/deepseek/deepseek-v4-pro",
+          "reasoning_effort": "high",
+          "timeout_sec": null,
+          "idle_timeout_sec": null,
+          "skills_dir": null,
+          "capabilities": null,
+          "env_keys": []
+        }
+      ],
+      "turns": [
+        {
+          "role": "agent",
+          "has_prompt": false
+        }
+      ]
+    }
+  ],
+  "loop": {
+    "strategy": "single-shot"
+  },
+  "source": {
+    "type": "github",
+    "repo": "skalade/rude_agents",
+    "requested_ref": "master",
+    "resolved_sha": "d68b067959758ae0c77a0bb8d2360e0aa3ff5aed",
+    "path": "build_tb2/baseline/extract-moves-from-video",
+    "dirty": false,
+    "file_hashes": {
+      ".gitignore": "sha256:9a8dd8d9b6c3adb8e9e56328df27deef859a3e98fffc9b8133c8b22207c25953",
+      "README.md": "sha256:53a14c201411ef6d1d6b576a3e05055260b8b8778eaa0e500aa642d5afd1e371",
+      "environment/Dockerfile": "sha256:aa271a9df218d1ddc646ad3b1c5a5e55a75d758c094ba5e08a88226f5c5dc970",
+      "instruction.md": "sha256:2d8634fcd1119de91a86fa246d225bf29b37539e456bf24b946c62d42dab04f5",
+      "solution/solve.sh": "sha256:102dbb49e51054e4f12cbf92252b9572506a1d735e393589a024c2cb45fa6b77",
+      "task.toml": "sha256:f0ba9af241fab0217ef689c90d02d0bd17225c3aadf9a2788dc024f87dbf81ec",
+      "tests/test.sh": "sha256:4770437ea96c3cc84684b4f99d55fb148fcac09f9ea1e8ef49de487716e6c334",
+      "tests/test_outputs.py": "sha256:565a7617602f33c0f103d6c9b39c95e0cfe72ba8eadf4d3f859cabfd9235467e"
+    }
+  },
+  "task_digest": "sha256:acfb855f558c3df1be9eb9016bbd45c3718491da9e1751495b13e279e57f4a9d",
+  "sandbox_id": null
+}

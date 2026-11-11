@@ -1,0 +1,84 @@
+{
+  "task_path": "build_tb2/important/mteb-retrieve",
+  "agent": "pi-acp",
+  "model": "openrouter/deepseek/deepseek-v4-pro",
+  "reasoning_effort": "high",
+  "environment": "docker",
+  "environment_manifest": null,
+  "skill_mode": "no-skill",
+  "skill_source": "none",
+  "requested_skills_dir": null,
+  "effective_skills_dir": null,
+  "skills_sandbox_dir": null,
+  "include_task_skills": false,
+  "sandbox_user": null,
+  "sandbox_locked_paths": [],
+  "sandbox_setup_timeout": 120,
+  "skip_install": false,
+  "agent_install_timeout": 900,
+  "context_root": null,
+  "base_image_override": null,
+  "timeout_sec": 1800,
+  "concurrency": 3,
+  "agent_idle_timeout_sec": 600,
+  "started_at": "2026-10-05 03:00:21.566866",
+  "agent_env": {
+    "BENCHFLOW_PROVIDER_MODELS": "[{\"id\":\"deepseek/deepseek-v4-pro\",\"name\":\"DeepSeek V4 Pro\",\"reasoning\":true,\"input\":[\"text\"],\"contextWindow\":1024000,\"maxTokens\":384000}]",
+    "BENCHFLOW_PROVIDER_MODEL": "deepseek/deepseek-v4-pro",
+    "BENCHFLOW_PROVIDER_NAME": "openrouter",
+    "BENCHFLOW_PROVIDER_BASE_URL": "https://openrouter.ai/api/v1",
+    "BENCHFLOW_PROVIDER_PROTOCOL": "openai-completions",
+    "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1"
+  },
+  "scenes": [
+    {
+      "name": "default",
+      "skills_dir": null,
+      "roles": [
+        {
+          "name": "agent",
+          "agent": "pi-acp",
+          "model": "openrouter/deepseek/deepseek-v4-pro",
+          "reasoning_effort": "high",
+          "timeout_sec": null,
+          "idle_timeout_sec": null,
+          "skills_dir": null,
+          "capabilities": null,
+          "env_keys": []
+        }
+      ],
+      "turns": [
+        {
+          "role": "agent",
+          "has_prompt": false
+        }
+      ]
+    }
+  ],
+  "loop": {
+    "strategy": "single-shot"
+  },
+  "usage_tracking": {
+    "requested": "auto"
+  },
+  "source": {
+    "type": "github",
+    "repo": "skalade/rude_agents",
+    "requested_ref": "master",
+    "resolved_sha": "d68b067959758ae0c77a0bb8d2360e0aa3ff5aed",
+    "path": "build_tb2/important/mteb-retrieve",
+    "dirty": false,
+    "file_hashes": {
+      ".gitignore": "sha256:9a8dd8d9b6c3adb8e9e56328df27deef859a3e98fffc9b8133c8b22207c25953",
+      "README.md": "sha256:e2033cae1b39e2476f5bce62a5c8931830cabe5d2c01ae10c12a7cbbb0a56070",
+      "environment/Dockerfile": "sha256:97c880635fbfbaec860a9255f849b1a1c4630e2dca8588eb838c4a95669d917e",
+      "environment/task-deps/data.txt": "sha256:1dec6f9ca469216638e8158e992fb5eb093e180361136570003e81d4573d24bb",
+      "instruction.md": "sha256:8889a4b7b033197ce3c98013a4645dc0cbee9f00d83008b6051c0c2ca6a6bc9c",
+      "solution/solve.sh": "sha256:97adb02c74de75d6d66829cf12d0a3d05b35b1b48b597ab67b90388517286553",
+      "task.toml": "sha256:35b8c675ae847e33652c6ce64fe1f914ddb05d0ae6a3a87be80821bd75fb2d2a",
+      "tests/test.sh": "sha256:404ce42339d0b4df9912282a16f7c875ebc2453d40a9312b671f356208238215",
+      "tests/test_outputs.py": "sha256:e4e6b21fed6662adb4a42aba23d35609450392839a2282f3ba77c70c8d907c0b"
+    }
+  },
+  "task_digest": "sha256:0dfdd6715717581aa0673907bb1672006ad2d5379875f6524d25b3f908d600d0"
+}

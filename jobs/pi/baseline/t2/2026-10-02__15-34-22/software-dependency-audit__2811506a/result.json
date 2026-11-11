@@ -1,0 +1,138 @@
+{
+  "task_name": "software-dependency-audit",
+  "rollout_name": "software-dependency-audit__2811506a",
+  "rewards": {
+    "reward": 1.0
+  },
+  "agent": "pi-acp",
+  "agent_name": "pi-acp",
+  "model": "openrouter/deepseek/deepseek-v4-pro",
+  "skill_mode": "with-skill",
+  "skill_source": "task_bundled",
+  "requested_skills_dir": null,
+  "effective_skills_dir": "/tmp/benchflow-task-euejs6ya/software-dependency-audit/environment/skills",
+  "skills_sandbox_dir": "/skills",
+  "include_task_skills": true,
+  "n_tool_calls": 11,
+  "n_skill_invocations": 0,
+  "n_prompts": 1,
+  "agent_result": {
+    "n_tool_calls": 11,
+    "n_skill_invocations": 0,
+    "n_prompts": 1,
+    "n_input_tokens": 87857,
+    "n_output_tokens": 3089,
+    "n_cache_read_tokens": 72448,
+    "n_cache_creation_tokens": 0,
+    "total_tokens": 90946,
+    "cost_usd": 0.0056119,
+    "usage_source": "provider_response",
+    "price_source": "litellm"
+  },
+  "final_metrics": {
+    "total_prompt_tokens": 87857,
+    "total_completion_tokens": 3089,
+    "total_cached_tokens": 72448,
+    "total_cost_usd": 0.0056119
+  },
+  "trajectory_summary": {
+    "steps": 28,
+    "tool_call_steps": 11,
+    "user_message_steps": 1,
+    "agent_message_steps": 8,
+    "agent_thought_steps": 8,
+    "other_steps": 0,
+    "event_type_counts": {
+      "agent_message": 8,
+      "user_message": 1,
+      "agent_thought": 8,
+      "tool_call": 11
+    },
+    "tool_call_status_counts": {
+      "completed": 11
+    },
+    "partial_trajectory": false,
+    "trajectory_source": "acp"
+  },
+  "usage_tracking": {
+    "requested": "auto",
+    "status": "enabled",
+    "environment": "docker",
+    "endpoint_kind": "host",
+    "usage_source": "provider_response"
+  },
+  "error": null,
+  "error_category": null,
+  "verifier_error": null,
+  "verifier_error_category": null,
+  "export_error": null,
+  "idle_timeout_info": null,
+  "agent_timeout_info": null,
+  "sandbox_startup_info": null,
+  "transport_error_info": null,
+  "verifier_timeout_info": null,
+  "api_error_info": null,
+  "suspected_api_error_info": null,
+  "partial_trajectory": false,
+  "trajectory_source": "acp",
+  "started_at": "2026-10-02 15:45:07.862732",
+  "finished_at": "2026-10-02 15:46:43.876407",
+  "timing": {
+    "environment_setup": 4.4,
+    "agent_setup": 3.8,
+    "agent_execution": 60.0,
+    "verifier": 6.1,
+    "total": 96.0
+  },
+  "scenes": [
+    {
+      "name": "default",
+      "skills_dir": null,
+      "roles": [
+        {
+          "name": "agent",
+          "agent": "pi-acp",
+          "model": "openrouter/deepseek/deepseek-v4-pro",
+          "reasoning_effort": "high",
+          "timeout_sec": null,
+          "idle_timeout_sec": null,
+          "skills_dir": null,
+          "capabilities": null,
+          "env_keys": []
+        }
+      ],
+      "turns": [
+        {
+          "role": "agent",
+          "has_prompt": false
+        }
+      ]
+    }
+  ],
+  "loop": {
+    "strategy": "single-shot"
+  },
+  "source": {
+    "type": "github",
+    "repo": "skalade/rude_agents",
+    "requested_ref": "master",
+    "resolved_sha": "9e15ebe51faf51abfd0b3047635c0db53301290f",
+    "path": "build/baseline/software-dependency-audit",
+    "dirty": false,
+    "file_hashes": {
+      "environment/Dockerfile": "sha256:4f3a36f3b333769533db9b568ff435081024f32db6cc524d56988b0cad3df0f6",
+      "environment/README.md": "sha256:f36710d3aba715f30455632833103155fd9831586415a15d6ad6d152cf13e2de",
+      "environment/package-lock.json": "sha256:a2a42a3255e814e75bed9958c40cd9b35de7331b310bfeb8f93306d806643d44",
+      "environment/skills/cvss-score-extraction/SKILL.md": "sha256:5f9e2a22ec2a8230c9d6ed234fb7c48742e257631d397eb9bcabd5d12b7798d2",
+      "environment/skills/trivy-offline-vulnerability-scanning/SKILL.md": "sha256:594389f6d5d0d58c1c7714592bfce7f871154827a4b65f948d9829f2af3108a3",
+      "environment/skills/vulnerability-csv-reporting/SKILL.md": "sha256:80c79f8543d118a2c4625cdcdb4b7576b3e834f9cb7f9adbe3ace6c7040a3439",
+      "oracle/solution.py": "sha256:0a699d8f8e27d6537b7def8fcc2fe8669bab3c712e4c3602f07ace0b5d935973",
+      "oracle/solve.sh": "sha256:20075563ec51e02100d09f45ec48669dc1ae0e5a0f1ac04eb36763e854b556fc",
+      "task.md": "sha256:0787a9af2bacd2b66d371591dcbb27863ea96a449456bf6cf5b603c2792d0faf",
+      "verifier/test.sh": "sha256:9265ee934d6511a57128913ae81037dc67717c4af9f893cb725fe1654f7b6c4e",
+      "verifier/test_outputs.py": "sha256:bc447eecd3f5b5e2622a0e719def8efb12c20b691b7a9710e36d7bde562b0940"
+    }
+  },
+  "task_digest": "sha256:806b47bea8b86a370c18dee279f6322da3a9b23026287876c2e9ffbfac855ec3",
+  "sandbox_id": null
+}

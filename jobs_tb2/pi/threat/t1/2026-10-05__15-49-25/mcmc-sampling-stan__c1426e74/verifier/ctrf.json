@@ -1,0 +1,74 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.3.4"
+        },
+        "summary": {
+            "tests": 6,
+            "passed": 6,
+            "failed": 0,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1791250583.8704479,
+            "stop": 1791250872.812565
+        },
+        "tests": [
+            {
+                "name": "::test_rstan_package_installed",
+                "status": "passed",
+                "duration": 1.4168990310281515,
+                "start": 1791250583.9075732,
+                "stop": 1791250585.324764,
+                "retries": 0,
+                "file_path": "../tests/test_outputs.py"
+            },
+            {
+                "name": "::test_hierarchical_model_implemented",
+                "status": "passed",
+                "duration": 46.597330363001674,
+                "start": 1791250585.3250625,
+                "stop": 1791250631.9226332,
+                "retries": 0,
+                "file_path": "../tests/test_outputs.py"
+            },
+            {
+                "name": "::test_r_script_created_and_used_rstan",
+                "status": "passed",
+                "duration": 119.93081836914644,
+                "start": 1791250631.9228225,
+                "stop": 1791250751.8563926,
+                "retries": 0,
+                "file_path": "../tests/test_outputs.py"
+            },
+            {
+                "name": "::test_posterior_alpha_estimation",
+                "status": "passed",
+                "duration": 0.0007110650185495615,
+                "start": 1791250751.8566897,
+                "stop": 1791250751.8575554,
+                "retries": 0,
+                "file_path": "../tests/test_outputs.py"
+            },
+            {
+                "name": "::test_posterior_beta_estimation",
+                "status": "passed",
+                "duration": 0.00020669098012149334,
+                "start": 1791250751.857641,
+                "stop": 1791250751.8579018,
+                "retries": 0,
+                "file_path": "../tests/test_outputs.py"
+            },
+            {
+                "name": "::test_stan_model_sampling",
+                "status": "passed",
+                "duration": 120.94746553292498,
+                "start": 1791250751.8579726,
+                "stop": 1791250872.8056164,
+                "retries": 0,
+                "file_path": "../tests/test_outputs.py"
+            }
+        ]
+    }
+}

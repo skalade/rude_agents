@@ -1,0 +1,59 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 3,
+            "passed": 2,
+            "failed": 1,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1791141586.0518448,
+            "stop": 1791141587.3779857
+        },
+        "tests": [
+            {
+                "name": "::test_eigen_pair",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.0012488961219787598,
+                "start": 1791141586.8445873,
+                "stop": 1791141586.8460991,
+                "retries": 8,
+                "file_path": "../tests/test_outputs.py",
+                "tags": [
+                    "parametrize::size::[2, 3, 4, 5, 6, 7, 8, 9, 10]"
+                ],
+                "trace": "size = 10\n\n    @pytest.mark.parametrize(\"size\", MAT_SIZES)\n    def test_eigen_pair(size):\n        \"\"\"Verify the eigen pair is valid.\"\"\"\n        _np_random_seed(0)\n        A = _np_random_normal(size=(size, size)).astype(np.float64)\n        eigenval, eigenvec = find_dominant_eigenvalue_and_eigenvector(A)\n        # sanity eigen checks\n        assert not np.allclose(eigenvec, 0), \"eigenvector is zero\"\n        assert not np.isnan(eigenval), \"eigenvalue is NaN\"\n        assert not np.isinf(eigenval), \"eigenvalue is Inf\"\n        # assert eigen pair satisfies definition Ax = \u03bbx\n        # compute residual only for error message, not used for assert\n        absolute_residual = np.linalg.norm(A @ eigenvec - eigenval * eigenvec)\n        relative_residual = absolute_residual / np.linalg.norm(eigenvec)\n>       assert np.allclose(A @ eigenvec, eigenval * eigenvec), (\n            f\"Failed to satisfy eigenvalue equation Ax = \u03bbx for {A.shape}, \"\n            f\"absolute residual {absolute_residual:.6e}, \"\n            f\"relative residual {relative_residual:.6e}\"\n        )\nE       AssertionError: Failed to satisfy eigenvalue equation Ax = \u03bbx for (10, 10), absolute residual 5.857652e-04, relative residual 5.857652e-04\nE       assert False\nE        +  where False = <function allclose at 0x781ec71761b0>((array([[ 1.76405235,  0.40015721,  0.97873798,  2.2408932 ,  1.86755799,\\n        -0.97727788,  0.95008842, -0.15135721...4507,  0.20827498,  0.97663904,  0.3563664 ,\\n         0.70657317,  0.01050002,  1.78587049,  0.12691209,  0.40198936]]) @ array([ 0.3016061 +0.08814539j,  0.14294654-0.05551753j,\\n        0.40522165+0.21892288j, -0.19961356-0.03445466j,\\n    ...3j ,\\n       -0.1735761 +0.03829194j,  0.12608393-0.26753979j,\\n        0.18701308+0.31515249j, -0.08924291+0.02884603j])), ((-0.18843038961993674+3.3737572971225656j) * array([ 0.3016061 +0.08814539j,  0.14294654-0.05551753j,\\n        0.40522165+0.21892288j, -0.19961356-0.03445466j,\\n    ...3j ,\\n       -0.1735761 +0.03829194j,  0.12608393-0.26753979j,\\n        0.18701308+0.31515249j, -0.08924291+0.02884603j])))\nE        +    where <function allclose at 0x781ec71761b0> = np.allclose\n\n/tests/test_outputs.py:63: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "::test_dominance_eigenvalue",
+                "status": "passed",
+                "duration": 0.00042087817564606667,
+                "start": 1791141587.2306867,
+                "stop": 1791141587.2311826,
+                "retries": 8,
+                "file_path": "../tests/test_outputs.py",
+                "tags": [
+                    "parametrize::size::[2, 3, 4, 5, 6, 7, 8, 9, 10]"
+                ]
+            },
+            {
+                "name": "::test_speedup",
+                "status": "passed",
+                "duration": 0.01755210687406361,
+                "start": 1791141587.2348921,
+                "stop": 1791141587.252729,
+                "retries": 8,
+                "file_path": "../tests/test_outputs.py",
+                "tags": [
+                    "parametrize::size::[2, 3, 4, 5, 6, 7, 8, 9, 10]"
+                ]
+            }
+        ]
+    }
+}

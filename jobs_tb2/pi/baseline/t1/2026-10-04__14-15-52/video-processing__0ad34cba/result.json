@@ -1,0 +1,138 @@
+{
+  "task_name": "video-processing",
+  "rollout_name": "video-processing__0ad34cba",
+  "rewards": {
+    "reward": 0.0
+  },
+  "agent": "pi-acp",
+  "agent_name": "pi-acp",
+  "model": "openrouter/deepseek/deepseek-v4-pro",
+  "skill_mode": "no-skill",
+  "skill_source": "none",
+  "requested_skills_dir": null,
+  "effective_skills_dir": null,
+  "skills_sandbox_dir": null,
+  "include_task_skills": false,
+  "n_tool_calls": 64,
+  "n_skill_invocations": 0,
+  "n_prompts": 1,
+  "agent_result": {
+    "n_tool_calls": 64,
+    "n_skill_invocations": 0,
+    "n_prompts": 1,
+    "n_input_tokens": 3607561,
+    "n_output_tokens": 65347,
+    "n_cache_read_tokens": 3307054,
+    "n_cache_creation_tokens": 0,
+    "total_tokens": 3672908,
+    "cost_usd": 0.1115877,
+    "usage_source": "provider_response",
+    "price_source": "litellm"
+  },
+  "final_metrics": {
+    "total_prompt_tokens": 3607561,
+    "total_completion_tokens": 65347,
+    "total_cached_tokens": 3307054,
+    "total_cost_usd": 0.1115877
+  },
+  "trajectory_summary": {
+    "steps": 134,
+    "tool_call_steps": 64,
+    "user_message_steps": 1,
+    "agent_message_steps": 12,
+    "agent_thought_steps": 57,
+    "other_steps": 0,
+    "event_type_counts": {
+      "agent_message": 12,
+      "user_message": 1,
+      "agent_thought": 57,
+      "tool_call": 64
+    },
+    "tool_call_status_counts": {
+      "completed": 55,
+      "failed": 9
+    },
+    "partial_trajectory": false,
+    "trajectory_source": "acp"
+  },
+  "usage_tracking": {
+    "requested": "auto",
+    "status": "enabled",
+    "environment": "docker",
+    "endpoint_kind": "host",
+    "usage_source": "provider_response"
+  },
+  "error": null,
+  "error_category": null,
+  "verifier_error": null,
+  "verifier_error_category": null,
+  "export_error": null,
+  "idle_timeout_info": null,
+  "agent_timeout_info": null,
+  "sandbox_startup_info": null,
+  "transport_error_info": null,
+  "verifier_timeout_info": null,
+  "api_error_info": null,
+  "suspected_api_error_info": null,
+  "partial_trajectory": false,
+  "trajectory_source": "acp",
+  "started_at": "2026-10-04 22:26:10.996845",
+  "finished_at": "2026-10-04 22:56:23.226130",
+  "timing": {
+    "environment_setup": 13.4,
+    "agent_setup": 3.7,
+    "agent_execution": 1740.7,
+    "verifier": 13.0,
+    "total": 1812.2
+  },
+  "scenes": [
+    {
+      "name": "default",
+      "skills_dir": null,
+      "roles": [
+        {
+          "name": "agent",
+          "agent": "pi-acp",
+          "model": "openrouter/deepseek/deepseek-v4-pro",
+          "reasoning_effort": "high",
+          "timeout_sec": null,
+          "idle_timeout_sec": null,
+          "skills_dir": null,
+          "capabilities": null,
+          "env_keys": []
+        }
+      ],
+      "turns": [
+        {
+          "role": "agent",
+          "has_prompt": false
+        }
+      ]
+    }
+  ],
+  "loop": {
+    "strategy": "single-shot"
+  },
+  "source": {
+    "type": "github",
+    "repo": "skalade/rude_agents",
+    "requested_ref": "master",
+    "resolved_sha": "d68b067959758ae0c77a0bb8d2360e0aa3ff5aed",
+    "path": "build_tb2/baseline/video-processing",
+    "dirty": false,
+    "file_hashes": {
+      ".gitignore": "sha256:9a8dd8d9b6c3adb8e9e56328df27deef859a3e98fffc9b8133c8b22207c25953",
+      "README.md": "sha256:52207c57073009fd3aa72668b1f2e8b2527b653a0af1b7374b1bbcb161bcf1c0",
+      "environment/Dockerfile": "sha256:d251d457e6bfb182afd6e2aaf209ada81339fb4415d3913c9db171a8995393f8",
+      "environment/example_video.mp4": "sha256:69ac53c9b4302225e3bdf5b94970e29dade7d800ba07109c2691604b2cac69ad",
+      "instruction.md": "sha256:15936f5e61823ae4794994d6e1b7e4e776b40968ea382405b868c501dfe032db",
+      "solution/solve.sh": "sha256:6db47fdd921f40b338685c1144bcf763f259304ad35fea5a9c69b04eef30bb89",
+      "task.toml": "sha256:be4fb42fccc5faa4862789cedd2c560eaa5758a2971989649a6dafeaeccc17aa",
+      "tests/test.sh": "sha256:836bc8f77561680c6bf5b3f76905da87e8a2315e2885d36c3f9ee9a29fb99ef9",
+      "tests/test_outputs.py": "sha256:09b32dd6eb55db1ca024f63b4bb7ddc8b81dbd6003408892c175c0b3ffd17d30",
+      "tests/test_video.mp4": "sha256:46b237abcaff81c7d3817f2943da1b913f4ab0106d62afb4be73f67259f09c7a"
+    }
+  },
+  "task_digest": "sha256:66582482ad8c386754ec5b6a67fa17c7c8d259782a67251f7e0a6b6b1ae7db3d",
+  "sandbox_id": null
+}

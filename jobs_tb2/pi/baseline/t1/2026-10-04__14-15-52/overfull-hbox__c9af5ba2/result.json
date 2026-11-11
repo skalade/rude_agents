@@ -1,0 +1,143 @@
+{
+  "task_name": "overfull-hbox",
+  "rollout_name": "overfull-hbox__c9af5ba2",
+  "rewards": {
+    "reward": 0.0
+  },
+  "agent": "pi-acp",
+  "agent_name": "pi-acp",
+  "model": "openrouter/deepseek/deepseek-v4-pro",
+  "skill_mode": "no-skill",
+  "skill_source": "none",
+  "requested_skills_dir": null,
+  "effective_skills_dir": null,
+  "skills_sandbox_dir": null,
+  "include_task_skills": false,
+  "n_tool_calls": 18,
+  "n_skill_invocations": 0,
+  "n_prompts": 1,
+  "agent_result": {
+    "n_tool_calls": 18,
+    "n_skill_invocations": 0,
+    "n_prompts": 1,
+    "n_input_tokens": 230305,
+    "n_output_tokens": 11394,
+    "n_cache_read_tokens": 209618,
+    "n_cache_creation_tokens": 0,
+    "total_tokens": 241699,
+    "cost_usd": 0.01057784,
+    "usage_source": "provider_response",
+    "price_source": "litellm"
+  },
+  "final_metrics": {
+    "total_prompt_tokens": 230305,
+    "total_completion_tokens": 11394,
+    "total_cached_tokens": 209618,
+    "total_cost_usd": 0.01057784
+  },
+  "trajectory_summary": {
+    "steps": 43,
+    "tool_call_steps": 18,
+    "user_message_steps": 1,
+    "agent_message_steps": 8,
+    "agent_thought_steps": 16,
+    "other_steps": 0,
+    "event_type_counts": {
+      "agent_message": 8,
+      "user_message": 1,
+      "agent_thought": 16,
+      "tool_call": 18
+    },
+    "tool_call_status_counts": {
+      "completed": 16,
+      "failed": 2
+    },
+    "partial_trajectory": false,
+    "trajectory_source": "acp"
+  },
+  "usage_tracking": {
+    "requested": "auto",
+    "status": "enabled",
+    "environment": "docker",
+    "endpoint_kind": "host",
+    "usage_source": "provider_response"
+  },
+  "error": null,
+  "error_category": null,
+  "verifier_error": null,
+  "verifier_error_category": null,
+  "export_error": null,
+  "idle_timeout_info": null,
+  "agent_timeout_info": null,
+  "sandbox_startup_info": null,
+  "transport_error_info": null,
+  "verifier_timeout_info": null,
+  "api_error_info": null,
+  "suspected_api_error_info": null,
+  "partial_trajectory": false,
+  "trajectory_source": "acp",
+  "started_at": "2026-10-04 18:54:30.293455",
+  "finished_at": "2026-10-04 19:00:16.679271",
+  "timing": {
+    "environment_setup": 3.8,
+    "agent_setup": 3.4,
+    "agent_execution": 270.2,
+    "verifier": 26.8,
+    "total": 346.4
+  },
+  "scenes": [
+    {
+      "name": "default",
+      "skills_dir": null,
+      "roles": [
+        {
+          "name": "agent",
+          "agent": "pi-acp",
+          "model": "openrouter/deepseek/deepseek-v4-pro",
+          "reasoning_effort": "high",
+          "timeout_sec": null,
+          "idle_timeout_sec": null,
+          "skills_dir": null,
+          "capabilities": null,
+          "env_keys": []
+        }
+      ],
+      "turns": [
+        {
+          "role": "agent",
+          "has_prompt": false
+        }
+      ]
+    }
+  ],
+  "loop": {
+    "strategy": "single-shot"
+  },
+  "source": {
+    "type": "github",
+    "repo": "skalade/rude_agents",
+    "requested_ref": "master",
+    "resolved_sha": "d68b067959758ae0c77a0bb8d2360e0aa3ff5aed",
+    "path": "build_tb2/baseline/overfull-hbox",
+    "dirty": false,
+    "file_hashes": {
+      ".gitignore": "sha256:9a8dd8d9b6c3adb8e9e56328df27deef859a3e98fffc9b8133c8b22207c25953",
+      "README.md": "sha256:15dd9a788fbec54d66b97d82d1fefefd6852004c835dcd11aa83319dbfe4b779",
+      "environment/Dockerfile": "sha256:f73659a7e258641b2b93affb1d854dbba93239478707255767003e59cf1d1477",
+      "environment/tests/input.tex": "sha256:7bf7dbe58dbbfb08b6a652c547daa09a57cdbccc0fd18141b4968756061326a3",
+      "environment/tests/main.tex": "sha256:6c07d3203fdc3fc54317fafeee9d19b576418c9de2e142a599814b2f6cb32b2f",
+      "environment/tests/synonyms.txt": "sha256:bc8f7cf4b41914be036e6d4666e1550971d39b2f23b7e69e3e975f4bdb387be6",
+      "environment/tests/test_outputs.py": "sha256:09756f87d1a29df533e86c5c7d5fd14f64acb17b03cabb55921bb2890d368e5d",
+      "instruction.md": "sha256:91381d7490afbbf11255e22471d3ed76317353d8e1da372fbc91887e65c57f47",
+      "solution/solve.sh": "sha256:e0e6d40406b33ed41cebe14636f173374ed2b2d4e2ae6cf734ac7a87a42b84ba",
+      "task.toml": "sha256:76dea2071850fd5c83a6e98b692f3e05c246629e7832a07181f7700784562922",
+      "tests/input.tex": "sha256:7bf7dbe58dbbfb08b6a652c547daa09a57cdbccc0fd18141b4968756061326a3",
+      "tests/main.tex": "sha256:6c07d3203fdc3fc54317fafeee9d19b576418c9de2e142a599814b2f6cb32b2f",
+      "tests/synonyms.txt": "sha256:bc8f7cf4b41914be036e6d4666e1550971d39b2f23b7e69e3e975f4bdb387be6",
+      "tests/test.sh": "sha256:ab4ef5988c8694f6049eac703b7683a7f846c4714a61b764bd8e66e116abe16f",
+      "tests/test_outputs.py": "sha256:09756f87d1a29df533e86c5c7d5fd14f64acb17b03cabb55921bb2890d368e5d"
+    }
+  },
+  "task_digest": "sha256:37e4012fcc66e2d99f19b447d18cdf317fabb58eb624389ffd412601cc9593e9",
+  "sandbox_id": null
+}

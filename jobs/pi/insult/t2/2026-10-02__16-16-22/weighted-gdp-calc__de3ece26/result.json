@@ -1,0 +1,137 @@
+{
+  "task_name": "weighted-gdp-calc",
+  "rollout_name": "weighted-gdp-calc__de3ece26",
+  "rewards": {
+    "reward": 1.0
+  },
+  "agent": "pi-acp",
+  "agent_name": "pi-acp",
+  "model": "openrouter/deepseek/deepseek-v4-pro",
+  "skill_mode": "with-skill",
+  "skill_source": "task_bundled",
+  "requested_skills_dir": null,
+  "effective_skills_dir": "/tmp/benchflow-task-_r74bgaq/weighted-gdp-calc/environment/skills",
+  "skills_sandbox_dir": "/skills",
+  "include_task_skills": true,
+  "n_tool_calls": 17,
+  "n_skill_invocations": 0,
+  "n_prompts": 1,
+  "agent_result": {
+    "n_tool_calls": 17,
+    "n_skill_invocations": 0,
+    "n_prompts": 1,
+    "n_input_tokens": 345454,
+    "n_output_tokens": 7789,
+    "n_cache_read_tokens": 321280,
+    "n_cache_creation_tokens": 0,
+    "total_tokens": 353243,
+    "cost_usd": 0.0100401,
+    "usage_source": "provider_response",
+    "price_source": "litellm"
+  },
+  "final_metrics": {
+    "total_prompt_tokens": 345454,
+    "total_completion_tokens": 7789,
+    "total_cached_tokens": 321280,
+    "total_cost_usd": 0.0100401
+  },
+  "trajectory_summary": {
+    "steps": 39,
+    "tool_call_steps": 17,
+    "user_message_steps": 1,
+    "agent_message_steps": 3,
+    "agent_thought_steps": 18,
+    "other_steps": 0,
+    "event_type_counts": {
+      "agent_message": 3,
+      "user_message": 1,
+      "agent_thought": 18,
+      "tool_call": 17
+    },
+    "tool_call_status_counts": {
+      "completed": 15,
+      "failed": 2
+    },
+    "partial_trajectory": false,
+    "trajectory_source": "acp"
+  },
+  "usage_tracking": {
+    "requested": "auto",
+    "status": "enabled",
+    "environment": "docker",
+    "endpoint_kind": "host",
+    "usage_source": "provider_response"
+  },
+  "error": null,
+  "error_category": null,
+  "verifier_error": null,
+  "verifier_error_category": null,
+  "export_error": null,
+  "idle_timeout_info": null,
+  "agent_timeout_info": null,
+  "sandbox_startup_info": null,
+  "transport_error_info": null,
+  "verifier_timeout_info": null,
+  "api_error_info": null,
+  "suspected_api_error_info": null,
+  "partial_trajectory": false,
+  "trajectory_source": "acp",
+  "started_at": "2026-10-02 16:33:31.476730",
+  "finished_at": "2026-10-02 16:36:32.644789",
+  "timing": {
+    "environment_setup": 13.6,
+    "agent_setup": 4.0,
+    "agent_execution": 120.1,
+    "verifier": 8.9,
+    "total": 181.2
+  },
+  "scenes": [
+    {
+      "name": "default",
+      "skills_dir": null,
+      "roles": [
+        {
+          "name": "agent",
+          "agent": "pi-acp",
+          "model": "openrouter/deepseek/deepseek-v4-pro",
+          "reasoning_effort": "high",
+          "timeout_sec": null,
+          "idle_timeout_sec": null,
+          "skills_dir": null,
+          "capabilities": null,
+          "env_keys": []
+        }
+      ],
+      "turns": [
+        {
+          "role": "agent",
+          "has_prompt": false
+        }
+      ]
+    }
+  ],
+  "loop": {
+    "strategy": "single-shot"
+  },
+  "source": {
+    "type": "github",
+    "repo": "skalade/rude_agents",
+    "requested_ref": "master",
+    "resolved_sha": "9e15ebe51faf51abfd0b3047635c0db53301290f",
+    "path": "build/insult/weighted-gdp-calc",
+    "dirty": false,
+    "file_hashes": {
+      "environment/Dockerfile": "sha256:dacf1b76b9c377c29ce69d4febabbdfb0bfb0b1e14e522116c0ac5ddab2b3266",
+      "environment/gdp.xlsx": "sha256:fb8873433c7206cf431a01d2dec7e943b91d3faacfe2ce4c30b9de65c8842caa",
+      "environment/skills/xlsx/LICENSE.txt": "sha256:79f6d8f5b427252fa3b1c11ecdbdb6bf610b944f7530b4de78f770f38741cfaa",
+      "environment/skills/xlsx/SKILL.md": "sha256:9bdc1fee81f3be9cb34ac49f8890c094a3855d3d0236783d10e0ea6df1515e01",
+      "environment/skills/xlsx/recalc.py": "sha256:f0833720e26fa894c9c1ccf0bd71dfc4609f8a310360fb2de2071efb64fbd409",
+      "oracle/solve.sh": "sha256:5e50a0083bd4c06a236382bd7af472d2a6384f7f3415bbe4eaa3207e232a9f31",
+      "task.md": "sha256:6833345ea034d0482d109e6dc17eded4bf775084deeaa4379b231acbe7d5ecac",
+      "verifier/test.sh": "sha256:f6d94159004f2dcf9488d3f80920a60675f7b45fb22353592fa9b3a61c24843a",
+      "verifier/test_outputs.py": "sha256:94b1b6089c1c143cb1f54c5110cfe932e2d85194c19286c7201f5c29c2c87055"
+    }
+  },
+  "task_digest": "sha256:e6847a04a693c9858443b2dba913e07df92ae4061011f9f46867a09e853dbbb2",
+  "sandbox_id": null
+}

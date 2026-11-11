@@ -1,0 +1,137 @@
+{
+  "task_name": "code-from-image",
+  "rollout_name": "code-from-image__a77a2538",
+  "rewards": {
+    "reward": 1.0
+  },
+  "agent": "pi-acp",
+  "agent_name": "pi-acp",
+  "model": "openrouter/deepseek/deepseek-v4-pro",
+  "skill_mode": "no-skill",
+  "skill_source": "none",
+  "requested_skills_dir": null,
+  "effective_skills_dir": null,
+  "skills_sandbox_dir": null,
+  "include_task_skills": false,
+  "n_tool_calls": 15,
+  "n_skill_invocations": 0,
+  "n_prompts": 1,
+  "agent_result": {
+    "n_tool_calls": 15,
+    "n_skill_invocations": 0,
+    "n_prompts": 1,
+    "n_input_tokens": 72578,
+    "n_output_tokens": 6530,
+    "n_cache_read_tokens": 61422,
+    "n_cache_creation_tokens": 0,
+    "total_tokens": 79108,
+    "cost_usd": 0.00586628,
+    "usage_source": "provider_response",
+    "price_source": "litellm"
+  },
+  "final_metrics": {
+    "total_prompt_tokens": 72578,
+    "total_completion_tokens": 6530,
+    "total_cached_tokens": 61422,
+    "total_cost_usd": 0.00586628
+  },
+  "trajectory_summary": {
+    "steps": 37,
+    "tool_call_steps": 15,
+    "user_message_steps": 1,
+    "agent_message_steps": 7,
+    "agent_thought_steps": 14,
+    "other_steps": 0,
+    "event_type_counts": {
+      "agent_message": 7,
+      "user_message": 1,
+      "agent_thought": 14,
+      "tool_call": 15
+    },
+    "tool_call_status_counts": {
+      "completed": 11,
+      "failed": 4
+    },
+    "partial_trajectory": false,
+    "trajectory_source": "acp"
+  },
+  "usage_tracking": {
+    "requested": "auto",
+    "status": "enabled",
+    "environment": "docker",
+    "endpoint_kind": "host",
+    "usage_source": "provider_response"
+  },
+  "error": null,
+  "error_category": null,
+  "verifier_error": null,
+  "verifier_error_category": null,
+  "export_error": null,
+  "idle_timeout_info": null,
+  "agent_timeout_info": null,
+  "sandbox_startup_info": null,
+  "transport_error_info": null,
+  "verifier_timeout_info": null,
+  "api_error_info": null,
+  "suspected_api_error_info": null,
+  "partial_trajectory": false,
+  "trajectory_source": "acp",
+  "started_at": "2026-10-05 00:02:35.601001",
+  "finished_at": "2026-10-05 00:11:17.429029",
+  "timing": {
+    "environment_setup": 18.1,
+    "agent_setup": 3.3,
+    "agent_execution": 222.8,
+    "verifier": 4.8,
+    "total": 521.8
+  },
+  "scenes": [
+    {
+      "name": "default",
+      "skills_dir": null,
+      "roles": [
+        {
+          "name": "agent",
+          "agent": "pi-acp",
+          "model": "openrouter/deepseek/deepseek-v4-pro",
+          "reasoning_effort": "high",
+          "timeout_sec": null,
+          "idle_timeout_sec": null,
+          "skills_dir": null,
+          "capabilities": null,
+          "env_keys": []
+        }
+      ],
+      "turns": [
+        {
+          "role": "agent",
+          "has_prompt": false
+        }
+      ]
+    }
+  ],
+  "loop": {
+    "strategy": "single-shot"
+  },
+  "source": {
+    "type": "github",
+    "repo": "skalade/rude_agents",
+    "requested_ref": "master",
+    "resolved_sha": "d68b067959758ae0c77a0bb8d2360e0aa3ff5aed",
+    "path": "build_tb2/important/code-from-image",
+    "dirty": false,
+    "file_hashes": {
+      ".gitignore": "sha256:9a8dd8d9b6c3adb8e9e56328df27deef859a3e98fffc9b8133c8b22207c25953",
+      "README.md": "sha256:a67ffcec8232bc7a054c267913599c0ed3bf378f3a333605607009071b8bd6f6",
+      "environment/Dockerfile": "sha256:5bd29db32ea0ef2b5c87c8526d0ac1b102be922dab66510f06439ab9dc84809c",
+      "environment/code.png": "sha256:f4d0330407b363a9ef03d563e5c2ffd24aa76345f997613741f9fc0935354305",
+      "instruction.md": "sha256:bc39058ebcb537f24359accac86e66fc5675774beda1c3a9980a22c0542e024b",
+      "solution/solve.sh": "sha256:bf3dcc484e6c47b7991cb401b17820cfffa33050265ae86328e4a81be1ee7693",
+      "task.toml": "sha256:3a13c1e252bb8759f51215be0b2b2cb1b4c697f0dd570f2d7702cc28b28f08de",
+      "tests/test.sh": "sha256:4770437ea96c3cc84684b4f99d55fb148fcac09f9ea1e8ef49de487716e6c334",
+      "tests/test_outputs.py": "sha256:b9b7cb0033116df88a4807404bf309190f92d62a89df2ce64cdcbf732efe084a"
+    }
+  },
+  "task_digest": "sha256:83a81f652e868ba15ab2041fe9019beca963a442ccc750fe4bc1c014ac2f1f13",
+  "sandbox_id": null
+}

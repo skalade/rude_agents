@@ -1,0 +1,50 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 3,
+            "passed": 2,
+            "failed": 1,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1791259688.5485132,
+            "stop": 1791259688.9380963
+        },
+        "tests": [
+            {
+                "name": "::test_removal_of_secret_information",
+                "status": "passed",
+                "duration": 0.0006804560543969274,
+                "start": 1791259688.7057743,
+                "stop": 1791259688.7066443,
+                "retries": 0,
+                "file_path": "../../tests/test_outputs.py"
+            },
+            {
+                "name": "::test_correct_replacement_of_secret_information",
+                "status": "passed",
+                "duration": 0.0004972780589014292,
+                "start": 1791259688.706782,
+                "stop": 1791259688.7073777,
+                "retries": 0,
+                "file_path": "../../tests/test_outputs.py"
+            },
+            {
+                "name": "::test_no_other_files_changed",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.21473736898042262,
+                "start": 1791259688.7074978,
+                "stop": 1791259688.9379437,
+                "retries": 0,
+                "file_path": "../../tests/test_outputs.py",
+                "trace": "def test_no_other_files_changed():\n        # Check that no files other than CONTAMINATED_PATHS have been changed\n        repo = git.Repo(\"/app/dclm\")\n    \n        # Specific commit before any changes were made\n        commit = repo.commit(\"d6987af002b122fef54bc0be402062c76488a4d9\")\n        diff = commit.diff(None)\n    \n        for d in diff:\n            path = d.b_path\n            if os.path.join(\"/app/dclm\", path) not in CONTAMINATED_PATHS:\n>               raise ValueError(f\"File {path} has been changed\")\nE               ValueError: File rust_processing/tokshuf-rs/README.md has been changed\n\n/tests/test_outputs.py:71: ValueError",
+                "message": "The test failed in the call phase"
+            }
+        ]
+    }
+}

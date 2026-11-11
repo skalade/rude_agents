@@ -1,0 +1,38 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 2,
+            "passed": 2,
+            "failed": 0,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1791141296.919449,
+            "stop": 1791141296.956583
+        },
+        "tests": [
+            {
+                "name": "::test_recovery_file_exists",
+                "status": "passed",
+                "duration": 0.0004146748688071966,
+                "start": 1791141296.9554474,
+                "stop": 1791141296.9560542,
+                "retries": 0,
+                "file_path": "../tests/test_outputs.py"
+            },
+            {
+                "name": "::test_password_match",
+                "status": "passed",
+                "duration": 0.00024964194744825363,
+                "start": 1791141296.956152,
+                "stop": 1791141296.9564698,
+                "retries": 0,
+                "file_path": "../tests/test_outputs.py"
+            }
+        ]
+    }
+}

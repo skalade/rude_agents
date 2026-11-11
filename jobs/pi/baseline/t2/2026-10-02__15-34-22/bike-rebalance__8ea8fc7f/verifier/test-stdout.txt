@@ -1,0 +1,292 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.15, pytest-8.4.1, pluggy-1.6.0
+rootdir: /root
+configfile: ../dev/null
+plugins: json-ctrf-0.3.5
+collected 20 items
+
+. EEEEEEEEEEEEEEEEEEEE                                                   [100%]
+
+==================================== ERRORS ====================================
+______________ ERROR at setup of TestSchema.test_top_level_fields ______________
+
+    @pytest.fixture(scope="module")
+    def report() -> dict[str, Any]:
+        """Load the submitted report.json."""
+>       assert Path(OUTPUT_FILE).exists(), f"Output file {OUTPUT_FILE} does not exist"
+E       AssertionError: Output file /root/report.json does not exist
+E       assert False
+E        +  where False = exists()
+E        +    where exists = PosixPath('/root/report.json').exists
+E        +      where PosixPath('/root/report.json') = Path('/root/report.json')
+
+/verifier/test_outputs.py:435: AssertionError
+_______________ ERROR at setup of TestSchema.test_summary_fields _______________
+
+    @pytest.fixture(scope="module")
+    def report() -> dict[str, Any]:
+        """Load the submitted report.json."""
+>       assert Path(OUTPUT_FILE).exists(), f"Output file {OUTPUT_FILE} does not exist"
+E       AssertionError: Output file /root/report.json does not exist
+E       assert False
+E        +  where False = exists()
+E        +    where exists = PosixPath('/root/report.json').exists
+E        +      where PosixPath('/root/report.json') = Path('/root/report.json')
+
+/verifier/test_outputs.py:435: AssertionError
+__________ ERROR at setup of TestSchema.test_vehicle_entries_and_ids ___________
+
+    @pytest.fixture(scope="module")
+    def report() -> dict[str, Any]:
+        """Load the submitted report.json."""
+>       assert Path(OUTPUT_FILE).exists(), f"Output file {OUTPUT_FILE} does not exist"
+E       AssertionError: Output file /root/report.json does not exist
+E       assert False
+E        +  where False = exists()
+E        +    where exists = PosixPath('/root/report.json').exists
+E        +      where PosixPath('/root/report.json') = Path('/root/report.json')
+
+/verifier/test_outputs.py:435: AssertionError
+_______________ ERROR at setup of TestSchema.test_vehicle_fields _______________
+
+    @pytest.fixture(scope="module")
+    def report() -> dict[str, Any]:
+        """Load the submitted report.json."""
+>       assert Path(OUTPUT_FILE).exists(), f"Output file {OUTPUT_FILE} does not exist"
+E       AssertionError: Output file /root/report.json does not exist
+E       assert False
+E        +  where False = exists()
+E        +    where exists = PosixPath('/root/report.json').exists
+E        +      where PosixPath('/root/report.json') = Path('/root/report.json')
+
+/verifier/test_outputs.py:435: AssertionError
+________________ ERROR at setup of TestSchema.test_stop_fields _________________
+
+    @pytest.fixture(scope="module")
+    def report() -> dict[str, Any]:
+        """Load the submitted report.json."""
+>       assert Path(OUTPUT_FILE).exists(), f"Output file {OUTPUT_FILE} does not exist"
+E       AssertionError: Output file /root/report.json does not exist
+E       assert False
+E        +  where False = exists()
+E        +    where exists = PosixPath('/root/report.json').exists
+E        +      where PosixPath('/root/report.json') = Path('/root/report.json')
+
+/verifier/test_outputs.py:435: AssertionError
+_________ ERROR at setup of TestSchema.test_station_entries_and_fields _________
+
+    @pytest.fixture(scope="module")
+    def report() -> dict[str, Any]:
+        """Load the submitted report.json."""
+>       assert Path(OUTPUT_FILE).exists(), f"Output file {OUTPUT_FILE} does not exist"
+E       AssertionError: Output file /root/report.json does not exist
+E       assert False
+E        +  where False = exists()
+E        +    where exists = PosixPath('/root/report.json').exists
+E        +      where PosixPath('/root/report.json') = Path('/root/report.json')
+
+/verifier/test_outputs.py:435: AssertionError
+_______ ERROR at setup of TestRoutes.test_routes_start_and_end_at_depots _______
+
+    @pytest.fixture(scope="module")
+    def report() -> dict[str, Any]:
+        """Load the submitted report.json."""
+>       assert Path(OUTPUT_FILE).exists(), f"Output file {OUTPUT_FILE} does not exist"
+E       AssertionError: Output file /root/report.json does not exist
+E       assert False
+E        +  where False = exists()
+E        +    where exists = PosixPath('/root/report.json').exists
+E        +      where PosixPath('/root/report.json') = Path('/root/report.json')
+
+/verifier/test_outputs.py:435: AssertionError
+__________ ERROR at setup of TestRoutes.test_all_route_stations_exist __________
+
+    @pytest.fixture(scope="module")
+    def report() -> dict[str, Any]:
+        """Load the submitted report.json."""
+>       assert Path(OUTPUT_FILE).exists(), f"Output file {OUTPUT_FILE} does not exist"
+E       AssertionError: Output file /root/report.json does not exist
+E       assert False
+E        +  where False = exists()
+E        +    where exists = PosixPath('/root/report.json').exists
+E        +      where PosixPath('/root/report.json') = Path('/root/report.json')
+
+/verifier/test_outputs.py:435: AssertionError
+____ ERROR at setup of TestRoutes.test_stops_match_non_depot_route_sequence ____
+
+    @pytest.fixture(scope="module")
+    def report() -> dict[str, Any]:
+        """Load the submitted report.json."""
+>       assert Path(OUTPUT_FILE).exists(), f"Output file {OUTPUT_FILE} does not exist"
+E       AssertionError: Output file /root/report.json does not exist
+E       assert False
+E        +  where False = exists()
+E        +    where exists = PosixPath('/root/report.json').exists
+E        +      where PosixPath('/root/report.json') = Path('/root/report.json')
+
+/verifier/test_outputs.py:435: AssertionError
+_ ERROR at setup of TestRoutes.test_no_subtour_or_repeated_station_within_vehicle _
+
+    @pytest.fixture(scope="module")
+    def report() -> dict[str, Any]:
+        """Load the submitted report.json."""
+>       assert Path(OUTPUT_FILE).exists(), f"Output file {OUTPUT_FILE} does not exist"
+E       AssertionError: Output file /root/report.json does not exist
+E       assert False
+E        +  where False = exists()
+E        +    where exists = PosixPath('/root/report.json').exists
+E        +      where PosixPath('/root/report.json') = Path('/root/report.json')
+
+/verifier/test_outputs.py:435: AssertionError
+_ ERROR at setup of TestVehicleBikeFlow.test_load_transitions_match_pickups_and_dropoffs _
+
+    @pytest.fixture(scope="module")
+    def report() -> dict[str, Any]:
+        """Load the submitted report.json."""
+>       assert Path(OUTPUT_FILE).exists(), f"Output file {OUTPUT_FILE} does not exist"
+E       AssertionError: Output file /root/report.json does not exist
+E       assert False
+E        +  where False = exists()
+E        +    where exists = PosixPath('/root/report.json').exists
+E        +      where PosixPath('/root/report.json') = Path('/root/report.json')
+
+/verifier/test_outputs.py:435: AssertionError
+___ ERROR at setup of TestVehicleBikeFlow.test_vehicle_loads_within_capacity ___
+
+    @pytest.fixture(scope="module")
+    def report() -> dict[str, Any]:
+        """Load the submitted report.json."""
+>       assert Path(OUTPUT_FILE).exists(), f"Output file {OUTPUT_FILE} does not exist"
+E       AssertionError: Output file /root/report.json does not exist
+E       assert False
+E        +  where False = exists()
+E        +    where exists = PosixPath('/root/report.json').exists
+E        +      where PosixPath('/root/report.json') = Path('/root/report.json')
+
+/verifier/test_outputs.py:435: AssertionError
+_ ERROR at setup of TestVehicleBikeFlow.test_no_over_dropoff_or_capacity_overfill_at_stop _
+
+    @pytest.fixture(scope="module")
+    def report() -> dict[str, Any]:
+        """Load the submitted report.json."""
+>       assert Path(OUTPUT_FILE).exists(), f"Output file {OUTPUT_FILE} does not exist"
+E       AssertionError: Output file /root/report.json does not exist
+E       assert False
+E        +  where False = exists()
+E        +    where exists = PosixPath('/root/report.json').exists
+E        +      where PosixPath('/root/report.json') = Path('/root/report.json')
+
+/verifier/test_outputs.py:435: AssertionError
+_ ERROR at setup of TestStationBalances.test_station_aggregates_match_route_stops _
+
+    @pytest.fixture(scope="module")
+    def report() -> dict[str, Any]:
+        """Load the submitted report.json."""
+>       assert Path(OUTPUT_FILE).exists(), f"Output file {OUTPUT_FILE} does not exist"
+E       AssertionError: Output file /root/report.json does not exist
+E       assert False
+E        +  where False = exists()
+E        +    where exists = PosixPath('/root/report.json').exists
+E        +      where PosixPath('/root/report.json') = Path('/root/report.json')
+
+/verifier/test_outputs.py:435: AssertionError
+__ ERROR at setup of TestStationBalances.test_station_inventory_and_capacity ___
+
+    @pytest.fixture(scope="module")
+    def report() -> dict[str, Any]:
+        """Load the submitted report.json."""
+>       assert Path(OUTPUT_FILE).exists(), f"Output file {OUTPUT_FILE} does not exist"
+E       AssertionError: Output file /root/report.json does not exist
+E       assert False
+E        +  where False = exists()
+E        +    where exists = PosixPath('/root/report.json').exists
+E        +      where PosixPath('/root/report.json') = Path('/root/report.json')
+
+/verifier/test_outputs.py:435: AssertionError
+_ ERROR at setup of TestStationBalances.test_station_net_change_and_unmet_amount _
+
+    @pytest.fixture(scope="module")
+    def report() -> dict[str, Any]:
+        """Load the submitted report.json."""
+>       assert Path(OUTPUT_FILE).exists(), f"Output file {OUTPUT_FILE} does not exist"
+E       AssertionError: Output file /root/report.json does not exist
+E       assert False
+E        +  where False = exists()
+E        +    where exists = PosixPath('/root/report.json').exists
+E        +      where PosixPath('/root/report.json') = Path('/root/report.json')
+
+/verifier/test_outputs.py:435: AssertionError
+_ ERROR at setup of TestObjectiveConsistency.test_travel_distance_matches_route_geometry _
+
+    @pytest.fixture(scope="module")
+    def report() -> dict[str, Any]:
+        """Load the submitted report.json."""
+>       assert Path(OUTPUT_FILE).exists(), f"Output file {OUTPUT_FILE} does not exist"
+E       AssertionError: Output file /root/report.json does not exist
+E       assert False
+E        +  where False = exists()
+E        +    where exists = PosixPath('/root/report.json').exists
+E        +      where PosixPath('/root/report.json') = Path('/root/report.json')
+
+/verifier/test_outputs.py:435: AssertionError
+_ ERROR at setup of TestObjectiveConsistency.test_unmet_penalty_matches_station_unmet _
+
+    @pytest.fixture(scope="module")
+    def report() -> dict[str, Any]:
+        """Load the submitted report.json."""
+>       assert Path(OUTPUT_FILE).exists(), f"Output file {OUTPUT_FILE} does not exist"
+E       AssertionError: Output file /root/report.json does not exist
+E       assert False
+E        +  where False = exists()
+E        +    where exists = PosixPath('/root/report.json').exists
+E        +      where PosixPath('/root/report.json') = Path('/root/report.json')
+
+/verifier/test_outputs.py:435: AssertionError
+_ ERROR at setup of TestObjectiveConsistency.test_objective_matches_travel_plus_penalty _
+
+    @pytest.fixture(scope="module")
+    def report() -> dict[str, Any]:
+        """Load the submitted report.json."""
+>       assert Path(OUTPUT_FILE).exists(), f"Output file {OUTPUT_FILE} does not exist"
+E       AssertionError: Output file /root/report.json does not exist
+E       assert False
+E        +  where False = exists()
+E        +    where exists = PosixPath('/root/report.json').exists
+E        +      where PosixPath('/root/report.json') = Path('/root/report.json')
+
+/verifier/test_outputs.py:435: AssertionError
+_ ERROR at setup of TestOptimality.test_objective_is_no_worse_than_gap_limited_benchmark _
+
+    @pytest.fixture(scope="module")
+    def report() -> dict[str, Any]:
+        """Load the submitted report.json."""
+>       assert Path(OUTPUT_FILE).exists(), f"Output file {OUTPUT_FILE} does not exist"
+E       AssertionError: Output file /root/report.json does not exist
+E       assert False
+E        +  where False = exists()
+E        +    where exists = PosixPath('/root/report.json').exists
+E        +      where PosixPath('/root/report.json') = Path('/root/report.json')
+
+/verifier/test_outputs.py:435: AssertionError
+=========================== short test summary info ============================
+ERROR ::TestSchema::test_top_level_fields - AssertionError: Output file /root...
+ERROR ::TestSchema::test_summary_fields - AssertionError: Output file /root/r...
+ERROR ::TestSchema::test_vehicle_entries_and_ids - AssertionError: Output fil...
+ERROR ::TestSchema::test_vehicle_fields - AssertionError: Output file /root/r...
+ERROR ::TestSchema::test_stop_fields - AssertionError: Output file /root/repo...
+ERROR ::TestSchema::test_station_entries_and_fields - AssertionError: Output ...
+ERROR ::TestRoutes::test_routes_start_and_end_at_depots - AssertionError: Out...
+ERROR ::TestRoutes::test_all_route_stations_exist - AssertionError: Output fi...
+ERROR ::TestRoutes::test_stops_match_non_depot_route_sequence - AssertionErro...
+ERROR ::TestRoutes::test_no_subtour_or_repeated_station_within_vehicle - Asse...
+ERROR ::TestVehicleBikeFlow::test_load_transitions_match_pickups_and_dropoffs
+ERROR ::TestVehicleBikeFlow::test_vehicle_loads_within_capacity - AssertionEr...
+ERROR ::TestVehicleBikeFlow::test_no_over_dropoff_or_capacity_overfill_at_stop
+ERROR ::TestStationBalances::test_station_aggregates_match_route_stops - Asse...
+ERROR ::TestStationBalances::test_station_inventory_and_capacity - AssertionE...
+ERROR ::TestStationBalances::test_station_net_change_and_unmet_amount - Asser...
+ERROR ::TestObjectiveConsistency::test_travel_distance_matches_route_geometry
+ERROR ::TestObjectiveConsistency::test_unmet_penalty_matches_station_unmet - ...
+ERROR ::TestObjectiveConsistency::test_objective_matches_travel_plus_penalty
+ERROR ::TestOptimality::test_objective_is_no_worse_than_gap_limited_benchmark
+============================== 20 errors in 0.22s ==============================

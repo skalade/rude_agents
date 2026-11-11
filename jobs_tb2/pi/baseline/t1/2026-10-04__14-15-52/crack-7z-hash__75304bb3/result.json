@@ -1,0 +1,137 @@
+{
+  "task_name": "crack-7z-hash",
+  "rollout_name": "crack-7z-hash__75304bb3",
+  "rewards": {
+    "reward": 1.0
+  },
+  "agent": "pi-acp",
+  "agent_name": "pi-acp",
+  "model": "openrouter/deepseek/deepseek-v4-pro",
+  "skill_mode": "no-skill",
+  "skill_source": "none",
+  "requested_skills_dir": null,
+  "effective_skills_dir": null,
+  "skills_sandbox_dir": null,
+  "include_task_skills": false,
+  "n_tool_calls": 17,
+  "n_skill_invocations": 0,
+  "n_prompts": 1,
+  "agent_result": {
+    "n_tool_calls": 17,
+    "n_skill_invocations": 0,
+    "n_prompts": 1,
+    "n_input_tokens": 333502,
+    "n_output_tokens": 2051,
+    "n_cache_read_tokens": 303935,
+    "n_cache_creation_tokens": 0,
+    "total_tokens": 335553,
+    "cost_usd": 0.00914018,
+    "usage_source": "provider_response",
+    "price_source": "litellm"
+  },
+  "final_metrics": {
+    "total_prompt_tokens": 333502,
+    "total_completion_tokens": 2051,
+    "total_cached_tokens": 303935,
+    "total_cost_usd": 0.00914018
+  },
+  "trajectory_summary": {
+    "steps": 40,
+    "tool_call_steps": 17,
+    "user_message_steps": 1,
+    "agent_message_steps": 4,
+    "agent_thought_steps": 18,
+    "other_steps": 0,
+    "event_type_counts": {
+      "agent_message": 4,
+      "user_message": 1,
+      "agent_thought": 18,
+      "tool_call": 17
+    },
+    "tool_call_status_counts": {
+      "completed": 13,
+      "failed": 4
+    },
+    "partial_trajectory": false,
+    "trajectory_source": "acp"
+  },
+  "usage_tracking": {
+    "requested": "auto",
+    "status": "enabled",
+    "environment": "docker",
+    "endpoint_kind": "host",
+    "usage_source": "provider_response"
+  },
+  "error": null,
+  "error_category": null,
+  "verifier_error": null,
+  "verifier_error_category": null,
+  "export_error": null,
+  "idle_timeout_info": null,
+  "agent_timeout_info": null,
+  "sandbox_startup_info": null,
+  "transport_error_info": null,
+  "verifier_timeout_info": null,
+  "api_error_info": null,
+  "suspected_api_error_info": null,
+  "partial_trajectory": false,
+  "trajectory_source": "acp",
+  "started_at": "2026-10-04 15:48:28.751456",
+  "finished_at": "2026-10-04 15:52:25.017056",
+  "timing": {
+    "environment_setup": 8.0,
+    "agent_setup": 3.4,
+    "agent_execution": 121.6,
+    "verifier": 62.1,
+    "total": 236.3
+  },
+  "scenes": [
+    {
+      "name": "default",
+      "skills_dir": null,
+      "roles": [
+        {
+          "name": "agent",
+          "agent": "pi-acp",
+          "model": "openrouter/deepseek/deepseek-v4-pro",
+          "reasoning_effort": "high",
+          "timeout_sec": null,
+          "idle_timeout_sec": null,
+          "skills_dir": null,
+          "capabilities": null,
+          "env_keys": []
+        }
+      ],
+      "turns": [
+        {
+          "role": "agent",
+          "has_prompt": false
+        }
+      ]
+    }
+  ],
+  "loop": {
+    "strategy": "single-shot"
+  },
+  "source": {
+    "type": "github",
+    "repo": "skalade/rude_agents",
+    "requested_ref": "master",
+    "resolved_sha": "d68b067959758ae0c77a0bb8d2360e0aa3ff5aed",
+    "path": "build_tb2/baseline/crack-7z-hash",
+    "dirty": false,
+    "file_hashes": {
+      ".gitignore": "sha256:9a8dd8d9b6c3adb8e9e56328df27deef859a3e98fffc9b8133c8b22207c25953",
+      "README.md": "sha256:c37fcfc6e6a68b51ed42cd614a0638723b8ae63889afadc115fa2ebf425fd6e0",
+      "environment/Dockerfile": "sha256:387c60f7a21d4548c12e1af2453aa8bdd12c45bbe576666c3e48777c5b7c3ecb",
+      "environment/task-deps/secrets.7z": "sha256:a2e13fcbb4c2c8e92b1bf9d78ec91376705d1f5631d5bd4de64f82aa0553b773",
+      "instruction.md": "sha256:f5f89400c549eefb2c245caa7770356737b7a12098e6879787e846d9cb5eb822",
+      "solution/solve.sh": "sha256:2640463e6e14658426f3ea629e0702688e00553eb8006cf31ec3b9cff75c4b19",
+      "task.toml": "sha256:8e192bcbe00e817419bde7ff9b562a5fa0c1e24ec4f3384cba4a31eda0a7b013",
+      "tests/test.sh": "sha256:4770437ea96c3cc84684b4f99d55fb148fcac09f9ea1e8ef49de487716e6c334",
+      "tests/test_outputs.py": "sha256:f18d7565f690727484ac43d012d36a4f386236419501e4a4277134a8e8fcfcc9"
+    }
+  },
+  "task_digest": "sha256:5ccd1223600680c610a4f5c3ebe8ac0397ce065435119a00206f02ca5d3c9b3b",
+  "sandbox_id": null
+}

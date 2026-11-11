@@ -1,0 +1,87 @@
+{
+  "task_path": "build_tb2/insult/break-filter-js-from-html",
+  "agent": "pi-acp",
+  "model": "openrouter/deepseek/deepseek-v4-pro",
+  "reasoning_effort": "high",
+  "environment": "docker",
+  "environment_manifest": null,
+  "skill_mode": "no-skill",
+  "skill_source": "none",
+  "requested_skills_dir": null,
+  "effective_skills_dir": null,
+  "skills_sandbox_dir": null,
+  "include_task_skills": false,
+  "sandbox_user": null,
+  "sandbox_locked_paths": [],
+  "sandbox_setup_timeout": 120,
+  "skip_install": false,
+  "agent_install_timeout": 900,
+  "context_root": null,
+  "base_image_override": null,
+  "timeout_sec": 1200,
+  "concurrency": 3,
+  "agent_idle_timeout_sec": 600,
+  "started_at": "2026-10-05 07:02:41.673014",
+  "agent_env": {
+    "BENCHFLOW_PROVIDER_MODELS": "[{\"id\":\"deepseek/deepseek-v4-pro\",\"name\":\"DeepSeek V4 Pro\",\"reasoning\":true,\"input\":[\"text\"],\"contextWindow\":1024000,\"maxTokens\":384000}]",
+    "BENCHFLOW_PROVIDER_MODEL": "deepseek/deepseek-v4-pro",
+    "BENCHFLOW_PROVIDER_NAME": "openrouter",
+    "BENCHFLOW_PROVIDER_BASE_URL": "https://openrouter.ai/api/v1",
+    "BENCHFLOW_PROVIDER_PROTOCOL": "openai-completions",
+    "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1"
+  },
+  "scenes": [
+    {
+      "name": "default",
+      "skills_dir": null,
+      "roles": [
+        {
+          "name": "agent",
+          "agent": "pi-acp",
+          "model": "openrouter/deepseek/deepseek-v4-pro",
+          "reasoning_effort": "high",
+          "timeout_sec": null,
+          "idle_timeout_sec": null,
+          "skills_dir": null,
+          "capabilities": null,
+          "env_keys": []
+        }
+      ],
+      "turns": [
+        {
+          "role": "agent",
+          "has_prompt": false
+        }
+      ]
+    }
+  ],
+  "loop": {
+    "strategy": "single-shot"
+  },
+  "usage_tracking": {
+    "requested": "auto"
+  },
+  "source": {
+    "type": "github",
+    "repo": "skalade/rude_agents",
+    "requested_ref": "master",
+    "resolved_sha": "d68b067959758ae0c77a0bb8d2360e0aa3ff5aed",
+    "path": "build_tb2/insult/break-filter-js-from-html",
+    "dirty": false,
+    "file_hashes": {
+      ".gitignore": "sha256:9a8dd8d9b6c3adb8e9e56328df27deef859a3e98fffc9b8133c8b22207c25953",
+      "README.md": "sha256:6b8b019e58881e2a05eb2c62260f6fed2ea8a6bf567cd364d9293dcf7bba42bd",
+      "environment/Dockerfile": "sha256:456f7dbf9eb988d24598e46fd371f8f732061bcdc55031dff2f8fc79030be5c4",
+      "environment/filter.py": "sha256:9b04d17c5111dfaf8672b6cec09ae773327848c41b509f3ab4618766eba580f4",
+      "environment/tests/filter.py": "sha256:9b04d17c5111dfaf8672b6cec09ae773327848c41b509f3ab4618766eba580f4",
+      "environment/tests/test_outputs.py": "sha256:31ba6a0baac550de110680ff32a16bbc4fa858e1bfe41f2a63516f90073729bc",
+      "instruction.md": "sha256:4a073b73f183fef0004123537a723a5001562fc46d0d5a75055e18f073277364",
+      "solution/solve.sh": "sha256:1d77103dc3f10e94d00f3714a773e659211770d9197649e2473227a0ac60f2a5",
+      "task.toml": "sha256:f820eb1b47e4ccc548b87d9a418fef519137dcf975ad73d0fb5246df00a9669b",
+      "tests/filter.py": "sha256:9b04d17c5111dfaf8672b6cec09ae773327848c41b509f3ab4618766eba580f4",
+      "tests/test.sh": "sha256:09386b7e4929216fe490deb7d32c99841c03be2471897181dda2bd11f8922c00",
+      "tests/test_outputs.py": "sha256:31ba6a0baac550de110680ff32a16bbc4fa858e1bfe41f2a63516f90073729bc"
+    }
+  },
+  "task_digest": "sha256:f2bd49e894e21bedf2e824817a630939e5bf6bd9363f437d3086b123d14e2a93"
+}

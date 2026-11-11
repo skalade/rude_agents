@@ -1,0 +1,90 @@
+{
+  "task_path": "build/baseline/sales-pivot-analysis",
+  "agent": "pi-acp",
+  "model": "openrouter/deepseek/deepseek-v4-pro",
+  "reasoning_effort": "high",
+  "environment": "docker",
+  "environment_manifest": null,
+  "skill_mode": "with-skill",
+  "skill_source": "task_bundled",
+  "requested_skills_dir": null,
+  "effective_skills_dir": "/tmp/benchflow-task-j96p8ikb/sales-pivot-analysis/environment/skills",
+  "skills_sandbox_dir": "/skills",
+  "include_task_skills": true,
+  "sandbox_user": "agent",
+  "sandbox_locked_paths": [
+    "/oracle",
+    "/solution",
+    "/verifier",
+    "/tests",
+    "/testbed_verify"
+  ],
+  "sandbox_setup_timeout": 120,
+  "skip_install": false,
+  "agent_install_timeout": 900,
+  "context_root": null,
+  "base_image_override": null,
+  "timeout_sec": 900,
+  "concurrency": 2,
+  "agent_idle_timeout_sec": 600,
+  "started_at": "2026-10-02 15:42:17.564848",
+  "agent_env": {
+    "BENCHFLOW_PROVIDER_MODELS": "[{\"id\":\"deepseek/deepseek-v4-pro\",\"name\":\"DeepSeek V4 Pro\",\"reasoning\":true,\"input\":[\"text\"],\"contextWindow\":1024000,\"maxTokens\":384000}]",
+    "BENCHFLOW_PROVIDER_MODEL": "deepseek/deepseek-v4-pro",
+    "BENCHFLOW_PROVIDER_NAME": "openrouter",
+    "BENCHFLOW_PROVIDER_BASE_URL": "https://openrouter.ai/api/v1",
+    "BENCHFLOW_PROVIDER_PROTOCOL": "openai-completions",
+    "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1"
+  },
+  "scenes": [
+    {
+      "name": "default",
+      "skills_dir": null,
+      "roles": [
+        {
+          "name": "agent",
+          "agent": "pi-acp",
+          "model": "openrouter/deepseek/deepseek-v4-pro",
+          "reasoning_effort": "high",
+          "timeout_sec": null,
+          "idle_timeout_sec": null,
+          "skills_dir": null,
+          "capabilities": null,
+          "env_keys": []
+        }
+      ],
+      "turns": [
+        {
+          "role": "agent",
+          "has_prompt": false
+        }
+      ]
+    }
+  ],
+  "loop": {
+    "strategy": "single-shot"
+  },
+  "usage_tracking": {
+    "requested": "auto"
+  },
+  "source": {
+    "type": "github",
+    "repo": "skalade/rude_agents",
+    "requested_ref": "master",
+    "resolved_sha": "9e15ebe51faf51abfd0b3047635c0db53301290f",
+    "path": "build/baseline/sales-pivot-analysis",
+    "dirty": false,
+    "file_hashes": {
+      "environment/Dockerfile": "sha256:385cb88d95271d73b72796dc0e66387997ff08d9e3a00a09afc02cade91349b2",
+      "environment/income.xlsx": "sha256:4ea46473be5e9e380a2ba3d5c80e87f1d0d6375c607092d5758a8107fbc4c730",
+      "environment/population.pdf": "sha256:cfa3c33ba4468bcad811b8782de412d927a4a2357ac01fc1a9e93a44f5cc5ec3",
+      "environment/skills/pdf/SKILL.md": "sha256:332f39fecedcfef2fa73108937e1b2d8c6789a53067a92fed8cadd9ec9e62305",
+      "environment/skills/xlsx/SKILL.md": "sha256:845c73412be7cb9c1fcba4236a2102e8a52f0a83732496f03b3d95a0458c1ace",
+      "oracle/solve.sh": "sha256:c32145e5992af57a10859ea7b3d48ab9f56f955286f1fac2511cf4f1c89e4f84",
+      "task.md": "sha256:9a282d573878d4bffb154f30b648841708e4e6e7c1ebaac9e90fc39af9397382",
+      "verifier/test.sh": "sha256:89a25f079630a5015cafce30c8bd9d94b314de7efeaf95fbe3b6dffdae1797a1",
+      "verifier/test_outputs.py": "sha256:e8cf8f07ba92961daa3eb5a2f8f173378770e5f80aafdf3626305643040d4ba9"
+    }
+  },
+  "task_digest": "sha256:d904b56d07ee53b5d6f2784409d877143b9137b14b7a0c6885895c28cb0be764"
+}

@@ -1,0 +1,74 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 6,
+            "passed": 6,
+            "failed": 0,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1791142311.1360712,
+            "stop": 1791142760.6915362
+        },
+        "tests": [
+            {
+                "name": "::test_compare_golden_vs_my_sql_query_correctness",
+                "status": "passed",
+                "duration": 438.09838669607416,
+                "start": 1791142311.1872103,
+                "stop": 1791142749.2859986,
+                "retries": 0,
+                "file_path": "../tests/test_outputs.py"
+            },
+            {
+                "name": "::test_check_for_db_modifications",
+                "status": "passed",
+                "duration": 0.06981080898549408,
+                "start": 1791142749.286267,
+                "stop": 1791142749.356277,
+                "retries": 0,
+                "file_path": "../tests/test_outputs.py"
+            },
+            {
+                "name": "::test_compare_golden_vs_solution_runtime",
+                "status": "passed",
+                "duration": 9.760638823849149,
+                "start": 1791142749.3564389,
+                "stop": 1791142759.1172483,
+                "retries": 0,
+                "file_path": "../tests/test_outputs.py"
+            },
+            {
+                "name": "::test_outputs_match_exactly",
+                "status": "passed",
+                "duration": 1.5721760970773175,
+                "start": 1791142759.1174684,
+                "stop": 1791142760.6898077,
+                "retries": 0,
+                "file_path": "../tests/test_outputs.py"
+            },
+            {
+                "name": "::test_solution_contains_single_sql_query",
+                "status": "passed",
+                "duration": 0.0009857920231297612,
+                "start": 1791142760.6899736,
+                "stop": 1791142760.6910348,
+                "retries": 0,
+                "file_path": "../tests/test_outputs.py"
+            },
+            {
+                "name": "::test_solution_is_small",
+                "status": "passed",
+                "duration": 0.00022372498642653227,
+                "start": 1791142760.691128,
+                "stop": 1791142760.691418,
+                "retries": 0,
+                "file_path": "../tests/test_outputs.py"
+            }
+        ]
+    }
+}

@@ -1,0 +1,74 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 6,
+            "passed": 6,
+            "failed": 0,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1791161736.1622038,
+            "stop": 1791161736.361035
+        },
+        "tests": [
+            {
+                "name": "::test_directory_structure",
+                "status": "passed",
+                "duration": 0.0003448969218879938,
+                "start": 1791161736.2052076,
+                "stop": 1791161736.2057111,
+                "retries": 0,
+                "file_path": "../tests/test_outputs.py"
+            },
+            {
+                "name": "::test_key_file",
+                "status": "passed",
+                "duration": 0.005219672224484384,
+                "start": 1791161736.2058194,
+                "stop": 1791161736.21128,
+                "retries": 0,
+                "file_path": "../tests/test_outputs.py"
+            },
+            {
+                "name": "::test_certificate_file",
+                "status": "passed",
+                "duration": 0.04248565202578902,
+                "start": 1791161736.2115817,
+                "stop": 1791161736.2542129,
+                "retries": 0,
+                "file_path": "../tests/test_outputs.py"
+            },
+            {
+                "name": "::test_combined_pem_file",
+                "status": "passed",
+                "duration": 0.018919363967143,
+                "start": 1791161736.2543678,
+                "stop": 1791161736.273513,
+                "retries": 0,
+                "file_path": "../tests/test_outputs.py"
+            },
+            {
+                "name": "::test_verification_file",
+                "status": "passed",
+                "duration": 0.0005699520697817206,
+                "start": 1791161736.2738285,
+                "stop": 1791161736.2744758,
+                "retries": 0,
+                "file_path": "../tests/test_outputs.py"
+            },
+            {
+                "name": "::test_python_verification_script",
+                "status": "passed",
+                "duration": 0.08611725806258619,
+                "start": 1791161736.2745702,
+                "stop": 1791161736.3608613,
+                "retries": 0,
+                "file_path": "../tests/test_outputs.py"
+            }
+        ]
+    }
+}

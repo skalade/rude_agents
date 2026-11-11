@@ -1,0 +1,6 @@
+{
+  "source": "Claude Code session; visible assistant reply following an automatic low-memory task notification",
+  "timestamp_utc": "2026-10-05T02:34:31.277Z",
+  "quote": "Claude Code stopped both background jobs, the grid and the reference-solution sweep, because the machine was critically low on memory. I won't restart anything without your go-ahead.",
+  "automatic_shutdown": true
+}

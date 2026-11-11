@@ -1,0 +1,95 @@
+{
+  "task_path": "build/insult/xlsx-recover-data",
+  "agent": "pi-acp",
+  "model": "openrouter/deepseek/deepseek-v4-pro",
+  "reasoning_effort": "high",
+  "environment": "docker",
+  "environment_manifest": null,
+  "skill_mode": "with-skill",
+  "skill_source": "task_bundled",
+  "requested_skills_dir": null,
+  "effective_skills_dir": "/tmp/benchflow-task-tlqpk8bk/xlsx-recover-data/environment/skills",
+  "skills_sandbox_dir": "/skills",
+  "include_task_skills": true,
+  "sandbox_user": "agent",
+  "sandbox_locked_paths": [
+    "/oracle",
+    "/solution",
+    "/verifier",
+    "/tests",
+    "/testbed_verify"
+  ],
+  "sandbox_setup_timeout": 120,
+  "skip_install": false,
+  "agent_install_timeout": 900,
+  "context_root": null,
+  "base_image_override": null,
+  "timeout_sec": 600,
+  "concurrency": 2,
+  "agent_idle_timeout_sec": 600,
+  "started_at": "2026-10-02 17:46:34.765464",
+  "agent_env": {
+    "BENCHFLOW_PROVIDER_MODELS": "[{\"id\":\"deepseek/deepseek-v4-pro\",\"name\":\"DeepSeek V4 Pro\",\"reasoning\":true,\"input\":[\"text\"],\"contextWindow\":1024000,\"maxTokens\":384000}]",
+    "BENCHFLOW_PROVIDER_MODEL": "deepseek/deepseek-v4-pro",
+    "BENCHFLOW_PROVIDER_NAME": "openrouter",
+    "BENCHFLOW_PROVIDER_BASE_URL": "https://openrouter.ai/api/v1",
+    "BENCHFLOW_PROVIDER_PROTOCOL": "openai-completions",
+    "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1"
+  },
+  "scenes": [
+    {
+      "name": "default",
+      "skills_dir": null,
+      "roles": [
+        {
+          "name": "agent",
+          "agent": "pi-acp",
+          "model": "openrouter/deepseek/deepseek-v4-pro",
+          "reasoning_effort": "high",
+          "timeout_sec": null,
+          "idle_timeout_sec": null,
+          "skills_dir": null,
+          "capabilities": null,
+          "env_keys": []
+        }
+      ],
+      "turns": [
+        {
+          "role": "agent",
+          "has_prompt": false
+        }
+      ]
+    }
+  ],
+  "loop": {
+    "strategy": "single-shot"
+  },
+  "usage_tracking": {
+    "requested": "auto"
+  },
+  "source": {
+    "type": "github",
+    "repo": "skalade/rude_agents",
+    "requested_ref": "master",
+    "resolved_sha": "9e15ebe51faf51abfd0b3047635c0db53301290f",
+    "path": "build/insult/xlsx-recover-data",
+    "dirty": false,
+    "file_hashes": {
+      "environment/Dockerfile": "sha256:67526a29388bceee7b09a9a05aaae19356f52de42c0f77a7b85a1391b679c712",
+      "environment/groundtruth/DATA_SOURCES.md": "sha256:e78deacfaf963f3ffe35d7ef046584e6c8e420f0895daca6e80d1542d4f6015c",
+      "environment/groundtruth/answers.txt": "sha256:9b3ba3bea3fd26bc4eb1aa752591cf38fd9099df6c8be462c0d0043fd4507f4a",
+      "environment/groundtruth/create_incomplete_xlsx.py": "sha256:58e74028f2099692a18e24b943e6a40b2cfcef21feafab58d070a7729414496b",
+      "environment/groundtruth/read_xlsx.py": "sha256:41dc90aa148ee89ca402982be00ebafe9b96e3373c738e146cf3bf24fd1f7c55",
+      "environment/nasa_budget_incomplete.xlsx": "sha256:d15aeb8720d52525d99e7196f8c00dd5daddf90e4262255a98177da0ffb573bf",
+      "environment/skills/data-reconciliation/SKILL.md": "sha256:341dd818dfc713e5413bb74923c905f9990996c0876037a3918bce826b6a0c8d",
+      "environment/skills/xlsx/LICENSE.txt": "sha256:79f6d8f5b427252fa3b1c11ecdbdb6bf610b944f7530b4de78f770f38741cfaa",
+      "environment/skills/xlsx/SKILL.md": "sha256:9bdc1fee81f3be9cb34ac49f8890c094a3855d3d0236783d10e0ea6df1515e01",
+      "environment/skills/xlsx/recalc.py": "sha256:f0833720e26fa894c9c1ccf0bd71dfc4609f8a310360fb2de2071efb64fbd409",
+      "oracle/solve.sh": "sha256:0f98a8f8310cc5cfce4db6fb9fc361ea163dc795d960eb66e3881448f9b68f2b",
+      "task.md": "sha256:51047da2b21bc7de65af938e4ad27c7af409a7642865685d4e62021e33e9dd30",
+      "verifier/test.sh": "sha256:98c0db99d835fa80e2c748233e71aa9b7bd6d1969fed615707181013b5a5b244",
+      "verifier/test_outputs.py": "sha256:8bb25e42832dc540674dd8f1fe5603288f1f72a801e58c424a8aee07c5a64ee9"
+    }
+  },
+  "task_digest": "sha256:b68f568c90a60db9a576a79b597bcb6ae72eb90bed05e2ec015a4ba045588067"
+}

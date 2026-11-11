@@ -1,0 +1,137 @@
+{
+  "task_name": "sqlite-with-gcov",
+  "rollout_name": "sqlite-with-gcov__82921d97",
+  "rewards": {
+    "reward": 0.0
+  },
+  "agent": "pi-acp",
+  "agent_name": "pi-acp",
+  "model": "openrouter/deepseek/deepseek-v4-pro",
+  "skill_mode": "no-skill",
+  "skill_source": "none",
+  "requested_skills_dir": null,
+  "effective_skills_dir": null,
+  "skills_sandbox_dir": null,
+  "include_task_skills": false,
+  "n_tool_calls": 18,
+  "n_skill_invocations": 0,
+  "n_prompts": 1,
+  "agent_result": {
+    "n_tool_calls": 18,
+    "n_skill_invocations": 0,
+    "n_prompts": 1,
+    "n_input_tokens": 77007,
+    "n_output_tokens": 2175,
+    "n_cache_read_tokens": 69922,
+    "n_cache_creation_tokens": 0,
+    "total_tokens": 79182,
+    "cost_usd": 0.0028973,
+    "usage_source": "provider_response",
+    "price_source": "litellm"
+  },
+  "final_metrics": {
+    "total_prompt_tokens": 77007,
+    "total_completion_tokens": 2175,
+    "total_cached_tokens": 69922,
+    "total_cost_usd": 0.0028973
+  },
+  "trajectory_summary": {
+    "steps": 37,
+    "tool_call_steps": 18,
+    "user_message_steps": 1,
+    "agent_message_steps": 4,
+    "agent_thought_steps": 14,
+    "other_steps": 0,
+    "event_type_counts": {
+      "agent_message": 4,
+      "user_message": 1,
+      "agent_thought": 14,
+      "tool_call": 18
+    },
+    "tool_call_status_counts": {
+      "completed": 18
+    },
+    "partial_trajectory": false,
+    "trajectory_source": "acp"
+  },
+  "usage_tracking": {
+    "requested": "auto",
+    "status": "enabled",
+    "environment": "docker",
+    "endpoint_kind": "host",
+    "usage_source": "provider_response"
+  },
+  "error": null,
+  "error_category": null,
+  "verifier_error": null,
+  "verifier_error_category": null,
+  "export_error": null,
+  "idle_timeout_info": null,
+  "agent_timeout_info": null,
+  "sandbox_startup_info": null,
+  "transport_error_info": null,
+  "verifier_timeout_info": null,
+  "api_error_info": null,
+  "suspected_api_error_info": null,
+  "partial_trajectory": false,
+  "trajectory_source": "acp",
+  "started_at": "2026-10-04 21:59:14.814926",
+  "finished_at": "2026-10-04 22:02:49.403380",
+  "timing": {
+    "environment_setup": 2.7,
+    "agent_setup": 4.4,
+    "agent_execution": 150.3,
+    "verifier": 9.7,
+    "total": 214.6
+  },
+  "scenes": [
+    {
+      "name": "default",
+      "skills_dir": null,
+      "roles": [
+        {
+          "name": "agent",
+          "agent": "pi-acp",
+          "model": "openrouter/deepseek/deepseek-v4-pro",
+          "reasoning_effort": "high",
+          "timeout_sec": null,
+          "idle_timeout_sec": null,
+          "skills_dir": null,
+          "capabilities": null,
+          "env_keys": []
+        }
+      ],
+      "turns": [
+        {
+          "role": "agent",
+          "has_prompt": false
+        }
+      ]
+    }
+  ],
+  "loop": {
+    "strategy": "single-shot"
+  },
+  "source": {
+    "type": "github",
+    "repo": "skalade/rude_agents",
+    "requested_ref": "master",
+    "resolved_sha": "d68b067959758ae0c77a0bb8d2360e0aa3ff5aed",
+    "path": "build_tb2/baseline/sqlite-with-gcov",
+    "dirty": false,
+    "file_hashes": {
+      ".gitignore": "sha256:9a8dd8d9b6c3adb8e9e56328df27deef859a3e98fffc9b8133c8b22207c25953",
+      "README.md": "sha256:ba1a1f05c7152b9a4d355382212fa4d8e6829f604fee4b8a4f3aa4a7a603bac6",
+      "environment/Dockerfile": "sha256:f4be72b64b710962e5d9d5236716b4823ec72401a5379423039101cc00a73cd6",
+      "environment/vendor/sqlite-fossil-release.tar.gz": "sha256:7c02b6cc04dddc2f90e63d43ab8900cb694ba4665f4e4ac877ec724733125229",
+      "environment/vendor/sqlite-fossil-release.tar.gz.sha256": "sha256:3574015c694bd2465942ff17731db62293fea6ec7d90f34be09de1445fcdb18a",
+      "instruction.md": "sha256:b6ba9acf62292bc2a0bab40d4805b3abceededbb0ccd4477a1ce9ccc42c14dd9",
+      "solution/solve.sh": "sha256:e054f4092eb4b2895866a89c4d4e3591dda0fa28bd9d825ca60403f359a8f027",
+      "task.toml": "sha256:9a0da96990ee2ecbf4d92682a4c5301a53db45fc6e2d46ac7d45d3b8ee7fe523",
+      "tests/test.sh": "sha256:4770437ea96c3cc84684b4f99d55fb148fcac09f9ea1e8ef49de487716e6c334",
+      "tests/test_outputs.py": "sha256:b165f8504bb93a901451b80c4ea73344b71b6af377ebdabef745fbcdd1d2993b"
+    }
+  },
+  "task_digest": "sha256:e38316738d7e5cec80d1c8e714ec07a2b4d53b060cff0bd750d9c92b1735210e",
+  "sandbox_id": null
+}

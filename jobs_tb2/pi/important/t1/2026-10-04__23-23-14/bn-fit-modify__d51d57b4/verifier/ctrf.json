@@ -1,0 +1,101 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 9,
+            "passed": 9,
+            "failed": 0,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1791178440.5582068,
+            "stop": 1791178442.1374037
+        },
+        "tests": [
+            {
+                "name": "::test_bn_sample_exists",
+                "status": "passed",
+                "duration": 0.0003033409593626857,
+                "start": 1791178442.1220593,
+                "stop": 1791178442.1224954,
+                "retries": 0,
+                "file_path": "../tests/test_outputs.py"
+            },
+            {
+                "name": "::test_learned_dag_structure_exists",
+                "status": "passed",
+                "duration": 0.0001912850420922041,
+                "start": 1791178442.1225822,
+                "stop": 1791178442.122831,
+                "retries": 0,
+                "file_path": "../tests/test_outputs.py"
+            },
+            {
+                "name": "::test_learned_dag_structure_csv_col_names",
+                "status": "passed",
+                "duration": 0.0012083130422979593,
+                "start": 1791178442.1229029,
+                "stop": 1791178442.1241724,
+                "retries": 0,
+                "file_path": "../tests/test_outputs.py"
+            },
+            {
+                "name": "::test_learned_dag_structure",
+                "status": "passed",
+                "duration": 0.0006551109254360199,
+                "start": 1791178442.1242533,
+                "stop": 1791178442.124969,
+                "retries": 0,
+                "file_path": "../tests/test_outputs.py"
+            },
+            {
+                "name": "::test_intervened_dag_structure_exists",
+                "status": "passed",
+                "duration": 0.00017924990970641375,
+                "start": 1791178442.1250455,
+                "stop": 1791178442.1252763,
+                "retries": 0,
+                "file_path": "../tests/test_outputs.py"
+            },
+            {
+                "name": "::test_intervened_dag_structure_csv_col_names",
+                "status": "passed",
+                "duration": 0.0004921191139146686,
+                "start": 1791178442.1253405,
+                "stop": 1791178442.1258883,
+                "retries": 0,
+                "file_path": "../tests/test_outputs.py"
+            },
+            {
+                "name": "::test_intervened__data_structure",
+                "status": "passed",
+                "duration": 0.0005606658523902297,
+                "start": 1791178442.125963,
+                "stop": 1791178442.1265814,
+                "retries": 0,
+                "file_path": "../tests/test_outputs.py"
+            },
+            {
+                "name": "::test_sampled_csv_col_names",
+                "status": "passed",
+                "duration": 0.004724542028270662,
+                "start": 1791178442.1266541,
+                "stop": 1791178442.1314552,
+                "retries": 0,
+                "file_path": "../tests/test_outputs.py"
+            },
+            {
+                "name": "::test_sampled_data",
+                "status": "passed",
+                "duration": 0.005664822994731367,
+                "start": 1791178442.1315541,
+                "stop": 1791178442.137298,
+                "retries": 0,
+                "file_path": "../tests/test_outputs.py"
+            }
+        ]
+    }
+}

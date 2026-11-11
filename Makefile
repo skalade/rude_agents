@@ -2,11 +2,12 @@ AGENT ?= claude
 TRIALS ?= 1
 REASONING_EFFORT ?= high
 BENCH ?= skillsbench
+BENCHFLOW_VERSION ?= 0.6.5
 EXP = python3 experiment.py --bench $(BENCH)
 
 setup:  ## install uv + the benchflow CLI (provides `bench`)
 	command -v uv >/dev/null || curl -LsSf https://astral.sh/uv/install.sh | sh
-	uv tool install benchflow
+	uv tool install 'benchflow==$(BENCHFLOW_VERSION)'
 
 list:  ## show all tasks, * marks the subset in tasks.txt (BENCH=tb2: tasks_tb2.txt)
 	$(EXP) list
@@ -21,6 +22,6 @@ report:  ## aggregate jobs/ into results.csv + summary table
 	$(EXP) report
 
 clean:
-	rm -rf build jobs results.csv
+	rm -rf build build_tb2 results.csv results_tb2.csv reproduced
 
 .PHONY: setup list build run report clean

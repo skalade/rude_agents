@@ -1,0 +1,86 @@
+{
+  "task_path": "build_tb2/insult/reshard-c4-data",
+  "agent": "pi-acp",
+  "model": "openrouter/deepseek/deepseek-v4-pro",
+  "reasoning_effort": "high",
+  "environment": "docker",
+  "environment_manifest": null,
+  "skill_mode": "no-skill",
+  "skill_source": "none",
+  "requested_skills_dir": null,
+  "effective_skills_dir": null,
+  "skills_sandbox_dir": null,
+  "include_task_skills": false,
+  "sandbox_user": null,
+  "sandbox_locked_paths": [],
+  "sandbox_setup_timeout": 120,
+  "skip_install": false,
+  "agent_install_timeout": 900,
+  "context_root": null,
+  "base_image_override": null,
+  "timeout_sec": 3600,
+  "concurrency": 3,
+  "agent_idle_timeout_sec": 600,
+  "started_at": "2026-10-05 12:49:19.095506",
+  "agent_env": {
+    "BENCHFLOW_PROVIDER_MODELS": "[{\"id\":\"deepseek/deepseek-v4-pro\",\"name\":\"DeepSeek V4 Pro\",\"reasoning\":true,\"input\":[\"text\"],\"contextWindow\":1024000,\"maxTokens\":384000}]",
+    "BENCHFLOW_PROVIDER_MODEL": "deepseek/deepseek-v4-pro",
+    "BENCHFLOW_PROVIDER_NAME": "openrouter",
+    "BENCHFLOW_PROVIDER_BASE_URL": "https://openrouter.ai/api/v1",
+    "BENCHFLOW_PROVIDER_PROTOCOL": "openai-completions",
+    "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1"
+  },
+  "scenes": [
+    {
+      "name": "default",
+      "skills_dir": null,
+      "roles": [
+        {
+          "name": "agent",
+          "agent": "pi-acp",
+          "model": "openrouter/deepseek/deepseek-v4-pro",
+          "reasoning_effort": "high",
+          "timeout_sec": null,
+          "idle_timeout_sec": null,
+          "skills_dir": null,
+          "capabilities": null,
+          "env_keys": []
+        }
+      ],
+      "turns": [
+        {
+          "role": "agent",
+          "has_prompt": false
+        }
+      ]
+    }
+  ],
+  "loop": {
+    "strategy": "single-shot"
+  },
+  "usage_tracking": {
+    "requested": "auto"
+  },
+  "source": {
+    "type": "github",
+    "repo": "skalade/rude_agents",
+    "requested_ref": "master",
+    "resolved_sha": "d68b067959758ae0c77a0bb8d2360e0aa3ff5aed",
+    "path": "build_tb2/insult/reshard-c4-data",
+    "dirty": false,
+    "file_hashes": {
+      ".gitignore": "sha256:9a8dd8d9b6c3adb8e9e56328df27deef859a3e98fffc9b8133c8b22207c25953",
+      "README.md": "sha256:0b1dbe1aa63420a103c32a1bd76253d558688b6c02f561e84b19db0ee976d611",
+      "environment/Dockerfile": "sha256:2ca4a0e68628b8160f5e4296f779a204f51e3a70a8d4239be30e845e1565b39d",
+      "environment/revert.py": "sha256:d72accde61d258c9e10ad1715ba8cc6000b5673e670bc6ccf115f9883e00ab9a",
+      "environment/setup.py": "sha256:4f997ee98f4b968dbd67eb865db2907a0f3554e9861a3a7b93efe80479d8eb4d",
+      "instruction.md": "sha256:ec11faebd4e25dd8ce7ce76493e20adef7431c64f4166b7455c49c0c4a8a4e0a",
+      "solution/solve.sh": "sha256:84ab67b5d3ceb68cac0413e5ba4a130bdb52ad7c764bbd231a30d9d8f82fa976",
+      "task.toml": "sha256:c2f146a1e00f798f7486ff60686ad52749bb73c7b71e984d52716d859e0f7dd8",
+      "tests/files_hashes.json": "sha256:8a6b0c533db960d5534d3ab28ff4c683d6b5bca0a486e9a1921509a14db0e2fb",
+      "tests/test.sh": "sha256:833c89a17fb238b0da378566d648a6f978963f5ed9f4dd120ab6366d9cf7c35f",
+      "tests/test_outputs.py": "sha256:7c3e934692e274d798d90e213a0f733a1d1ef08464245e17b9531335ea78ae0a"
+    }
+  },
+  "task_digest": "sha256:2836e57fcd6b302697ac55ce9e0006ef638a6354ddf82dc34aee249e23558ca2"
+}

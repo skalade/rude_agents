@@ -1,0 +1,92 @@
+{
+  "task_path": "build/insult/software-dependency-audit",
+  "agent": "pi-acp",
+  "model": "openrouter/deepseek/deepseek-v4-pro",
+  "reasoning_effort": "high",
+  "environment": "docker",
+  "environment_manifest": null,
+  "skill_mode": "with-skill",
+  "skill_source": "task_bundled",
+  "requested_skills_dir": null,
+  "effective_skills_dir": "/tmp/benchflow-task-8axub4px/software-dependency-audit/environment/skills",
+  "skills_sandbox_dir": "/skills",
+  "include_task_skills": true,
+  "sandbox_user": "agent",
+  "sandbox_locked_paths": [
+    "/oracle",
+    "/solution",
+    "/verifier",
+    "/tests",
+    "/testbed_verify"
+  ],
+  "sandbox_setup_timeout": 120,
+  "skip_install": false,
+  "agent_install_timeout": 900,
+  "context_root": null,
+  "base_image_override": null,
+  "timeout_sec": 900,
+  "concurrency": 2,
+  "agent_idle_timeout_sec": 600,
+  "started_at": "2026-10-02 16:27:16.780372",
+  "agent_env": {
+    "BENCHFLOW_PROVIDER_MODELS": "[{\"id\":\"deepseek/deepseek-v4-pro\",\"name\":\"DeepSeek V4 Pro\",\"reasoning\":true,\"input\":[\"text\"],\"contextWindow\":1024000,\"maxTokens\":384000}]",
+    "BENCHFLOW_PROVIDER_MODEL": "deepseek/deepseek-v4-pro",
+    "BENCHFLOW_PROVIDER_NAME": "openrouter",
+    "BENCHFLOW_PROVIDER_BASE_URL": "https://openrouter.ai/api/v1",
+    "BENCHFLOW_PROVIDER_PROTOCOL": "openai-completions",
+    "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1"
+  },
+  "scenes": [
+    {
+      "name": "default",
+      "skills_dir": null,
+      "roles": [
+        {
+          "name": "agent",
+          "agent": "pi-acp",
+          "model": "openrouter/deepseek/deepseek-v4-pro",
+          "reasoning_effort": "high",
+          "timeout_sec": null,
+          "idle_timeout_sec": null,
+          "skills_dir": null,
+          "capabilities": null,
+          "env_keys": []
+        }
+      ],
+      "turns": [
+        {
+          "role": "agent",
+          "has_prompt": false
+        }
+      ]
+    }
+  ],
+  "loop": {
+    "strategy": "single-shot"
+  },
+  "usage_tracking": {
+    "requested": "auto"
+  },
+  "source": {
+    "type": "github",
+    "repo": "skalade/rude_agents",
+    "requested_ref": "master",
+    "resolved_sha": "9e15ebe51faf51abfd0b3047635c0db53301290f",
+    "path": "build/insult/software-dependency-audit",
+    "dirty": false,
+    "file_hashes": {
+      "environment/Dockerfile": "sha256:4f3a36f3b333769533db9b568ff435081024f32db6cc524d56988b0cad3df0f6",
+      "environment/README.md": "sha256:f36710d3aba715f30455632833103155fd9831586415a15d6ad6d152cf13e2de",
+      "environment/package-lock.json": "sha256:a2a42a3255e814e75bed9958c40cd9b35de7331b310bfeb8f93306d806643d44",
+      "environment/skills/cvss-score-extraction/SKILL.md": "sha256:5f9e2a22ec2a8230c9d6ed234fb7c48742e257631d397eb9bcabd5d12b7798d2",
+      "environment/skills/trivy-offline-vulnerability-scanning/SKILL.md": "sha256:594389f6d5d0d58c1c7714592bfce7f871154827a4b65f948d9829f2af3108a3",
+      "environment/skills/vulnerability-csv-reporting/SKILL.md": "sha256:80c79f8543d118a2c4625cdcdb4b7576b3e834f9cb7f9adbe3ace6c7040a3439",
+      "oracle/solution.py": "sha256:0a699d8f8e27d6537b7def8fcc2fe8669bab3c712e4c3602f07ace0b5d935973",
+      "oracle/solve.sh": "sha256:20075563ec51e02100d09f45ec48669dc1ae0e5a0f1ac04eb36763e854b556fc",
+      "task.md": "sha256:426be379b6dbe7525e68c8d2a0efd0aec9a9f6761e8774479e38d0cd3426ffb4",
+      "verifier/test.sh": "sha256:9265ee934d6511a57128913ae81037dc67717c4af9f893cb725fe1654f7b6c4e",
+      "verifier/test_outputs.py": "sha256:bc447eecd3f5b5e2622a0e719def8efb12c20b691b7a9710e36d7bde562b0940"
+    }
+  },
+  "task_digest": "sha256:2eafc76387e8eab3d2d82ddfbe4577f7fba187a128ee2a72cea3a9983107cb04"
+}

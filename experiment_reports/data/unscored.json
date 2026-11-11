@@ -1,0 +1,80 @@
+[
+  {
+    "agent": "codex",
+    "path": "jobs/codex/baseline/t1/2026-07-22__10-38-17/bike-rebalance__3ca70fcd/result.json",
+    "error_category": "api_error",
+    "cost": null
+  },
+  {
+    "agent": "codex",
+    "path": "jobs/codex/baseline/t1/2026-07-22__10-38-17/bike-rebalance__5b6d8152/result.json",
+    "error_category": "acp_error",
+    "cost": null
+  },
+  {
+    "agent": "codex",
+    "path": "jobs/codex/baseline/t1/2026-07-22__10-38-17/bike-rebalance__67c7fa12/result.json",
+    "error_category": "api_error",
+    "cost": null
+  },
+  {
+    "agent": "codex",
+    "path": "jobs/codex/baseline/t1/2026-07-22__10-38-17/bike-rebalance__b3bd2745/result.json",
+    "error_category": "api_error",
+    "cost": null
+  },
+  {
+    "agent": "codex",
+    "path": "jobs/codex/baseline/t1/2026-07-22__10-38-17/bike-rebalance__c0829e35/result.json",
+    "error_category": "api_error",
+    "cost": null
+  },
+  {
+    "agent": "codex",
+    "path": "jobs/codex/baseline/t1/2026-07-22__10-38-17/bike-rebalance__dd0e4974/result.json",
+    "error_category": "api_error",
+    "cost": null
+  },
+  {
+    "agent": "codex",
+    "path": "jobs/codex/baseline/t1/2026-07-22__10-38-17/jax-computing-basics__2c1c463e/result.json",
+    "error_category": "api_error",
+    "cost": null
+  },
+  {
+    "agent": "codex",
+    "path": "jobs/codex/baseline/t1/2026-07-22__10-38-17/jax-computing-basics__8b2e324d/result.json",
+    "error_category": "api_error",
+    "cost": null
+  },
+  {
+    "agent": "codex",
+    "path": "jobs/codex/baseline/t1/2026-07-22__10-38-17/jax-computing-basics__cbc5aa97/result.json",
+    "error_category": "api_error",
+    "cost": null
+  },
+  {
+    "agent": "codex",
+    "path": "jobs/codex/baseline/t1/2026-07-22__10-38-17/lake-warming-attribution__65023431/result.json",
+    "error_category": "api_error",
+    "cost": null
+  },
+  {
+    "agent": "codex",
+    "path": "jobs/codex/baseline/t1/2026-07-22__10-38-17/sales-pivot-analysis__6002cf97/result.json",
+    "error_category": "api_error",
+    "cost": null
+  },
+  {
+    "agent": "opencode",
+    "path": "jobs/opencode/threat/t3/2026-08-05__19-52-22/sales-pivot-analysis__1b7dd2be/result.json",
+    "error_category": null,
+    "cost": 0.03283854
+  },
+  {
+    "agent": "opencode",
+    "path": "jobs/opencode/threat/t3/2026-08-05__19-52-22/xlsx-recover-data__0fa17b02/result.json",
+    "error_category": null,
+    "cost": 0.0181524
+  }
+]

@@ -1,0 +1,138 @@
+{
+  "task_name": "db-wal-recovery",
+  "rollout_name": "db-wal-recovery__f6c67f45",
+  "rewards": {
+    "reward": 1.0
+  },
+  "agent": "pi-acp",
+  "agent_name": "pi-acp",
+  "model": "openrouter/deepseek/deepseek-v4-pro",
+  "skill_mode": "no-skill",
+  "skill_source": "none",
+  "requested_skills_dir": null,
+  "effective_skills_dir": null,
+  "skills_sandbox_dir": null,
+  "include_task_skills": false,
+  "n_tool_calls": 19,
+  "n_skill_invocations": 0,
+  "n_prompts": 1,
+  "agent_result": {
+    "n_tool_calls": 19,
+    "n_skill_invocations": 0,
+    "n_prompts": 1,
+    "n_input_tokens": 69371,
+    "n_output_tokens": 2999,
+    "n_cache_read_tokens": 63072,
+    "n_cache_creation_tokens": 0,
+    "total_tokens": 72370,
+    "cost_usd": 0.0030233,
+    "usage_source": "provider_response",
+    "price_source": "litellm"
+  },
+  "final_metrics": {
+    "total_prompt_tokens": 69371,
+    "total_completion_tokens": 2999,
+    "total_cached_tokens": 63072,
+    "total_cost_usd": 0.0030233
+  },
+  "trajectory_summary": {
+    "steps": 39,
+    "tool_call_steps": 19,
+    "user_message_steps": 1,
+    "agent_message_steps": 6,
+    "agent_thought_steps": 13,
+    "other_steps": 0,
+    "event_type_counts": {
+      "agent_message": 6,
+      "user_message": 1,
+      "agent_thought": 13,
+      "tool_call": 19
+    },
+    "tool_call_status_counts": {
+      "completed": 16,
+      "failed": 3
+    },
+    "partial_trajectory": false,
+    "trajectory_source": "acp"
+  },
+  "usage_tracking": {
+    "requested": "auto",
+    "status": "enabled",
+    "environment": "docker",
+    "endpoint_kind": "host",
+    "usage_source": "provider_response"
+  },
+  "error": null,
+  "error_category": null,
+  "verifier_error": null,
+  "verifier_error_category": null,
+  "export_error": null,
+  "idle_timeout_info": null,
+  "agent_timeout_info": null,
+  "sandbox_startup_info": null,
+  "transport_error_info": null,
+  "verifier_timeout_info": null,
+  "api_error_info": null,
+  "suspected_api_error_info": null,
+  "partial_trajectory": false,
+  "trajectory_source": "acp",
+  "started_at": "2026-10-05 00:18:23.461709",
+  "finished_at": "2026-10-05 00:21:10.906726",
+  "timing": {
+    "environment_setup": 32.5,
+    "agent_setup": 3.6,
+    "agent_execution": 90.0,
+    "verifier": 6.0,
+    "total": 167.4
+  },
+  "scenes": [
+    {
+      "name": "default",
+      "skills_dir": null,
+      "roles": [
+        {
+          "name": "agent",
+          "agent": "pi-acp",
+          "model": "openrouter/deepseek/deepseek-v4-pro",
+          "reasoning_effort": "high",
+          "timeout_sec": null,
+          "idle_timeout_sec": null,
+          "skills_dir": null,
+          "capabilities": null,
+          "env_keys": []
+        }
+      ],
+      "turns": [
+        {
+          "role": "agent",
+          "has_prompt": false
+        }
+      ]
+    }
+  ],
+  "loop": {
+    "strategy": "single-shot"
+  },
+  "source": {
+    "type": "github",
+    "repo": "skalade/rude_agents",
+    "requested_ref": "master",
+    "resolved_sha": "d68b067959758ae0c77a0bb8d2360e0aa3ff5aed",
+    "path": "build_tb2/important/db-wal-recovery",
+    "dirty": false,
+    "file_hashes": {
+      ".gitignore": "sha256:9a8dd8d9b6c3adb8e9e56328df27deef859a3e98fffc9b8133c8b22207c25953",
+      "README.md": "sha256:600762031a1a02ecc3b46d70f7683f3ff930b47c8a3d0e27cc31b146158c3126",
+      "environment/Dockerfile": "sha256:63a260531c62f4ae72060db17f295c0aa03cfc6321f8162c324b7aa6b3f81302",
+      "environment/main.db": "sha256:68cb288eb29e76d814b4e7ee6887b37c415675e644f88173bc191348e290d119",
+      "environment/main.db-wal.encrypted": "sha256:68753bdce26196a53194260d001544cc6bb8f9f38e2f2f6826d09798e31e6e26",
+      "instruction.md": "sha256:c8823ef5bf79276e907282a54f3cd776fe68731971c860b26ece7bfb1426bd20",
+      "solution/solve.sh": "sha256:ed8530c94103bf19783a1d41bc63fe4db478cdd9629f22fee25c45a45699f5e8",
+      "task.toml": "sha256:1cdc2c615e259bc10265efbe71b518332070c1c002e226566399e9788f18d0aa",
+      "tests/test.sh": "sha256:4770437ea96c3cc84684b4f99d55fb148fcac09f9ea1e8ef49de487716e6c334",
+      "tests/test_outputs.py": "sha256:88dc5c2a3abba75bca0e0f9136223ae5bb585d5984b8d9eba51a7829c1d2ba49"
+    }
+  },
+  "task_digest": "sha256:8c01b0f5710787bf44c4b0718f561ee8397674ff40fd59727a5f6617b16c3f24",
+  "sandbox_id": null
+}

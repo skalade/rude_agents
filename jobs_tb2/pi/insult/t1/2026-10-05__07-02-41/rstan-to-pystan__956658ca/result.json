@@ -1,0 +1,149 @@
+{
+  "task_name": "rstan-to-pystan",
+  "rollout_name": "rstan-to-pystan__956658ca",
+  "rewards": {
+    "reward": 1.0
+  },
+  "agent": "pi-acp",
+  "agent_name": "pi-acp",
+  "model": "openrouter/deepseek/deepseek-v4-pro",
+  "skill_mode": "no-skill",
+  "skill_source": "none",
+  "requested_skills_dir": null,
+  "effective_skills_dir": null,
+  "skills_sandbox_dir": null,
+  "include_task_skills": false,
+  "n_tool_calls": 37,
+  "n_skill_invocations": 0,
+  "n_prompts": 1,
+  "agent_result": {
+    "n_tool_calls": 37,
+    "n_skill_invocations": 0,
+    "n_prompts": 1,
+    "n_input_tokens": 879844,
+    "n_output_tokens": 25943,
+    "n_cache_read_tokens": 802783,
+    "n_cache_creation_tokens": 0,
+    "total_tokens": 905787,
+    "cost_usd": 0.03247314,
+    "usage_source": "provider_response",
+    "price_source": "litellm"
+  },
+  "final_metrics": {
+    "total_prompt_tokens": 879844,
+    "total_completion_tokens": 25943,
+    "total_cached_tokens": 802783,
+    "total_cost_usd": 0.03247314
+  },
+  "trajectory_summary": {
+    "steps": 72,
+    "tool_call_steps": 37,
+    "user_message_steps": 1,
+    "agent_message_steps": 2,
+    "agent_thought_steps": 31,
+    "other_steps": 1,
+    "event_type_counts": {
+      "agent_message": 2,
+      "user_message": 1,
+      "agent_thought": 31,
+      "tool_call": 37,
+      "agent_timeout": 1
+    },
+    "tool_call_status_counts": {
+      "completed": 30,
+      "failed": 7
+    },
+    "partial_trajectory": false,
+    "trajectory_source": "acp"
+  },
+  "usage_tracking": {
+    "requested": "auto",
+    "status": "enabled",
+    "environment": "docker",
+    "endpoint_kind": "host",
+    "usage_source": "provider_response"
+  },
+  "error": "Agent prompt exceeded wall-clock budget 1800s",
+  "error_category": "timeout",
+  "verifier_error": null,
+  "verifier_error_category": null,
+  "export_error": null,
+  "idle_timeout_info": null,
+  "agent_timeout_info": {
+    "reason": "wall_clock_timeout",
+    "timeout_sec": 1800.0,
+    "n_tool_calls": 37,
+    "pending_tool_call_ids": [],
+    "terminal_event_recorded": true,
+    "terminal_trajectory_complete": true
+  },
+  "sandbox_startup_info": null,
+  "transport_error_info": null,
+  "verifier_timeout_info": null,
+  "api_error_info": null,
+  "suspected_api_error_info": null,
+  "partial_trajectory": false,
+  "trajectory_source": "acp",
+  "started_at": "2026-10-05 13:03:21.113724",
+  "finished_at": "2026-10-05 13:51:16.478427",
+  "timing": {
+    "environment_setup": 3.0,
+    "agent_setup": 3.9,
+    "agent_execution": 2039.8,
+    "verifier": 12.0,
+    "total": 2875.4
+  },
+  "scenes": [
+    {
+      "name": "default",
+      "skills_dir": null,
+      "roles": [
+        {
+          "name": "agent",
+          "agent": "pi-acp",
+          "model": "openrouter/deepseek/deepseek-v4-pro",
+          "reasoning_effort": "high",
+          "timeout_sec": null,
+          "idle_timeout_sec": null,
+          "skills_dir": null,
+          "capabilities": null,
+          "env_keys": []
+        }
+      ],
+      "turns": [
+        {
+          "role": "agent",
+          "has_prompt": false
+        }
+      ]
+    }
+  ],
+  "loop": {
+    "strategy": "single-shot"
+  },
+  "source": {
+    "type": "github",
+    "repo": "skalade/rude_agents",
+    "requested_ref": "master",
+    "resolved_sha": "d68b067959758ae0c77a0bb8d2360e0aa3ff5aed",
+    "path": "build_tb2/insult/rstan-to-pystan",
+    "dirty": false,
+    "file_hashes": {
+      ".gitignore": "sha256:9a8dd8d9b6c3adb8e9e56328df27deef859a3e98fffc9b8133c8b22207c25953",
+      "README.md": "sha256:ffaf890e1f504fcb862369a94c9a3936120114e33403aae5aafb4cb8a5ba3c6c",
+      "environment/Dockerfile": "sha256:9d813ec4fdc2054717f253e7acbc2740fe43f97d35a5545c91a9c06986d9d595",
+      "environment/task-deps/gp_rstan.R": "sha256:9ec1dd99d26b1e2dcf8b41d404557b5d837802a9b5da287e5ab17bd40e9ecd8f",
+      "environment/task-deps/meta_public.json": "sha256:cbd6d58749391d9875650cf9885379ca878ccacc9c99eef5f9a0d88dc323a529",
+      "environment/task-deps/test_X.csv": "sha256:08529740690113cb1d0948c3c98720223b14d5b0a8a582823a8a9db5b5fd64f4",
+      "environment/task-deps/train_X.csv": "sha256:6f0223165f21959266848051d94c5174c926a786143c95427fc4913feb42711a",
+      "environment/task-deps/train_y.csv": "sha256:e16e658582873ac0937e22f50eb1d1edd45acc3200d5d48dded2df59aac94315",
+      "instruction.md": "sha256:3ab5736f950e962f8ca9b21f4b44c8e289c0be494ac6252a8f7f13d106ee3ffa",
+      "solution/solve.sh": "sha256:9205bd776bbe3ee25bbcca9ebd94a35d9d8c60e41c733a4abb0a7b1fb9dc01a4",
+      "task.toml": "sha256:ed0cd4382cb353e73cb575aa7a20b624e35f09ddd8769c332f40f8986980e13f",
+      "tests/test.sh": "sha256:6c3d54c3e703202edf4ee93b0a67790225e215d2ce1b8d8027759f2152bbaf0d",
+      "tests/test_outputs.py": "sha256:d740077bc8f6f9df7e81a1dd96f6c91cbbb86b04b556e803729a7a48a037acfc"
+    }
+  },
+  "task_digest": "sha256:20e8d8d5a0079d0cdc5bce33159b24e0d9d87e16a9a15f642a183105d2f489d1",
+  "sandbox_id": null
+}
