@@ -1,26 +1,18 @@
 # rude_agents
 
-Does the tone of a task description change how coding agents perform?
-Runs a subset of [SkillsBench](https://github.com/benchflow-ai/skillsbench)
-tasks with the same phrase injected at the top of every task description:
+Code for my blog post [Should you abuse your coding agent?](https://skalade.github.io/posts/should_you_abuse_your_coding_agent/),
+plus saved results and agent traces to reproduce the graphs.
 
-| condition   | injected phrase |
-|-------------|-----------------|
-| `baseline`  | (none — unmodified benchmark) |
-| `important` | "This is very important to me, please make no mistakes." |
-| `insult`    | "Do it right you piece of shit" |
-| `threat`    | "If you don't do this perfectly I will jump into a bathtub and electrocute myself with a toaster." |
+948 scored runs across SkillsBench and Terminal-Bench 2, testing whether asking
+nicely, insulting or threatening coding agents changes their performance.
 
-## Reproduce the published results
+![SkillsBench scores for five agent setups under baseline, please, insult and threat preambles.](experiment_reports/figures/fig_tone_scores.png)
 
-The snapshot contains the **600 SkillsBench and 348 Terminal-Bench 2 scored runs**
-used in the post, plus saved calibration runs and retry metadata. It includes
-action/reasoning traces, results, verifier output, captured usage tables,
-and the analysis and plotting code. Full model request/response logs are omitted
-from Git; they are not needed to rebuild the published figures.
+*Mean reward across 10 SkillsBench tasks, with three runs per task and tone.*
 
-Rebuild the published analysis and six blog figures **without API keys, Docker,
-or new agent runs**:
+## Reproduce the graphs
+
+With Python 3.11 or newer:
 
 ```bash
 python3 -m venv .venv
@@ -28,111 +20,8 @@ python3 -m venv .venv
 .venv/bin/python reproduce.py
 ```
 
-Outputs go to `reproduced/`; the saved inputs stay untouched. Use
-`python reproduce.py --figures-only` to render from saved tables, or
-`python reproduce.py --verify-only` to check the cohort and artifact hashes.
-See [REPRODUCING.md](REPRODUCING.md) for the data layout, usage-table inputs, methods,
-and the distinction between rebuilding the analysis and rerunning agents.
+This rebuilds the analysis and all six blog figures in `reproduced/`.
+No API keys, Docker or new agent runs needed.
 
-## Run new experiments
-
-The commands below launch fresh model runs when `--execute` / `EXECUTE=1` is set.
-They require Docker, credentials and model access, and can incur API charges.
-Historical results are not expected to repeat exactly.
-
-### Setup
-
-```bash
-git submodule update --init   # skillsbench, pinned
-make setup                    # installs uv + the benchflow `bench` CLI
-export ANTHROPIC_API_KEY=...  # claude-code; OPENAI_API_KEY for codex, etc.
-export OPENROUTER_API_KEY=... # opencode + DeepSeek V4 Pro
-```
-
-Docker is required (tasks run in `--sandbox docker`).
-
-To bill runs to a subscription instead of API credits, don't set the API
-key. Prefer a long-lived token: `claude setup-token`, put the result in
-`.envrc` (gitignored) as `export CLAUDE_CODE_OAUTH_TOKEN=...`, and
-`source .envrc` before running — benchflow forwards it into the sandbox
-automatically. (Without it, benchflow copies `~/.claude/.credentials.json`
-from `claude login` into each sandbox; that works until the access token
-expires mid-run, at which point a sandbox refresh revokes the host login.)
-Subscription runs share your 5-hour usage window, so use `--concurrency 1`
-and expect the full grid to span several windows on Pro.
-
-## Workflow
-
-```bash
-make list          # browse available tasks; edit tasks.txt to change the subset
-make build         # build/<condition>/<task>/ with phrases injected
-make run           # dry run: prints the bench commands
-make run EXECUTE=1 AGENT=claude TRIALS=3
-make run EXECUTE=1 AGENT=codex
-make run EXECUTE=1 AGENT=opencode TRIALS=3 # DeepSeek V4 Pro via OpenRouter
-make run AGENT=pi TRIALS=3               # preview the equivalent Pi experiment
-make report        # summary table + row-level results.csv
-```
-
-Cost knobs: the subset in `tasks.txt` (default: 10 tasks with agent
-timeouts <= 900s), `TRIALS`, and `--conditions baseline threat` to skip a
-condition. Default models per agent live in `AGENTS` in `experiment.py`.
-
-All harnesses run at the same named reasoning level (`high` by default). The
-runner translates that setting to Claude Code's `CLAUDE_CODE_EFFORT_LEVEL`,
-Codex's `model_reasoning_effort`, and OpenCode's provider-level
-`reasoningEffort`. Only `low` and `high` are accepted because those levels are supported by all three model
-families. Override the shared level with `make run REASONING_EFFORT=low`.
-
-## Pi + DeepSeek
-
-Pi uses the same `openrouter/deepseek/deepseek-v4-pro` model and
-`OPENROUTER_API_KEY`, task builds, four conditions, skills, and timeouts.
-Three trials produce 120 task runs, with results isolated under `jobs/pi/`.
-
-```bash
-python3 experiment.py run --agent pi --trials 3 --concurrency 2
-# Add --execute to run the grid after validating a one-task smoke test.
-```
-
-`bench_pi.py` applies process-local fixes to the installed Benchflow 0.6.5
-adapter: it pins `@earendil-works/pi-coding-agent@1.0.0` and `pi-acp@0.0.34`
-and registers the ACP `thought_level` option. This sets Pi's reasoning level
-explicitly (default `high`). Benchflow's stock installer still uses the deprecated
-`@mariozechner` package, which is older than the current ACP adapter requires.
-The wrapper uses the Python environment installed by `uv tool install benchflow`;
-it does not modify the installed package or other harnesses.
-
-Pi also receives explicit DeepSeek reasoning and token-limit metadata, captured
-from the [OpenRouter model catalog](https://openrouter.ai/api/v1/models) on
-2026-10-02 (1,024,000 context tokens; 384,000 maximum completion tokens).
-Benchflow otherwise defaults this custom model to non-reasoning and a 4,096-token
-completion cap. Other Pi model overrides are rejected until their metadata is
-configured. The wrapper fails if Benchflow's installer changes, so an upgrade
-requires reviewing the compatibility fixes.
-
-`bench_pi.py` also asks OpenRouter to prefer the StreamLake provider and skip
-Relace. Default routing sent 78% of the 2026-10-02 run to Relace; historical provider
-rates changed the final bill. The saved provider records preserve those charges.
-
-## Terminal-Bench 2
-
-`--bench tb2` (or `make ... BENCH=tb2`) runs the same four conditions on
-[Terminal-Bench 2.0](https://github.com/harbor-framework/terminal-bench-2),
-pinned as the `terminal-bench-2` submodule. The subset is `tasks_tb2.txt`;
-outputs go to `build_tb2/`, `jobs_tb2/` and `results_tb2.csv`. The phrase is
-prepended to each task's `instruction.md`.
-
-TB2 runs with `--sandbox-user none` because its tasks expect root (Harbor's
-default), and with `--skill-mode no-skill` because it ships no skills.
-`bench_pi.py` also works around two benchflow behaviours that break TB2
-verification: it doesn't force-load pytest plugins found in the container
-(an agent running as root can install them), and it raises benchflow's 10s
-housekeeping exec timeouts to 120s. Known task issues and the two excluded
-`qemu-*` tasks are listed at the top of `tasks_tb2.txt`.
-
-```bash
-make build BENCH=tb2
-make run BENCH=tb2 AGENT=pi TRIALS=1   # add EXECUTE=1 to run
-make report BENCH=tb2
-```
+See [REPRODUCING.md](REPRODUCING.md) for the saved data, methods and instructions
+for running new experiments.
